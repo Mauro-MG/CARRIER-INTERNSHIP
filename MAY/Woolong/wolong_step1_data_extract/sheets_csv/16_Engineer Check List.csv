@@ -1,0 +1,20 @@
+﻿,,Rev AT,Rev AS,Rev AQ,Rev AP,Rev AO,Rev AN,Rev AC,REV AB
+"The below checklist and the instructions in the SWI (RFTP-0005_Namplate& Electrical Data ) are needed to complete these steps. Unless otherwise noted, all macros are to be run from the EDRs while this nameplate program is open.",,,,,,,,,
+"Create a project on the ""Model Number Update Tracker"" worksheet tracker.  (see SWI)",,Done-JT,Done-JT,Done-KJP,NA-DJM,NA - NB,NA - NB,NA - ACJ,n/a - MMC
+"Make changes and document on Revs worksheet and on the ""Model Number Update Tracker"" worksheet tracker.",,Done-JT,Done-JT,Done-KJP,Done-DJM,Done - NB,Done - NB,Done - ACJ,Done-MMC
+"After the nameplate changes are complete per the SWI, run ""MassGenLit2"" macro to generate the new/revised data for the EDR.  ",,Done-JT,Done-JT,Done-KJP,Done-DJM,Done - NB,Done - NB,Done - ACJ,Done-MMC
+Run MassCompareLitData macro to compare data in the tables on the left with data in the tables on the right (see SWI for more info on checking).,,Done-JT,Done-JT,Done-KJP,Done-DJM,NA - NB,NA - NB,NA - ACJ,Done-MMC
+"If not already in the EDR, create a sheet named ""wLiterature Sheets"" and place it to the right of the revisions sheet.",,Done-JT,Done-JT,NA-KJP,Done-DJM,Done - NB,Done - NB,Done - ACJ,Done-MMC
+"Run GetLiteratureSheets macro.  This macro generates a list of all the sheets contained in the EDR and places the list in the ""wLiterature Sheets"" sheet.  It also summarizes how many differences or ""errors"" there were for each sheet when the comparison macro was run above (see SWI for more info on checking).",,Done-JT,Done-JT,Done-KJP,Done-DJM,Done - NB,Done - NB,Done - ACJ,Done-MMC
+"Since opening the nameplate file turns off automatic calculation to help processing speed, hit the F9 key at this point to recalculate formula's etc.  Hitting F9 on any sheet in the EDR will recalculate all sheets in the EDR",,Done-JT,Done-JT,Done-KJP,Done-DJM,Done - NB,Done - NB,Done - ACJ,Done-MMC
+Review worksheet wLiterature Sheets.,,Done-JT,Done-JT,Done-KJP,Done-DJM,Done - NB,Done - NB,Done - ACJ,Done-MMC
+Did expected changes show up on the literature sheets?,,Done-JT,Yes-JT,None-KJP,Yes-DJM,Done - NB,Done - NB,Done - ACJ,Yes-MMC
+Are there any unexpected changes to the literature sheets?,,Done-JT,Yes-JT,None-KJP,No-DJM,Done - NB,Done - NB,Done - ACJ,No-MMC
+"If all changes are approved, update Revs with change information and discuss changes 
+with a Nameplate releaser.  Once approved, the releaser will run the MassCopyLiteratureData macro to prepare the EDR for the next time the nameplate needs updating.",,Done-JT,Done-JT,,,Done - NB,Done - NB,Done - ACJ,Done-MMC
+Work with a designer to secure an ECN to release the nameplate and have the designer update the nameplate drawing.  See note in the Revisions sheet.,,Done-JT,Done-JT,Done-KJP,,Done - NB,Done - NB,Done - ACJ,Done-MMC
+"From the nameplate program, run ""HideSheets"" macro to turn on password protection for the nameplate program.  A button to click is provided here.  
+
+Background info only; not necessary to read:
+
+The reason the macro is called ""HideSheets"" is because the EDR electrical data tables used to be contained within the nameplate program Excel file.  They were hidden to reduce the # of visible sheets for users outside of Engineering (i.e. manufacturing) to reduce confusion.  Since the number of EDR electrical data tables has grown dramatically over the years, it was decided to remove them from the nameplate program file to keep the file nameplate file size down to prevent it from crashing.  The HideSheets macro provided two functions; hide sheets and password protection.",,Done-JT,Done-JT,Done-JT,,,,,Done-MMC

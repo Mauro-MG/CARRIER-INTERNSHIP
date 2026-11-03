@@ -1,0 +1,8 @@
+RULEBEGIN.RAW.REQUIRED									P9										NOMENCLATURE			HIT.CATEGORY	HIT.VALUE	HIT.DESCRIPTION																				
+									BC										DDPF			WHEELCLASS	2	Direct Drive Class II
+									BR										BELTPREFIVESIX			WHEELCLASS	1	Wheel Class I
+									CFGJSVWZ										BELTPREFIVESIX			WHEELCLASS	2	Wheel Class II
+									BR										BELTPOSTFIVESIX			WHEELCLASS	1	Wheel Class I
+									CFGJSVWZ										BELTPOSTFIVESIX			WHEELCLASS	2	Wheel Class II
+																			
+RULEEND																				

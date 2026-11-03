@@ -1,0 +1,9 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Confirm overwrite · ValidateSAP</title><link rel="stylesheet" href="{% static 'validatesap/app.css' %}"></head>
+<body>
+  <header class="masthead masthead--compact"><div class="shell masthead__inner"><div><p class="eyebrow">Save results</p><h1>File already exists</h1></div></div></header>
+  <main class="shell page-stack"><section class="decision-panel"><p class="step">Confirmation required</p><h2>A saved result already exists for:</h2><code class="filename-display">{{ filename }}</code><p>Do you want to replace the existing file? The previous contents cannot be recovered from this application after overwrite.</p><form method="post" action="{% url 'validatesap:save_results' %}" class="decision-actions">{% csrf_token %}<input type="hidden" name="result_token" value="{{ result_token }}"><button class="danger-button" type="submit" name="action" value="overwrite">Overwrite</button><button class="secondary-button" type="submit" name="action" value="cancel">Cancel</button></form></section></main>
+</body>
+</html>

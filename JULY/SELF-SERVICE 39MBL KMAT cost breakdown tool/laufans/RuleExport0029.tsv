@@ -1,0 +1,87 @@
+RULEBEGIN.RAW.REQUIRED																WHEEL	WHEELCLASS		NOMENCLATURE			HIT.CATEGORY	HIT.VALUE	HIT.DESCRIPTION																				
+																			
+																A10-8A	2					MAXRPM	2471	Max RPM A10-8A  Class 2
+																A12-11A	2					MAXRPM	2040	Max RPM A12-11A  Class 2
+																A12-12A	2					MAXRPM	2091	Max RPM A12-12A  Class 2
+																A15-15A	2					MAXRPM	1725	Max RPM A15-15A  Class 2
+																A18-18A	2					MAXRPM	1450	Max RPM A18-18A  Class 2
+																A20-15A	2					MAXRPM	1316	Max RPM A20-15A  Class 2
+																A20-18A	2					MAXRPM	1302	Max RPM A20-18A  Class 2
+																A20-18H	2					MAXRPM	1303	Max RPM A20-18H  Class 2
+																A20-20H	2					MAXRPM	1281	Max RPM A20-20H  Class 2
+																A9-4A	2					MAXRPM	2894	Max RPM A9-4A  Class 2
+																101	2					MAXRPM	4900	Max RPM 101  Class 2
+																121	2					MAXRPM	4800	Max RPM 121  Class 2
+																131	2					MAXRPM	4245	Max RPM 131  Class 2
+																161	2					MAXRPM	3425	Max RPM 161  Class 2
+																181	2					MAXRPM	3105	Max RPM 181  Class 2
+																201	2					MAXRPM	2735	Max RPM 201  Class 2
+																221	2					MAXRPM	2570	Max RPM 221  Class 2
+																123	2					MAXRPM	4900	Max RPM 123  Class 2
+																153	2					MAXRPM	3800	Max RPM 153  Class 2
+																163	2					MAXRPM	3385	Max RPM 163  Class 2
+																183Q	2					MAXRPM	3005	Max RPM 183Q  Class 2
+																223Q	2					MAXRPM	2570	Max RPM 223Q  Class 2
+																243Q	2					MAXRPM	2335	Max RPM 243Q  Class 2
+																273Q	2					MAXRPM	2010	Max RPM 273Q  Class 2
+																303Q	2					MAXRPM	1805	Max RPM 303Q  Class 2
+																333Q	2					MAXRPM	1650	Max RPM 333Q  Class 2
+																A22-22H	2					MAXRPM	1178	Max RPM A22-22H  Class 2
+																A25-20H	2					MAXRPM	1032	Max RPM A25-20H  Class 2
+																A25-25H	2					MAXRPM	1011	Max RPM A25-25H  Class 2
+																A27-22H	2					MAXRPM	919	Max RPM A27-22H  Class 2
+																A27-27H	2					MAXRPM	910	Max RPM A27-27H  Class 2
+																A30-30H	2					MAXRPM	835	Max RPM A30-30H  Class 2
+																363Q	2					MAXRPM	1450	Max RPM 363Q  Class 2
+																403Q	2					MAXRPM	1315	Max RPM 403Q  Class 2
+																443Q	2					MAXRPM	1190	Max RPM 443Q  Class 2
+																493Q	2					MAXRPM	1105	Max RPM 493Q  Class 2
+																241	2					MAXRPM	2335	Max RPM 241  Class 2
+																271	2					MAXRPM	2010	Max RPM 271  Class 2
+																301	2					MAXRPM	1805	Max RPM 301  Class 2
+																331	2					MAXRPM	1650	Max RPM 331  Class 2
+																361	2					MAXRPM	1450	Max RPM 361  Class 2
+																A10-8A	1					MAXRPM	1901	Max RPM A10-8A  Class 1
+																A12-11A	1					MAXRPM	1569	Max RPM A12-11A  Class 1
+																A12-12A	1					MAXRPM	1614	Max RPM A12-12A  Class 1
+																A15-15A	1					MAXRPM	1328	Max RPM A15-15A  Class 1
+																A18-18A	1					MAXRPM	1155	Max RPM A18-18A  Class 1
+																A20-15A	1					MAXRPM	1013	Max RPM A20-15A  Class 1
+																A20-18A	1					MAXRPM	1002	Max RPM A20-18A  Class 1
+																A20-18H	1					MAXRPM	1020	Max RPM A20-18H  Class 1
+																A20-20H	1					MAXRPM	1010	Max RPM A20-20H  Class 1
+																A9-4A	1					MAXRPM	2244	Max RPM A9-4A  Class 1
+																101	1					MAXRPM	4900	Max RPM 101  Class 1
+																121	1					MAXRPM	4800	Max RPM 121  Class 1
+																131	1					MAXRPM	4245	Max RPM 131  Class 1
+																161	1					MAXRPM	3425	Max RPM 161  Class 1
+																181	1					MAXRPM	2380	Max RPM 181  Class 1
+																201	1					MAXRPM	2125	Max RPM 201  Class 1
+																221	1					MAXRPM	1970	Max RPM 221  Class 1
+																123	1					MAXRPM	3755	Max RPM 123  Class 1
+																153	1					MAXRPM	2910	Max RPM 153  Class 1
+																163	1					MAXRPM	2595	Max RPM 163  Class 1
+																183Q	1					MAXRPM	2305	Max RPM 183Q  Class 1
+																223Q	1					MAXRPM	1970	Max RPM 223Q  Class 1
+																243Q	1					MAXRPM	1790	Max RPM 243Q  Class 1
+																273Q	1					MAXRPM	1540	Max RPM 273Q  Class 1
+																303Q	1					MAXRPM	1385	Max RPM 303Q  Class 1
+																333Q	1					MAXRPM	1265	Max RPM 333Q  Class 1
+																A22-22H	1					MAXRPM	1119	Max RPM A22-22H  Class 1 Built as Class II
+																A25-20H	1					MAXRPM	980	Max RPM A25-20H  Class 1 Built as Class II
+																A25-25H	1					MAXRPM	960	Max RPM A25-25H  Class 1 Built as Class II
+																A27-22H	1					MAXRPM	873	Max RPM A27-22H  Class 1 Built as Class II
+																A27-27H	1					MAXRPM	865	Max RPM A27-27H  Class 1 Built as Class II
+																A30-30H	1					MAXRPM	793	Max RPM A30-30H  Class 1 Built as Class II
+																363Q	1					MAXRPM	1110	Max RPM 363Q  Class 1
+																403Q	1					MAXRPM	1005	Max RPM 403Q  Class 1
+																443Q	1					MAXRPM	910	Max RPM 443Q  Class 1
+																493Q	1					MAXRPM	850	Max RPM 493Q  Class 1
+																241	1					MAXRPM	1790	Max RPM 241  Class 1
+																271	1					MAXRPM	1540	Max RPM 271  Class 1
+																301	1					MAXRPM	1385	Max RPM 301  Class 1
+																331	1					MAXRPM	1265	Max RPM 331  Class 1
+																361	1					MAXRPM	1110	Max RPM 361  Class 1
+																			
+																			
+RULEEND																				

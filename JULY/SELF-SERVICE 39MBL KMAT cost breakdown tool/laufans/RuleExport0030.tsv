@@ -1,0 +1,22 @@
+RULEBEGIN.RAW.REQUIRED							P7									P16			NOMENCLATURE			HIT.CATEGORY	HIT.VALUE	HIT.DESCRIPTION																				
+							B									BC						$BASE	620.499	DDPF 105 Base Fan
+							C									BC						$BASE	746.704	DDPF 122 Base Fan
+							D									BC						$BASE	764.682	DDPF 135 Base Fan
+							F									BC						$BASE	776.837	DDPF 150 Base Fan
+							G									BC						$BASE	924.386	DDPF 165 Base Fan
+							H									BC						$BASE	956.327	DDPF 182 Base Fan
+							J									BC						$BASE	978.839	DDPF 200 Base Fan
+							K									BC						$BASE	997.277	DDPF 222 Base Fan
+							L									BC						$BASE	1073.453	DDPF 245 Base Fan
+							M									BC						$BASE	1261.073	DDPF 270 Base Fan
+							N									BC						$BASE	1339.887	DDPF 300 Base Fan
+							P									BC						$BASE	1585.086	DDPF 330 Base Fan
+							Q									BC						$BASE	1849.881	DDPF 365 Base Fan
+							RS									BC						$BASE	2026.425	DDPF 402 Base Fan
+							H									D						$BASE	5566.493	DDPF 182 Base 4 Fan Array
+							J									D						$BASE	5956.494	DDPF 200 Base 4 Fan Array
+							L									D						$BASE	7537.835	DDPF 245 Base 4 Fan Array
+							H									F						$BASE	8349.739	DDPF 182 Base 6 Fan Array
+							J									F						$BASE	8934.742	DDPF 200 Base 6 Fan Array
+							L									F						$BASE	11306.752	DDPF 245 Base 6 Fan Array
+RULEEND																				

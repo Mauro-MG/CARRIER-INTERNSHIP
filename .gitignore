@@ -1,0 +1,39 @@
+# Reinstallable dependencies and local state
+node_modules/
+.pnpm-store/
+.venv/
+venv/
+env/
+.build-venv/
+.deps/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.build-cache/
+.analysis/
+.neurotrace/
+.svn/
+.vscode/
+.idea/
+# Generated packaging
+build/
+dist/
+release/
+obj/
+# Credentials and local runtime files
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+*.key
+*.pfx
+*.p12
+*.log
+debug_log*.txt
+~$*
+.DS_Store
+Thumbs.db

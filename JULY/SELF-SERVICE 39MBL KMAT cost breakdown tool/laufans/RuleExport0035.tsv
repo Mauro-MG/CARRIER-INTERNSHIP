@@ -1,0 +1,4 @@
+RULEBEGIN.RAW.REQUIRED								P8											NOMENCLATURE			HIT.CATEGORY	HIT.VALUE	HIT.DESCRIPTION																				
+								BDGQSV														SHAFTGROUNDING	NO	No Motor Shaft Grounding (DDP)
+								CFHRTW														SHAFTGROUNDING	YES	Yes Motor Shaft Grounding (DDP)
+RULEEND																				

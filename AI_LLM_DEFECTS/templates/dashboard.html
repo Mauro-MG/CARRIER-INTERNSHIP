@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+    <h2>Search Claims</h2>
+
+    <form method="POST" action="{{ url_for('load') }}">
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <label>Claim Number</label>
+                <input type="text" name="claim_number" class="form-control">
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <label>Serial</label>
+                <input type="text" name="serial" class="form-control">
+            </div>
+
+            <div class="col-md-2 mb-3">
+                <label>Date From</label>
+                <input type="date" name="date_from" class="form-control">
+            </div>
+
+            <div class="col-md-2 mb-3">
+                <label>Date To</label>
+                <input type="date" name="date_to" class="form-control">
+            </div>
+
+            <div class="col-md-2 mb-3">
+                <label>Limit</label>
+                <input type="number" name="limit" value="50" class="form-control">
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Search Claims
+        </button>
+    </form>
+</section>
+
+<section class="card">
+    <h2>Weekly AI Classification</h2>
+    <p>Loads claims paid in the last 7 days plus historical claims for the same serials.</p>
+
+    <form method="POST" action="{{ url_for('load_last_week_history') }}">
+        <button type="submit" class="btn btn-warning">
+            Load Last Week Claims + Serial History
+        </button>
+    </form>
+</section>
+
+<section class="stats">
+    <div class="stat"><strong>{{ results|length }}</strong><span>classified claims</span></div>
+</section>
+<br>
+
+<section class="card">
+    <h3>Loaded Claims</h3>
+
+    <p>Claims loaded: {{ claims|length }}</p>
+
+    {% if claims %}
+    <form method="POST" action="{{ url_for('classify_selected') }}">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Select</th>
+                    <th>Claim Number</th>
+                    <th>Serial</th>
+                    <th>Model</th>
+                    <th>Plant</th>
+                    <th>Date Failed</th>
+                    <th>Service Performed</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for claim in claims %}
+                <tr>
+                    <td>
+                        <input type="checkbox" name="selected_claims" value="{{ loop.index0 }}">
+                    </td>
+                    <td>{{ claim.ClaimNumber }}</td>
+                    <td>{{ claim.Serial }}</td>
+                    <td>{{ claim.Model }}</td>
+                    <td>{{ claim.Plant }}</td>
+                    <td>{{ claim.DateFailed }}</td>
+                    <td>{{ claim.ServicePerformed[:250] }}...</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <button type="submit" class="btn btn-primary">
+            Classify Selected Claims
+        </button>
+
+    </form>
+    {% else %}
+        <p>No claims loaded yet.</p>
+    {% endif %}
+</section>
+{% endblock %}

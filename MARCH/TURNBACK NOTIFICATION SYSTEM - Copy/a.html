@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f4f4; }
+        .email-container { width: 100%; max-width: 600px; margin: 20px auto; background-color: #ffffff; border: 1px solid #ddd; }
+        
+        .header { background-color: #1a337e; color: #ffffff; text-align: center; 
+            padding: 40px 20px 30px 20px; 
+        }
+        
+        .logo-top { 
+            width: 10px;       
+            height: auto; 
+            margin-bottom: 5px; 
+        } 
+
+
+        .header h1 { margin: 0; font-size: 28px; letter-spacing: 1px; }
+        .header p { margin: 5px 0 0; font-size: 16px; opacity: 0.9; }
+
+        .body-content { padding: 40px 30px; line-height: 1.6; color: #333; font-size: 16px; }
+        .body-content strong { font-size: 18px; display: block; margin-bottom: 15px; }
+
+        .footer { background-color: #1a337e; color: #ffffff; text-align: center; padding: 20px; font-size: 14px; }
+        .footer p { margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Carrier_Global_logo.svg/512px-Carrier_Global_logo.svg.png"
+     width="40"
+     style="display:block; margin:0 auto;">
+            <h1>Turnback Notification Progress</h1>
+        </div>
+
+        <div class="body-content">
+            <strong>Hello {name},</strong>
+            <p>As of {current date}, you have completed {X} turnbacks during the month of {Month}.You are currently {Y} turnbacks behind the goal required to be completed by the end of the month.</p>
+            <p> Please make sure to meet the goal by the end of the month.</p>
+        </div>
+
+        <div class="footer">
+            <p><strong>Monterrey Technology Hub</strong></p>
+            <p style="font-size: 12px; opacity: 0.8;">This email was automatically generated. Please do not reply.</p>
+        </div>
+    </div>
+</body>
+</html>
+ 

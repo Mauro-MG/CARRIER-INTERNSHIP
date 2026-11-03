@@ -1,0 +1,557 @@
+{
+  "base_unit_price_rule": {
+    "enabled": true,
+    "search_type": "range",
+    "start_position": 1,
+    "end_position": 9,
+    "template": ""
+  },
+  "conditional_price_rules": {
+    "enabled": false,
+    "positions": []
+  },
+  "configuration_date": "2026-08-06",
+  "configured_positions": [
+    10,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "created_at": "2026-08-06T11:10:13",
+  "description": "30MP CONFIG",
+  "option_positions": {
+    "start": 10,
+    "end": 19
+  },
+  "positions": {
+    "10": {
+      "allowed_values_by_option_code": {
+        "2": [
+          "0",
+          "1",
+          "2",
+          "9",
+          "B",
+          "C",
+          "L",
+          "M",
+          "Q",
+          "R"
+        ],
+        "11": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "L",
+          "N",
+          "Q",
+          "S"
+        ],
+        "12": [
+          "0",
+          "3",
+          "9",
+          "D"
+        ],
+        "2A": [
+          "3",
+          "4",
+          "5",
+          "D",
+          "F",
+          "G",
+          "N",
+          "P",
+          "S",
+          "T"
+        ],
+        "11A": [
+          "9",
+          "B",
+          "C",
+          "D",
+          "F",
+          "G",
+          "M",
+          "P",
+          "R",
+          "T"
+        ],
+        "12A": [
+          "1",
+          "4",
+          "B",
+          "F"
+        ],
+        "12B": [
+          "2",
+          "5",
+          "C",
+          "G"
+        ],
+        "12C": [
+          "L",
+          "M",
+          "N",
+          "P"
+        ],
+        "12D": [
+          "Q",
+          "R",
+          "S",
+          "T"
+        ]
+      },
+      "applicable_groups": [
+        2,
+        11,
+        12
+      ],
+      "excluded_characters": [],
+      "option_code_ranges": [
+        {
+          "end": "2A",
+          "group": 2,
+          "start": "2"
+        },
+        {
+          "end": "11A",
+          "group": 11,
+          "start": "11"
+        },
+        {
+          "end": "12D",
+          "group": 12,
+          "start": "12"
+        }
+      ],
+      "option_codes": [
+        "2",
+        "2A",
+        "11",
+        "11A",
+        "12",
+        "12A",
+        "12B",
+        "12C",
+        "12D"
+      ]
+    },
+    "12": {
+      "allowed_values_by_option_code": {
+        "1": [
+          "0",
+          "7",
+          "B",
+          "H"
+        ],
+        "6": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "N",
+          "S",
+          "V",
+          "X"
+        ],
+        "1A": [
+          "1",
+          "8",
+          "C",
+          "J"
+        ],
+        "1B": [
+          "2",
+          "5",
+          "D",
+          "K"
+        ],
+        "1C": [
+          "3",
+          "6",
+          "F",
+          "L"
+        ],
+        "1D": [
+          "4",
+          "9",
+          "G",
+          "M"
+        ],
+        "1E": [
+          "N",
+          "P",
+          "Q",
+          "R"
+        ],
+        "1F": [
+          "I",
+          "S",
+          "T",
+          "Z"
+        ],
+        "1G": [
+          "A",
+          "O",
+          "V",
+          "W"
+        ],
+        "1H": [
+          "E",
+          "U",
+          "X",
+          "Y"
+        ],
+        "6A": [
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "A",
+          "E",
+          "P",
+          "Z"
+        ],
+        "6B": [
+          "B",
+          "C",
+          "D",
+          "F",
+          "G",
+          "Q",
+          "T",
+          "W",
+          "Y"
+        ],
+        "6C": [
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "O",
+          "R",
+          "U"
+        ]
+      },
+      "applicable_groups": [
+        1,
+        6
+      ],
+      "excluded_characters": [],
+      "option_code_ranges": [
+        {
+          "end": "1H",
+          "group": 1,
+          "start": "1"
+        },
+        {
+          "end": "6C",
+          "group": 6,
+          "start": "6"
+        }
+      ],
+      "option_codes": [
+        "1",
+        "1A",
+        "1B",
+        "1C",
+        "1D",
+        "1E",
+        "1F",
+        "1G",
+        "1H",
+        "6",
+        "6A",
+        "6B",
+        "6C"
+      ]
+    },
+    "13": {
+      "allowed_values_by_option_code": {
+        "3": [
+          "0",
+          "3"
+        ],
+        "7": [
+          "0",
+          "1",
+          "2"
+        ],
+        "3A": [
+          "1",
+          "4"
+        ],
+        "3B": [
+          "2",
+          "5"
+        ],
+        "7A": [
+          "3",
+          "4",
+          "5"
+        ]
+      },
+      "applicable_groups": [
+        3,
+        7
+      ],
+      "excluded_characters": [],
+      "option_code_ranges": [
+        {
+          "end": "3B",
+          "group": 3,
+          "start": "3"
+        },
+        {
+          "end": "7A",
+          "group": 7,
+          "start": "7"
+        }
+      ],
+      "option_codes": [
+        "3",
+        "3A",
+        "3B",
+        "7",
+        "7A"
+      ]
+    },
+    "14": {
+      "allowed_values_by_option_code": {
+        "5": [
+          "0",
+          "3"
+        ],
+        "19": [
+          "0",
+          "1",
+          "2"
+        ],
+        "5A": [
+          "1",
+          "4"
+        ],
+        "5B": [
+          "2",
+          "5"
+        ],
+        "19A": [
+          "3",
+          "4",
+          "5"
+        ]
+      },
+      "applicable_groups": [
+        5,
+        19
+      ],
+      "excluded_characters": [],
+      "option_code_ranges": [
+        {
+          "end": "5B",
+          "group": 5,
+          "start": "5"
+        },
+        {
+          "end": "19A",
+          "group": 19,
+          "start": "19"
+        }
+      ],
+      "option_codes": [
+        "5",
+        "5A",
+        "5B",
+        "19",
+        "19A"
+      ]
+    },
+    "15": {
+      "allowed_values_by_option_code": {
+        "4": [
+          "1",
+          "3"
+        ],
+        "18": [
+          "1",
+          "5"
+        ],
+        "4A": [
+          "5",
+          "7"
+        ],
+        "18A": [
+          "3",
+          "7"
+        ]
+      },
+      "applicable_groups": [
+        4,
+        18
+      ],
+      "excluded_characters": [],
+      "option_code_ranges": [
+        {
+          "end": "4A",
+          "group": 4,
+          "start": "4"
+        },
+        {
+          "end": "18A",
+          "group": 18,
+          "start": "18"
+        }
+      ],
+      "option_codes": [
+        "4",
+        "4A",
+        "18",
+        "18A"
+      ]
+    },
+    "16": {
+      "allowed_values_by_option_code": {
+        "15": [
+          "1",
+          "2",
+          "5",
+          "B"
+        ],
+        "8A": [
+          "5",
+          "7"
+        ],
+        "8B": [
+          "B",
+          "D"
+        ],
+        "8C": [
+          "1",
+          "3"
+        ],
+        "8D": [
+          "2",
+          "4"
+        ],
+        "15A": [
+          "3",
+          "4",
+          "7",
+          "D"
+        ]
+      },
+      "applicable_groups": [
+        8,
+        15
+      ],
+      "excluded_characters": [],
+      "option_code_ranges": [
+        {
+          "end": "8D",
+          "group": 8,
+          "start": "8"
+        },
+        {
+          "end": "15A",
+          "group": 15,
+          "start": "15"
+        }
+      ],
+      "option_codes": [
+        "8",
+        "8A",
+        "8B",
+        "8C",
+        "8D",
+        "15",
+        "15A"
+      ]
+    }
+  },
+  "price_column_criteria": {
+    "enabled": false,
+    "keys": []
+  },
+  "product_type": "30MP",
+  "schema_version": 1,
+  "search_mode": "code_based",
+  "structure": [
+    {
+      "characteristic_key": "PRODUCT_TYPE",
+      "description": "Product family or type",
+      "end_position": 4,
+      "specifications": [],
+      "start_position": 1,
+      "used": true
+    },
+    {
+      "characteristic_key": "CONDENSER_OPTION",
+      "description": "Condenser option MPW/Q/A",
+      "end_position": 5,
+      "specifications": [],
+      "start_position": 3,
+      "used": true
+    },
+    {
+      "characteristic_key": "TONNAGE",
+      "description": "Unit size or tonnage",
+      "end_position": 8,
+      "specifications": [],
+      "start_position": 6,
+      "used": true
+    },
+    {
+      "characteristic_key": "VOLTAGE",
+      "description": "Voltage character",
+      "end_position": 9,
+      "specifications": [
+        {
+          "allowed": true,
+          "catalog_value": "1",
+          "description": "",
+          "label": "575-3-60"
+        },
+        {
+          "allowed": true,
+          "catalog_value": "2",
+          "description": "",
+          "label": "380-3-60"
+        },
+        {
+          "allowed": true,
+          "catalog_value": "5",
+          "description": "",
+          "label": "208/230-3-60"
+        },
+        {
+          "allowed": true,
+          "catalog_value": "6",
+          "description": "",
+          "label": "460-3-60"
+        }
+      ],
+      "start_position": 9,
+      "used": true
+    },
+    {
+      "characteristic_key": "OPTIONS",
+      "description": "Configurable option characters",
+      "end_position": 19,
+      "specifications": [],
+      "start_position": 10,
+      "used": true
+    }
+  ],
+  "updated_at": "2026-09-09T07:21:51",
+  "version": 1
+}

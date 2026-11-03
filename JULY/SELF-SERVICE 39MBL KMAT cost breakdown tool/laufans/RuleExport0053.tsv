@@ -1,0 +1,54 @@
+RULEBEGIN.RAW							P7	P8								P16			NOMENCLATURE			HIT.CATEGORY	HIT.VALUE	HIT.DESCRIPTION																				
+																			
+																			
+																			
+							B	QRSTVW								BC						$OPTIONS.InletScreen	66.379	Direct Drive Inlet Screen
+							C	QRSTVW								BC						$OPTIONS.InletScreen	68.656	Direct Drive Inlet Screen
+							D	QRSTVW								BC						$OPTIONS.InletScreen	69.395	Direct Drive Inlet Screen
+							F	QRSTVW								BC						$OPTIONS.InletScreen	71.662	Direct Drive Inlet Screen
+							G	QRSTVW								BC						$OPTIONS.InletScreen	73.66	Direct Drive Inlet Screen
+							H	QRSTVW								BC						$OPTIONS.InletScreen	73.909	Direct Drive Inlet Screen
+							J	QRSTVW								BC						$OPTIONS.InletScreen	81.979	Direct Drive Inlet Screen
+							K	QRSTVW								BC						$OPTIONS.InletScreen	86.394	Direct Drive Inlet Screen
+							L	QRSTVW								BC						$OPTIONS.InletScreen	89.38	Direct Drive Inlet Screen
+							M	QRSTVW								BC						$OPTIONS.InletScreen	92.147	Direct Drive Inlet Screen
+							N	QRSTVW								BC						$OPTIONS.InletScreen	100.197	Direct Drive Inlet Screen
+							P	QRSTVW								BC						$OPTIONS.InletScreen	108.357	Direct Drive Inlet Screen
+							Q	QRSTVW								BC						$OPTIONS.InletScreen	116.567	Direct Drive Inlet Screen
+							RS	QRSTVW								BC						$OPTIONS.InletScreen	128.812	Direct Drive Inlet Screen
+																			
+																			
+							B	DFGHSTVW								BC						$OPTIONS.PiezoRing	30.113	Piezo Ring
+							C	DFGHSTVW								BC						$OPTIONS.PiezoRing	30.213	Piezo Ring
+							D	DFGHSTVW								BC						$OPTIONS.PiezoRing	30.363	Piezo Ring
+							F	DFGHSTVW								BC						$OPTIONS.PiezoRing	30.463	Piezo Ring
+							G	DFGHSTVW								BC						$OPTIONS.PiezoRing	30.563	Piezo Ring
+							H	DFGHSTVW								BC						$OPTIONS.PiezoRing	30.662	Piezo Ring
+							J	DFGHSTVW								BC						$OPTIONS.PiezoRing	30.812	Piezo Ring
+							K	DFGHSTVW								BC						$OPTIONS.PiezoRing	30.962	Piezo Ring
+							L	DFGHSTVW								BC						$OPTIONS.PiezoRing	31.162	Piezo Ring
+							M	DFGHSTVW								BC						$OPTIONS.PiezoRing	31.362	Piezo Ring
+							N	DFGHSTVW								BC						$OPTIONS.PiezoRing	31.561	Piezo Ring
+							P	DFGHSTVW								BC						$OPTIONS.PiezoRing	31.811	Piezo Ring
+							Q	DFGHSTVW								BC						$OPTIONS.PiezoRing	32.061	Piezo Ring
+							RS	DFGHSTVW								BC						$OPTIONS.PiezoRing	32.31	Piezo Ring
+																			
+																			
+																			
+								GHVW								BC						$OPTIONS.PiezoTransducer	129.155	Piezo Transducer
+																			
+							H	QRSTVW								D						$OPTIONS.InletScreen	295.637	Direct Drive Inlet Screen x 4
+							J	QRSTVW								D						$OPTIONS.InletScreen	327.916	Direct Drive Inlet Screen x 4
+							L	QRSTVW								D						$OPTIONS.InletScreen	357.521	Direct Drive Inlet Screen x 4
+							H	DFGHSTVW								D						$OPTIONS.PiezoRing	0.001	Piezo Ring x 4
+							J	DFGHSTVW								D						$OPTIONS.PiezoRing	0.001	Piezo Ring x 4
+							L	DFGHSTVW								D						$OPTIONS.PiezoRing	0.001	Piezo Ring x 4
+								GHVW								D						$OPTIONS.PiezoTransducer	516.62	Piezo Transducer x 4
+							H	QRSTVW								F						$OPTIONS.InletScreen	443.456	Direct Drive Inlet Screen x 6
+							J	QRSTVW								F						$OPTIONS.InletScreen	491.874	Direct Drive Inlet Screen x 6
+							L	QRSTVW								F						$OPTIONS.InletScreen	536.282	Direct Drive Inlet Screen x 6
+							H	DFGHSTVW								F						$OPTIONS.PiezoRing	0.001	Piezo Ring x 6
+							J	DFGHSTVW								F						$OPTIONS.PiezoRing	0.001	Piezo Ring x 6
+							L	DFGHSTVW								F						$OPTIONS.PiezoRing	0.001	Piezo Ring x 6
+								GHVW								F						$OPTIONS.PiezoTransducer	774.93	Piezo Transducer x 6
+RULEEND																				

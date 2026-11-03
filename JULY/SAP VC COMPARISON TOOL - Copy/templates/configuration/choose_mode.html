@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Choose Configuration Type</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/configuration_phase1.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/configuration_matrix.css') }}">
+</head>
+<body>
+<main class="container wide">
+  <header class="page-header">
+    <p class="eyebrow">Version 2</p>
+    <h1>How does this product identify pricing options?</h1>
+    <p>Choose the search mode before creating the configuration. This choice is saved with the configuration.</p>
+  </header>
+
+  <section class="mode-choice-grid">
+    <a class="mode-choice-card" href="{{ url_for('new_configuration', mode='code_based') }}">
+      <span class="mode-badge">Code Based</span>
+      <h2>Character → option-code matrix</h2>
+      <p>Choose this when catalog characters must be translated into pricing codes such as 1A, 2C, or 5B using a configuration matrix.</p>
+      <pre>Catalog character G
+Matrix: G → 1D, 6B
+DOCX search: 1D and 6B</pre>
+    </a>
+
+    <a class="mode-choice-card" href="{{ url_for('new_configuration', mode='character_based') }}">
+      <span class="mode-badge character">Character Based</span>
+      <h2>Catalog character is the pricing code</h2>
+      <p>Choose this when the character at Position N should be searched directly in the DOCX table for POSITION N.</p>
+      <pre>Catalog Position 14 = 5
+DOCX search: 5</pre>
+    </a>
+  </section>
+
+  <div class="form-actions">
+    <a class="secondary-button" href="{{ url_for('configuration_manager') }}">Back to configuration manager</a>
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,297 @@
+RULEBEGIN.LOOKUP.BASEONECOST					P5	P6	P7										P17		NOMENCLATURE			HIT.CATEGORY	HIT.VALUE	HIT.DESCRIPTION																				
+					B	12	JK										CFHK					$BASE.1	1.948	Discharge Adder UB[FR] 101 AFMV01101-REAR-X034-Z024
+					B	12	BC										CFHK					$BASE.1	2.477	Discharge Adder BH[FR] 101 AFMV01101-REAR-X034-Z024
+					B	GQ	DF										CFHK					$BASE.1	20.635	Unknown fan
+					B	GQ	GH										CFHK					$BASE.1	20.635	Unknown fan
+					B	GQ	JK										CFHK					$BASE.1	20.635	Unknown fan
+					B	GQ	BC										CFHK					$BASE.1	49	Unknown fan
+					B	HR	DF										CFHK					$BASE.1	20.635	Discharge Adder DB[FR] A9-4A FCA9_4A-SIDE-X018-Z026
+					B	HR	GH										CFHK					$BASE.1	20.635	Discharge Adder TH[FR] A9-4A FCA9_4A-SIDE-X018-Z026
+					B	HR	JK										CFHK					$BASE.1	20.635	Discharge Adder UB[FR] A9-4A FCA9_4A-SIDE-X018-Z026
+					B	HR	BC										CFHK					$BASE.1	49	Discharge Adder BH[FR] A9-4A FCA9_4A-SIDE-X018-Z026
+					C	12	DF										CFHK					$BASE.1	1.748	Discharge Adder DB[FR] 121 AFMV01121-REAR-X036-Z034
+					C	12	JK										CFHK					$BASE.1	3.286	Discharge Adder UB[FR] 121 AFMV01121-REAR-X036-Z034
+					C	12	BC										CFHK					$BASE.1	3.715	Discharge Adder BH[FR] 121 AFMV01121-REAR-X036-Z034
+					C	56	JK										CFHK					$BASE.1	1.948	Discharge Adder UB[FR] 101(03-SB) AFMV01101-REAR-X034-Z024
+					C	56	BC										CFHK					$BASE.1	2.477	Discharge Adder BH[FR] 101(03-SB) AFMV01101-REAR-X034-Z024
+					C	G	BC										CFHK					$BASE.1	28.585	Unknown fan
+					C	G	DF										CFHK					$BASE.1	28.585	Unknown fan
+					C	G	GH										CFHK					$BASE.1	28.585	Unknown fan
+					C	G	JK										CFHK					$BASE.1	28.585	Unknown fan
+					C	G	BC										BDGJ					$BASE.1	174.995	Unknown fan
+					C	G	DF										BDGJ					$BASE.1	174.995	Unknown fan
+					C	G	GH										BDGJ					$BASE.1	174.995	Unknown fan
+					C	G	JK										BDGJ					$BASE.1	174.995	Unknown fan
+					C	HR	BC										CFHK					$BASE.1	28.585	Discharge Adder BH[FR] A10-8A FCA10_8A-SIDE-X024-Z039
+					C	HR	DF										CFHK					$BASE.1	28.585	Discharge Adder DB[FR] A10-8A FCA10_8A-SIDE-X024-Z039
+					C	HR	GH										CFHK					$BASE.1	28.585	Discharge Adder TH[FR] A10-8A FCA10_8A-SIDE-X024-Z039
+					C	HR	JK										CFHK					$BASE.1	28.585	Discharge Adder UB[FR] A10-8A FCA10_8A-SIDE-X024-Z039
+					C	HR	BC										BDGJ					$BASE.1	174.995	Discharge Adder BH[FR] A10-8A FCA10_8A-SIDE-X024-Z039
+					C	HR	DF										BDGJ					$BASE.1	174.995	Discharge Adder DB[FR] A10-8A FCA10_8A-SIDE-X024-Z039
+					C	HR	GH										BDGJ					$BASE.1	174.995	Discharge Adder TH[FR] A10-8A FCA10_8A-SIDE-X024-Z039
+					C	HR	JK										BDGJ					$BASE.1	174.995	Discharge Adder UB[FR] A10-8A FCA10_8A-SIDE-X024-Z039
+					C	Q	DF										CFHK					$BASE.1	20.635	Discharge Adder DB[FR] A9-4A(03-SB) FCA9_4A-SIDE-X018-Z026
+					C	Q	GH										CFHK					$BASE.1	20.635	Discharge Adder TH[FR] A9-4A(03-SB) FCA9_4A-SIDE-X018-Z026
+					C	Q	JK										CFHK					$BASE.1	20.635	Discharge Adder UB[FR] A9-4A(03-SB) FCA9_4A-SIDE-X018-Z026
+					C	Q	BC										CFHK					$BASE.1	49	Discharge Adder BH[FR] A9-4A(03-SB) FCA9_4A-SIDE-X018-Z026
+					D	12	DF										BDGJ					$BASE.1	1.328	Discharge Adder DB[FR] 131 AFMV01131-SIDE-X029-Z046
+					D	12	JK										BDGJ					$BASE.1	2.767	Discharge Adder UB[FR] 131 AFMV01131-SIDE-X029-Z046
+					D	12	BC										BDGJ					$BASE.1	3.695	Discharge Adder BH[FR] 131 AFMV01131-SIDE-X029-Z046
+					D	56	DF										CFHK					$BASE.1	1.748	Discharge Adder DB[FR] 121(06-SB) AFMV01121-REAR-X036-Z034
+					D	56	JK										CFHK					$BASE.1	3.286	Discharge Adder UB[FR] 121(06-SB) AFMV01121-REAR-X036-Z034
+					D	56	BC										CFHK					$BASE.1	3.715	Discharge Adder BH[FR] 121(06-SB) AFMV01121-REAR-X036-Z034
+					D	GQ	GH										BDGJ					$BASE.1	134.915	Discharge Adder TH[FR] A10-8A FCA10_8A-SIDE-X029-Z047
+					D	GQ	JK										BDGJ					$BASE.1	134.915	Discharge Adder UB[FR] A10-8A FCA10_8A-SIDE-X029-Z047
+					D	GQ	DF										BDGJ					$BASE.1	165.577	Discharge Adder DB[FR] A10-8A FCA10_8A-SIDE-X029-Z047
+					D	GQ	BC										BDGJ					$BASE.1	337.586	Discharge Adder BH[FR] A10-8A FCA10_8A-SIDE-X029-Z047
+					D	HR	GH										BDGJ					$BASE.1	39.861	Discharge Adder TH[FR] A12-12A FCA12_12A-SIDE-X029-Z047
+					D	HR	JK										BDGJ					$BASE.1	39.861	Discharge Adder UB[FR] A12-12A FCA12_12A-SIDE-X029-Z047
+					D	HR	DF										BDGJ					$BASE.1	70.524	Discharge Adder DB[FR] A12-12A FCA12_12A-SIDE-X029-Z047
+					D	HR	BC										BDGJ					$BASE.1	161.842	Discharge Adder BH[FR] A12-12A FCA12_12A-SIDE-X029-Z047
+					F	12	DF										BDGJ					$BASE.1	1.328	Discharge Adder DB[FR] 131 AFMV01131-SIDE-X029-Z059
+					F	12	JK										BDGJ					$BASE.1	2.767	Discharge Adder UB[FR] 131 AFMV01131-SIDE-X029-Z059
+					F	12	BC										BDGJ					$BASE.1	3.695	Discharge Adder BH[FR] 131 AFMV01131-SIDE-X029-Z059
+					F	56	DF										CFHK					$BASE.1	1.748	Discharge Adder DB[FR] 121(06-SB) AFMV01121-REAR-X036-Z034
+					F	56	JK										CFHK					$BASE.1	3.286	Discharge Adder UB[FR] 121(06-SB) AFMV01121-REAR-X036-Z034
+					F	56	BC										CFHK					$BASE.1	3.715	Discharge Adder BH[FR] 121(06-SB) AFMV01121-REAR-X036-Z034
+					F	GQ	GH										BDGJ					$BASE.1	6.132	Discharge Adder TH[FR] A12-12A FCA12_12A-SIDE-X029-Z060
+					F	GQ	JK										BDGJ					$BASE.1	6.132	Discharge Adder UB[FR] A12-12A FCA12_12A-SIDE-X029-Z060
+					F	GQ	DF										BDGJ					$BASE.1	36.795	Discharge Adder DB[FR] A12-12A FCA12_12A-SIDE-X029-Z060
+					F	GQ	BC										BDGJ					$BASE.1	155.909	Discharge Adder BH[FR] A12-12A FCA12_12A-SIDE-X029-Z060
+					F	HR	DF										BDGJ					$BASE.1	30.672	Discharge Adder DB[FR] A15-15A FCA15_15A-SIDE-X029-Z060
+					F	HR	BC										BDGJ					$BASE.1	141.017	Discharge Adder BH[FR] A15-15A FCA15_15A-SIDE-X029-Z060
+					G	12	DF										BDGJ					$BASE.1	1.958	Discharge Adder DB[FR] 161 AFMV01161-SIDE-X035-Z059
+					G	12	BC										BDGJ					$BASE.1	6.602	Discharge Adder BH[FR] 161 AFMV01161-SIDE-X035-Z059
+					G	12	JK										BDGJ					$BASE.1	6.602	Discharge Adder UB[FR] 161 AFMV01161-SIDE-X035-Z059
+					G	56	DF										BDGJ					$BASE.1	1.328	Discharge Adder DB[FR] 131(10-SB) AFMV01131-SIDE-X029-Z059
+					G	56	JK										BDGJ					$BASE.1	2.767	Discharge Adder UB[FR] 131(10-SB) AFMV01131-SIDE-X029-Z059
+					G	56	BC										BDGJ					$BASE.1	3.695	Discharge Adder BH[FR] 131(10-SB) AFMV01131-SIDE-X029-Z059
+					G	G	GH										BDGJ					$BASE.1	6.132	Discharge Adder TH[FR] A12-11A FCA12_11A-SIDE-X035-Z060
+					G	G	JK										BDGJ					$BASE.1	6.132	Discharge Adder UB[FR] A12-11A FCA12_11A-SIDE-X035-Z060
+					G	G	DF										BDGJ					$BASE.1	36.795	Discharge Adder DB[FR] A12-11A FCA12_11A-SIDE-X035-Z060
+					G	G	BC										BDGJ					$BASE.1	149.766	Discharge Adder BH[FR] A12-11A FCA12_11A-SIDE-X035-Z060
+					G	HR	GH										BDGJ					$BASE.1	39.861	Discharge Adder TH[FR] A15-15A FCA15_15A-SIDE-X035-Z060
+					G	HR	JK										BDGJ					$BASE.1	39.861	Discharge Adder UB[FR] A15-15A FCA15_15A-SIDE-X035-Z060
+					G	HR	DF										BDGJ					$BASE.1	70.524	Discharge Adder DB[FR] A15-15A FCA15_15A-SIDE-X035-Z060
+					G	HR	BC										BDGJ					$BASE.1	133.097	Discharge Adder BH[FR] A15-15A FCA15_15A-SIDE-X035-Z060
+					G	Q	GH										BDGJ					$BASE.1	39.861	Discharge Adder TH[FR] A12-12A(10-SA) FCA12_12A-SIDE-X029-Z060
+					G	Q	JK										BDGJ					$BASE.1	39.861	Discharge Adder UB[FR] A12-12A(10-SA) FCA12_12A-SIDE-X029-Z060
+					G	Q	DF										BDGJ					$BASE.1	70.524	Discharge Adder DB[FR] A12-12A(10-SA) FCA12_12A-SIDE-X029-Z060
+					G	Q	BC										BDGJ					$BASE.1	161.842	Discharge Adder BH[FR] A12-12A(10-SA) FCA12_12A-SIDE-X029-Z060
+					H	12	DF										BDGJ					$BASE.1	1.958	Discharge Adder DB[FR] 161 AFMV01161-SIDE-X041-Z064
+					H	12	BC										BDGJ					$BASE.1	6.602	Discharge Adder BH[FR] 161 AFMV01161-SIDE-X041-Z064
+					H	12	JK										BDGJ					$BASE.1	6.602	Discharge Adder UB[FR] 161 AFMV01161-SIDE-X041-Z064
+					H	56	DF										BDGJ					$BASE.1	1.328	Discharge Adder DB[FR] 131(10-SB) AFMV01131-SIDE-X029-Z059
+					H	56	JK										BDGJ					$BASE.1	2.767	Discharge Adder UB[FR] 131(10-SB) AFMV01131-SIDE-X029-Z059
+					H	56	BC										BDGJ					$BASE.1	3.695	Discharge Adder BH[FR] 131(10-SB) AFMV01131-SIDE-X029-Z059
+					H	GQ	DF										BDGJ					$BASE.1	30.672	Discharge Adder DB[FR] A15-15A FCA15_15A-SIDE-X041-Z065
+					H	GQ	BC										BDGJ					$BASE.1	88.442	Discharge Adder BH[FR] A15-15A FCA15_15A-SIDE-X041-Z065
+					H	HR	GH										BDGJ					$BASE.1	39.861	Discharge Adder TH[FR] A18-18A FCA18_18A-SIDE-X041-Z065
+					H	HR	JK										BDGJ					$BASE.1	39.861	Discharge Adder UB[FR] A18-18A FCA18_18A-SIDE-X041-Z065
+					H	HR	DF										BDGJ					$BASE.1	85.855	Discharge Adder DB[FR] A18-18A FCA18_18A-SIDE-X041-Z065
+					H	HR	BC										BDGJ					$BASE.1	135.354	Discharge Adder BH[FR] A18-18A FCA18_18A-SIDE-X041-Z065
+					J	12	DF										BDGJ					$BASE.1	2.797	Discharge Adder DB[FR] 181 AFMV01181-SIDE-X041-Z071
+					J	12	BC										BDGJ					$BASE.1	9.079	Discharge Adder BH[FR] 181 AFMV01181-SIDE-X041-Z071
+					J	12	JK										BDGJ					$BASE.1	9.079	Discharge Adder UB[FR] 181 AFMV01181-SIDE-X041-Z071
+					J	56	DF										BDGJ					$BASE.1	1.958	Discharge Adder DB[FR] 161(14-SB) AFMV01161-SIDE-X041-Z064
+					J	56	BC										BDGJ					$BASE.1	6.602	Discharge Adder BH[FR] 161(14-SB) AFMV01161-SIDE-X041-Z064
+					J	56	JK										BDGJ					$BASE.1	6.602	Discharge Adder UB[FR] 161(14-SB) AFMV01161-SIDE-X041-Z064
+					J	GQ	DF										BDGJ					$BASE.1	30.672	Discharge Adder DB[FR] A15-15A FCA15_15A-SIDE-X041-Z072
+					J	GQ	BC										BDGJ					$BASE.1	111.843	Discharge Adder BH[FR] A15-15A FCA15_15A-SIDE-X041-Z072
+					J	HR	DF										BDGJ					$BASE.1	45.994	Discharge Adder DB[FR] A18-18A FCA18_18A-SIDE-X041-Z072
+					J	HR	BC										BDGJ					$BASE.1	124.967	Discharge Adder BH[FR] A18-18A FCA18_18A-SIDE-X041-Z072
+					K	12	BC										BDGJ					$BASE.1	9.279	Discharge Adder BH[FR] 201 AFMV01201-SIDE-X041-Z072
+					K	12	JK										BDGJ					$BASE.1	9.279	Discharge Adder UB[FR] 201 AFMV01201-SIDE-X041-Z072
+					K	56	DF										BDGJ					$BASE.1	2.797	Discharge Adder DB[FR] 181(17-SB) AFMV01181-SIDE-X041-Z071
+					K	56	BC										BDGJ					$BASE.1	9.079	Discharge Adder BH[FR] 181(17-SB) AFMV01181-SIDE-X041-Z071
+					K	56	JK										BDGJ					$BASE.1	9.079	Discharge Adder UB[FR] 181(17-SB) AFMV01181-SIDE-X041-Z071
+					K	G	DF										BDGJ					$BASE.1	30.672	Discharge Adder DB[FR] A15-15A FCA15_15A-SIDE-X041-Z072
+					K	G	BC										BDGJ					$BASE.1	135.354	Discharge Adder BH[FR] A15-15A FCA15_15A-SIDE-X041-Z072
+					K	HR	GH										BDGJ					$BASE.1	49.06	Discharge Adder TH[FR] A20-18-A FCA20_18A-SIDE-X041-Z072
+					K	HR	JK										BDGJ					$BASE.1	86.164	Discharge Adder UB[FR] A20-18-A FCA20_18A-SIDE-X041-Z072
+					K	HR	DF										BDGJ					$BASE.1	132.168	Discharge Adder DB[FR] A20-18-A FCA20_18A-SIDE-X041-Z072
+					K	HR	BC										BDGJ					$BASE.1	146.071	Discharge Adder BH[FR] A20-18-A FCA20_18A-SIDE-X041-Z072
+					K	Q	GH										BDGJ					$BASE.1	39.861	Discharge Adder TH[FR] A18-18A(17-SB) FCA18_18A-SIDE-X041-Z072
+					K	Q	JK										BDGJ					$BASE.1	39.861	Discharge Adder UB[FR] A18-18A(17-SB) FCA18_18A-SIDE-X041-Z072
+					K	Q	DF										BDGJ					$BASE.1	85.855	Discharge Adder DB[FR] A18-18A(17-SB) FCA18_18A-SIDE-X041-Z072
+					K	Q	BC										BDGJ					$BASE.1	135.354	Discharge Adder BH[FR] A18-18A(17-SB) FCA18_18A-SIDE-X041-Z072
+					L	12	BC										BDGJ					$BASE.1	9.019	Discharge Adder BH[FR] 221 AFMV01221-SIDE-X053-Z078
+					L	12	JK										BDGJ					$BASE.1	9.019	Discharge Adder UB[FR] 221 AFMV01221-SIDE-X053-Z078
+					L	56	BC										BDGJ					$BASE.1	9.279	Discharge Adder BH[FR] 201(21-SB) AFMV01201-SIDE-X041-Z072
+					L	56	JK										BDGJ					$BASE.1	9.279	Discharge Adder UB[FR] 201(21-SB) AFMV01201-SIDE-X041-Z072
+					L	G	DF										BDGJ					$BASE.1	45.994	Discharge Adder DB[FR] A20-15A FCA20_15A-SIDE-X053-Z079
+					L	G	GH										BDGJ					$BASE.1	61.325	Discharge Adder TH[FR] A20-15A FCA20_15A-SIDE-X053-Z079
+					L	G	BC										BDGJ					$BASE.1	205.108	Discharge Adder BH[FR] A20-15A FCA20_15A-SIDE-X053-Z079
+					L	HR	DF										BDGJ					$BASE.1	45.994	Discharge Adder DB[FR] A20-18-A FCA20_18A-SIDE-X053-Z079
+					L	HR	BC										BDGJ					$BASE.1	185.383	Discharge Adder BH[FR] A20-18-A FCA20_18A-SIDE-X053-Z079
+					L	Q	GH										BDGJ					$BASE.1	39.861	Discharge Adder TH[FR] A18-18A(17-SB) FCA18_18A-SIDE-X041-Z072
+					L	Q	JK										BDGJ					$BASE.1	39.861	Discharge Adder UB[FR] A18-18A(17-SB) FCA18_18A-SIDE-X041-Z072
+					L	Q	DF										BDGJ					$BASE.1	85.855	Discharge Adder DB[FR] A18-18A(17-SB) FCA18_18A-SIDE-X041-Z072
+					L	Q	BC										BDGJ					$BASE.1	135.354	Discharge Adder BH[FR] A18-18A(17-SB) FCA18_18A-SIDE-X041-Z072
+					M	12	BC										BDGJ					$BASE.1	9.019	Discharge Adder BH[FR] 221 AFMV01221-SIDE-X053-Z096
+					M	12	JK										BDGJ					$BASE.1	9.019	Discharge Adder UB[FR] 221 AFMV01221-SIDE-X053-Z096
+					M	GQ	JK										BDGJ					$BASE.1	217.703	Discharge Adder UB[FR] A20-18H FCA20_18H-SIDE-X053-Z097
+					M	GQ	DF										BDGJ					$BASE.1	263.707	Discharge Adder DB[FR] A20-18H FCA20_18H-SIDE-X053-Z097
+					M	GQ	GH										BDGJ					$BASE.1	279.038	Discharge Adder TH[FR] A20-18H FCA20_18H-SIDE-X053-Z097
+					M	GQ	BC										BDGJ					$BASE.1	376.049	Discharge Adder BH[FR] A20-18H FCA20_18H-SIDE-X053-Z097
+					M	HR	JK										BDGJ					$BASE.1	78.194	Discharge Adder UB[FR] A20-20H FCA20_20H-SIDE-X053-Z097
+					M	HR	DF										BDGJ					$BASE.1	124.188	Discharge Adder DB[FR] A20-20H FCA20_20H-SIDE-X053-Z097
+					M	HR	GH										BDGJ					$BASE.1	157.916	Discharge Adder TH[FR] A20-20H FCA20_20H-SIDE-X053-Z097
+					M	HR	BC										BDGJ					$BASE.1	278.898	Discharge Adder BH[FR] A20-20H FCA20_20H-SIDE-X053-Z097
+					N	1	JK										BDGJ					$BASE.1	8.989	Discharge Adder UB[FR] 241 AFMV01241-SIDE-X048-Z101
+					N	1	BC										BDGJ					$BASE.1	12.025	Discharge Adder BH[FR] 241 AFMV01241-SIDE-X048-Z101
+					N	2	JK										BDGJ					$BASE.1	8.969	Discharge Adder UB[FR] 271 AFMV01271-SIDE-X048-Z101
+					N	2	BC										BDGJ					$BASE.1	11.716	Discharge Adder BH[FR] 271 AFMV01271-SIDE-X048-Z101
+					N	5	JK										BDGJ					$BASE.1	8.969	Discharge Adder UB[FR] 271 AFMV01271-SIDE-X048-Z101
+					N	5	BC										BDGJ					$BASE.1	11.716	Discharge Adder BH[FR] 271 AFMV01271-SIDE-X048-Z101
+					N	6	JK										BDGJ					$BASE.1	8.989	Discharge Adder UB[FR] 241 AFMV01241-SIDE-X048-Z101
+					N	6	BC										BDGJ					$BASE.1	12.025	Discharge Adder BH[FR] 241 AFMV01241-SIDE-X048-Z101
+					N	G	GH										BDGJ					$BASE.1	70.623	Discharge Adder TH[FR] A22-22H FCLA01A22_22H-SIDE-X053-Z101
+					N	G	DF										BDGJ					$BASE.1	72.341	Discharge Adder DB[FR] A22-22H FCLA01A22_22H-SIDE-X053-Z101
+					N	G	JK										BDGJ					$BASE.1	141.636	Discharge Adder UB[FR] A22-22H FCLA01A22_22H-SIDE-X053-Z101
+					N	G	BC										BDGJ					$BASE.1	159.235	Discharge Adder BH[FR] A22-22H FCLA01A22_22H-SIDE-X053-Z101
+					N	HR	GH										BDGJ					$BASE.1	74.259	Discharge Adder TH[FR] A25-25H FCLA01A25_25H-SIDE-X053-Z101
+					N	HR	DF										BDGJ					$BASE.1	76.576	Discharge Adder DB[FR] A25-25H FCLA01A25_25H-SIDE-X053-Z101
+					N	HR	BC										BDGJ					$BASE.1	107.548	Discharge Adder BH[FR] A25-25H FCLA01A25_25H-SIDE-X053-Z101
+					N	HR	JK										BDGJ					$BASE.1	141.846	Discharge Adder UB[FR] A25-25H FCLA01A25_25H-SIDE-X053-Z101
+					N	Q	JK										BDGJ					$BASE.1	78.194	Discharge Adder UB[FR] A20-20H(30-SB) FCA20_20H-SIDE-X053-Z097
+					N	Q	DF										BDGJ					$BASE.1	124.188	Discharge Adder DB[FR] A20-20H(30-SB) FCA20_20H-SIDE-X053-Z097
+					N	Q	GH										BDGJ					$BASE.1	157.916	Discharge Adder TH[FR] A20-20H(30-SB) FCA20_20H-SIDE-X053-Z097
+					N	Q	BC										BDGJ					$BASE.1	278.898	Discharge Adder BH[FR] A20-20H(30-SB) FCA20_20H-SIDE-X053-Z097
+					P	1	JK										BDGJ					$BASE.1	8.969	Discharge Adder UB[FR] 271 AFMV01271-SIDE-X054-Z101
+					P	1	BC										BDGJ					$BASE.1	11.716	Discharge Adder BH[FR] 271 AFMV01271-SIDE-X054-Z101
+					P	2	JK										BDGJ					$BASE.1	13.304	Discharge Adder UB[FR] 301 AFMV01301-SIDE-X054-Z101
+					P	2	BC										BDGJ					$BASE.1	15.131	Discharge Adder BH[FR] 301 AFMV01301-SIDE-X054-Z101
+					P	5	JK										BDGJ					$BASE.1	13.304	Discharge Adder UB[FR] 301 AFMV01301-SIDE-X054-Z101
+					P	5	BC										BDGJ					$BASE.1	15.131	Discharge Adder BH[FR] 301 AFMV01301-SIDE-X054-Z101
+					P	6	JK										BDGJ					$BASE.1	8.969	Discharge Adder UB[FR] 271 AFMV01271-SIDE-X054-Z101
+					P	6	BC										BDGJ					$BASE.1	11.716	Discharge Adder BH[FR] 271 AFMV01271-SIDE-X054-Z101
+					P	G	GH										BDGJ					$BASE.1	72.052	Discharge Adder TH[FR] A25-20H FCLA01A25_20H-SIDE-X053-Z101
+					P	G	DF										BDGJ					$BASE.1	74.219	Discharge Adder DB[FR] A25-20H FCLA01A25_20H-SIDE-X053-Z101
+					P	G	BC										BDGJ					$BASE.1	105.411	Discharge Adder BH[FR] A25-20H FCLA01A25_20H-SIDE-X053-Z101
+					P	G	JK										BDGJ					$BASE.1	149.287	Discharge Adder UB[FR] A25-20H FCLA01A25_20H-SIDE-X053-Z101
+					P	HR	GH										BDGJ					$BASE.1	74.259	Discharge Adder TH[FR] A25-25H FCLA01A25_25H-SIDE-X053-Z101
+					P	HR	DF										BDGJ					$BASE.1	76.576	Discharge Adder DB[FR] A25-25H FCLA01A25_25H-SIDE-X053-Z101
+					P	HR	BC										BDGJ					$BASE.1	107.548	Discharge Adder BH[FR] A25-25H FCLA01A25_25H-SIDE-X053-Z101
+					P	HR	JK										BDGJ					$BASE.1	141.846	Discharge Adder UB[FR] A25-25H FCLA01A25_25H-SIDE-X053-Z101
+					P	Q	JK										BDGJ					$BASE.1	78.194	Discharge Adder UB[FR] A20-20H(30-SB) FCA20_20H-SIDE-X053-Z097
+					P	Q	DF										BDGJ					$BASE.1	124.188	Discharge Adder DB[FR] A20-20H(30-SB) FCA20_20H-SIDE-X053-Z097
+					P	Q	GH										BDGJ					$BASE.1	157.916	Discharge Adder TH[FR] A20-20H(30-SB) FCA20_20H-SIDE-X053-Z097
+					P	Q	BC										BDGJ					$BASE.1	278.898	Discharge Adder BH[FR] A20-20H(30-SB) FCA20_20H-SIDE-X053-Z097
+					Q	1	JK										BDGJ					$BASE.1	13.304	Discharge Adder UB[FR] 301 AFMV01301-SIDE-X060-Z109
+					Q	1	BC										BDGJ					$BASE.1	15.131	Discharge Adder BH[FR] 301 AFMV01301-SIDE-X060-Z109
+					Q	2	JK										BDGJ					$BASE.1	16.35	Discharge Adder UB[FR] 331 AFMV01331-SIDE-X060-Z109
+					Q	2	BC										BDGJ					$BASE.1	18.318	Discharge Adder BH[FR] 331 AFMV01331-SIDE-X060-Z109
+					Q	5	JK										BDGJ					$BASE.1	16.35	Discharge Adder UB[FR] 331 AFMV01331-SIDE-X060-Z109
+					Q	5	BC										BDGJ					$BASE.1	18.318	Discharge Adder BH[FR] 331 AFMV01331-SIDE-X060-Z109
+					Q	6	JK										BDGJ					$BASE.1	13.304	Discharge Adder UB[FR] 301 AFMV01301-SIDE-X060-Z109
+					Q	6	BC										BDGJ					$BASE.1	15.131	Discharge Adder BH[FR] 301 AFMV01301-SIDE-X060-Z109
+					Q	G	GH										BDGJ					$BASE.1	79.592	Discharge Adder TH[FR] A27-22H FCLA01A27_22H-SIDE-X056-Z109
+					Q	G	JK										BDGJ					$BASE.1	80.212	Discharge Adder UB[FR] A27-22H FCLA01A27_22H-SIDE-X056-Z109
+					Q	G	DF										BDGJ					$BASE.1	80.451	Discharge Adder DB[FR] A27-22H FCLA01A27_22H-SIDE-X056-Z109
+					Q	G	BC										BDGJ					$BASE.1	150.086	Discharge Adder BH[FR] A27-22H FCLA01A27_22H-SIDE-X056-Z109
+					Q	HR	JK										BDGJ					$BASE.1	77.894	Discharge Adder UB[FR] A27-27H FCLA01A27_27H-SIDE-X056-Z109
+					Q	HR	DF										BDGJ					$BASE.1	81.5	Discharge Adder DB[FR] A27-27H FCLA01A27_27H-SIDE-X056-Z109
+					Q	HR	GH										BDGJ					$BASE.1	82.609	Discharge Adder TH[FR] A27-27H FCLA01A27_27H-SIDE-X056-Z109
+					Q	HR	BC										BDGJ					$BASE.1	152.892	Discharge Adder BH[FR] A27-27H FCLA01A27_27H-SIDE-X056-Z109
+					Q	Q	GH										BDGJ					$BASE.1	74.259	Discharge Adder TH[FR] A25-25H(40-SB) FCLA01A25_25H-SIDE-X053-Z101
+					Q	Q	DF										BDGJ					$BASE.1	76.576	Discharge Adder DB[FR] A25-25H(40-SB) FCLA01A25_25H-SIDE-X053-Z101
+					Q	Q	BC										BDGJ					$BASE.1	107.548	Discharge Adder BH[FR] A25-25H(40-SB) FCLA01A25_25H-SIDE-X053-Z101
+					Q	Q	JK										BDGJ					$BASE.1	141.846	Discharge Adder UB[FR] A25-25H(40-SB) FCLA01A25_25H-SIDE-X053-Z101
+					R	1	JK										BDGJ					$BASE.1	16.35	Discharge Adder UB[FR] 331 AFMV01331-SIDE-X066-Z109
+					R	1	BC										BDGJ					$BASE.1	18.318	Discharge Adder BH[FR] 331 AFMV01331-SIDE-X066-Z109
+					R	2	JK										BDGJ					$BASE.1	28.695	Discharge Adder UB[FR] 361 AFMV01361-SIDE-X066-Z109
+					R	2	BC										BDGJ					$BASE.1	35.397	Discharge Adder BH[FR] 361 AFMV01361-SIDE-X066-Z109
+					R	5	JK										BDGJ					$BASE.1	13.304	Discharge Adder UB[FR] 301(50-SB) AFMV01301-SIDE-X060-Z109
+					R	5	BC										BDGJ					$BASE.1	15.131	Discharge Adder BH[FR] 301(50-SB) AFMV01301-SIDE-X060-Z109
+					R	6	JK										BDGJ					$BASE.1	16.35	Discharge Adder UB[FR] 331 AFMV01331-SIDE-X066-Z109
+					R	6	BC										BDGJ					$BASE.1	18.318	Discharge Adder BH[FR] 331 AFMV01331-SIDE-X066-Z109
+					R	GQ	GH										BDGJ					$BASE.1	78.004	Discharge Adder TH[FR] A27-27H FCLA01A27_27H-SIDE-X059-Z109
+					R	GQ	DF										BDGJ					$BASE.1	81.5	Discharge Adder DB[FR] A27-27H FCLA01A27_27H-SIDE-X059-Z109
+					R	GQ	JK										BDGJ					$BASE.1	83.138	Discharge Adder UB[FR] A27-27H FCLA01A27_27H-SIDE-X059-Z109
+					R	GQ	BC										BDGJ					$BASE.1	148.278	Discharge Adder BH[FR] A27-27H FCLA01A27_27H-SIDE-X059-Z109
+					R	HR	GH										BDGJ					$BASE.1	80.381	Discharge Adder TH[FR] A30-30H FCLA01A30_30H-SIDE-X059-Z109
+					R	HR	JK										BDGJ					$BASE.1	81.42	Discharge Adder UB[FR] A30-30H FCLA01A30_30H-SIDE-X059-Z109
+					R	HR	DF										BDGJ					$BASE.1	83.797	Discharge Adder DB[FR] A30-30H FCLA01A30_30H-SIDE-X059-Z109
+					R	HR	BC										BDGJ					$BASE.1	151.205	Discharge Adder BH[FR] A30-30H FCLA01A30_30H-SIDE-X059-Z109
+					0	-	XY										1234					$BASE.1	6.6	Discharge Adder 161 BH
+					0	SW	XY										1234					$BASE.1	3.69	Discharge Adder 131 BH
+					0	TX	XY										1234					$BASE.1	2.77	Discharge Adder 131 UB
+					0	UY	XY										1234					$BASE.1	1.33	Discharge Adder 131 DB
+					1	04	XY										1234					$BASE.1	6.6	Discharge Adder 161 UB
+					1	15	XY										1234					$BASE.1	1.96	Discharge Adder 161 DB
+					1	3	XY										1234					$BASE.1	6.6	Discharge Adder 161 BH
+					1	7C	XY										1234					$BASE.1	9.08	Discharge Adder 181 BH
+					1	8D	XY										1234					$BASE.1	9.08	Discharge Adder 181 UB
+					1	AE	XY										1234					$BASE.1	2.8	Discharge Adder 181 DB
+					1	GL	XY										1234					$BASE.1	9.28	Discharge Adder 201 BH
+					1	HM	XY										1234					$BASE.1	9.28	Discharge Adder 201 UB
+					1	QU	XY										1234					$BASE.1	9.03	Discharge Adder 221 BH
+					1	RV	XY										1234					$BASE.1	9.03	Discharge Adder 221 UB
+					1	Y	XY										1234					$BASE.1	9.03	Discharge Adder 221 BH
+					1	Z	XY										1234					$BASE.1	9.03	Discharge Adder 221 UB
+					2	1	XY										1234					$BASE.1	9.03	Discharge Adder 221 BH
+					2	2	XY										1234					$BASE.1	9.03	Discharge Adder 221 UB
+					2	5A	XY										1234					$BASE.1	12.02	Discharge Adder 241 BH
+					2	6B	XY										1234					$BASE.1	8.99	Discharge Adder 241 UB
+					2	EJ	XY										1234					$BASE.1	11.71	Discharge Adder 271 BH
+					2	FK	XY										1234					$BASE.1	8.96	Discharge Adder 271 UB
+					5	-	XY										1234					$BASE.1	15.33	Discharge Adder A15-15A DB
+					5	Y	XY										1234					$BASE.1	86.32	Discharge Adder A15-15A BH
+					6	1	XY										1234					$BASE.1	86.32	Discharge Adder A15-15A BH
+					6	3	XY										1234					$BASE.1	15.33	Discharge Adder A15-15A DB
+					6	5A	XY										1234					$BASE.1	133.23	Discharge Adder A15-15A BH
+					6	7C	XY										1234					$BASE.1	15.33	Discharge Adder A15-15A DB
+					6	EJ	XY										1234					$BASE.1	122.17	Discharge Adder A18-18A BH
+					6	GL	XY										1234					$BASE.1	23	Discharge Adder A18-18A DB
+					6	MR	XY										1234					$BASE.1	30.66	Discharge Adder A20-15A TH
+					6	NS	XY										1234					$BASE.1	200.37	Discharge Adder A20-15A BH
+					6	QU	XY										1234					$BASE.1	23	Discharge Adder A20-15A DB
+					6	W-	XY										1234					$BASE.1	180.65	Discharge Adder A20-18-A BH
+					6	Y	XY										1234					$BASE.1	23	Discharge Adder A20-18-A DB
+					7	1	XY										1234					$BASE.1	23	Discharge Adder A20-18-A DB
+					7	26	XY										1234					$BASE.1	279.04	Discharge Adder A20-18H TH
+					7	37	XY										1234					$BASE.1	376.06	Discharge Adder A20-18H BH
+					7	48	XY										1234					$BASE.1	217.71	Discharge Adder A20-18H UB
+					7	5A	XY										1234					$BASE.1	263.7	Discharge Adder A20-18H DB
+					7	BF	XY										1234					$BASE.1	157.91	Discharge Adder A20-20H TH
+					7	CG	XY										1234					$BASE.1	278.9	Discharge Adder A20-20H BH
+					7	DH	XY										1234					$BASE.1	78.19	Discharge Adder A20-20H UB
+					7	EJ	XY										1234					$BASE.1	124.19	Discharge Adder A20-20H DB
+					7	KP	XY										1234					$BASE.1	70.62	Discharge Adder A22-22H TH
+					7	LQ	XY										1234					$BASE.1	159.23	Discharge Adder A22-22H BH
+					7	MR	XY										1234					$BASE.1	141.63	Discharge Adder A22-22H UB
+					7	NS	XY										1234					$BASE.1	72.34	Discharge Adder A22-22H DB
+					8	04	XY										1234					$BASE.1	74.26	Discharge Adder A25-25H TH
+					8	15	XY										1234					$BASE.1	107.55	Discharge Adder A25-25H BH
+					8	26	XY										1234					$BASE.1	141.85	Discharge Adder A25-25H UB
+					8	37	XY										1234					$BASE.1	76.57	Discharge Adder A25-25H DB
+					0	CG	XY										1234					$BASE.1	105	Discharge Adder 121 DB
+					2	QU	XY										1234					$BASE.1	105	Discharge Adder 271 DB
+					2	Y	XY										1234					$BASE.1	105	Discharge Adder 301 DB
+					3	51A	XY										1234					$BASE.1	105	Discharge Adder 301 DB
+					3	EN	XY										1234					$BASE.1	105	Discharge Adder 331 DB
+					3	JS	XY										1234					$BASE.1	105	Discharge Adder 331 DB
+					3	W-	XY										1234					$BASE.1	105	Discharge Adder 361 DB
+					4	-	XY										1234					$BASE.1	43	Discharge Adder A12-12A BH
+					4	AE	XY										1234					$BASE.1	43	Discharge Adder A10-8A BH
+					4	CG	XY										1234					$BASE.1	70.52	Discharge Adder A10-8A DB
+					5	1A	XY										1234					$BASE.1	70.52	Discharge Adder A12-12A DB
+					5	3C7	XY										1234					$BASE.1	43	Discharge Adder A12-12A BH
+					5	5E	XY										1234					$BASE.1	70.52	Discharge Adder A12-12A DB
+					5	GL	XY										1234					$BASE.1	43	Discharge Adder A15-15A BH
+					5	JN	XY										1234					$BASE.1	76.57	Discharge Adder A15-15A DB
+					7	UY	XY										1234					$BASE.1	43	Discharge Adder A25-20H BH
+					7	W-	XY										1234					$BASE.1	76.57	Discharge Adder A25-20H DB
+					8	-	XY										1234					$BASE.1	43	Discharge Adder A30-30H BH
+					8	AE	XY										1234					$BASE.1	43	Discharge Adder A27-22H BH
+					8	CG	XY										1234					$BASE.1	80.46	Discharge Adder A27-22H DB
+					8	JS	XY										1234					$BASE.1	43	Discharge Adder A27-27H BH
+					8	LU	XY										1234					$BASE.1	81.5	Discharge Adder A27-27H DB
+					8	NW	XY										1234					$BASE.1	43	Discharge Adder A27-27H BH
+					8	QY	XY										1234					$BASE.1	81.5	Discharge Adder A27-27H DB
+					9	15	XY										1234					$BASE.1	81.5	Discharge Adder A30-30H DB
+					9	3	XY										1234					$BASE.1	43	Discharge Adder A30-30H BH
+																			
+																			
+RULEEND																				

@@ -1,0 +1,34 @@
+TURNBACK NOTIFICATION SYSTEM
+INSTALLATION & EXECUTION GUIDE
+================================
+
+
+1) PYTHON VERSION
+-----------------
+Make sure the latest python version is installed
+
+
+2) INSTALL REQUIRED LIBRARIES
+------------------------------
+
+It is also attached the requirements.txt file that has the necessary libraries, to install everything at once:
+
+pip install -r requirements.txt
+
+
+3) HOW TO RUN THE EXECUTABLE
+----------------------------
+
+Double-click:
+
+TURNBACK_NOTIFICATION_SYSTEM.exe
+
+
+4) IMPORTANT REQUIREMENTS
+--------------------------
+
+• Microsoft Outlook Desktop (Classic Outlook) must be installed.
+• Outlook must be configured with a working email profile.
+• The user must be logged into Outlook before running the tool.
+• Windows only (uses pywin32 COM automation).
+

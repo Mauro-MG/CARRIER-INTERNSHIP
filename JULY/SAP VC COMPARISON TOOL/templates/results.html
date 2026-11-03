@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comparison Results · SAP Catalog Price Comparator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+</head>
+<body>
+<main class="container wide">
+  <header class="results-header">
+    <div>
+      <p class="eyebrow">Price comparison results</p>
+      <h1>{{ filename }}</h1>
+      <p>Processed from page {{ start_page }} · Tolerance {{ tolerance|money }} · Difference = SAP Price − Document Price</p>
+    </div>
+    <div class="actions">
+      <button type="button" class="secondary-button" id="detail-toggle" aria-expanded="false">Detailed analysis</button>
+      <a class="secondary-button" download="sap-catalog-comparison.csv" href="{{ csv_data_uri }}">Download comparison CSV</a>
+      <a class="secondary-button" href="{{ url_for('index') }}">Compare another catalog</a>
+    </div>
+  </header>
+
+  <section class="stats comparison-stats">
+    <div><strong>{{ valid_count }}</strong><span>Valid SAP rows</span></div>
+    <div><strong>{{ invalid_count }}</strong><span>Invalid rows</span></div>
+    <div><strong>{{ found_count }}</strong><span>Catalogs found</span></div>
+    <div class="neutral"><strong>{{ not_found_count }}</strong><span>Catalogs not found</span></div>
+    <div class="success"><strong>{{ status_counts.get('MATCH', 0) }}</strong><span>Exact price matches</span></div>
+    <div class="danger"><strong>{{ status_counts.get('PRICE_DISCREPANCY', 0) }}</strong><span>Discrepancies</span></div>
+    <div><strong>{{ status_counts.get('DOCUMENT_PRICE_NOT_FOUND', 0) }}</strong><span>Prices not found</span></div>
+    <div class="warning"><strong>{{ status_counts.get('AMBIGUOUS_DOCUMENT_PRICE', 0) + status_counts.get('LOW_CONFIDENCE_DOCUMENT_PRICE', 0) }}</strong><span>Manual review</span></div>
+    <div><strong>{{ duplicates|length }}</strong><span>Duplicate SAP rows</span></div>
+  </section>
+
+  {% if errors %}<details class="error-panel"><summary>{{ errors|length }} invalid row(s)</summary><ul>{% for error in errors %}<li>Row {{ error.row }}: {{ error.message }} <code>{{ error.input }}</code></li>{% endfor %}</ul></details>{% endif %}
+  {% if duplicates %}<details class="warning-panel"><summary>{{ duplicates|length }} duplicate catalog number(s)</summary><ul>{% for item in duplicates %}<li>{{ item.catalog_number }} — row {{ item.row }} duplicates row {{ item.first_row }}</li>{% endfor %}</ul></details>{% endif %}
+
+  <div class="table-wrap">
+    <table class="comparison-table">
+      <thead><tr>
+        <th>Catalog Number</th><th>SAP Master Price</th><th>Document Master Price</th><th>Difference</th>
+        <th>Status</th><th class="detail-column">Page</th><th class="detail-column">Confidence</th><th class="detail-column">Candidates</th><th class="detail-column">Evidence / Context</th><th class="detail-column">Review Details</th>
+      </tr></thead>
+      <tbody>
+      {% for result in results %}
+        {% set record = result.record %}{% set match = result.catalog_match %}{% set document = result.document %}{% set comparison = result.comparison %}
+        <tr>
+          <td><code>{{ record.original_catalog_number }}</code></td>
+          <td class="number">{{ record.sap_price|money }}</td>
+          <td class="number">
+            {% if document and document.document_price is not none %}{{ document.document_price|money }}
+            {% elif document and document.document_raw_value %}<span class="raw-value">{{ document.document_raw_value }}</span>
+            {% else %}—{% endif %}
+          </td>
+          <td class="number">{{ comparison.difference|money if comparison.difference is not none else '—' }}</td>
+          <td><span class="badge {{ comparison.status|status_class }}">{{ comparison.status|status_label }}</span></td>
+          <td class="detail-column">{{ document.page_number if document and document.page_number else (match.pages_found|join(', ') if match.pages_found else '—') }}</td>
+          <td class="detail-column">{{ document.confidence|title if document else '—' }}</td>
+          <td class="detail-column">{{ document.candidate_count if document else 0 }}</td>
+          <td class="contexts detail-column">
+            {% if document %}{{ document.evidence_text }}
+            {% elif match.contexts %}{{ match.contexts[0] }}
+            {% else %}<span class="muted">No exact normalized catalog match</span>{% endif %}
+          </td>
+          <td class="detail-column">
+            <details class="review-details">
+              <summary>Review extraction</summary>
+              <div class="review-content">
+                <h3>Catalog detection</h3>
+                <p><strong>Normalized:</strong> <code>{{ record.normalized_catalog_number }}</code></p>
+                <p><strong>Occurrences:</strong> {{ match.occurrence_count }}</p>
+                {% if document and document.selected_occurrence %}
+                  <p><strong>Selected occurrence box:</strong> {{ '%.1f, %.1f, %.1f, %.1f'|format(document.selected_occurrence.bounding_box[0], document.selected_occurrence.bounding_box[1], document.selected_occurrence.bounding_box[2], document.selected_occurrence.bounding_box[3]) }}</p>
+                {% endif %}
+
+                <h3>Selected document value</h3>
+                {% if document and document.selected_candidate %}
+                  <dl>
+                    <dt>Raw text</dt><dd>{{ document.selected_candidate.raw_text }}</dd>
+                    <dt>Strategy</dt><dd>{{ document.selected_candidate.strategy|replace('_', ' ')|title }}</dd>
+                    <dt>Score</dt><dd>{{ '%.2f'|format(document.selected_candidate.score) }}</dd>
+                    <dt>Value type</dt><dd>{{ document.selected_candidate.value_type|replace('_', ' ')|title }}</dd>
+                    <dt>Candidate box</dt><dd>{{ '%.1f, %.1f, %.1f, %.1f'|format(document.selected_candidate.bounding_box[0], document.selected_candidate.bounding_box[1], document.selected_candidate.bounding_box[2], document.selected_candidate.bounding_box[3]) }}</dd>
+                    <dt>Score reasons</dt><dd><ul>{% for reason in document.selected_candidate.reasons %}<li>{{ reason }}</li>{% endfor %}</ul></dd>
+                  </dl>
+                  <p><strong>Evidence:</strong> {{ document.evidence_text }}</p>
+                {% else %}<p>No document value was selected.</p>{% endif %}
+
+                <h3>Alternative candidates</h3>
+                {% if document and document.alternative_candidates %}
+                  <ol class="alternatives">{% for candidate in document.alternative_candidates[:5] %}
+                    <li><strong>{{ candidate.raw_text }}</strong> · score {{ '%.2f'|format(candidate.score) }} · page {{ candidate.page_number }} · {{ candidate.strategy|replace('_', ' ')|title }}<br><span>{{ candidate.surrounding_text }}</span></li>
+                  {% endfor %}</ol>
+                {% else %}<p>No alternative candidates.</p>{% endif %}
+              </div>
+            </details>
+          </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</main>
+<script>
+  const detailToggle = document.getElementById('detail-toggle');
+  const comparisonTable = document.querySelector('.comparison-table');
+
+  detailToggle.addEventListener('click', () => {
+    const expanded = comparisonTable.classList.toggle('show-details');
+    detailToggle.setAttribute('aria-expanded', String(expanded));
+    detailToggle.textContent = expanded ? 'Hide detailed analysis' : 'Detailed analysis';
+  });
+</script>
+</body>
+</html>

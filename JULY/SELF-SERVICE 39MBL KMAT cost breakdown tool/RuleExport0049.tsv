@@ -1,0 +1,11 @@
+RULEBEGIN.RAW.REQUIRED																P16			NOMENCLATURE			HIT.CATEGORY	HIT.VALUE	HIT.DESCRIPTION																				
+																BDGJL						DRIVEPITCH	CONSTANT	Constant Pitch
+																CFHKM						DRIVEPITCH	VARIABLE	Variable Pitch
+																BCJK						DRIVESERVICEFACTOR	1.5	1.5 Service Factor Drive
+																GHLM						DRIVESERVICEFACTOR	1.2	1.2 Service Factor Drive
+																DF						DRIVESERVICEFACTOR	2.0	2.0 Service Factor Drive
+																BCDFGH						DRIVEMULTIPLEBELT	NO	Mupltiple Belt Drive NOT required
+																JKLM						DRIVEMULTIPLEBELT	YES	Mupltiple Belt Drive required
+																BCDFGHJKLM						DRIVEFIELDSUPPLIED	NO	Factory Supplied Drive
+																X						DRIVEFIELDSUPPLIED	YES	Field Supplied Drive
+RULEEND																				

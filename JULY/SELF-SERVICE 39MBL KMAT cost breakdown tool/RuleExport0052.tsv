@@ -1,0 +1,78 @@
+RULEBEGIN.RAW					P5	P6											P17		NOMENCLATURE			HIT.CATEGORY	HIT.VALUE	HIT.DESCRIPTION																				
+					B	GHQR											BDGJ					$SPRINGS	193.033	FC Springs
+					C	Q											BDGJ					$SPRINGS	193.033	FC Springs
+					B	GHQR											CFHK					$SPRINGS	193.083	FC Springs
+					C	Q											CFHK					$SPRINGS	193.083	FC Springs
+					C	GHR											CFHK					$SPRINGS	193.183	FC Springs
+					C	GHR											BDGJ					$SPRINGS	193.233	FC Springs
+					D	HR																$SPRINGS	194.182	FC Springs
+					F	HR																$SPRINGS	194.182	FC Springs
+					G	Q																$SPRINGS	194.182	FC Springs
+					D	GQ																$SPRINGS	194.851	FC Springs
+					F	GQ																$SPRINGS	194.851	FC Springs
+					G	HR																$SPRINGS	196.279	FC Springs
+					H	HR																$SPRINGS	196.879	FC Springs
+					K	Q																$SPRINGS	196.879	FC Springs
+					L	Q																$SPRINGS	196.879	FC Springs
+					J	HR																$SPRINGS	197.528	FC Springs
+					G	G																$SPRINGS	197.588	FC Springs
+					H	GQ																$SPRINGS	198.327	FC Springs
+					J	GQ																$SPRINGS	199.336	FC Springs
+					K	HR																$SPRINGS	202.142	FC Springs
+					K	G																$SPRINGS	202.412	FC Springs
+					L	HR																$SPRINGS	203.181	FC Springs
+					L	G																$SPRINGS	206.976	FC Springs
+					M	HR																$SPRINGS	207.186	FC Springs
+					N	Q																$SPRINGS	207.186	FC Springs
+					P	Q																$SPRINGS	207.186	FC Springs
+					M	GQ																$SPRINGS	210.062	FC Springs
+					N	GHR																$SPRINGS	211.291	FC Springs
+					P	HR																$SPRINGS	211.291	FC Springs
+					Q	Q																$SPRINGS	211.291	FC Springs
+					P	G																$SPRINGS	211.351	FC Springs
+					Q	HR																$SPRINGS	211.431	FC Springs
+					R	HR																$SPRINGS	211.86	FC Springs
+					R	GQ																$SPRINGS	212.03	FC Springs
+					Q	G																$SPRINGS	212.07	FC Springs
+					0	RSTUVWXY																$SPRINGS	72.68	AF/FC Springs
+					0	Z-																$SPRINGS	72.68	AF/FC Springs
+					1	012345																$SPRINGS	72.68	AF/FC Springs
+					1	678ABCDE																$SPRINGS	72.68	AF/FC Springs
+					1	FGHJKLMN																$SPRINGS	72.68	AF/FC Springs
+					1	PQRSTUVW																$SPRINGS	72.68	AF/FC Springs
+					1	XYZ-																$SPRINGS	72.68	AF/FC Springs
+					2	0123																$SPRINGS	72.68	AF/FC Springs
+					2	45678ABC																$SPRINGS	109.02	AF/FC Springs
+					2	DEFGHJKL																$SPRINGS	109.02	AF/FC Springs
+					5	XYZ-																$SPRINGS	198.327	AF/FC Springs
+					6	0123																$SPRINGS	198.327	AF/FC Springs
+					6	45678ABC																$SPRINGS	202.41	AF/FC Springs
+					6	DEFGHJKL																$SPRINGS	197.53	AF/FC Springs
+					6	MNPQRSTU																$SPRINGS	206.98	AF/FC Springs
+					6	VWXYZ-																$SPRINGS	203.18	AF/FC Springs
+					7	01																$SPRINGS	203.18	AF/FC Springs
+					7	2345678A																$SPRINGS	210.06	AF/FC Springs
+					7	BCDEFGHJ																$SPRINGS	207.19	AF/FC Springs
+					7	KLMNPQRS																$SPRINGS	211.29	AF/FC Springs
+					8	01234567																$SPRINGS	211.29	AF/FC Springs
+					0	8ABCDEFG																$SPRINGS	72.68	AF/FC Springs
+					2	MNPQRSTU																$SPRINGS	109.02	AF/FC Springs
+					2	VWXYZ-																$SPRINGS	109.02	AF/FC Springs
+					3	01																$SPRINGS	109.02	AF/FC Springs
+					3	2345678A																$SPRINGS	109.02	AF/FC Springs
+					3	BCDEFGHJ																$SPRINGS	109.02	AF/FC Springs
+					3	KLMNPQRS																$SPRINGS	109.02	AF/FC Springs
+					3	TUVWXYZ-																$SPRINGS	109.02	AF/FC Springs
+					4	8ABCDEFG																$SPRINGS	193.23	AF/FC Springs
+					4	Z-																$SPRINGS	194.18	AF/FC Springs
+					5	012345																$SPRINGS	194.18	AF/FC Springs
+					5	678ABCDE																$SPRINGS	194.18	AF/FC Springs
+					5	FGHJKLMN																$SPRINGS	198.33	AF/FC Springs
+					7	TUVWXYZ-																$SPRINGS	211.29	AF/FC Springs
+					8	8ABCDEFG																$SPRINGS	212.07	AF/FC Springs
+					8	HJKLMNPQ																$SPRINGS	211.43	AF/FC Springs
+					8	RSTUVWXY																$SPRINGS	211.43	AF/FC Springs
+					8	Z-																$SPRINGS	211.86	AF/FC Springs
+					9	012345																$SPRINGS	211.86	AF/FC Springs
+																			
+RULEEND																				

@@ -1,0 +1,40 @@
+RULEBEGIN.RAW.REQUIRED						P6	P7										P17		WHEEL	NOMENCLATURE		HIT.CATEGORY	HIT.VALUE	HIT.DESCRIPTION																				
+AF						1256	BG										BG					MOTORBOX	F1	FafsDnoLsideDD[bt]hfHsidethis f1
+AF						1256	BG										CH					MOTORBOX	F1	FafsDnoLrearDD[bt]hfHsidethis f1
+AF						1256	BG										DJ					MOTORBOX	F2	FafsDnoLsideDD[bt]hfHsideopposite f2
+AF						1256	BG										FK					MOTORBOX	F2	FafsDnoLrearDD[bt]hfHsideopposite f2
+AF						1256	CH										BG					MOTORBOX	F2	FafsDnoLsideDD[bt]hrHsidethis f2
+AF						1256	CH										CH					MOTORBOX	F2	FafsDnoLrearDD[bt]hrHsidethis f2
+AF						1256	CH										DJ					MOTORBOX	F1	FafsDnoLsideDD[bt]hrHsideopposite f1
+AF						1256	CH										FK					MOTORBOX	F1	FafsDnoLrearDD[bt]hrHsideopposite f1
+AF						1256	D										CH					MOTORBOX	F1	FafsDnoLrearDDdbfHsidethis f1
+AF						1256	D										FK					MOTORBOX	F2	FafsDnoLrearDDdbfHsideopposite f2
+AF						1256	DJ										BG					MOTORBOX	F2	FafsDnoLsideDD[du]bfHsidethis f2
+AF						1256	DJ										DJ					MOTORBOX	F1	FafsDnoLsideDD[du]bfHsideopposite f1
+AF						1256	F										CH					MOTORBOX	F2	FafsDnoLrearDDdbrHsidethis f2
+AF						1256	F										FK					MOTORBOX	F1	FafsDnoLrearDDdbrHsideopposite f1
+AF						1256	FK										BG					MOTORBOX	F1	FafsDnoLsideDD[du]brHsidethis f1
+AF						1256	FK										DJ					MOTORBOX	F2	FafsDnoLsideDD[du]brHsideopposite f2
+AF						1256	J										CH		121			MOTORBOX	F2	121 wheel FafsDnoLrearDDubfHsidethis f2
+AF						1256	J										FK		121			MOTORBOX	F1	121 wheel FafsDnoLrearDDubfHsideopposite f1
+AF						1256	K										CH		121			MOTORBOX	F1	121 wheel FafsDnoLrearDDubrHsidethis f1
+AF						1256	K										FK		121			MOTORBOX	F2	121 wheel FafsDnoLrearDDubrHsideopposite f2
+AF						1256	J										CH		101			MOTORBOX	F1	101 wheel FafsDnoLrearDDubfHsidethis f1 !
+AF						1256	J										FK		101			MOTORBOX	F2	101 wheel FafsDnoLrearDDubfHsideopposite f2 !
+AF						1256	K										CH		101			MOTORBOX	F2	101 wheel FafsDnoLrearDDubrHsidethis f2 !
+AF						1256	K										FK		101			MOTORBOX	F1	101 wheel FafsDnoLrearDDubrHsideopposite f1 !
+PAF						3478											BG					MOTORBOX	F1	FpafDnoLsideDD.*Hsidethis f1
+PAF						3478											CH					MOTORBOX	F1	FpafDnoLrearDD.*Hsidethis f1
+PAF						3478											DJ					MOTORBOX	F2	FpafDnoLsideDD.*Hsideopposite f2
+PAF						3478											FK					MOTORBOX	F2	FpafDnoLrearDD.*Hsideopposite f2
+FC						GHQR	BG										BG					MOTORBOX	F1	FfcsDnoLsideDD[bt]hfHsidethis f1
+FC						GHQR	BG										DJ					MOTORBOX	F2	FfcsDnoLsideDD[bt]hfHsideopposite f2
+FC						GHQR	CH										BG					MOTORBOX	F2	FfcsDnoLsideDD[bt]hrHsidethis f2
+FC						GHQR	CH										DJ					MOTORBOX	F1	FfcsDnoLsideDD[bt]hrHsideopposite f1
+FC						GHQR	DJ										BG					MOTORBOX	F2	FfcsDnoLsideDD[du]bfHsidethis f2
+FC						GHQR	DJ										DJ					MOTORBOX	F1	FfcsDnoLsideDD[du]bfHsideopposite f1
+FC						GHQR	FK										BG					MOTORBOX	F1	FfcsDnoLsideDD[du]brHsidethis f1
+FC						GHQR	FK										DJ					MOTORBOX	F2	FfcsDnoLsideDD[du]brHsideopposite f2
+																	13					MOTORBOX	F1	Specified in 39MB part number
+																	24					MOTORBOX	F2	Specified in 39MB part number
+RULEEND																				

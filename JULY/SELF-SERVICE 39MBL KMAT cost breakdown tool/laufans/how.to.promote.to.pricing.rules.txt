@@ -1,0 +1,25 @@
+1) once the rules are tested in the xls run the two export macros to create RuleExport????.tsv,  generated.lookup.tsv and generated.rule
+
+2) validate diffs are correct.
+
+3) in pricing folder
+
+3a) pricing.lau.fansled.drl - delete all text below 
+
+Paste generated rules below. Ensure all prior generated rules are removed
+
+3b) paste generated.rule contents below "Paste generated rules below."
+
+3c) diff pricing.lau.fansled.drl  (assuming lau update)
+ignore the date change, ensure changes are correct
+
+4) lookup file changes
+
+If drive costs change - need to update  EMERSONCOST entries in pricing.fan.lookup.tsv
+If motor costs change - may need to update pricing.fan.motor.lau.tsv
+if rules change - need to paste  generated.lookup.tsv over pricing.fan.lookup.tsv leaving EMERSONCOST entrires.
+
+look at diff, 
+
+run build.sledprice.bat to create tmt file.
+

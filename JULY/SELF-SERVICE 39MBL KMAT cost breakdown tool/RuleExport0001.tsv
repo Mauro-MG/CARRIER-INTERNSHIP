@@ -1,0 +1,4 @@
+RULEBEGIN.MANUAL	P1	P2	P3	P4						P10	P11	P12	P13									HIT.CATEGORY	HIT.VALUE	HIT.DESCRIPTION																				
+																			
+	3	9	M	B																		WHEELRPM	*P10#*P11#*P12#*P13#	Wheel RPM from Positions 10-13
+RULEEND																				

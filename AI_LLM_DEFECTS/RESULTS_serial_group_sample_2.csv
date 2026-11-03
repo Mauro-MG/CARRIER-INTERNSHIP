@@ -1,0 +1,9 @@
+AIGroupID,Serial,Plant,ClaimNumbers,GroupClaimCount,GroupStartDate,GroupEndDate,CombinedReplacementParts,CombinedServiceText,TotalClaimAmountAppr,GLTotal,pred_primary_gemma,pred_secondary_gemma,pred_failure_gemma,needs_review,review_reason
+734,0324U31777,CMXB,CRSASBJ93,1,2024-10-22,2024-10-22,"TXV VALVE, 12.5-TON NOM","ClaimNumber: CRSASBJ93
+ClaimDate: 2024-10-22 00:00:00
+ReplacementPartDescription: TXV VALVE, 12.5-TON NOM
+ServicePerformed: Unit was confirmed to have issues with 2 txv's.",2163.72,2163.7200000000003,Other,Other - note issues in comments,Other,False,
+11061,3225U46045,CMXB,CRTBYFTFH,1,2025-11-04,2025-11-04,Not Provided,"ClaimNumber: CRTBYFTFH
+ClaimDate: 2025-11-04 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: First tried updating software in the unit which made the unit shut off and then cycle the heat on again continuously. After further troubleshooting I found a poorly made electrical connection on the rollout switch wire pin connection to the heat section control board. Used new pins and made connection. Tested operation and found unit working correctly. Reported my findings to service engineering. Unit warranty repair is complete.",812.0,812.0,Electrical controls,Electrical Controls-Wiring,Installation,False,

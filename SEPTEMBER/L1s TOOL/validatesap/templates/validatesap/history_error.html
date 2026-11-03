@@ -1,0 +1,9 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Saved Validation Unavailable</title><link rel="stylesheet" href="{% static 'validatesap/app.css' %}"></head>
+<body>
+  <header class="masthead masthead--compact"><div class="shell masthead__inner"><div><p class="eyebrow">Past validation</p><h1>Saved result unavailable</h1></div></div></header>
+  <main class="shell page-stack"><section class="decision-panel"><p class="step">Unable to load</p><h2>{{ message }}</h2><div class="decision-actions"><a class="primary-button button-link" href="{% url 'validatesap:history' %}">Back to past validations</a><a class="secondary-button" href="{% url 'validatesap:index' %}">New validation</a></div></section></main>
+</body>
+</html>

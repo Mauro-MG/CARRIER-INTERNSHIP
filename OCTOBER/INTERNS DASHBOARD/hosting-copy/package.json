@@ -1,0 +1,29 @@
+{
+  "name": "intern-program-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "main": "desktop/main.js",
+  "author": "Intern Program",
+  "description": "Node.js HTML view over the existing Python Excel dashboard",
+  "scripts": {
+    "start": "node server.js --open",
+    "serve": "node server.js",
+    "test": "node --test tests/server.test.js tests/management.test.js tests/desktop.test.js",
+    "desktop": "node scripts/desktop.js",
+    "build:backend": "node scripts/build_windows.js --backend-only",
+    "package:dir": "node scripts/build_windows.js --dir",
+    "package:win": "node scripts/build_windows.js",
+    "verify:package": "node scripts/verify_package.js"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "dependencies": {
+    "highcharts": "13.0.2"
+  },
+  "devDependencies": {
+    "@electron/asar": "4.0.1",
+    "electron": "44.7.2",
+    "electron-builder": "26.15.3"
+  }
+}

@@ -1,0 +1,36 @@
+.configuration-form h2 { margin-top:0; }
+.form-section { margin-bottom:28px; }
+.form-grid.four-columns { grid-template-columns:1.1fr 1fr .7fr 1.4fr; }
+.section-note { color:var(--muted); margin-top:-6px; }
+.position-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; }
+.position-card { border:1px solid var(--line); border-radius:8px; padding:14px; cursor:pointer; background:#fff; }
+.position-card input { width:auto; margin-right:8px; }
+.position-card span { font-weight:750; }
+.position-card small { display:block; margin-top:6px; }
+.position-card.selected { border-color:var(--blue); background:#eff4ff; }
+.position-ranges { border:1px solid var(--line); border-radius:8px; padding:16px; margin:16px 0; background:#fff; }
+.position-ranges.hidden { display:none; }
+.position-ranges-header { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:12px; }
+.position-ranges-header h3 { margin:0; }
+.position-ranges-header span { color:var(--muted); font-weight:700; }
+.range-table-wrap { max-height:430px; overflow:auto; border:1px solid var(--line); border-radius:8px; }
+.range-table { min-width:720px; }
+.range-table th { position:sticky; top:0; z-index:1; }
+.range-table td:first-child input { width:auto; }
+.range-table select { width:120px; }
+.range-preview { color:var(--muted); }
+.range-preview.range-error { color:var(--red); font-weight:700; }
+.form-actions { display:flex; justify-content:flex-end; }
+.preview-position { margin-bottom:16px; }
+.range-chip-list { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0; }
+.range-chip { border:1px solid var(--line); border-radius:999px; padding:4px 10px; background:#f9fafb; font-size:13px; }
+.code-list { display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; }
+.code-list code { border:1px solid var(--line); border-radius:6px; padding:3px 6px; background:#f9fafb; }
+.json-preview { overflow:auto; max-height:520px; padding:16px; background:#101828; color:#f9fafb; border-radius:8px; }
+@media (max-width:1000px) {
+  .form-grid.four-columns,.position-grid { grid-template-columns:1fr 1fr; }
+}
+@media (max-width:650px) {
+  .form-grid.four-columns,.position-grid { grid-template-columns:1fr; }
+  .position-ranges-header { align-items:flex-start; flex-direction:column; }
+}

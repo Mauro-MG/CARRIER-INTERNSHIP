@@ -1,0 +1,10 @@
+.deps/
+.venv/
+.tmp/
+.comparison_cache/
+.test_saved_results/
+saved_results/*.csv
+__pycache__/
+*.py[cod]
+db.sqlite3
+.env

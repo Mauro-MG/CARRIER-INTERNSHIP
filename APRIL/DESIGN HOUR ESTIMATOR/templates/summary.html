@@ -1,0 +1,246 @@
+{% extends "base.html" %}
+
+{% block title %}Summary{% endblock %}
+
+{% block content %}
+{% if error_message %}
+<div class="error-banner">
+    {{ error_message }}
+</div>
+{% endif %}
+{% if success_message %}
+<div class="success-banner">
+    {{ success_message }}
+</div>
+{% endif %}
+{% if overwrite_pending %}
+<div class="warning-banner">
+    {{ warning_message }}
+    <div style="margin-top: 10px;">
+        <button type="submit" form="mainForm" name="action" value="save_csv" class="btn">
+            Overwrite Existing File
+        </button>
+        <a href="/" class="btn btn-secondary">Cancel</a>
+    </div>
+</div>
+{% endif %}
+<div class="card">
+    <div class="card-topbar">
+        <div>
+            <h2 class="section-title section-title-tight">Summary</h2>
+            <div class="section-subtitle">Select saved estimates and build a combined project summary.</div>
+        </div>
+
+        <div class="file-toolbar">
+            <div class="save-inline-group">
+                <input
+                    type="text"
+                    name="save_file_name"
+                    form="mainForm"
+                    value="{{ save_file_name if save_file_name is defined else '' }}"
+                    placeholder="Project file name"
+                    class="save-name-input"
+                >
+                <button
+                    type="submit"
+                    form="mainForm"
+                    name="action"
+                    value="save_csv"
+                    class="btn btn-secondary btn-small">
+                    Save CSV
+                </button>
+            </div>
+
+            <form method="POST" action="/summary" enctype="multipart/form-data" class="file-inline-form" id="csvAutoLoadForm">
+                <input type="hidden" name="action" value="load_csv">
+
+                <label for="csv_file_upload" class="file-upload-chip">
+                    Load CSV
+                </label>
+                <input
+                    type="file"
+                    name="csv_file"
+                    id="csv_file_upload"
+                    accept=".csv"
+                    required
+                    class="file-input-hidden"
+                    onchange="document.getElementById('csvAutoLoadForm').submit();"
+                >
+            </form>
+        </div>
+    </div>
+
+    <form method="POST" action="/summary" id="mainForm">
+        <input type="hidden" name="confirm_overwrite" value="{{ confirm_overwrite if confirm_overwrite is defined else '0' }}">
+        <div class="table-wrapper summary-table-wrapper">
+            <table class="summary-table">
+                <thead>
+                    <tr>
+                        <th>QBomSaved</th>
+                        <th>Primary L1s Qty</th>
+                        <th>Secondary L1s Qty</th>
+                        <th>Tertiary L1s Qty</th>
+                        <th>Product Family</th>
+                        <th>Modelling hours </th>
+                        <th>Detailling Hours </th>
+                        <th>BOM Hours </th>
+                        <th>QC Hours </th>
+                        <th>Design Hours </th>
+                        <th>Primary L1s</th>
+                        <th>Secondary L1s</th>
+                        <th>Tertiary L1s</th>
+                        <th>Comments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in rows %}
+                    <tr>
+                        <td>
+                            <select name="qbom_saved_{{ loop.index0 }}" class="summary-input summary-select">
+                                <option value="">Select</option>
+                                {% for f in saved_files %}
+                                    <option value="{{ f }}" {% if row["QBomSaved"] == f %}selected{% endif %}>{{ f }}</option>
+                                {% endfor %}
+                            </select>
+                        </td>
+                        <td>
+                            <input type="number" min="0" name="primaryquantity_{{ loop.index0 }}" value="{{ row['Primary L1s Qty'] }}" class="summary-input">
+                        </td>
+                        <td>
+                            <input type="number" min="0" name="secondaryquantity_{{ loop.index0 }}" value="{{ row['Secondary L1s Qty'] }}" class="summary-input">
+                        </td>
+                        <td>
+                            <input type="number" min="0" name="tertiaryquantity_{{ loop.index0 }}" value="{{ row['Tertiary L1s Qty'] }}" class="summary-input">
+                        </td>
+                        <td>{{ row["Product Family"] }}</td>
+                        <td>{{ row["Modelling hours * Quantity"] }}</td>
+                        <td>{{ row["Detailling Hours * Quantity"] }}</td>
+                        <td>{{ row["BOM Hours * Quantity"] }}</td>
+                        <td>{{ row["QC Hours * Quantity"] }}</td>
+                        <td>{{ row["Design Hours * Quantity"] }}</td>
+                        <td>{{ row["Total Hours (Primary L1s) * Quantity"] }}</td>
+                        <td>{{ row["Secondary L1s"] }}</td>
+                        <td>{{ row["Tertiary L1s"] }}</td>
+                        <td>
+                            <input type="text"
+                                name="comments_{{ loop.index0 }}"
+                                value="{{ row.get('Comments', '') }}"
+                                class="table-input comments-input">
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="actions" style="margin-top: 18px;">
+            <button type="submit" name="action" value="update_summary" class="btn">
+                Update Summary
+            </button>
+        </div>
+    </form>
+</div>
+
+
+<div class="card">
+    <h2 class="section-title">Hours Summary</h2>
+
+    <div class="summary-grid">
+        <div class="summary-item">
+            <div class="summary-label">Modeling Hrs</div>
+            <div class="summary-value">{{ totals["Modelling hours * Quantity"] }}</div>
+        </div>
+
+        <div class="summary-item">
+            <div class="summary-label">Detailing Hrs</div>
+            <div class="summary-value">{{ totals["Detailling Hours * Quantity"] }}</div>
+        </div>
+
+        <div class="summary-item">
+            <div class="summary-label">BOM Hrs</div>
+            <div class="summary-value">{{ totals["BOM Hours * Quantity"] }}</div>
+        </div>
+
+        <div class="summary-item">
+            <div class="summary-label">QC Hrs</div>
+            <div class="summary-value">{{ totals["QC Hours * Quantity"] }}</div>
+        </div>
+
+        <div class="summary-item">
+            <div class="summary-label">Total Design Hrs</div>
+            <div class="summary-value">{{ totals["Design Hours * Quantity"] }}</div>
+        </div>
+    </div>
+
+    <div class="summary-grid summary-grid-center" style="margin-top: 16px;">
+        <div class="summary-item">
+            <div class="summary-label">Primary L1s</div>
+            <div class="summary-value">{{ totals["Total Hours (Primary L1s) * Quantity"] }}</div>
+        </div>
+
+        <div class="summary-item">
+            <div class="summary-label">Secondary L1s</div>
+            <div class="summary-value">{{ totals["Secondary L1s"] }}</div>
+        </div>
+
+        <div class="summary-item">
+            <div class="summary-label">Tertiary L1s</div>
+            <div class="summary-value">{{ totals["Tertiary L1s"] }}</div>
+        </div>
+    </div>
+
+    <div class="grand-total-box" style="margin-top: 22px;">
+        <div class="grand-total-label">Grand Total Hours</div>
+<div class="grand-total-value">
+  {{ ((totals["Total Hours (Primary L1s) * Quantity"] | float) + 
+      (totals["Secondary L1s"] | float) + 
+      (totals["Tertiary L1s"] | float)) | round(2) }}
+</div>
+
+    </div>
+    </div>
+</div>
+<script>
+function collectSummaryCache() {
+    const data = {};
+
+    const saveName = document.querySelector('[name="save_file_name"]');
+    if (saveName) data["save_file_name"] = saveName.value;
+
+    for (let i = 0; i < 10; i++) {
+        data[`qbom_saved_${i}`] = document.querySelector(`[name="qbom_saved_${i}"]`)?.value || "";
+        data[`phase_${i}`] = document.querySelector(`[name="phase_${i}"]`)?.value || 0;
+        data[`primaryquantity_${i}`] = document.querySelector(`[name="primaryquantity_${i}"]`)?.value || 0;
+        data[`secondaryquantity_${i}`] = document.querySelector(`[name="secondaryquantity_${i}"]`)?.value || 0;
+        data[`tertiaryquantity_${i}`] = document.querySelector(`[name="tertiaryquantity_${i}"]`)?.value || 0;
+        data[`comments_${i}`] = document.querySelector(`[name="comments_${i}"]`)?.value || "";
+    }
+
+    return data;
+}
+
+function saveSummaryCache() {
+    fetch("/cache_summary", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(collectSummaryCache()),
+        keepalive: true
+    });
+}
+
+let summaryCacheTimer;
+
+function scheduleSummaryCache() {
+    clearTimeout(summaryCacheTimer);
+    summaryCacheTimer = setTimeout(saveSummaryCache, 250);
+}
+
+document.addEventListener("change", saveSummaryCache);
+document.addEventListener("input", (event) => {
+    if (event.target.matches('[name^="comments_"], [name="save_file_name"]')) {
+        scheduleSummaryCache();
+    }
+});
+window.addEventListener("pagehide", saveSummaryCache);
+</script>
+{% endblock %}

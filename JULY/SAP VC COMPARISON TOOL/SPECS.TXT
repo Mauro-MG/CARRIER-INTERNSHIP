@@ -1,0 +1,5 @@
+
+integrate COMPARE SAP BUTTON + LOGIC
+COMPARE PRICES With the pasted from SAP data, since the data pasted from SAP must be in order meaning that first is the base unit price then the options in order, compare each one, if they are off by 0.01 we consider them a mismatch,
+Final table showing columns: 
+TAG - POSITION - CODE - SAP PRICE - DOC PRICE - DIFFERENCE - RESULT

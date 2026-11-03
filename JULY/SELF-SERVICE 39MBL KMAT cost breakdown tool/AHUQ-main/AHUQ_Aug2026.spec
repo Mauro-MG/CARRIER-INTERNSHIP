@@ -1,0 +1,56 @@
+# -*- mode: python ; coding: utf-8 -*-
+
+
+a = Analysis(
+    ['AHUQ_Aug2026.py'],
+    pathex=[],
+    binaries=[],
+    datas=[
+        ('AHUQ-icon.ico', '.'),
+        ('Carrier_logo.png', '.'),
+        ('..\\laufansledprice20251013 RELEASED.xlsm', '.'),
+        ('..\\EmersonPricingRuntime2022\\pricing_rule_engine.py', 'EmersonPricingRuntime2022'),
+        ('..\\EmersonPricingRuntime2022\\WcfEmersonEXE-loopback.exe', 'EmersonPricingRuntime2022'),
+        ('..\\EmersonPricingRuntime2022\\WcfEmersonEXE.exe', 'EmersonPricingRuntime2022'),
+        ('..\\EmersonPricingRuntime2022\\PTS.VBeltDriveLibrary.DLL', 'EmersonPricingRuntime2022'),
+        ('..\\EmersonPricingRuntime2022\\PTS.VbeltDriveConfigurator.DLL', 'EmersonPricingRuntime2022'),
+        ('..\\EmersonPricingRuntime2022\\EPT.Internet.ProductSelection.DLL', 'EmersonPricingRuntime2022'),
+        ('..\\EmersonPricingRuntime2022\\log4net.dll', 'EmersonPricingRuntime2022'),
+        ('..\\EmersonPricingRuntime2022\\Belts.xml', 'EmersonPricingRuntime2022'),
+        ('..\\EmersonPricingRuntime2022\\Bushings.xml', 'EmersonPricingRuntime2022'),
+        ('..\\EmersonPricingRuntime2022\\DesignatedParts.xml', 'EmersonPricingRuntime2022'),
+        ('..\\EmersonPricingRuntime2022\\FixedPitchSheaves.xml', 'EmersonPricingRuntime2022'),
+        ('..\\EmersonPricingRuntime2022\\Multipliers.xml', 'EmersonPricingRuntime2022'),
+        ('..\\EmersonPricingRuntime2022\\VariablePitchSheaves.xml', 'EmersonPricingRuntime2022'),
+    ],
+    hiddenimports=[],
+    hookspath=[],
+    hooksconfig={},
+    runtime_hooks=[],
+    excludes=[],
+    noarchive=False,
+    optimize=0,
+)
+pyz = PYZ(a.pure)
+
+exe = EXE(
+    pyz,
+    a.scripts,
+    a.binaries,
+    a.datas,
+    [],
+    name='AHUQ_Aug2026_SelfContained',
+    debug=False,
+    bootloader_ignore_signals=False,
+    strip=False,
+    upx=True,
+    upx_exclude=[],
+    runtime_tmpdir=None,
+    console=False,
+    disable_windowed_traceback=False,
+    argv_emulation=False,
+    target_arch=None,
+    codesign_identity=None,
+    entitlements_file=None,
+    icon=['AHUQ-icon.ico'],
+)

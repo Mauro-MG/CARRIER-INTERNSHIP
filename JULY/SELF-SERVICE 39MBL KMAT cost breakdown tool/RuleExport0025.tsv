@@ -1,0 +1,5 @@
+RULEBEGIN.RAW.REQUIRED																P16			NOMENCLATURE			HIT.CATEGORY	HIT.VALUE	HIT.DESCRIPTION																				
+																BC						FANQUANTITY	1	One Fan
+																D						FANQUANTITY	4	Four Fans
+																F						FANQUANTITY	6	Six Fans
+RULEEND																				

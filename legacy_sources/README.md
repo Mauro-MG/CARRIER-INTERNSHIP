@@ -1,0 +1,47 @@
+# Legacy archive sources
+
+Source variants recovered from nested ZIP files. Original archives are preserved outside this repository. Folders use short unique names for Windows compatibility. Some original vendor ZIPs are invalid or use unsupported compression; see the preparation report.
+
+- `legacy_sources/EmersonWrapper-archive-source-0fb7bb06ab`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/tx/laufansledprice20130323-archive-source/EmersonWrapper.zip-archive-source/EmersonWrapper/EmersonWrapper/bin/Debug/EmersonWrapper-archive-source`
+- `legacy_sources/EmersonWrapper-archive-source-7b7abf5b5d`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/emerson/wrapper/EmersonWrapper/EmersonWrapper/bin/Debug/EmersonWrapper-archive-source`
+- `legacy_sources/EmersonWrapper-archive-source-2888cb8a1e`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/tx/EmersonWrapper.zip-archive-source/EmersonWrapper/EmersonWrapper/bin/Debug/EmersonWrapper-archive-source`
+- `legacy_sources/WcfService1-archive-source-3327bf9d21`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/emerson/installimage/wrapper-archive-source/WcfEmersonEXE-archive-source/WcfEmersonEXE/WcfService1-archive-source`
+- `legacy_sources/bin-archive-source-9892eebf14`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/emerson/HttpWrapper/WcfEmersonEXE/WcfEmersonEXE/bin-archive-source`
+- `legacy_sources/bin-archive-source-7b104f5e3a`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/emerson/HttpWrapper/WcfEmersonEXE/WcfService1/bin-archive-source`
+- `legacy_sources/WcfService1-archive-source-50e9a6304f`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/emerson/HttpWrapper/WcfEmersonEXE-archive-source/WcfEmersonEXE/WcfService1-archive-source`
+- `legacy_sources/WcfService1-archive-source-28641411fb`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/emerson/installimage/WcfEmersonEXE-archive-source/WcfEmersonEXE/WcfService1-archive-source`
+- `legacy_sources/WcfService1-archive-source-5ff3f43e8a`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/emerson/HttpWrapper/WcfEmersonEXE/WcfService1-archive-source`
+- `legacy_sources/WcfEmersonEXE-archive-source-91d7ecdd57`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/emerson/installimage/wrapper-archive-source/WcfEmersonEXE-archive-source`
+- `legacy_sources/CustomerIntegrationPackage-archive-sou-3bceced5db`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/emerson/PTS.VbeltDriveConfigurator-archive-source/update20140305/CustomerIntegrationPackage-archive-source`
+- `legacy_sources/WcfEmersonEXE-archive-source-5d03e4d14d`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/emerson/HttpWrapper/WcfEmersonEXE-archive-source`
+- `legacy_sources/WcfEmersonEXE-archive-source-8a81663a2d`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/emerson/installimage/WcfEmersonEXE-archive-source`
+- `legacy_sources/wrapper (2)-archive-source-2c73e79b98`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/emerson/installimage/wrapper (2)-archive-source`
+- `legacy_sources/wrapper-archive-source-62166d1ed4`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/emerson/installimage/wrapper-archive-source`
+- `legacy_sources/lau201604-archive-source-a67369e497`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/emerson/LauApril2016/lau201604-archive-source`
+- `legacy_sources/laufansledprice20160322httppost-archiv-9e3fc785a9`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/emerson/LauApril2016/laufansledprice20160322httppost-archive-source`
+- `legacy_sources/CustomerIntegrationPackage-archive-sou-596010a03c`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/emerson/update20140305/CustomerIntegrationPackage-archive-source`
+- `legacy_sources/CustomerIntegrationPackage 800010100-a-baf876f503`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/emerson/update20181107/CustomerIntegrationPackage 800010100-archive-source`
+- `legacy_sources/PTS.VbeltDriveConfigurator-archive-sou-474efac69a`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/emerson/wrapper/PTS.VbeltDriveConfigurator-archive-source`
+- `legacy_sources/VariablePitchSheaves-archive-source-ec6ea08f36`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/emerson/wrapper/VariablePitchSheaves-archive-source`
+- `legacy_sources/EmersonWrapper.zip-archive-source-3d30cc4ff7`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/tx/laufansledprice20130323-archive-source/EmersonWrapper.zip-archive-source`
+- `legacy_sources/wcfservice1.zip-archive-source-53dc18d350`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/tx/laufansledprice20130323-archive-source/wcfservice1.zip-archive-source`
+- `legacy_sources/Belts-archive-source-e6224affd2`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/emerson/Belts-archive-source`
+- `legacy_sources/CustomerIntegrationPackage-archive-sou-312da0e493`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/emerson/CustomerIntegrationPackage-archive-source`
+- `legacy_sources/Multipliers.2014xmlfilesfromemerson-ar-80df8e06c8`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/emerson/Multipliers.2014xmlfilesfromemerson-archive-source`
+- `legacy_sources/PTS.VbeltDriveConfigurator-archive-sou-95f9e88520`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/emerson/PTS.VbeltDriveConfigurator-archive-source`
+- `legacy_sources/PTS.VBeltDriveLibrary-archive-source-6187cf871b`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/emerson/PTS.VBeltDriveLibrary-archive-source`
+- `legacy_sources/WcfService1-archive-source-cc818414b4`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/emerson/WcfService1-archive-source`
+- `legacy_sources/EmersonWrapper.zip-archive-source-0a0f679b35`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/tx/EmersonWrapper.zip-archive-source`
+- `legacy_sources/laufansledprice20130323-archive-source-b3ea2480f4`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/tx/laufansledprice20130323-archive-source`
+- `legacy_sources/test-archive-source-2627d39690`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/tx/test-archive-source`
+- `legacy_sources/wcfservice1.zip-archive-source-cbee9ebd5e`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/tx/wcfservice1.zip-archive-source`
+- `legacy_sources/emerson.20220825-archive-source-fa0ddb01f9`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/emerson.20220825-archive-source`
+- `legacy_sources/emersonxmlfilesfromNovDec2018-archive--1c8ceca42a`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/emersonxmlfilesfromNovDec2018-archive-source`
+- `legacy_sources/laufansledprice20220825-archive-source-2039f7dc4a`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/laufansledprice20220825-archive-source`
+- `legacy_sources/samplesledprice-archive-source-cda0eafbd4`: originally `JULY/SELF-SERVICE 39MBL KMAT cost breakdown tool/laufans/samplesledprice-archive-source`
+- `legacy_sources/app & asana_client updates-archive-sou-0528a681fc`: originally `FEBRUARY/ETO AUTOMATATION PROJECT/app & asana_client updates-archive-source`
+- `legacy_sources/QUOTES_AUTOMATION_PROJECT-archive-sour-f9666d96ad`: originally `FEBRUARY/ETO AUTOMATATION PROJECT/QUOTES_AUTOMATION_PROJECT-archive-source`
+- `legacy_sources/Turnback Notification System-archive-s-33c185b165`: originally `MARCH/TURNBACK NOTIFICATION SYSTEM/Turnback Notification System-archive-source`
+- `legacy_sources/CLASSIFIER&CONFIG-archive-source-940bb39004`: originally `AI_LLM_DEFECTS/CLASSIFIER&CONFIG-archive-source`
+- `legacy_sources/gemma_consistency-archive-source-79d7d081b4`: originally `AI_LLM_DEFECTS/gemma_consistency-archive-source`
+- `legacy_sources/l1 validation tool-archive-source-906bfc1b77`: originally `JANUARY/l1 validation tool-archive-source`

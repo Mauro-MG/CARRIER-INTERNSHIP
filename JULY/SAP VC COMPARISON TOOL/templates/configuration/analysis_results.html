@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DOCX Pricing Results</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/configuration_matrix.css') }}">
+</head>
+<body>
+<main class="container wide">
+  <header class="results-header">
+    <div>
+      <p class="eyebrow">DOCX price extraction</p>
+      <h1>{{ catalog_number }}</h1>
+      <p>{{ configuration.product_type }} - Version {{ configuration.version }} - {{ filename }}</p>
+      <p><span class="mode-badge">Configuration Search Mode: {{ result.search_mode|replace('_', ' ')|title }}</span></p>
+    </div>
+    <div class="actions">
+      <a class="secondary-button" href="{{ url_for('analysis_form', config=configuration_file) }}">Analyze another DOCX</a>
+      <a class="secondary-button" href="{{ url_for('configuration_manager') }}">Configuration manager</a>
+    </div>
+  </header>
+
+  <section class="stats builder-stats">
+    <div><strong>{{ result.priced_options|length }}</strong><span>Priced options</span></div>
+    <div><strong>{{ result.diagnostics|length }}</strong><span>Diagnostics</span></div>
+    <div><strong>{{ result.decoded_positions|length }}</strong><span>Decoded positions</span></div>
+    <div><strong>{{ result.tables|length }}</strong><span>DOCX position tables</span></div>
+  </section>
+
+  {% if sap_comparison %}
+    <section class="card analysis-section sap-overall {{ 'success' if sap_comparison.all_match else 'review' }}">
+      <p class="eyebrow">COMPARE SAP</p>
+      <h2>{{ sap_comparison.overall_status }}</h2>
+      <p class="muted">Order-independent, one-to-one price reconciliation. Eligible matches have an absolute difference below $0.01; Difference = SAP Price - DOC Price.</p>
+    </section>
+
+    <section class="stats comparison-stats">
+      <div><strong>{{ sap_comparison.sap_row_count }}</strong><span>SAP Prices</span></div>
+      <div><strong>{{ sap_comparison.document_row_count }}</strong><span>DOC Prices</span></div>
+      <div class="success"><strong>{{ sap_comparison.match_count }}</strong><span>Matched</span></div>
+      <div class="warning"><strong>{{ sap_comparison.no_document_match_count }}</strong><span>No DOC Match</span></div>
+      <div class="warning"><strong>{{ sap_comparison.no_sap_match_count }}</strong><span>No SAP Match</span></div>
+      {% if sap_comparison.nonnumeric_document_count %}<div class="warning"><strong>{{ sap_comparison.nonnumeric_document_count }}</strong><span>Non-Numeric DOC Values</span></div>{% endif %}
+    </section>
+
+    {% if sap_parse_result.errors %}
+      <section class="warning-panel analysis-section">
+        <h2>SAP input rows needing review</h2>
+        <ul>
+          {% for error in sap_parse_result.errors %}
+            <li>Row {{ error.row }}: {{ error.message }} <code>{{ error.input }}</code></li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endif %}
+
+    <section class="table-wrap analysis-section">
+      <h2>SAP vs DOCX Price Reconciliation</h2>
+      <table class="comparison-table manager-table sap-comparison-table">
+        <thead>
+          <tr>
+            <th>TAG</th>
+            <th>POSITION</th>
+            <th>CODE</th>
+            <th>SAP PRICE</th>
+            <th>DOC PRICE</th>
+            <th>DIFFERENCE</th>
+            <th>RESULT</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for row in sap_comparison.rows %}
+          <tr class="{{ 'base-unit-row' if row.position == 'BASE' else '' }}">
+            <td><code>{{ row.tag or '—' }}</code></td>
+            <td>{{ row.position or '—' }}</td>
+            <td><code>{{ row.code or '—' }}</code></td>
+            <td class="number">{{ row.sap_price|money if row.sap_price is not none else '—' }}</td>
+            <td class="number">
+              {% if row.document_price is not none %}
+                {{ row.document_price|money }}
+              {% elif row.raw_document_price %}
+                {{ row.raw_document_price }}
+              {% else %}
+                —
+              {% endif %}
+            </td>
+            <td class="number">{{ row.difference|signed_money if row.difference is not none else '—' }}</td>
+            <td>
+              <span class="badge {{ row.result|sap_result_class }}">{{ row.result }}</span>
+              {% if row.diagnostic %}
+                <br><span class="muted">{{ row.diagnostic|replace('_', ' ')|title }}</span>
+              {% endif %}
+              {% if row.eligible_candidate_count > 1 %}
+                <br><span class="muted">{{ row.eligible_candidate_count }} eligible DOC candidates; deterministic assignment used.</span>
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </section>
+  {% else %}
+    <section class="warning-panel analysis-section">
+      <h2>SAP comparison not run</h2>
+      <p>Paste SAP pricing rows on the analysis page to reconcile SAP against numeric DOCX prices.</p>
+    </section>
+  {% endif %}
+
+  {% set base = result.base_unit_result %}
+  <section class="table-wrap analysis-section">
+    <h2>Base Unit Master Price</h2>
+    <table class="comparison-table manager-table">
+      <thead>
+        <tr>
+          <th>Position</th>
+          <th>Code</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Location</th>
+          <th>Table Heading</th>
+          <th>Condenser</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% if base %}
+          <tr>
+            <td>BASE UNIT MASTER PRICE</td>
+            <td><code></code></td>
+            <td>{{ base.search_value or 'No derived base-unit tag' }}</td>
+            <td class="number">{{ base.price|money if base.price is not none else '-' }}</td>
+            <td>{{ base.location or '-' }}</td>
+            <td>{{ base.table_heading or '-' }}</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td colspan="7">
+              <details class="review-details">
+                <summary>{{ base.status|replace('_', ' ')|title }}</summary>
+                <div class="review-content">
+                  <p><strong>Reason:</strong> {{ base.reason }}</p>
+                  <p><strong>Input Catalog:</strong> <code>{{ base.source_catalog_number }}</code></p>
+                  <p><strong>Base Unit Search Type:</strong> {{ base.search_type|replace('_', ' ')|title if base.search_type else '-' }}</p>
+                  {% if base.configured_range %}<p><strong>Configured Range:</strong> {{ base.configured_range }}</p>{% endif %}
+                  {% if base.template %}<p><strong>Configured Template:</strong> <code>{{ base.template }}</code></p>{% endif %}
+                  <p><strong>Derived Search:</strong> <code>{{ base.search_value or '-' }}</code></p>
+                  <p><strong>Tables Searched:</strong> {{ base.tables_searched }}</p>
+                  <p><strong>Matching Tables:</strong> {{ base.matching_tables }}</p>
+                  {% if base.raw_value %}<p><strong>Selected Raw Value:</strong> <code>{{ base.raw_value }}</code></p>{% endif %}
+                  {% if base.matches %}
+                    <h3>Base-unit matches</h3>
+                    <ol>
+                    {% for match in base.matches %}
+                      <li>
+                        Table {{ match.table_number }}, row {{ match.row_number }}, cell {{ match.cell_number }};
+                        Master Price column {{ match.master_price_column or '-' }};
+                        raw value <code>{{ match.raw_value }}</code>;
+                        parsed {{ match.price|money if match.price is not none else match.value_type }}.
+                        <br><span class="muted">{{ match.row_text }}</span>
+                      </li>
+                    {% endfor %}
+                    </ol>
+                  {% endif %}
+                </div>
+              </details>
+            </td>
+          </tr>
+        {% else %}
+          <tr><td colspan="7" class="muted">No base-unit analysis was returned.</td></tr>
+        {% endif %}
+      </tbody>
+    </table>
+  </section>
+
+  <section class="table-wrap analysis-section">
+    <table class="comparison-table manager-table">
+      <thead>
+        <tr>
+          <th>Position</th>
+          <th>Catalog Character</th>
+          <th>Catalog Code</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Location</th>
+          <th>Table Heading</th>
+          <th>Condenser</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for option in result.priced_options %}
+        <tr>
+          <td>{{ option.position }}</td>
+          <td><code>{{ option.catalog_character or '-' }}</code></td>
+          <td><code>{{ option.catalog_code }}</code></td>
+          <td>{{ option.description }}</td>
+          <td class="number">{{ option.price|money }}</td>
+          <td>{{ option.location }}</td>
+          <td>{{ option.table_heading }}</td>
+          <td>
+            <strong>Product:</strong> {{ option.product_family or option.condenser_type or '-' }}<br>
+            <strong>DOCX:</strong> {{ option.document_condenser_compatibility or 'All / unrestricted' }}<br>
+            <span class="muted">Normalized: {{ option.normalized_condenser_families|join(', ') if option.normalized_condenser_families else 'ALL' }}</span>
+          </td>
+        </tr>
+        {% if option.price_column_configured_keys %}
+          <tr>
+            <td colspan="8">
+              <details class="review-details">
+                <summary>Price column resolution</summary>
+                <div class="review-content">
+                  <p><strong>Criteria:</strong> {{ option.price_column_configured_keys|join(', ') }}</p>
+                  <p><strong>Catalog values:</strong>
+                    {% for key, value in option.price_column_catalog_values.items() %}
+                      <code>{{ key }}={{ value }}</code>{% if not loop.last %}, {% endif %}
+                    {% else %}
+                      -
+                    {% endfor %}
+                  </p>
+                  <p><strong>Matched criteria:</strong> {{ option.price_column_matched_keys|join(', ') if option.price_column_matched_keys else '-' }}</p>
+                  <p><strong>Selected header:</strong> {{ option.price_column_matched_header_parts|join(' / ') if option.price_column_matched_header_parts else '-' }}</p>
+                  <p><strong>Match level:</strong> {{ option.price_column_match_level or '-' }}; <strong>Confidence:</strong> {{ option.price_column_confidence or '-' }}</p>
+                  <p><strong>Reason:</strong> {{ option.price_column_reason or '-' }}</p>
+                </div>
+              </details>
+            </td>
+          </tr>
+        {% endif %}
+      {% else %}
+        <tr><td colspan="8" class="muted">No additional numeric option prices were extracted.</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </section>
+
+  <section class="table-wrap analysis-section">
+    <table class="comparison-table manager-table">
+      <thead>
+        <tr>
+          <th>Position</th>
+          <th>Catalog Character</th>
+          <th>Catalog Code</th>
+          <th>Status</th>
+          <th>Reason</th>
+          <th>Location</th>
+          <th>Table Heading</th>
+          <th>Condenser Debug</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for diagnostic in result.diagnostics %}
+        <tr>
+          <td>{{ diagnostic.position }}</td>
+          <td><code>{{ diagnostic.catalog_character or '-' }}</code></td>
+          <td><code>{{ diagnostic.catalog_code }}</code></td>
+          <td><span class="badge review">{{ diagnostic.status|replace('_', ' ')|title }}</span></td>
+          <td>{{ diagnostic.reason }}</td>
+          <td>{{ diagnostic.location or '-' }}</td>
+          <td>{{ diagnostic.table_heading or '-' }}</td>
+          <td>
+            {% if diagnostic.product_family or diagnostic.document_condenser_compatibility %}
+              <strong>Product:</strong> {{ diagnostic.product_family or '-' }}<br>
+              <strong>DOCX:</strong> {{ diagnostic.document_condenser_compatibility or 'All / unrestricted' }}<br>
+              <span class="muted">Normalized: {{ diagnostic.normalized_condenser_families|join(', ') if diagnostic.normalized_condenser_families else 'ALL' }}</span>
+            {% else %}
+              -
+            {% endif %}
+            {% if diagnostic.price_column_configured_keys %}
+              <details class="review-details">
+                <summary>Price column resolution</summary>
+                <div class="review-content">
+                  <p><strong>Criteria:</strong> {{ diagnostic.price_column_configured_keys|join(', ') }}</p>
+                  <p><strong>Catalog values:</strong>
+                    {% for key, value in diagnostic.price_column_catalog_values.items() %}
+                      <code>{{ key }}={{ value }}</code>{% if not loop.last %}, {% endif %}
+                    {% else %}
+                      -
+                    {% endfor %}
+                  </p>
+                  <p><strong>Matched criteria:</strong> {{ diagnostic.price_column_matched_keys|join(', ') if diagnostic.price_column_matched_keys else '-' }}</p>
+                  <p><strong>Candidate header:</strong> {{ diagnostic.price_column_matched_header_parts|join(' / ') if diagnostic.price_column_matched_header_parts else '-' }}</p>
+                  <p><strong>Match level:</strong> {{ diagnostic.price_column_match_level or '-' }}; <strong>Confidence:</strong> {{ diagnostic.price_column_confidence or '-' }}</p>
+                  <p><strong>Reason:</strong> {{ diagnostic.price_column_reason or '-' }}</p>
+                </div>
+              </details>
+            {% endif %}
+          </td>
+        </tr>
+      {% else %}
+        <tr><td colspan="8" class="muted">No diagnostics.</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card analysis-section">
+    <h2>Decoded Catalog Positions</h2>
+    <div class="code-list">
+      {% for decoded in result.decoded_positions %}
+        {% if decoded.catalog_code %}
+          <code>Position {{ decoded.position }}: {{ decoded.position_value }} -> {{ decoded.catalog_code }} ({{ decoded.source_mode|replace('_', ' ')|title }})</code>
+        {% else %}
+          <code>Position {{ decoded.position }}: {{ decoded.position_value }} -> no mapped option code</code>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+</main>
+</body>
+</html>

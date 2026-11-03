@@ -1,0 +1,363 @@
+RULEBEGIN.LOOKUP.OPTIONSPRICE.DUP					P5	P6		P8											NOMENCLATURE			HIT.CATEGORY	HIT.VALUE	HIT.DESCRIPTION																				
+					B	12		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	375.949	Option Belt Guard
+					B	12		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	3.815	Option Extended Lube Line
+					B	12		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	61.495	Option Inlet Screen
+					B	12		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-30.742	Adjustment when Belt and Inlet Screen are ordered
+					B	34		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	375.949	Option Belt Guard
+					B	34		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	3.436	Option Extended Lube Line
+					B	34		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	423.361	Option Inlet Screen
+					B	GQ		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-29.694	Adjustment when Belt and Inlet Screen are ordered
+					B	GQ		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-29.694	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					B	GQ		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	370.575	Option Belt Guard
+					B	GQ		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	59.387	Option Inlet Screen
+					B	GQ		1GQ														$OPTIONS.EXTENDEDLUBE	0.001	Option Extended Lube Line
+					B	HR		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-29.694	Adjustment when Belt and Inlet Screen are ordered
+					B	HR		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-29.694	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					B	HR		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	370.575	Option Belt Guard
+					B	HR		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	59.387	Option Inlet Screen
+					B	HR		1GQ														$OPTIONS.EXTENDEDLUBE	0.001	Option Extended Lube Line
+					C	12		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	455.461	Option Belt Guard
+					C	12		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	4.574	Option Extended Lube Line
+					C	12		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	61.495	Option Inlet Screen
+					C	12		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-30.742	Adjustment when Belt and Inlet Screen are ordered
+					C	34		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	455.461	Option Belt Guard
+					C	34		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	4.275	Option Extended Lube Line
+					C	34		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	578.62	Option Inlet Screen
+					C	56		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	375.949	Option Belt Guard
+					C	56		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	3.815	Option Extended Lube Line
+					C	56		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	61.495	Option Inlet Screen
+					C	56		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-30.742	Adjustment when Belt and Inlet Screen are ordered
+					C	G		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-33.449	Adjustment when Belt and Inlet Screen are ordered
+					C	G		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-33.449	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					C	G		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	448.949	Option Belt Guard
+					C	G		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	66.878	Option Inlet Screen
+					C	G		1GQ														$OPTIONS.EXTENDEDLUBE	0.001	Option Extended Lube Line
+					C	HR		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-33.449	Adjustment when Belt and Inlet Screen are ordered
+					C	HR		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-33.449	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					C	HR		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	448.949	Option Belt Guard
+					C	HR		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	66.878	Option Inlet Screen
+					C	HR		1GQ														$OPTIONS.EXTENDEDLUBE	0.001	Option Extended Lube Line
+					C	Q		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-29.694	Adjustment when Belt and Inlet Screen are ordered
+					C	Q		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-29.694	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					C	Q		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	370.575	Option Belt Guard
+					C	Q		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	59.387	Option Inlet Screen
+					C	Q		1GQ														$OPTIONS.EXTENDEDLUBE	0.001	Option Extended Lube Line
+					D	12		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	455.461	Option Belt Guard
+					D	12		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	4.944	Option Extended Lube Line
+					D	12		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	79.542	Option Inlet Screen
+					D	12		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-39.771	Adjustment when Belt and Inlet Screen are ordered
+					D	34		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	485.225	Option Belt Guard
+					D	34		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	4.574	Option Extended Lube Line
+					D	34		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	620.159	Option Inlet Screen
+					D	56		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	455.461	Option Belt Guard
+					D	56		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	4.574	Option Extended Lube Line
+					D	56		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	61.495	Option Inlet Screen
+					D	56		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-30.742	Adjustment when Belt and Inlet Screen are ordered
+					D	78		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	455.461	Option Belt Guard
+					D	78		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	4.275	Option Extended Lube Line
+					D	78		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	578.62	Option Inlet Screen
+					D	GQ		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-33.449	Adjustment when Belt and Inlet Screen are ordered
+					D	GQ		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-33.449	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					D	GQ		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	448.949	Option Belt Guard
+					D	GQ		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	66.878	Option Inlet Screen
+					D	GQ		1GQ														$OPTIONS.EXTENDEDLUBE	0.001	Option Extended Lube Line
+					D	HR		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-37.134	Adjustment when Belt and Inlet Screen are ordered
+					D	HR		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-37.134	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					D	HR		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	478.293	Option Belt Guard
+					D	HR		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	74.249	Option Inlet Screen
+					D	HR		1GQ														$OPTIONS.EXTENDEDLUBE	0.001	Option Extended Lube Line
+					F	12		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	485.225	Option Belt Guard
+					F	12		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	4.944	Option Extended Lube Line
+					F	12		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	79.542	Option Inlet Screen
+					F	12		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-39.771	Adjustment when Belt and Inlet Screen are ordered
+					F	34		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	514.958	Option Belt Guard
+					F	34		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	5.134	Option Extended Lube Line
+					F	34		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	629.358	Option Inlet Screen
+					F	56		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	455.461	Option Belt Guard
+					F	56		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	4.574	Option Extended Lube Line
+					F	56		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	61.495	Option Inlet Screen
+					F	56		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-30.742	Adjustment when Belt and Inlet Screen are ordered
+					F	GQ		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-37.134	Adjustment when Belt and Inlet Screen are ordered
+					F	GQ		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-37.134	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					F	GQ		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	478.293	Option Belt Guard
+					F	GQ		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	74.249	Option Inlet Screen
+					F	GQ		1GQ														$OPTIONS.EXTENDEDLUBE	0.001	Option Extended Lube Line
+					F	HR		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-41.879	Adjustment when Belt and Inlet Screen are ordered
+					F	HR		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-41.879	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					F	HR		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	507.607	Option Belt Guard
+					F	HR		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	83.747	Option Inlet Screen
+					F	HR		1GQ														$OPTIONS.EXTENDEDLUBE	0.001	Option Extended Lube Line
+					G	12		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	485.225	Option Belt Guard
+					G	12		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	6.093	Option Extended Lube Line
+					G	12		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	91.318	Option Inlet Screen
+					G	12		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-45.654	Adjustment when Belt and Inlet Screen are ordered
+					G	34		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	514.958	Option Belt Guard
+					G	34		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	6.272	Option Extended Lube Line
+					G	34		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	681.984	Option Inlet Screen
+					G	56		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	485.225	Option Belt Guard
+					G	56		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	4.944	Option Extended Lube Line
+					G	56		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	79.542	Option Inlet Screen
+					G	56		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-39.771	Adjustment when Belt and Inlet Screen are ordered
+					G	G		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-34.628	Adjustment when Belt and Inlet Screen are ordered
+					G	G		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-34.628	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					G	G		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	478.293	Option Belt Guard
+					G	G		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	74.249	Option Inlet Screen
+					G	G		1GQ														$OPTIONS.EXTENDEDLUBE	0.001	Option Extended Lube Line
+					G	HR		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-41.879	Adjustment when Belt and Inlet Screen are ordered
+					G	HR		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-41.879	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					G	HR		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	507.607	Option Belt Guard
+					G	HR		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	83.747	Option Inlet Screen
+					G	HR		1GQ														$OPTIONS.EXTENDEDLUBE	0.001	Option Extended Lube Line
+					G	Q		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-37.134	Adjustment when Belt and Inlet Screen are ordered
+					G	Q		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-37.134	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					G	Q		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	478.293	Option Belt Guard
+					G	Q		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	74.249	Option Inlet Screen
+					G	Q		1GQ														$OPTIONS.EXTENDEDLUBE	0.001	Option Extended Lube Line
+					H	12		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	514.958	Option Belt Guard
+					H	12		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	6.093	Option Extended Lube Line
+					H	12		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	91.318	Option Inlet Screen
+					H	12		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-45.654	Adjustment when Belt and Inlet Screen are ordered
+					H	34		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	544.732	Option Belt Guard
+					H	34		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	6.272	Option Extended Lube Line
+					H	34		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	681.984	Option Inlet Screen
+					H	56		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	485.225	Option Belt Guard
+					H	56		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	4.944	Option Extended Lube Line
+					H	56		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	79.542	Option Inlet Screen
+					H	56		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-39.771	Adjustment when Belt and Inlet Screen are ordered
+					H	GQ		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-41.879	Adjustment when Belt and Inlet Screen are ordered
+					H	GQ		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-41.879	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					H	GQ		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	507.607	Option Belt Guard
+					H	GQ		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	83.747	Option Inlet Screen
+					H	GQ		1GQ														$OPTIONS.EXTENDEDLUBE	0.001	Option Extended Lube Line
+					H	HR		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-46.573	Adjustment when Belt and Inlet Screen are ordered
+					H	HR		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-46.573	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					H	HR		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	536.951	Option Belt Guard
+					H	HR		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	93.136	Option Inlet Screen
+					H	HR		1GQ														$OPTIONS.EXTENDEDLUBE	0.001	Option Extended Lube Line
+					J	12		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	514.958	Option Belt Guard
+					J	12		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	6.842	Option Extended Lube Line
+					J	12		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	91.318	Option Inlet Screen
+					J	12		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-45.654	Adjustment when Belt and Inlet Screen are ordered
+					J	34		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	544.732	Option Belt Guard
+					J	34		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	6.842	Option Extended Lube Line
+					J	34		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	718.299	Option Inlet Screen
+					J	56		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	514.958	Option Belt Guard
+					J	56		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	6.093	Option Extended Lube Line
+					J	56		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	91.318	Option Inlet Screen
+					J	56		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-45.654	Adjustment when Belt and Inlet Screen are ordered
+					J	78		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	544.732	Option Belt Guard
+					J	78		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	6.272	Option Extended Lube Line
+					J	78		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	681.984	Option Inlet Screen
+					J	GQ		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-41.879	Adjustment when Belt and Inlet Screen are ordered
+					J	GQ		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-41.879	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					J	GQ		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	507.607	Option Belt Guard
+					J	GQ		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	83.747	Option Inlet Screen
+					J	GQ		1GQ														$OPTIONS.EXTENDEDLUBE	0.001	Option Extended Lube Line
+					J	HR		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-46.573	Adjustment when Belt and Inlet Screen are ordered
+					J	HR		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-46.573	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					J	HR		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	536.951	Option Belt Guard
+					J	HR		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	93.136	Option Inlet Screen
+					J	HR		1GQ														$OPTIONS.EXTENDEDLUBE	0.001	Option Extended Lube Line
+					K	12		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	514.958	Option Belt Guard
+					K	12		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	7.601	Option Extended Lube Line
+					K	12		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	108.637	Option Inlet Screen
+					K	12		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-54.323	Adjustment when Belt and Inlet Screen are ordered
+					K	34		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	603.35	Option Belt Guard
+					K	34		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	7.701	Option Extended Lube Line
+					K	34		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	728.177	Option Inlet Screen
+					K	56		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	514.958	Option Belt Guard
+					K	56		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	6.842	Option Extended Lube Line
+					K	56		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	91.318	Option Inlet Screen
+					K	56		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-45.654	Adjustment when Belt and Inlet Screen are ordered
+					K	78		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	544.732	Option Belt Guard
+					K	78		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	6.842	Option Extended Lube Line
+					K	78		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	718.299	Option Inlet Screen
+					K	G		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-41.879	Adjustment when Belt and Inlet Screen are ordered
+					K	G		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-41.879	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					K	G		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	507.607	Option Belt Guard
+					K	G		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	83.747	Option Inlet Screen
+					K	G		1GQ														$OPTIONS.EXTENDEDLUBE	0.001	Option Extended Lube Line
+					K	HR		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-50.728	Adjustment when Belt and Inlet Screen are ordered
+					K	HR		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-50.728	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					K	HR		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	594.731	Option Belt Guard
+					K	HR		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	101.446	Option Inlet Screen
+					K	HR		1GQ														$OPTIONS.EXTENDEDLUBE	0.001	Option Extended Lube Line
+					K	Q		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-46.573	Adjustment when Belt and Inlet Screen are ordered
+					K	Q		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-46.573	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					K	Q		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	536.951	Option Belt Guard
+					K	Q		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	93.136	Option Inlet Screen
+					K	Q		1GQ														$OPTIONS.EXTENDEDLUBE	0.001	Option Extended Lube Line
+					L	12		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	574.485	Option Belt Guard
+					L	12		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	8.36	Option Extended Lube Line
+					L	12		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	144.962	Option Inlet Screen
+					L	12		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-72.481	Adjustment when Belt and Inlet Screen are ordered
+					L	34		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	603.35	Option Belt Guard
+					L	34		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	8.55	Option Extended Lube Line
+					L	34		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	772.213	Option Inlet Screen
+					L	56		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	514.958	Option Belt Guard
+					L	56		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	7.601	Option Extended Lube Line
+					L	56		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	108.637	Option Inlet Screen
+					L	56		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-54.323	Adjustment when Belt and Inlet Screen are ordered
+					L	78		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	603.35	Option Belt Guard
+					L	78		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	7.701	Option Extended Lube Line
+					L	78		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	728.177	Option Inlet Screen
+					L	G		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-50.718	Adjustment when Belt and Inlet Screen are ordered
+					L	G		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-50.718	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					L	G		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	566.275	Option Belt Guard
+					L	G		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	101.446	Option Inlet Screen
+					L	G		1GQ														$OPTIONS.EXTENDEDLUBE	0.001	Option Extended Lube Line
+					L	HR		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-50.728	Adjustment when Belt and Inlet Screen are ordered
+					L	HR		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-50.728	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					L	HR		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	594.731	Option Belt Guard
+					L	HR		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	101.446	Option Inlet Screen
+					L	HR		1GQ														$OPTIONS.EXTENDEDLUBE	0.001	Option Extended Lube Line
+					L	Q		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-46.573	Adjustment when Belt and Inlet Screen are ordered
+					L	Q		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-46.573	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					L	Q		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	536.951	Option Belt Guard
+					L	Q		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	93.136	Option Inlet Screen
+					L	Q		1GQ														$OPTIONS.EXTENDEDLUBE	0.001	Option Extended Lube Line
+					M	12		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	603.35	Option Belt Guard
+					M	12		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	8.36	Option Extended Lube Line
+					M	12		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	144.962	Option Inlet Screen
+					M	12		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-72.481	Adjustment when Belt and Inlet Screen are ordered
+					M	34		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	633.103	Option Belt Guard
+					M	34		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	9.398	Option Extended Lube Line
+					M	34		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	794.466	Option Inlet Screen
+					M	78		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	603.35	Option Belt Guard
+					M	78		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	8.55	Option Extended Lube Line
+					M	78		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	772.213	Option Inlet Screen
+					M	GQ		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-50.728	Adjustment when Belt and Inlet Screen are ordered
+					M	GQ		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-50.728	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					M	GQ		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	594.731	Option Belt Guard
+					M	GQ		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	101.446	Option Inlet Screen
+					M	GQ		1GQ														$OPTIONS.EXTENDEDLUBE	0.001	Option Extended Lube Line
+					M	HR		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-50.718	Adjustment when Belt and Inlet Screen are ordered
+					M	HR		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-50.718	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					M	HR		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	624.075	Option Belt Guard
+					M	HR		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	101.446	Option Inlet Screen
+					M	HR		1GQ														$OPTIONS.EXTENDEDLUBE	0.001	Option Extended Lube Line
+					N	16		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	767.599	Option Belt Guard
+					N	16		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	8.759	Option Extended Lube Line
+					N	16		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	274.304	Option Inlet Screen
+					N	16		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-137.142	Adjustment when Belt and Inlet Screen are ordered
+					N	25		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	767.599	Option Belt Guard
+					N	25		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	8.759	Option Extended Lube Line
+					N	25		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	289.445	Option Inlet Screen
+					N	25		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-144.722	Adjustment when Belt and Inlet Screen are ordered
+					N	34		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	807.679	Option Belt Guard
+					N	34		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	9.858	Option Extended Lube Line
+					N	34		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	802.616	Option Inlet Screen
+					N	78		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	633.103	Option Belt Guard
+					N	78		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	9.398	Option Extended Lube Line
+					N	78		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	794.466	Option Inlet Screen
+					N	G		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-135.034	Adjustment when Belt and Inlet Screen are ordered
+					N	G		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-135.034	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					N	G		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	756.622	Option Belt Guard
+					N	G		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	6.772	Option Extended Lube Line
+					N	G		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	270.079	Option Inlet Screen
+					N	HR		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-176.254	Adjustment when Belt and Inlet Screen are ordered
+					N	HR		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-176.254	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					N	HR		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	796.134	Option Belt Guard
+					N	HR		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	6.772	Option Extended Lube Line
+					N	HR		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	352.508	Option Inlet Screen
+					N	Q		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-50.718	Adjustment when Belt and Inlet Screen are ordered
+					N	Q		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-50.718	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					N	Q		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	624.075	Option Belt Guard
+					N	Q		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	101.446	Option Inlet Screen
+					N	Q		1GQ														$OPTIONS.EXTENDEDLUBE	0.001	Option Extended Lube Line
+					P	16		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	807.679	Option Belt Guard
+					P	16		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	9.169	Option Extended Lube Line
+					P	16		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	289.445	Option Inlet Screen
+					P	16		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-144.722	Adjustment when Belt and Inlet Screen are ordered
+					P	25		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	807.679	Option Belt Guard
+					P	25		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	9.169	Option Extended Lube Line
+					P	25		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	329.845	Option Inlet Screen
+					P	25		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-164.918	Adjustment when Belt and Inlet Screen are ordered
+					P	38		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	807.679	Option Belt Guard
+					P	38		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	9.858	Option Extended Lube Line
+					P	38		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	803.005	Option Inlet Screen
+					P	4		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	807.679	Option Belt Guard
+					P	4		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	9.858	Option Extended Lube Line
+					P	4		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	803.005	Option Inlet Screen
+					P	7		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	633.103	Option Belt Guard
+					P	7		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	9.398	Option Extended Lube Line
+					P	7		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	794.466	Option Inlet Screen
+					P	G		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-176.254	Adjustment when Belt and Inlet Screen are ordered
+					P	G		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-176.254	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					P	G		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	796.134	Option Belt Guard
+					P	G		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	7.101	Option Extended Lube Line
+					P	G		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	352.508	Option Inlet Screen
+					P	HR		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-176.254	Adjustment when Belt and Inlet Screen are ordered
+					P	HR		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-176.254	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					P	HR		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	796.134	Option Belt Guard
+					P	HR		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	7.101	Option Extended Lube Line
+					P	HR		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	352.508	Option Inlet Screen
+					P	Q		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-50.718	Adjustment when Belt and Inlet Screen are ordered
+					P	Q		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-50.718	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					P	Q		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	624.075	Option Belt Guard
+					P	Q		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	101.446	Option Inlet Screen
+					P	Q		1GQ														$OPTIONS.EXTENDEDLUBE	0.001	Option Extended Lube Line
+					Q	16		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	847.72	Option Belt Guard
+					Q	16		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	9.169	Option Extended Lube Line
+					Q	16		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	329.845	Option Inlet Screen
+					Q	16		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-164.918	Adjustment when Belt and Inlet Screen are ordered
+					Q	25		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	847.72	Option Belt Guard
+					Q	25		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	9.169	Option Extended Lube Line
+					Q	25		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	355.094	Option Inlet Screen
+					Q	25		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-177.552	Adjustment when Belt and Inlet Screen are ordered
+					Q	38		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	847.72	Option Belt Guard
+					Q	38		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	9.858	Option Extended Lube Line
+					Q	38		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	877.074	Option Inlet Screen
+					Q	4		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	847.72	Option Belt Guard
+					Q	4		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	9.858	Option Extended Lube Line
+					Q	4		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	877.074	Option Inlet Screen
+					Q	7		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	807.679	Option Belt Guard
+					Q	7		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	9.858	Option Extended Lube Line
+					Q	7		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	803.005	Option Inlet Screen
+					Q	G		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-229.349	Adjustment when Belt and Inlet Screen are ordered
+					Q	G		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-229.349	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					Q	G		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	835.625	Option Belt Guard
+					Q	G		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	7.101	Option Extended Lube Line
+					Q	G		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	458.697	Option Inlet Screen
+					Q	HR		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-229.349	Adjustment when Belt and Inlet Screen are ordered
+					Q	HR		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-229.349	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					Q	HR		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	835.625	Option Belt Guard
+					Q	HR		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	7.101	Option Extended Lube Line
+					Q	HR		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	458.697	Option Inlet Screen
+					Q	Q		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-176.254	Adjustment when Belt and Inlet Screen are ordered
+					Q	Q		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-176.254	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					Q	Q		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	796.134	Option Belt Guard
+					Q	Q		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	7.101	Option Extended Lube Line
+					Q	Q		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	352.508	Option Inlet Screen
+					R	16		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	847.72	Option Belt Guard
+					R	16		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	10.987	Option Extended Lube Line
+					R	16		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	355.094	Option Inlet Screen
+					R	16		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-177.552	Adjustment when Belt and Inlet Screen are ordered
+					R	2		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	847.72	Option Belt Guard
+					R	2		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	10.987	Option Extended Lube Line
+					R	2		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	355.094	Option Inlet Screen
+					R	2		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-177.552	Adjustment when Belt and Inlet Screen are ordered
+					R	38		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	890.128	Option Belt Guard
+					R	38		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	10.987	Option Extended Lube Line
+					R	38		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	915.397	Option Inlet Screen
+					R	4		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	890.128	Option Belt Guard
+					R	4		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	10.987	Option Extended Lube Line
+					R	4		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	915.397	Option Inlet Screen
+					R	5		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	847.72	Option Belt Guard
+					R	5		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	9.169	Option Extended Lube Line
+					R	5		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	329.845	Option Inlet Screen
+					R	5		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-164.918	Adjustment when Belt and Inlet Screen are ordered
+					R	7		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	847.72	Option Belt Guard
+					R	7		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	9.858	Option Extended Lube Line
+					R	7		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	877.074	Option Inlet Screen
+					R	GQ		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-229.349	Adjustment when Belt and Inlet Screen are ordered
+					R	GQ		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-229.349	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					R	GQ		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	835.625	Option Belt Guard
+					R	GQ		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	7.431	Option Extended Lube Line
+					R	GQ		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	458.697	Option Inlet Screen
+					R	HR		ZFP														$OPTIONS.Adjust.BELTandINLETSCREEN	-264.975	Adjustment when Belt and Inlet Screen are ordered
+					R	HR		4KW														$OPTIONS.Adjust.BELTandINLETSCREENandEXTENDEDLUBE	-264.975	Adjustment when Belt, Inlet Screen and Extended Lube are ordered
+					R	HR		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	877.414	Option Belt Guard
+					R	HR		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	7.431	Option Extended Lube Line
+					R	HR		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	529.94	Option Inlet Screen
+RULEEND																				

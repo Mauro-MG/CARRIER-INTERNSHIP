@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analyze DOCX Pricing</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/configuration_matrix.css') }}">
+</head>
+<body>
+<main class="container">
+  <header class="page-header">
+    <p class="eyebrow">Version 2</p>
+    <h1>Analyze DOCX Pricing</h1>
+    <p>Select a saved product configuration, enter a complete catalog number, upload the pricing DOCX, and paste SAP rows. Extract option prices from the DOCX, then reconcile SAP prices in any order.</p>
+  </header>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% for category, message in messages %}<div class="alert {{ category }}">{{ message }}</div>{% endfor %}
+  {% endwith %}
+
+  <form action="{{ url_for('analyze_docx') }}" method="post" enctype="multipart/form-data" class="card analysis-form">
+    <label for="configuration_file">Product configuration</label>
+    <select id="configuration_file" name="configuration_file" required>
+      <option value="">Select a saved configuration</option>
+      {% for item in configurations %}
+        <option value="{{ item.file_name }}" {% if item.file_name == selected_config %}selected{% endif %}>
+          {{ item.product_type }} - Version {{ item.version }} - {{ item.configuration_date }}
+        </option>
+      {% endfor %}
+    </select>
+
+    <label for="catalog_number">Complete catalog number</label>
+    <input id="catalog_number" name="catalog_number" value="{{ catalog_number }}" placeholder="30MPW03153AG557B" required>
+
+    <label for="docx_file">Pricing DOCX</label>
+    <input id="docx_file" name="docx_file" type="file" accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
+    <small>DOCX only, maximum 25 MB. The upload is processed temporarily and deleted.</small>
+
+    <label for="sap_pricing_data">SAP PRICING DATA</label>
+    <textarea id="sap_pricing_data" name="sap_pricing_data" rows="10" placeholder="TAG&#9;PRICE&#10;65LL-1002P--3---0&#9;279862&#10;65LL_POS11_006&#9;7072">{{ sap_pricing_data or '' }}</textarea>
+    <small>Paste TAG and SAP PRICE columns directly from SAP/Excel. Row order does not matter. Each SAP price is reconciled against all numeric prices extracted from the Carrier DOCX.</small>
+
+    <div class="form-actions">
+      <button type="submit">COMPARE SAP</button>
+      <a class="secondary-button" href="{{ url_for('configuration_manager') }}">Configuration manager</a>
+    </div>
+  </form>
+</main>
+</body>
+</html>

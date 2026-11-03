@@ -1,0 +1,2020 @@
+rule "pricing.fansled.v1.xls.sourced.D.47.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P1 as p1
+then
+   LauFanSetup
+   set key to p1
+   set data to 
+     add row to data  "[^3]" "ERRORPOSITION~P1~Position P1 is not in list  [^3]"
+   processLauRawFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.50.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P2 as p2
+then
+   LauFanSetup
+   set key to p2
+   set data to 
+     add row to data  "[^9]" "ERRORPOSITION~P2~Position P2 is not in list  [^9]"
+   processLauRawFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.53.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P3 as p3
+then
+   LauFanSetup
+   set key to p3
+   set data to 
+     add row to data  "[^M]" "ERRORPOSITION~P3~Position P3 is not in list  [^M]"
+   processLauRawFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.56.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P4 as p4
+then
+   LauFanSetup
+   set key to p4
+   set data to 
+     add row to data  "[^B]" "ERRORPOSITION~P4~Position P4 is not in list  [^B]"
+   processLauRawFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.59.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P5 as p5
+then
+   LauFanSetup
+   set key to p5
+   set data to 
+     add row to data  "[^BCDFGHJKLMNPQRSTVW0123456789X]" "ERRORPOSITION~P5~Position P5 is not in list  [^BCDFGHJKLMNPQRSTVW0123456789X]"
+   processLauRawFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.62.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P5 as p5
+   store fansled hit P6 as p6
+then
+   LauFanSetup
+   set key to p5+p6
+   set data to 
+     add row to data  "[BCDFGHJKLMNPQRSTVW][^GHQR123456789]" "ERRORPOSITION~P6~Position P6 is not in list  [^GHQR123456789]"
+   processLauRawFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.65.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P5 as p5
+   store fansled hit P6 as p6
+then
+   LauFanSetup
+   set key to p5+p6
+   set data to 
+     add row to data  "[012345678]9" "ERRORPOSITION~P6~Position P6 is not in list  [9]"
+   processLauRawFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.68.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P18 as p18
+then
+   LauFanSetup
+   set key to p18
+   set data to 
+     add row to data  "[^K]" "ERRORPOSITION~P18~Position P18 is not in list  [^K]"
+   processLauRawFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.71.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P6 as p6 restriction !="9"
+   store fansled hit P7 as p7
+then
+   LauFanSetup
+   set key to p6+p7
+   set data to 
+     add row to data  "[^9][^BCDFGHJKLX]" "ERRORPOSITION~P7~Position P7 is not in list  [^BCDFGHJKLX]"
+   processLauRawFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.74.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P6 as p6 restriction !="9"
+   store fansled hit P8 as p8
+then
+   LauFanSetup
+   set key to p6+p8
+   set data to 
+     add row to data  "[^9][^TVYZ1234BCDFGHJKLMNPQRSW]" "ERRORPOSITION~P8~Position P8 is not in list  [^TVYZ1234BCDFGHJKLMNPQRSW]"
+   processLauRawFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.77.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P6 as p6 restriction !="9"
+   store fansled hit P9 as p9
+then
+   LauFanSetup
+   set key to p6+p9
+   set data to 
+     add row to data  "[^9][^BCFGJRSVWZ]" "ERRORPOSITION~P9~Position P9 is not in list  [^BCFGJRSVWZ]"
+   processLauRawFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.80.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P6 as p6 restriction !="9"
+   store fansled hit P16 as p16
+then
+   LauFanSetup
+   set key to p6+p16
+   set data to 
+     add row to data  "[^9][^BCDFGHJKLMX]" "ERRORPOSITION~P16~Position P16 is not in list  [^BCDFGHJKLMX]"
+   processLauRawFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.83.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P6 as p6 restriction !="9"
+   store fansled hit P17 as p17
+then
+   LauFanSetup
+   set key to p6+p17
+   set data to 
+     add row to data  "[^9][^BCDFGHJK1234]" "ERRORPOSITION~P17~Position P17 is not in list  [^BCDFGHJK1234]"
+   processLauRawFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.86.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P6 as p6
+   store fansled hit P7 as p7
+then
+   LauFanSetup
+   set key to p6+p7
+   set data to 
+     add row to data  "9[^BCDFGHJKLMNPQRS]" "ERRORPOSITION~P7~Position P7 is not in list  [^BCDFGHJKLMNPQRS]"
+   processLauRawFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.89.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P6 as p6 restriction =="9"
+   store fansled hit P8 as p8
+then
+   LauFanSetup
+   set key to p6+p8
+   set data to 
+     add row to data  "9[^BCDFGHQRSTVW]" "ERRORPOSITION~P8~Position P8 is not in list  [^BCDFGHQRSTVW]"
+   processLauRawFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.92.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P6 as p6 restriction =="9"
+   store fansled hit P9 as p9
+then
+   LauFanSetup
+   set key to p6+p9
+   set data to 
+     add row to data  "9[^BC]" "ERRORPOSITION~P9~Position P9 is not in list  [^BC]"
+   processLauRawFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.95.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P6 as p6 restriction =="9"
+   store fansled hit P16 as p16
+then
+   LauFanSetup
+   set key to p6+p16
+   set data to 
+     add row to data  "9[^BCDF]" "ERRORPOSITION~P16~Position P16 is not in list  [^BCDF]"
+   processLauRawFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.98.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P6 as p6 restriction =="9"
+   store fansled hit P17 as p17
+then
+   LauFanSetup
+   set key to p6+p17
+   set data to 
+     add row to data  "9[^C]" "ERRORPOSITION~P17~Position P17 is not in list  [^C]"
+   processLauRawFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.104.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P5 as p5
+   store fansled hit P6 as p6
+then
+   LauFanSetup
+   set key to p5+p6
+   set data to 
+     add row to data  "[BCDFGHJKLMNPQR][^9]" "NOMENCLATURE~BELTPREFIVESIX~Belt Fan, Pre 2016 56 code change"
+     add row to data  "[01234567890][^9]" "NOMENCLATURE~BELTPOSTFIVESIX~Belt Fan, Post 2016 56 code change"
+     add row to data  ".9" "NOMENCLATURE~DDPF~DDPF Layout (P6 = 9)"
+   processLauRawRequiredFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.116.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P7 as p7
+   store fansled hit NOMENCLATURE as nomenclature restriction == "DDPF"
+then
+   LauFanSetup
+   set key to p7
+   set data to 
+     add row to data  "B" "WHEEL~105~DDPF 105 Base Fan"
+     add row to data  "C" "WHEEL~122~DDPF 122 Base Fan"
+     add row to data  "D" "WHEEL~135~DDPF 135 Base Fan"
+     add row to data  "F" "WHEEL~150~DDPF 150 Base Fan"
+     add row to data  "G" "WHEEL~165~DDPF 165 Base Fan"
+     add row to data  "H" "WHEEL~182~DDPF 182 Base Fan"
+     add row to data  "J" "WHEEL~200~DDPF 200 Base Fan"
+     add row to data  "K" "WHEEL~222~DDPF 222 Base Fan"
+     add row to data  "L" "WHEEL~245~DDPF 245 Base Fan"
+     add row to data  "M" "WHEEL~270~DDPF 270 Base Fan"
+     add row to data  "N" "WHEEL~300~DDPF 300 Base Fan"
+     add row to data  "P" "WHEEL~330~DDPF 330 Base Fan"
+     add row to data  "Q" "WHEEL~365~DDPF 365 Base Fan"
+     add row to data  "[RS]" "WHEEL~402~DDPF 402 Base Fan"
+   processLauRawRequiredFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.132.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P5 as p5
+   store fansled hit P6 as p6
+   store fansled hit NOMENCLATURE as nomenclature restriction in ("BELTPREFIVESIX","BELTPOSTFIVESIX")
+then
+   LauFanSetup
+   set key to p5+p6
+   set data to 
+     add row to data  "B[12]" "WHEEL~101~Wheel 101"
+     add row to data  "B[34]" "WHEEL~123~Wheel 123"
+     add row to data  "B[HR]" "WHEEL~A9-4A~Wheel A9-4A"
+     add row to data  "C[12]" "WHEEL~121~Wheel 121"
+     add row to data  "C[34]" "WHEEL~153~Wheel 153"
+     add row to data  "C[56]" "WHEEL~101~Wheel 101"
+     add row to data  "C[HR]" "WHEEL~A10-8A~Wheel A10-8A"
+     add row to data  "CQ" "WHEEL~A9-4A~Wheel A9-4A"
+     add row to data  "D[34]" "WHEEL~163~Wheel 163"
+     add row to data  "D[78]" "WHEEL~153~Wheel 153"
+     add row to data  "D[GQ]" "WHEEL~A10-8A~Wheel A10-8A"
+     add row to data  "D[HR]" "WHEEL~A12-12A~Wheel A12-12A"
+     add row to data  "[DF][12]" "WHEEL~131~Wheel 131"
+     add row to data  "[DF][56]" "WHEEL~121~Wheel 121"
+     add row to data  "F[34]" "WHEEL~183Q~Wheel 183Q"
+     add row to data  "F[GQ]" "WHEEL~A12-12A~Wheel A12-12A"
+     add row to data  "[FG][HR]" "WHEEL~A15-15A~Wheel A15-15A"
+     add row to data  "GG" "WHEEL~A12-11A~Wheel A12-11A"
+     add row to data  "GQ" "WHEEL~A12-12A~Wheel A12-12A"
+     add row to data  "[GH][12]" "WHEEL~161~Wheel 161"
+     add row to data  "[GH][34]" "WHEEL~223Q~Wheel 223Q"
+     add row to data  "[GH][56]" "WHEEL~131~Wheel 131"
+     add row to data  "[HJ][GQ]" "WHEEL~A15-15A~Wheel A15-15A"
+     add row to data  "[HJ][HR]" "WHEEL~A18-18A~Wheel A18-18A"
+     add row to data  "J[12]" "WHEEL~181~Wheel 181"
+     add row to data  "J[34]" "WHEEL~243Q~Wheel 243Q"
+     add row to data  "J[56]" "WHEEL~161~Wheel 161"
+     add row to data  "J[78]" "WHEEL~223Q~Wheel 223Q"
+     add row to data  "K[12]" "WHEEL~201~Wheel 201"
+     add row to data  "K[34]" "WHEEL~273Q~Wheel 273Q"
+     add row to data  "K[56]" "WHEEL~181~Wheel 181"
+     add row to data  "K[78]" "WHEEL~243Q~Wheel 243Q"
+     add row to data  "KG" "WHEEL~A15-15A~Wheel A15-15A"
+     add row to data  "[KL][HR]" "WHEEL~A20-18A~Wheel A20-18A"
+     add row to data  "[KL]Q" "WHEEL~A18-18A~Wheel A18-18A"
+     add row to data  "L[34]" "WHEEL~303Q~Wheel 303Q"
+     add row to data  "L[56]" "WHEEL~201~Wheel 201"
+     add row to data  "L[78]" "WHEEL~273Q~Wheel 273Q"
+     add row to data  "LG" "WHEEL~A20-15A~Wheel A20-15A"
+     add row to data  "[LM][12]" "WHEEL~221~Wheel 221"
+     add row to data  "M[34]" "WHEEL~333Q~Wheel 333Q"
+     add row to data  "M[78]" "WHEEL~303Q~Wheel 303Q"
+     add row to data  "M[GQ]" "WHEEL~A20-18H~Wheel A20-18H"
+     add row to data  "M[HR]" "WHEEL~A20-20H~Wheel A20-20H"
+     add row to data  "N[16]" "WHEEL~241~Wheel 241"
+     add row to data  "N[25]" "WHEEL~271~Wheel 271"
+     add row to data  "N[34]" "WHEEL~363Q~Wheel 363Q"
+     add row to data  "N[78]" "WHEEL~333Q~Wheel 333Q"
+     add row to data  "NG" "WHEEL~A22-22H~Wheel A22-22H"
+     add row to data  "[NP][HR]" "WHEEL~A25-25H~Wheel A25-25H"
+     add row to data  "[NP]Q" "WHEEL~A20-20H~Wheel A20-20H"
+     add row to data  "P[16]" "WHEEL~271~Wheel 271"
+     add row to data  "P[25]" "WHEEL~301~Wheel 301"
+     add row to data  "P[38]" "WHEEL~363Q~Wheel 363Q"
+     add row to data  "P4" "WHEEL~403Q~Wheel 403Q"
+     add row to data  "P7" "WHEEL~333Q~Wheel 333Q"
+     add row to data  "PG" "WHEEL~A25-20H~Wheel A25-20H"
+     add row to data  "Q[16]" "WHEEL~301~Wheel 301"
+     add row to data  "Q[25]" "WHEEL~331~Wheel 331"
+     add row to data  "Q[38]" "WHEEL~403Q~Wheel 403Q"
+     add row to data  "Q4" "WHEEL~443Q~Wheel 443Q"
+     add row to data  "Q7" "WHEEL~363Q~Wheel 363Q"
+     add row to data  "QG" "WHEEL~A27-22H~Wheel A27-22H"
+     add row to data  "Q[HR]" "WHEEL~A27-27H~Wheel A27-27H"
+     add row to data  "QQ" "WHEEL~A25-25H~Wheel A25-25H"
+     add row to data  "R[16]" "WHEEL~331~Wheel 331"
+     add row to data  "R2" "WHEEL~361~Wheel 361"
+     add row to data  "R[38]" "WHEEL~443Q~Wheel 443Q"
+     add row to data  "R4" "WHEEL~493Q~Wheel 493Q"
+     add row to data  "R5" "WHEEL~301~Wheel 301"
+     add row to data  "R7" "WHEEL~403Q~Wheel 403Q"
+     add row to data  "R[GQ]" "WHEEL~A27-27H~Wheel A27-27H"
+     add row to data  "R[HR]" "WHEEL~A30-30H~Wheel A30-30H"
+     add row to data  "0[RSTUVWXY]" "WHEEL~131~Wheel 131"
+     add row to data  "0[Z-]" "WHEEL~161~Wheel 161"
+     add row to data  "1[012345]" "WHEEL~161~Wheel 161"
+     add row to data  "1[678ABCDE]" "WHEEL~181~Wheel 181"
+     add row to data  "1[FGHJKLMN]" "WHEEL~201~Wheel 201"
+     add row to data  "1[PQRSTUVWXYZ-]" "WHEEL~221~Wheel 221"
+     add row to data  "2[0123]" "WHEEL~221~Wheel 221"
+     add row to data  "2[45678ABC]" "WHEEL~241~Wheel 241"
+     add row to data  "2[DEFGHJKL]" "WHEEL~271~Wheel 271"
+     add row to data  "5[XYZ-]" "WHEEL~A15-15A~Wheel A15-15A"
+     add row to data  "6[012345678ABC]" "WHEEL~A15-15A~Wheel A15-15A"
+     add row to data  "6[DEFGHJKL]" "WHEEL~A18-18A~Wheel A18-18A"
+     add row to data  "6[MNPQRSTU]" "WHEEL~A20-15A~Wheel A20-15A"
+     add row to data  "6[VWXYZ-]" "WHEEL~A20-18A~Wheel A20-18A"
+     add row to data  "7[01]" "WHEEL~A20-18A~Wheel A20-18A"
+     add row to data  "7[2345678A]" "WHEEL~A20-18H~Wheel A20-18H"
+     add row to data  "7[BCDEFGHJ]" "WHEEL~A20-20H~Wheel A20-20H"
+     add row to data  "7[KLMNPQRS]" "WHEEL~A22-22H~Wheel A22-22H"
+     add row to data  "8[01234567]" "WHEEL~A25-25H~Wheel A25-25H"
+     add row to data  "0[8ABCDEFG]" "WHEEL~121~Wheel  121"
+     add row to data  "2[MNPQRSTU]" "WHEEL~271~Wheel  271"
+     add row to data  "2[VWXYZ-]" "WHEEL~301~Wheel  301"
+     add row to data  "3[012345678A]" "WHEEL~301~Wheel  301"
+     add row to data  "3[BCDEFGHJKLMNPQRS]" "WHEEL~331~Wheel  331"
+     add row to data  "3[TUVWXYZ-]" "WHEEL~361~Wheel  361"
+     add row to data  "4[8ABCDEFG]" "WHEEL~A10-8A~Wheel  A10-8A"
+     add row to data  "4[Z-]" "WHEEL~A12-12A~Wheel  A12-12A"
+     add row to data  "5[012345678ABCDE]" "WHEEL~A12-12A~Wheel  A12-12A"
+     add row to data  "5[FGHJKLMN]" "WHEEL~A15-15A~Wheel  A15-15A"
+     add row to data  "7[TUVWXYZ-]" "WHEEL~A25-20H~Wheel  A25-20H"
+     add row to data  "8[8ABCDEFG]" "WHEEL~A27-22H~Wheel  A27-22H"
+     add row to data  "8[HJKLMNPQRSTUVWXY]" "WHEEL~A27-27H~Wheel  A27-27H"
+     add row to data  "8[Z-]" "WHEEL~A30-30H~Wheel  A30-30H"
+     add row to data  "9[012345]" "WHEEL~A30-30H~Wheel  A30-30H"
+   processLauRawRequiredFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.242.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P9 as p9
+   store fansled hit NOMENCLATURE as nomenclature
+then
+   LauFanSetup
+   set key to p9+"~"+nomenclature+"~"
+   set data to 
+     add row to data  "[BC]~DDPF~" "WHEELCLASS~2~Direct Drive Class II"
+     add row to data  "[BR]~BELTPREFIVESIX~" "WHEELCLASS~1~Wheel Class I"
+     add row to data  "[CFGJSVWZ]~BELTPREFIVESIX~" "WHEELCLASS~2~Wheel Class II"
+     add row to data  "[BR]~BELTPOSTFIVESIX~" "WHEELCLASS~1~Wheel Class I"
+     add row to data  "[CFGJSVWZ]~BELTPOSTFIVESIX~" "WHEELCLASS~2~Wheel Class II"
+   processLauRawRequiredFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.251.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P1 as p1
+   store fansled hit NOMENCLATURE as nomenclature restriction == "DDPF"
+then
+   LauFanSetup
+   set key to p1
+   set data to 
+     add row to data  "3" "FANSHAFT~NONE~Direct Drive~MAXRPM~NONE~Max RPM for Driect Drive NA~MOTORFIELDSUPPLIED~NO~Motor Factory Supplied~DRIVENMAXPD~0~N/A for direct Drive"
+   processLauRawRequiredFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.255.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P16 as p16
+   store fansled hit NOMENCLATURE as nomenclature restriction == "DDPF"
+then
+   LauFanSetup
+   set key to p16
+   set data to 
+     add row to data  "[BC]" "FANQUANTITY~1~One Fan"
+     add row to data  "D" "FANQUANTITY~4~Four Fans"
+     add row to data  "F" "FANQUANTITY~6~Six Fans"
+   processLauRawRequiredFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.261.20231004"
+when
+   fansledLauRawRule
+   store fansled hit NOMENCLATURE as nomenclature restriction != "DDPF"
+then
+   LauFanSetup
+   set key to "~"+nomenclature+"~"
+   set data to 
+     add row to data  "~BELTPREFIVESIX~" "FANQUANTITY~1~One Fan"
+     add row to data  "~BELTPOSTFIVESIX~" "FANQUANTITY~1~One Fan"
+   processLauRawRequiredFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.266.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P5 as p5
+   store fansled hit P6 as p6
+   store fansled hit WHEEL as wheel
+   store fansled hit WHEELCLASS as wheelclass
+   store fansled hit NOMENCLATURE as nomenclature restriction != "DDPF"
+then
+   LauFanSetup
+   set key to p5+p6+"~"+wheel+"~"+wheelclass+"~"
+   set data to 
+     add row to data  "..~181~1~" "FANSHAFT~1.6875~Fan Shaft 181 Class 1 1.6875"
+     add row to data  "..~201~1~" "FANSHAFT~1.6875~Fan Shaft 201 Class 1 1.6875"
+     add row to data  "..~221~1~" "FANSHAFT~1.9375~Fan Shaft 221 Class 1 1.9375"
+     add row to data  "..~241~1~" "FANSHAFT~2.1875~Fan Shaft 241 Class 1 2.1875"
+     add row to data  "..~271~1~" "FANSHAFT~2.1875~Fan Shaft 271 Class 1 2.1875"
+     add row to data  "..~301~1~" "FANSHAFT~2.4375~Fan Shaft 301 Class 1 2.4375"
+     add row to data  "..~331~1~" "FANSHAFT~2.4375~Fan Shaft 331 Class 1 2.4375"
+     add row to data  "..~361~1~" "FANSHAFT~2.6875~Fan Shaft 361 Class 1 2.6875"
+     add row to data  "..~101~2~" "FANSHAFT~1~Fan Shaft 101 Class 2 1"
+     add row to data  "..~121~2~" "FANSHAFT~1.1875~Fan Shaft 121 Class 2 1.1875"
+     add row to data  "..~131~2~" "FANSHAFT~1.4375~Fan Shaft 131 Class 2 1.4375"
+     add row to data  "..~161~2~" "FANSHAFT~1.6875~Fan Shaft 161 Class 2 1.6875"
+     add row to data  "..~181~2~" "FANSHAFT~1.9375~Fan Shaft 181 Class 2 1.9375"
+     add row to data  "..~201~2~" "FANSHAFT~1.9375~Fan Shaft 201 Class 2 1.9375"
+     add row to data  "..~221~2~" "FANSHAFT~2.1875~Fan Shaft 221 Class 2 2.1875"
+     add row to data  "..~241~2~" "FANSHAFT~2.4375~Fan Shaft 241 Class 2 2.4375"
+     add row to data  "..~271~2~" "FANSHAFT~2.4375~Fan Shaft 271 Class 2 2.4375"
+     add row to data  "..~301~2~" "FANSHAFT~1.9375~Fan Shaft 301 Class 2 1.9375"
+     add row to data  "..~331~2~" "FANSHAFT~2.1875~Fan Shaft 331 Class 2 2.1875"
+     add row to data  "..~361~2~" "FANSHAFT~2.1875~Fan Shaft 361 Class 2 2.1875"
+     add row to data  "C.~A10-8A~1~" "FANSHAFT~1~Fan Shaft A10-8A Class 1 1 on Size(s) C"
+     add row to data  "D.~A10-8A~1~" "FANSHAFT~1.1875~Fan Shaft A10-8A Class 1 1.1875 on Size(s) D"
+     add row to data  "4.~A10-8A~1~" "FANSHAFT~1.1875~Fan Shaft A10-8A Class 1 1.1875 on 56 Codes 4 "
+     add row to data  "..~A12-11A~1~" "FANSHAFT~1.4375~Fan Shaft A12-11A Class 1 1.4375"
+     add row to data  "..~A12-12A~1~" "FANSHAFT~1.1875~Fan Shaft A12-12A Class 1 1.1875"
+     add row to data  "[FG].~A15-15A~1~" "FANSHAFT~1.1875~Fan Shaft A15-15A Class 1 1.1875 on Size(s) FG"
+     add row to data  "5[FGHJKLMN]~A15-15A~1~" "FANSHAFT~1.1875~Fan Shaft A15-15A Class 1 1.1875 on 56 Codes 5 FGHJKLMN"
+     add row to data  "[HJ].~A15-15A~1~" "FANSHAFT~1.4375~Fan Shaft A15-15A Class 1 1.4375 on Size(s) HJ"
+     add row to data  "K.~A15-15A~1~" "FANSHAFT~1.6875~Fan Shaft A15-15A Class 1 1.6875 on Size(s) K"
+     add row to data  "5[XYZ-]~A15-15A~1~" "FANSHAFT~1.4375~Fan Shaft A15-15A Class 1 1.4375 on 56 Codes 5 XYZ-"
+     add row to data  "6[0123]~A15-15A~1~" "FANSHAFT~1.4375~Fan Shaft A15-15A Class 1 1.4375 on 56 Codes 6 0123"
+     add row to data  "6[45678ABC]~A15-15A~1~" "FANSHAFT~1.6875~Fan Shaft A15-15A Class 1 1.6875 on 56 Codes 6 45678ABC"
+     add row to data  "..~A18-18A~1~" "FANSHAFT~1.1875~Fan Shaft A18-18A Class 1 1.1875"
+     add row to data  "..~A20-15A~1~" "FANSHAFT~1.6875~Fan Shaft A20-15A Class 1 1.6875"
+     add row to data  "..~A20-18A~1~" "FANSHAFT~1.4375~Fan Shaft A20-18A Class 1 1.4375"
+     add row to data  "..~A20-18H~1~" "FANSHAFT~1.6875~Fan Shaft A20-18H Class 1 1.6875"
+     add row to data  "..~A20-20H~1~" "FANSHAFT~1.6875~Fan Shaft A20-20H Class 1 1.6875"
+     add row to data  "..~A22-22H~1~" "FANSHAFT~2.1875~Fan Shaft A22-22H Class 1 1.BUILT AS CLASS II"
+     add row to data  "..~A25-20H~1~" "FANSHAFT~2.4375~Fan Shaft A25-20H Class 1 BUILT AS CLASS II"
+     add row to data  "..~A25-25H~1~" "FANSHAFT~2.4375~Fan Shaft A25-25H Class 1 BUILT AS CLASS II"
+     add row to data  "..~A27-22H~1~" "FANSHAFT~2.4375~Fan Shaft A27-22H Class 1 BUILT AS CLASS II"
+     add row to data  "..~A27-27H~1~" "FANSHAFT~2.4375~Fan Shaft A27-27H Class 1 BUILT AS CLASS II"
+     add row to data  "..~A30-30H~1~" "FANSHAFT~2.6875~Fan Shaft A30-30H Class 1 BUILT AS CLASS II"
+     add row to data  "..~A9-4A~1~" "FANSHAFT~1~Fan Shaft A9-4A Class 1 1"
+     add row to data  "C.~A10-8A~2~" "FANSHAFT~1~Fan Shaft A10-8A Class 2 1 on Size(s) C"
+     add row to data  "D.~A10-8A~2~" "FANSHAFT~1.1875~Fan Shaft A10-8A Class 2 1.1875 on Size(s) D"
+     add row to data  "4.~A10-8A~2~" "FANSHAFT~1.1875~Fan Shaft A10-8A Class 2 1.1875 on 56 Codes 4 "
+     add row to data  "..~A12-11A~2~" "FANSHAFT~1.4375~Fan Shaft A12-11A Class 2 1.4375"
+     add row to data  "..~A12-12A~2~" "FANSHAFT~1.1875~Fan Shaft A12-12A Class 2 1.1875"
+     add row to data  "[FG].~A15-15A~2~" "FANSHAFT~1.1875~Fan Shaft A15-15A Class 2 1.1875 on Size(s) FG"
+     add row to data  "5[FGHJKLMN]~A15-15A~2~" "FANSHAFT~1.1875~Fan Shaft A15-15A Class 2 1.1875 on 56 Codes 5 FGHJKLMN"
+     add row to data  "[HJ].~A15-15A~2~" "FANSHAFT~1.4375~Fan Shaft A15-15A Class 2 1.4375 on Size(s) HJ"
+     add row to data  "K.~A15-15A~2~" "FANSHAFT~1.6875~Fan Shaft A15-15A Class 2 1.6875 on Size(s) K"
+     add row to data  "5[XYZ-]~A15-15A~2~" "FANSHAFT~1.4375~Fan Shaft A15-15A Class 2 1.4375 on 56 Codes 5 XYZ-"
+     add row to data  "6[0123]~A15-15A~2~" "FANSHAFT~1.4375~Fan Shaft A15-15A Class 2 1.4375 on 56 Codes 6 0123"
+     add row to data  "6[45678ABC]~A15-15A~2~" "FANSHAFT~1.6875~Fan Shaft A15-15A Class 2 1.6875 on 56 Codes 6 45678ABC"
+     add row to data  "..~A18-18A~2~" "FANSHAFT~1.4375~Fan Shaft A18-18A Class 2 1.4375"
+     add row to data  "..~A20-15A~2~" "FANSHAFT~1.6875~Fan Shaft A20-15A Class 2 1.6875"
+     add row to data  "..~A20-18A~2~" "FANSHAFT~1.4375~Fan Shaft A20-18A Class 2 1.4375"
+     add row to data  "..~A20-18H~2~" "FANSHAFT~1.6875~Fan Shaft A20-18H Class 2 1.6875"
+     add row to data  "..~A20-20H~2~" "FANSHAFT~1.6875~Fan Shaft A20-20H Class 2 1.6875"
+     add row to data  "..~A22-22H~2~" "FANSHAFT~2.1875~Fan Shaft A22-22H Class 2 2.1875"
+     add row to data  "..~A25-20H~2~" "FANSHAFT~2.4375~Fan Shaft A25-20H Class 2 2.4375"
+     add row to data  "..~A25-25H~2~" "FANSHAFT~2.4375~Fan Shaft A25-25H Class 2 2.4375"
+     add row to data  "..~A27-22H~2~" "FANSHAFT~2.4375~Fan Shaft A27-22H Class 2 2.4375"
+     add row to data  "..~A27-27H~2~" "FANSHAFT~2.4375~Fan Shaft A27-27H Class 2 2.4375"
+     add row to data  "..~A30-30H~2~" "FANSHAFT~2.6875~Fan Shaft A30-30H Class 2 2.6875"
+     add row to data  "..~A9-4A~2~" "FANSHAFT~1~Fan Shaft A9-4A Class 2 1"
+     add row to data  "..~123~1~" "FANSHAFT~1~Fan Shaft 123 Class 1 1"
+     add row to data  "..~153~1~" "FANSHAFT~1~Fan Shaft 153 Class 1 1"
+     add row to data  "..~163~1~" "FANSHAFT~1~Fan Shaft 163 Class 1 1"
+     add row to data  "..~183Q~1~" "FANSHAFT~1~Fan Shaft 183Q Class 1 1"
+     add row to data  "..~223Q~1~" "FANSHAFT~1.4375~Fan Shaft 223Q Class 1 1.4375"
+     add row to data  "..~243Q~1~" "FANSHAFT~1.4375~Fan Shaft 243Q Class 1 1.4375"
+     add row to data  "..~273Q~1~" "FANSHAFT~1.4375~Fan Shaft 273Q Class 1 1.4375"
+     add row to data  "..~303Q~1~" "FANSHAFT~1.4375~Fan Shaft 303Q Class 1 1.4375"
+     add row to data  "..~333Q~1~" "FANSHAFT~1.6875~Fan Shaft 333Q Class 1 1.6875"
+     add row to data  "..~363Q~1~" "FANSHAFT~1.6875~Fan Shaft 363Q Class 1 1.6875"
+     add row to data  "..~403Q~1~" "FANSHAFT~1.9375~Fan Shaft 403Q Class 1 1.9375"
+     add row to data  "..~443Q~1~" "FANSHAFT~2.1875~Fan Shaft 443Q Class 1 2.1875"
+     add row to data  "..~493Q~1~" "FANSHAFT~2.6875~Fan Shaft 493Q Class 1 2.6875"
+     add row to data  "..~123~2~" "FANSHAFT~1.1875~Fan Shaft 123 Class 2 1.1875"
+     add row to data  "..~153~2~" "FANSHAFT~1.1875~Fan Shaft 153 Class 2 1.1875"
+     add row to data  "..~163~2~" "FANSHAFT~1~Fan Shaft 163 Class 2 1"
+     add row to data  "..~183Q~2~" "FANSHAFT~1.1875~Fan Shaft 183Q Class 2 1.1875"
+     add row to data  "..~223Q~2~" "FANSHAFT~1.4375~Fan Shaft 223Q Class 2 1.4375"
+     add row to data  "..~243Q~2~" "FANSHAFT~1.4375~Fan Shaft 243Q Class 2 1.4375"
+     add row to data  "..~273Q~2~" "FANSHAFT~1.4375~Fan Shaft 273Q Class 2 1.4375"
+     add row to data  "..~303Q~2~" "FANSHAFT~1.4375~Fan Shaft 303Q Class 2 1.4375"
+     add row to data  "..~333Q~2~" "FANSHAFT~1.6875~Fan Shaft 333Q Class 2 1.6875"
+     add row to data  "..~363Q~2~" "FANSHAFT~1.6875~Fan Shaft 363Q Class 2 1.6875"
+     add row to data  "..~403Q~2~" "FANSHAFT~1.9375~Fan Shaft 403Q Class 2 1.9375"
+     add row to data  "..~443Q~2~" "FANSHAFT~2.1875~Fan Shaft 443Q Class 2 2.1875"
+     add row to data  "..~493Q~2~" "FANSHAFT~2.6875~Fan Shaft 493Q Class 2 2.6875"
+   processLauRawRequiredFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.364.20231004"
+when
+   fansledLauRawRule
+   store fansled hit WHEEL as wheel
+   store fansled hit NOMENCLATURE as nomenclature restriction != "DDPF"
+then
+   LauFanSetup
+   set key to "~"+wheel+"~"
+   set data to 
+     add row to data  "~101~" "DRIVENMAXPD~63.8~Max Driven PD"
+     add row to data  "~121~" "DRIVENMAXPD~63.8~Max Driven PD"
+     add row to data  "~123~" "DRIVENMAXPD~63.8~Max Driven PD"
+     add row to data  "~131~" "DRIVENMAXPD~63.8~Max Driven PD"
+     add row to data  "~153~" "DRIVENMAXPD~63.8~Max Driven PD"
+     add row to data  "~161~" "DRIVENMAXPD~63.8~Max Driven PD"
+     add row to data  "~163~" "DRIVENMAXPD~63.8~Max Driven PD"
+     add row to data  "~181~" "DRIVENMAXPD~63.8~Max Driven PD"
+     add row to data  "~201~" "DRIVENMAXPD~63.8~Max Driven PD"
+     add row to data  "~221~" "DRIVENMAXPD~63.8~Max Driven PD"
+     add row to data  "~241~" "DRIVENMAXPD~63.8~Max Driven PD"
+     add row to data  "~271~" "DRIVENMAXPD~63.8~Max Driven PD"
+     add row to data  "~301~" "DRIVENMAXPD~63.8~Max Driven PD"
+     add row to data  "~331~" "DRIVENMAXPD~63.8~Max Driven PD"
+     add row to data  "~361~" "DRIVENMAXPD~63.8~Max Driven PD"
+     add row to data  "~183Q~" "DRIVENMAXPD~63.8~Max Driven PD"
+     add row to data  "~223Q~" "DRIVENMAXPD~63.8~Max Driven PD"
+     add row to data  "~243Q~" "DRIVENMAXPD~63.8~Max Driven PD"
+     add row to data  "~273Q~" "DRIVENMAXPD~63.8~Max Driven PD"
+     add row to data  "~303Q~" "DRIVENMAXPD~63.8~Max Driven PD"
+     add row to data  "~333Q~" "DRIVENMAXPD~63.8~Max Driven PD"
+     add row to data  "~363Q~" "DRIVENMAXPD~63.8~Max Driven PD"
+     add row to data  "~403Q~" "DRIVENMAXPD~63.8~Max Driven PD"
+     add row to data  "~443Q~" "DRIVENMAXPD~63.8~Max Driven PD"
+     add row to data  "~493Q~" "DRIVENMAXPD~63.8~Max Driven PD"
+     add row to data  "~A10-8A~" "DRIVENMAXPD~10~Max Driven PD"
+     add row to data  "~A12-11A~" "DRIVENMAXPD~12~Max Driven PD"
+     add row to data  "~A12-12A~" "DRIVENMAXPD~12~Max Driven PD"
+     add row to data  "~A15-15A~" "DRIVENMAXPD~15~Max Driven PD"
+     add row to data  "~A18-18A~" "DRIVENMAXPD~18~Max Driven PD"
+     add row to data  "~A20-15A~" "DRIVENMAXPD~20~Max Driven PD"
+     add row to data  "~A20-18A~" "DRIVENMAXPD~20~Max Driven PD"
+     add row to data  "~A20-18H~" "DRIVENMAXPD~20~Max Driven PD"
+     add row to data  "~A20-20H~" "DRIVENMAXPD~20~Max Driven PD"
+     add row to data  "~A22-22H~" "DRIVENMAXPD~22~Max Driven PD"
+     add row to data  "~A25-20H~" "DRIVENMAXPD~25~Max Driven PD"
+     add row to data  "~A25-25H~" "DRIVENMAXPD~25~Max Driven PD"
+     add row to data  "~A27-22H~" "DRIVENMAXPD~27~Max Driven PD"
+     add row to data  "~A27-27H~" "DRIVENMAXPD~27~Max Driven PD"
+     add row to data  "~A30-30H~" "DRIVENMAXPD~30~Max Driven PD"
+     add row to data  "~A9-4A~" "DRIVENMAXPD~9~Max Driven PD"
+   processLauRawRequiredFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.408.20231004"
+when
+   fansledLauRawRule
+   store fansled hit WHEEL as wheel
+   store fansled hit WHEELCLASS as wheelclass
+   store fansled hit NOMENCLATURE as nomenclature restriction != "DDPF"
+then
+   LauFanSetup
+   set key to "~"+wheel+"~"+wheelclass+"~"
+   set data to 
+     add row to data  "~A10-8A~2~" "MAXRPM~2471~Max RPM A10-8A  Class 2"
+     add row to data  "~A12-11A~2~" "MAXRPM~2040~Max RPM A12-11A  Class 2"
+     add row to data  "~A12-12A~2~" "MAXRPM~2091~Max RPM A12-12A  Class 2"
+     add row to data  "~A15-15A~2~" "MAXRPM~1725~Max RPM A15-15A  Class 2"
+     add row to data  "~A18-18A~2~" "MAXRPM~1450~Max RPM A18-18A  Class 2"
+     add row to data  "~A20-15A~2~" "MAXRPM~1316~Max RPM A20-15A  Class 2"
+     add row to data  "~A20-18A~2~" "MAXRPM~1302~Max RPM A20-18A  Class 2"
+     add row to data  "~A20-18H~2~" "MAXRPM~1303~Max RPM A20-18H  Class 2"
+     add row to data  "~A20-20H~2~" "MAXRPM~1281~Max RPM A20-20H  Class 2"
+     add row to data  "~A9-4A~2~" "MAXRPM~2894~Max RPM A9-4A  Class 2"
+     add row to data  "~101~2~" "MAXRPM~4900~Max RPM 101  Class 2"
+     add row to data  "~121~2~" "MAXRPM~4800~Max RPM 121  Class 2"
+     add row to data  "~131~2~" "MAXRPM~4245~Max RPM 131  Class 2"
+     add row to data  "~161~2~" "MAXRPM~3425~Max RPM 161  Class 2"
+     add row to data  "~181~2~" "MAXRPM~3105~Max RPM 181  Class 2"
+     add row to data  "~201~2~" "MAXRPM~2735~Max RPM 201  Class 2"
+     add row to data  "~221~2~" "MAXRPM~2570~Max RPM 221  Class 2"
+     add row to data  "~123~2~" "MAXRPM~4900~Max RPM 123  Class 2"
+     add row to data  "~153~2~" "MAXRPM~3800~Max RPM 153  Class 2"
+     add row to data  "~163~2~" "MAXRPM~3385~Max RPM 163  Class 2"
+     add row to data  "~183Q~2~" "MAXRPM~3005~Max RPM 183Q  Class 2"
+     add row to data  "~223Q~2~" "MAXRPM~2570~Max RPM 223Q  Class 2"
+     add row to data  "~243Q~2~" "MAXRPM~2335~Max RPM 243Q  Class 2"
+     add row to data  "~273Q~2~" "MAXRPM~2010~Max RPM 273Q  Class 2"
+     add row to data  "~303Q~2~" "MAXRPM~1805~Max RPM 303Q  Class 2"
+     add row to data  "~333Q~2~" "MAXRPM~1650~Max RPM 333Q  Class 2"
+     add row to data  "~A22-22H~2~" "MAXRPM~1178~Max RPM A22-22H  Class 2"
+     add row to data  "~A25-20H~2~" "MAXRPM~1032~Max RPM A25-20H  Class 2"
+     add row to data  "~A25-25H~2~" "MAXRPM~1011~Max RPM A25-25H  Class 2"
+     add row to data  "~A27-22H~2~" "MAXRPM~919~Max RPM A27-22H  Class 2"
+     add row to data  "~A27-27H~2~" "MAXRPM~910~Max RPM A27-27H  Class 2"
+     add row to data  "~A30-30H~2~" "MAXRPM~835~Max RPM A30-30H  Class 2"
+     add row to data  "~363Q~2~" "MAXRPM~1450~Max RPM 363Q  Class 2"
+     add row to data  "~403Q~2~" "MAXRPM~1315~Max RPM 403Q  Class 2"
+     add row to data  "~443Q~2~" "MAXRPM~1190~Max RPM 443Q  Class 2"
+     add row to data  "~493Q~2~" "MAXRPM~1105~Max RPM 493Q  Class 2"
+     add row to data  "~241~2~" "MAXRPM~2335~Max RPM 241  Class 2"
+     add row to data  "~271~2~" "MAXRPM~2010~Max RPM 271  Class 2"
+     add row to data  "~301~2~" "MAXRPM~1805~Max RPM 301  Class 2"
+     add row to data  "~331~2~" "MAXRPM~1650~Max RPM 331  Class 2"
+     add row to data  "~361~2~" "MAXRPM~1450~Max RPM 361  Class 2"
+     add row to data  "~A10-8A~1~" "MAXRPM~1901~Max RPM A10-8A  Class 1"
+     add row to data  "~A12-11A~1~" "MAXRPM~1569~Max RPM A12-11A  Class 1"
+     add row to data  "~A12-12A~1~" "MAXRPM~1614~Max RPM A12-12A  Class 1"
+     add row to data  "~A15-15A~1~" "MAXRPM~1328~Max RPM A15-15A  Class 1"
+     add row to data  "~A18-18A~1~" "MAXRPM~1155~Max RPM A18-18A  Class 1"
+     add row to data  "~A20-15A~1~" "MAXRPM~1013~Max RPM A20-15A  Class 1"
+     add row to data  "~A20-18A~1~" "MAXRPM~1002~Max RPM A20-18A  Class 1"
+     add row to data  "~A20-18H~1~" "MAXRPM~1020~Max RPM A20-18H  Class 1"
+     add row to data  "~A20-20H~1~" "MAXRPM~1010~Max RPM A20-20H  Class 1"
+     add row to data  "~A9-4A~1~" "MAXRPM~2244~Max RPM A9-4A  Class 1"
+     add row to data  "~101~1~" "MAXRPM~4900~Max RPM 101  Class 1"
+     add row to data  "~121~1~" "MAXRPM~4800~Max RPM 121  Class 1"
+     add row to data  "~131~1~" "MAXRPM~4245~Max RPM 131  Class 1"
+     add row to data  "~161~1~" "MAXRPM~3425~Max RPM 161  Class 1"
+     add row to data  "~181~1~" "MAXRPM~2380~Max RPM 181  Class 1"
+     add row to data  "~201~1~" "MAXRPM~2125~Max RPM 201  Class 1"
+     add row to data  "~221~1~" "MAXRPM~1970~Max RPM 221  Class 1"
+     add row to data  "~123~1~" "MAXRPM~3755~Max RPM 123  Class 1"
+     add row to data  "~153~1~" "MAXRPM~2910~Max RPM 153  Class 1"
+     add row to data  "~163~1~" "MAXRPM~2595~Max RPM 163  Class 1"
+     add row to data  "~183Q~1~" "MAXRPM~2305~Max RPM 183Q  Class 1"
+     add row to data  "~223Q~1~" "MAXRPM~1970~Max RPM 223Q  Class 1"
+     add row to data  "~243Q~1~" "MAXRPM~1790~Max RPM 243Q  Class 1"
+     add row to data  "~273Q~1~" "MAXRPM~1540~Max RPM 273Q  Class 1"
+     add row to data  "~303Q~1~" "MAXRPM~1385~Max RPM 303Q  Class 1"
+     add row to data  "~333Q~1~" "MAXRPM~1265~Max RPM 333Q  Class 1"
+     add row to data  "~A22-22H~1~" "MAXRPM~1119~Max RPM A22-22H  Class 1 Built as Class II"
+     add row to data  "~A25-20H~1~" "MAXRPM~980~Max RPM A25-20H  Class 1 Built as Class II"
+     add row to data  "~A25-25H~1~" "MAXRPM~960~Max RPM A25-25H  Class 1 Built as Class II"
+     add row to data  "~A27-22H~1~" "MAXRPM~873~Max RPM A27-22H  Class 1 Built as Class II"
+     add row to data  "~A27-27H~1~" "MAXRPM~865~Max RPM A27-27H  Class 1 Built as Class II"
+     add row to data  "~A30-30H~1~" "MAXRPM~793~Max RPM A30-30H  Class 1 Built as Class II"
+     add row to data  "~363Q~1~" "MAXRPM~1110~Max RPM 363Q  Class 1"
+     add row to data  "~403Q~1~" "MAXRPM~1005~Max RPM 403Q  Class 1"
+     add row to data  "~443Q~1~" "MAXRPM~910~Max RPM 443Q  Class 1"
+     add row to data  "~493Q~1~" "MAXRPM~850~Max RPM 493Q  Class 1"
+     add row to data  "~241~1~" "MAXRPM~1790~Max RPM 241  Class 1"
+     add row to data  "~271~1~" "MAXRPM~1540~Max RPM 271  Class 1"
+     add row to data  "~301~1~" "MAXRPM~1385~Max RPM 301  Class 1"
+     add row to data  "~331~1~" "MAXRPM~1265~Max RPM 331  Class 1"
+     add row to data  "~361~1~" "MAXRPM~1110~Max RPM 361  Class 1"
+   processLauRawRequiredFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.497.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P7 as p7
+   store fansled hit P16 as p16
+   store fansled hit NOMENCLATURE as nomenclature restriction == "DDPF"
+then
+   LauFanSetup
+   set key to p7+p16
+   set data to 
+     add row to data  "B[BC]" "$BASE~620.499~DDPF 105 Base Fan"
+     add row to data  "C[BC]" "$BASE~746.704~DDPF 122 Base Fan"
+     add row to data  "D[BC]" "$BASE~764.682~DDPF 135 Base Fan"
+     add row to data  "F[BC]" "$BASE~776.837~DDPF 150 Base Fan"
+     add row to data  "G[BC]" "$BASE~924.386~DDPF 165 Base Fan"
+     add row to data  "H[BC]" "$BASE~956.327~DDPF 182 Base Fan"
+     add row to data  "J[BC]" "$BASE~978.839~DDPF 200 Base Fan"
+     add row to data  "K[BC]" "$BASE~997.277~DDPF 222 Base Fan"
+     add row to data  "L[BC]" "$BASE~1073.453~DDPF 245 Base Fan"
+     add row to data  "M[BC]" "$BASE~1261.073~DDPF 270 Base Fan"
+     add row to data  "N[BC]" "$BASE~1339.887~DDPF 300 Base Fan"
+     add row to data  "P[BC]" "$BASE~1585.086~DDPF 330 Base Fan"
+     add row to data  "Q[BC]" "$BASE~1849.881~DDPF 365 Base Fan"
+     add row to data  "[RS][BC]" "$BASE~2026.425~DDPF 402 Base Fan"
+     add row to data  "HD" "$BASE~5566.493~DDPF 182 Base 4 Fan Array"
+     add row to data  "JD" "$BASE~5956.494~DDPF 200 Base 4 Fan Array"
+     add row to data  "LD" "$BASE~7537.835~DDPF 245 Base 4 Fan Array"
+     add row to data  "HF" "$BASE~8349.739~DDPF 182 Base 6 Fan Array"
+     add row to data  "JF" "$BASE~8934.742~DDPF 200 Base 6 Fan Array"
+     add row to data  "LF" "$BASE~11306.752~DDPF 245 Base 6 Fan Array"
+   processLauRawRequiredFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.519.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P5 as p5
+   store fansled hit P6 as p6
+   store fansled hit NOMENCLATURE as nomenclature restriction != "DDPF"
+then
+   LauFanSetup
+   set key to p5+p6
+   set data to 
+     add row to data  "B[12]" "$BASE~787.444~101 AFMV01101-REAR-X034-Z024"
+     add row to data  "B[34]" "$BASE~690.233~123 PFMV01123-REAR-X0"
+     add row to data  "B[GQ]" "$BASE~736.806~Unknown fan base"
+     add row to data  "B[HR]" "$BASE~736.097~A9-4A FCA9_4A-SIDE-X018-Z026"
+     add row to data  "C[12]" "$BASE~922.529~121 AFMV01121-REAR-X036-Z034"
+     add row to data  "C[34]" "$BASE~806.361~153 PFMV01153-REAR-X0"
+     add row to data  "C[56]" "$BASE~787.444~101(03-SB) AFMV01101-REAR-X034-Z024"
+     add row to data  "CG" "$BASE~778.275~Unknown fan base"
+     add row to data  "C[HR]" "$BASE~777.566~A10-8A FCA10_8A-SIDE-X024-Z039"
+     add row to data  "CQ" "$BASE~736.097~A9-4A(03-SB) FCA9_4A-SIDE-X018-Z026"
+     add row to data  "D[12]" "$BASE~1121.854~131 AFMV01131-SIDE-X029-Z046"
+     add row to data  "D[34]" "$BASE~972.707~163 PFMV01163-SIDE-X0"
+     add row to data  "D[56]" "$BASE~922.529~121(06-SB) AFMV01121-REAR-X036-Z034"
+     add row to data  "D[78]" "$BASE~806.361~153 PFMV01153-REAR-X0"
+     add row to data  "D[GQ]" "$BASE~979.609~A10-8A FCA10_8A-SIDE-X029-Z047"
+     add row to data  "D[HR]" "$BASE~984.832~A12-12A FCA12_12A-SIDE-X029-Z047"
+     add row to data  "F[12]" "$BASE~1133.05~131 AFMV01131-SIDE-X029-Z059"
+     add row to data  "F[34]" "$BASE~995.549~183Q PFMV01183Q-SIDE-X0"
+     add row to data  "F[56]" "$BASE~922.529~121(06-SB) AFMV01121-REAR-X036-Z034"
+     add row to data  "F[GQ]" "$BASE~1013.038~A12-12A FCA12_12A-SIDE-X029-Z060"
+     add row to data  "F[HR]" "$BASE~1030.606~A15-15A FCA15_15A-SIDE-X029-Z060"
+     add row to data  "G[12]" "$BASE~1251.835~161 AFMV01161-SIDE-X035-Z059"
+     add row to data  "G[34]" "$BASE~1078.527~223Q PFMV01223Q-SIDE-X0"
+     add row to data  "G[56]" "$BASE~1133.05~131(10-SB) AFMV01131-SIDE-X029-Z059"
+     add row to data  "GG" "$BASE~1153.645~A12-11A FCA12_11A-SIDE-X035-Z060"
+     add row to data  "G[HR]" "$BASE~1045.847~A15-15A FCA15_15A-SIDE-X035-Z060"
+     add row to data  "GQ" "$BASE~984.832~A12-12A(10-SA) FCA12_12A-SIDE-X029-Z060"
+     add row to data  "H[12]" "$BASE~1263.91~161 AFMV01161-SIDE-X041-Z064"
+     add row to data  "H[34]" "$BASE~1098.243~223Q PFMV01223Q-SIDE-X0"
+     add row to data  "H[56]" "$BASE~1133.05~131(10-SB) AFMV01131-SIDE-X029-Z059"
+     add row to data  "H[GQ]" "$BASE~1199.968~A15-15A FCA15_15A-SIDE-X041-Z065"
+     add row to data  "H[HR]" "$BASE~1146.154~A18-18A FCA18_18A-SIDE-X041-Z065"
+     add row to data  "J[12]" "$BASE~1411.619~181 AFMV01181-SIDE-X041-Z071"
+     add row to data  "J[34]" "$BASE~1194.095~243Q PFMV01243Q-SIDE-X0"
+     add row to data  "J[56]" "$BASE~1263.91~161(14-SB) AFMV01161-SIDE-X041-Z064"
+     add row to data  "J[78]" "$BASE~1098.243~223Q PFMV01223Q-SIDE-X0"
+     add row to data  "J[GQ]" "$BASE~1217.657~A15-15A FCA15_15A-SIDE-X041-Z072"
+     add row to data  "J[HR]" "$BASE~1195.624~A18-18A FCA18_18A-SIDE-X041-Z072"
+     add row to data  "K[12]" "$BASE~1619.853~201 AFMV01201-SIDE-X041-Z072"
+     add row to data  "K[34]" "$BASE~1387.398~273Q PFMV01273Q-SIDE-X0"
+     add row to data  "K[56]" "$BASE~1411.619~181(17-SB) AFMV01181-SIDE-X041-Z071"
+     add row to data  "K[78]" "$BASE~1194.095~243Q PFMV01243Q-SIDE-X0"
+     add row to data  "KG" "$BASE~1320.331~A15-15A FCA15_15A-SIDE-X041-Z072"
+     add row to data  "K[HR]" "$BASE~1351.223~A20-18-A FCA20_18A-SIDE-X041-Z072"
+     add row to data  "KQ" "$BASE~1146.154~A18-18A(17-SB) FCA18_18A-SIDE-X041-Z072"
+     add row to data  "L[12]" "$BASE~1934.228~221 AFMV01221-SIDE-X053-Z078"
+     add row to data  "L[34]" "$BASE~1502.777~303Q PFMV01303Q-SIDE-X0"
+     add row to data  "L[56]" "$BASE~1619.853~201(21-SB) AFMV01201-SIDE-X041-Z072"
+     add row to data  "L[78]" "$BASE~1387.398~273Q PFMV01273Q-SIDE-X0"
+     add row to data  "LG" "$BASE~1553.015~A20-15A FCA20_15A-SIDE-X053-Z079"
+     add row to data  "L[HR]" "$BASE~1500.44~A20-18-A FCA20_18A-SIDE-X053-Z079"
+     add row to data  "LQ" "$BASE~1146.154~A18-18A(17-SB) FCA18_18A-SIDE-X041-Z072"
+     add row to data  "M[12]" "$BASE~2056.478~221 AFMV01221-SIDE-X053-Z096"
+     add row to data  "M[34]" "$BASE~1619.264~333Q PFMV01333Q-SIDE-X0"
+     add row to data  "M[78]" "$BASE~1502.777~303Q PFMV01303Q-SIDE-X0"
+     add row to data  "M[GQ]" "$BASE~1814.904~A20-18H FCA20_18H-SIDE-X053-Z097"
+     add row to data  "M[HR]" "$BASE~1790.873~A20-20H FCA20_20H-SIDE-X053-Z097"
+     add row to data  "N1" "$BASE~2862.879~241 AFMV01241-SIDE-X048-Z101"
+     add row to data  "N2" "$BASE~2861.091~271 AFMV01271-SIDE-X048-Z101"
+     add row to data  "N[34]" "$BASE~2483.794~363Q PFMV01363Q-SIDE-X0"
+     add row to data  "N5" "$BASE~2861.091~271 AFMV01271-SIDE-X048-Z101"
+     add row to data  "N6" "$BASE~2862.879~241 AFMV01241-SIDE-X048-Z101"
+     add row to data  "N[78]" "$BASE~1619.264~333Q PFMV01333Q-SIDE-X0"
+     add row to data  "NG" "$BASE~2556.644~A22-22H FCLA01A22_22H-SIDE-X053-Z101"
+     add row to data  "N[HR]" "$BASE~2729.153~A25-25H FCLA01A25_25H-SIDE-X053-Z101"
+     add row to data  "NQ" "$BASE~1790.873~A20-20H(30-SB) FCA20_20H-SIDE-X053-Z097"
+     add row to data  "P1" "$BASE~2985.269~271 AFMV01271-SIDE-X054-Z101"
+     add row to data  "P2" "$BASE~2973.373~301 AFMV01301-SIDE-X054-Z101"
+     add row to data  "P3" "$BASE~2657.58~363Q PFMV01363Q-SIDE-X0"
+     add row to data  "P4" "$BASE~2657.58~403Q PFMV01403Q-SIDE-X0"
+     add row to data  "P5" "$BASE~2973.373~301 AFMV01301-SIDE-X054-Z101"
+     add row to data  "P6" "$BASE~2985.269~271 AFMV01271-SIDE-X054-Z101"
+     add row to data  "P7" "$BASE~1619.264~333Q PFMV01333Q-SIDE-X0"
+     add row to data  "P8" "$BASE~2657.58~363Q PFMV01363Q-SIDE-X0"
+     add row to data  "PG" "$BASE~2697.681~A25-20H FCLA01A25_20H-SIDE-X053-Z101"
+     add row to data  "P[HR]" "$BASE~2729.163~A25-25H FCLA01A25_25H-SIDE-X053-Z101"
+     add row to data  "PQ" "$BASE~1790.873~A20-20H(30-SB) FCA20_20H-SIDE-X053-Z097"
+     add row to data  "Q1" "$BASE~3104.333~301 AFMV01301-SIDE-X060-Z109"
+     add row to data  "Q2" "$BASE~3104.303~331 AFMV01331-SIDE-X060-Z109"
+     add row to data  "Q3" "$BASE~2760.684~403Q PFMV01403Q-SIDE-X0"
+     add row to data  "Q4" "$BASE~2760.684~443Q PFMV01443Q-SIDE-X0"
+     add row to data  "Q5" "$BASE~3104.303~331 AFMV01331-SIDE-X060-Z109"
+     add row to data  "Q6" "$BASE~3104.333~301 AFMV01301-SIDE-X060-Z109"
+     add row to data  "Q7" "$BASE~2657.58~363Q PFMV01363Q-SIDE-X0"
+     add row to data  "Q8" "$BASE~2760.684~403Q PFMV01403Q-SIDE-X0"
+     add row to data  "QG" "$BASE~2901.971~A27-22H FCLA01A27_22H-SIDE-X056-Z109"
+     add row to data  "Q[HR]" "$BASE~2917.512~A27-27H FCLA01A27_27H-SIDE-X056-Z109"
+     add row to data  "QQ" "$BASE~2729.163~A25-25H(40-SB) FCLA01A25_25H-SIDE-X053-Z101"
+     add row to data  "R1" "$BASE~3703.078~331 AFMV01331-SIDE-X066-Z109"
+     add row to data  "R2" "$BASE~3700.401~361 AFMV01361-SIDE-X066-Z109"
+     add row to data  "R3" "$BASE~3803.685~443Q PFMV01443Q-SIDE-X0"
+     add row to data  "R4" "$BASE~3803.685~493Q PFMV01493Q-SIDE-X0"
+     add row to data  "R5" "$BASE~3104.333~301(50-SB) AFMV01301-SIDE-X060-Z109"
+     add row to data  "R6" "$BASE~3703.078~331 AFMV01331-SIDE-X066-Z109"
+     add row to data  "R7" "$BASE~2760.684~403Q PFMV01403Q-SIDE-X0"
+     add row to data  "R8" "$BASE~3803.685~443Q PFMV01443Q-SIDE-X0"
+     add row to data  "R[GQ]" "$BASE~2917.512~A27-27H FCLA01A27_27H-SIDE-X059-Z109"
+     add row to data  "R[HR]" "$BASE~3410.107~A30-30H FCLA01A30_30H-SIDE-X059-Z109"
+     add row to data  "0[RSTUVWXY]" "$BASE~1118.36~Base 131 Pos5-6 2016"
+     add row to data  "0[Z-]" "$BASE~1221.93~Base 161 Pos5-6 2016"
+     add row to data  "1[012345]" "$BASE~1221.93~Base 161 Pos5-6 2016"
+     add row to data  "1[678ABCDE]" "$BASE~1387.67~Base 181 Pos5-6 2016"
+     add row to data  "1[FGHJKLMN]" "$BASE~1582.87~Base 201 Pos5-6 2016"
+     add row to data  "1[PQRSTUVW]" "$BASE~1909.34~Base 221 Pos5-6 2016"
+     add row to data  "1[XYZ-]" "$BASE~2004.96~Base 221 Pos5-6 2016"
+     add row to data  "2[0123]" "$BASE~2004.96~Base 221 Pos5-6 2016"
+     add row to data  "2[45678ABC]" "$BASE~2797.7~Base 241 Pos5-6 2016"
+     add row to data  "2[DEFGHJKL]" "$BASE~2910.64~Base 271 Pos5-6 2016"
+     add row to data  "5[XYZ-]" "$BASE~1157.49~Base A15-15A Pos5-6 2016"
+     add row to data  "6[0123]" "$BASE~1157.49~Base A15-15A Pos5-6 2016"
+     add row to data  "6[45678ABC]" "$BASE~1272.77~Base A15-15A Pos5-6 2016"
+     add row to data  "6[DEFGHJKL]" "$BASE~1154.35~Base A18-18A Pos5-6 2016"
+     add row to data  "6[MNPQRSTU]" "$BASE~1462.37~Base A20-15A Pos5-6 2016"
+     add row to data  "6[VWXYZ-]" "$BASE~1411.43~Base A20-18-A Pos5-6 2016"
+     add row to data  "7[01]" "$BASE~1411.43~Base A20-18-A Pos5-6 2016"
+     add row to data  "7[2345678A]" "$BASE~1747.29~Base A20-18H Pos5-6 2016"
+     add row to data  "7[BCDEFGHJ]" "$BASE~1723.26~Base A20-20H Pos5-6 2016"
+     add row to data  "7[KLMNPQRS]" "$BASE~2329.82~Base A22-22H Pos5-6 2016"
+     add row to data  "8[01234567]" "$BASE~2513.07~Base A25-25H Pos5-6 2016"
+     add row to data  "0[8ABCDEFG]" "$BASE~922.53~Base 121 Pos5-6 2017"
+     add row to data  "2[MNPQRSTU]" "$BASE~3060.12~Base 271 Pos5-6 2017"
+     add row to data  "2[VWXYZ-]" "$BASE~3057.49~Base 301 Pos5-6 2017"
+     add row to data  "3[01]" "$BASE~3057.49~Base 301 Pos5-6 2017"
+     add row to data  "3[2345678A]" "$BASE~3188.45~Base 301 Pos5-6 2017"
+     add row to data  "3[BCDEFGHJ]" "$BASE~3193~Base 331 Pos5-6 2017"
+     add row to data  "3[KLMNPQRS]" "$BASE~3791.78~Base 331 Pos5-6 2017"
+     add row to data  "3[TUVWXYZ-]" "$BASE~3793.05~Base 361 Pos5-6 2017"
+     add row to data  "4[8ABCDEFG]" "$BASE~778.27~Base A10-8A Pos5-6 2017"
+     add row to data  "4[Z-]" "$BASE~945.43~Base A12-12A Pos5-6 2017"
+     add row to data  "5[012345]" "$BASE~945.43~Base A12-12A Pos5-6 2017"
+     add row to data  "5[678ABCDE]" "$BASE~973.64~Base A12-12A Pos5-6 2017"
+     add row to data  "5[FGHJKLMN]" "$BASE~1131.11~Base A15-15A Pos5-6 2017"
+     add row to data  "7[TUVWXYZ-]" "$BASE~2481.6~Base A25-20H Pos5-6 2017"
+     add row to data  "8[8ABCDEFG]" "$BASE~2690.68~Base A27-22H Pos5-6 2017"
+     add row to data  "8[HJKLMNPQ]" "$BASE~2703.46~Base A27-27H Pos5-6 2017"
+     add row to data  "8[RSTUVWXY]" "$BASE~2703.46~Base A27-27H Pos5-6 2017"
+     add row to data  "8[Z-]" "$BASE~3303.28~Base A30-30H Pos5-6 2017"
+     add row to data  "9[012345]" "$BASE~3303.28~Base A30-30H Pos5-6 2017"
+   processLauRawRequiredFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.baseonecost.D.660.20231004"
+when
+   fansledLookupRule
+   store fansled hit P5 as p5
+   store fansled hit P6 as p6
+   store fansled hit P7 as p7
+   store fansled hit P17 as p17
+   store fansled hit NOMENCLATURE as nomenclature restriction != "DDPF"
+then
+   set key to "BASEONECOST:"+p5+p6+p7+p17
+   useFanLookupFile
+   processLookupFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.basetwocost.D.957.20231004"
+when
+   fansledLookupRule
+   store fansled hit P5 as p5
+   store fansled hit P6 as p6
+   store fansled hit P9 as p9
+   store fansled hit NOMENCLATURE as nomenclature restriction != "DDPF"
+then
+   set key to "BASETWOCOST:"+p5+p6+p9
+   useFanLookupFile
+   processLookupFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.1159.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P16 as p16
+   store fansled hit NOMENCLATURE as nomenclature restriction == "DDPF"
+then
+   LauFanSetup
+   set key to p16
+   set data to 
+     add row to data  "[CDF]" "MOTORBOX~F1~DDPF F1"
+     add row to data  "B" "MOTORBOX~F2~DDPF F2"
+   processLauRawRequiredFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.1163.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P8 as p8
+   store fansled hit NOMENCLATURE as nomenclature restriction == "DDPF"
+then
+   LauFanSetup
+   set key to p8
+   set data to 
+     add row to data  "[BDGQSV]" "SHAFTGROUNDING~NO~No Motor Shaft Grounding (DDP)"
+     add row to data  "[CFHRTW]" "SHAFTGROUNDING~YES~Yes Motor Shaft Grounding (DDP)"
+   processLauRawRequiredFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.1167.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P9 as p9
+   store fansled hit NOMENCLATURE as nomenclature restriction != "DDPF"
+then
+   LauFanSetup
+   set key to p9+"~"+nomenclature+"~"
+   set data to 
+     add row to data  "[BCFGJ]~BELTPREFIVESIX~" "SHAFTGROUNDING~NO~No Motor Shaft Grounding (Not DDP)"
+     add row to data  "[RSVWZ]~BELTPREFIVESIX~" "SHAFTGROUNDING~YES~Yes Motor Shaft Grounding (Not DDP)"
+     add row to data  "[BCFGJ]~BELTPOSTFIVESIX~" "SHAFTGROUNDING~NO~No Motor Shaft Grounding (Not DDP)"
+     add row to data  "[RSVWZ]~BELTPOSTFIVESIX~" "SHAFTGROUNDING~YES~Yes Motor Shaft Grounding (Not DDP)"
+   processLauRawRequiredFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.1173.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P6 as p6
+   store fansled hit P7 as p7
+   store fansled hit P17 as p17
+   store fansled hit WHEEL as wheel
+   store fansled hit NOMENCLATURE as nomenclature restriction != "DDPF"
+then
+   LauFanSetup
+   set key to p6+p7+p17+"~"+wheel+"~"
+   set data to 
+     add row to data  "[1256][BG][BG]~.*~" "MOTORBOX~F1~FafsDnoLsideDD[bt]hfHsidethis f1 "
+     add row to data  "[1256][BG][CH]~.*~" "MOTORBOX~F1~FafsDnoLrearDD[bt]hfHsidethis f1 "
+     add row to data  "[1256][BG][DJ]~.*~" "MOTORBOX~F2~FafsDnoLsideDD[bt]hfHsideopposite f2 "
+     add row to data  "[1256][BG][FK]~.*~" "MOTORBOX~F2~FafsDnoLrearDD[bt]hfHsideopposite f2 "
+     add row to data  "[1256][CH][BG]~.*~" "MOTORBOX~F2~FafsDnoLsideDD[bt]hrHsidethis f2 "
+     add row to data  "[1256][CH][CH]~.*~" "MOTORBOX~F2~FafsDnoLrearDD[bt]hrHsidethis f2 "
+     add row to data  "[1256][CH][DJ]~.*~" "MOTORBOX~F1~FafsDnoLsideDD[bt]hrHsideopposite f1 "
+     add row to data  "[1256][CH][FK]~.*~" "MOTORBOX~F1~FafsDnoLrearDD[bt]hrHsideopposite f1 "
+     add row to data  "[1256]D[CH]~.*~" "MOTORBOX~F1~FafsDnoLrearDDdbfHsidethis f1 "
+     add row to data  "[1256]D[FK]~.*~" "MOTORBOX~F2~FafsDnoLrearDDdbfHsideopposite f2 "
+     add row to data  "[1256][DJ][BG]~.*~" "MOTORBOX~F2~FafsDnoLsideDD[du]bfHsidethis f2 "
+     add row to data  "[1256][DJ][DJ]~.*~" "MOTORBOX~F1~FafsDnoLsideDD[du]bfHsideopposite f1 "
+     add row to data  "[1256]F[CH]~.*~" "MOTORBOX~F2~FafsDnoLrearDDdbrHsidethis f2 "
+     add row to data  "[1256]F[FK]~.*~" "MOTORBOX~F1~FafsDnoLrearDDdbrHsideopposite f1 "
+     add row to data  "[1256][FK][BG]~.*~" "MOTORBOX~F1~FafsDnoLsideDD[du]brHsidethis f1 "
+     add row to data  "[1256][FK][DJ]~.*~" "MOTORBOX~F2~FafsDnoLsideDD[du]brHsideopposite f2 "
+     add row to data  "[1256]J[CH]~121~" "MOTORBOX~F2~121 wheel FafsDnoLrearDDubfHsidethis f2 "
+     add row to data  "[1256]J[FK]~121~" "MOTORBOX~F1~121 wheel FafsDnoLrearDDubfHsideopposite f1 "
+     add row to data  "[1256]K[CH]~121~" "MOTORBOX~F1~121 wheel FafsDnoLrearDDubrHsidethis f1 "
+     add row to data  "[1256]K[FK]~121~" "MOTORBOX~F2~121 wheel FafsDnoLrearDDubrHsideopposite f2 "
+     add row to data  "[1256]J[CH]~101~" "MOTORBOX~F1~101 wheel FafsDnoLrearDDubfHsidethis f1 !"
+     add row to data  "[1256]J[FK]~101~" "MOTORBOX~F2~101 wheel FafsDnoLrearDDubfHsideopposite f2 !"
+     add row to data  "[1256]K[CH]~101~" "MOTORBOX~F2~101 wheel FafsDnoLrearDDubrHsidethis f2 !"
+     add row to data  "[1256]K[FK]~101~" "MOTORBOX~F1~101 wheel FafsDnoLrearDDubrHsideopposite f1 !"
+     add row to data  "[3478].[BG]~.*~" "MOTORBOX~F1~FpafDnoLsideDD.*Hsidethis f1 "
+     add row to data  "[3478].[CH]~.*~" "MOTORBOX~F1~FpafDnoLrearDD.*Hsidethis f1 "
+     add row to data  "[3478].[DJ]~.*~" "MOTORBOX~F2~FpafDnoLsideDD.*Hsideopposite f2 "
+     add row to data  "[3478].[FK]~.*~" "MOTORBOX~F2~FpafDnoLrearDD.*Hsideopposite f2 "
+     add row to data  "[GHQR][BG][BG]~.*~" "MOTORBOX~F1~FfcsDnoLsideDD[bt]hfHsidethis f1 "
+     add row to data  "[GHQR][BG][DJ]~.*~" "MOTORBOX~F2~FfcsDnoLsideDD[bt]hfHsideopposite f2 "
+     add row to data  "[GHQR][CH][BG]~.*~" "MOTORBOX~F2~FfcsDnoLsideDD[bt]hrHsidethis f2 "
+     add row to data  "[GHQR][CH][DJ]~.*~" "MOTORBOX~F1~FfcsDnoLsideDD[bt]hrHsideopposite f1 "
+     add row to data  "[GHQR][DJ][BG]~.*~" "MOTORBOX~F2~FfcsDnoLsideDD[du]bfHsidethis f2 "
+     add row to data  "[GHQR][DJ][DJ]~.*~" "MOTORBOX~F1~FfcsDnoLsideDD[du]bfHsideopposite f1 "
+     add row to data  "[GHQR][FK][BG]~.*~" "MOTORBOX~F1~FfcsDnoLsideDD[du]brHsidethis f1 "
+     add row to data  "[GHQR][FK][DJ]~.*~" "MOTORBOX~F2~FfcsDnoLsideDD[du]brHsideopposite f2 "
+     add row to data  "..[13]~.*~" "MOTORBOX~F1~Specified in 39MB part number"
+     add row to data  "..[24]~.*~" "MOTORBOX~F2~Specified in 39MB part number"
+   processLauRawRequiredFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.1213.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P14 as p14
+then
+   LauFanSetup
+   set key to p14
+   set data to 
+     add row to data  "[0123456789]" "EXTRABELTS~NO~No Extra Belts"
+     add row to data  "[-ZYXWVTSRQ]" "EXTRABELTS~YES~Extra Belts"
+   processLauRawRequiredFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.1217.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P17 as p17
+   store fansled hit NOMENCLATURE as nomenclature restriction != "DDPF"
+then
+   LauFanSetup
+   set key to p17
+   set data to 
+     add row to data  "[BCDF12]" "MOTORFIELDSUPPLIED~NO~Motor Factory Supplied"
+     add row to data  "[GHJK34]" "MOTORFIELDSUPPLIED~YES~Motor Field Supplied"
+   processLauRawRequiredFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.motordetails.D.1234.20231004"
+when
+   fansledLookupRule
+   store fansled hit MOTORBOX as motorbox
+   store fansled hit SHAFTGROUNDING as shaftgrounding
+   store fansled hit MOTORBASECODE as motorbasecode
+then
+   set key to "MOTORDETAILS:"+"~"+motorbox+"~"+shaftgrounding+"~"+motorbasecode+"~"
+   useFanLookupFile
+   processLookupFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.2010.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P5 as p5
+   store fansled hit P6 as p6
+   store fansled hit MOTORFRAME as motorframe
+   store fansled hit NOMENCLATURE as nomenclature restriction == "BELTPREFIVESIX"
+then
+   LauFanSetup
+   set key to p5+p6+"~"+motorframe+"~"
+   set data to 
+     add row to data  "B[HR]~56~" "DRIVENMAXWIDTH~1.88~Max Driven Width"
+     add row to data  "B[HR]~143T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "B[HR]~145T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "B[HR]~182T~" "DRIVENMAXWIDTH~2.5~Max Driven Width"
+     add row to data  "B[HR]~184T~" "DRIVENMAXWIDTH~2.5~Max Driven Width"
+     add row to data  "C[HR]~56~" "DRIVENMAXWIDTH~1.88~Max Driven Width"
+     add row to data  "C[HR]~143T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "C[HR]~145T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "C[HR]~182T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "C[HR]~184T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "CQ~56~" "DRIVENMAXWIDTH~1.88~Max Driven Width"
+     add row to data  "CQ~143T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "CQ~145T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "CQ~182T~" "DRIVENMAXWIDTH~2.5~Max Driven Width"
+     add row to data  "CQ~184T~" "DRIVENMAXWIDTH~2.5~Max Driven Width"
+     add row to data  "DG~56~" "DRIVENMAXWIDTH~1.88~Max Driven Width"
+     add row to data  "DG~143T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "DG~145T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "DG~182T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "DG~184T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "DG~213T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "DG~215T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "D[HR]~56~" "DRIVENMAXWIDTH~1.88~Max Driven Width"
+     add row to data  "D[HR]~143T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "D[HR]~145T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "D[HR]~182T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "D[HR]~184T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "D[HR]~213T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "D[HR]~215T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "DQ~56~" "DRIVENMAXWIDTH~1.88~Max Driven Width"
+     add row to data  "DQ~143T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "DQ~145T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "DQ~182T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "DQ~184T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "DQ~213T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "DQ~215T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "FG~56~" "DRIVENMAXWIDTH~1.88~Max Driven Width"
+     add row to data  "FG~143T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "FG~145T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "FG~182T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "FG~184T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "FG~213T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "FG~215T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "F[HR]~56~" "DRIVENMAXWIDTH~1.88~Max Driven Width"
+     add row to data  "F[HR]~143T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "F[HR]~145T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "F[HR]~182T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "F[HR]~184T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "F[HR]~213T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "F[HR]~215T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "[FG]Q~56~" "DRIVENMAXWIDTH~1.88~Max Driven Width"
+     add row to data  "[FG]Q~143T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "[FG]Q~145T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "[FG]Q~182T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "[FG]Q~184T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "[FG]Q~213T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "[FG]Q~215T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "GG~143T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "GG~145T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "GG~182T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "GG~184T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "GG~213T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "GG~215T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "GG~254T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "GG~256T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "G[HR]~143T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "G[HR]~145T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "G[HR]~182T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "G[HR]~184T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "G[HR]~213T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "G[HR]~215T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "G[HR]~254T~" "DRIVENMAXWIDTH~3.7404~Max Driven Width"
+     add row to data  "G[HR]~256T~" "DRIVENMAXWIDTH~3.7404~Max Driven Width"
+     add row to data  "HG~143T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "HG~145T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "HG~182T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "HG~184T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "HG~213T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "HG~215T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "HG~254T~" "DRIVENMAXWIDTH~3.7404~Max Driven Width"
+     add row to data  "HG~256T~" "DRIVENMAXWIDTH~3.7404~Max Driven Width"
+     add row to data  "H[HR]~143T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "H[HR]~145T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "H[HR]~182T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "H[HR]~184T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "H[HR]~213T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "H[HR]~215T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "H[HR]~254T~" "DRIVENMAXWIDTH~3.5804~Max Driven Width"
+     add row to data  "H[HR]~256T~" "DRIVENMAXWIDTH~3.5804~Max Driven Width"
+     add row to data  "HQ~143T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "HQ~145T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "HQ~182T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "HQ~184T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "HQ~213T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "HQ~215T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "HQ~254T~" "DRIVENMAXWIDTH~3.7404~Max Driven Width"
+     add row to data  "HQ~256T~" "DRIVENMAXWIDTH~3.7404~Max Driven Width"
+     add row to data  "JG~143T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "JG~145T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "JG~182T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "JG~184T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "JG~213T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "JG~215T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "JG~254T~" "DRIVENMAXWIDTH~3.7404~Max Driven Width"
+     add row to data  "JG~256T~" "DRIVENMAXWIDTH~3.7404~Max Driven Width"
+     add row to data  "J[HR]~143T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "J[HR]~145T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "J[HR]~182T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "J[HR]~184T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "J[HR]~213T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "J[HR]~215T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "J[HR]~254T~" "DRIVENMAXWIDTH~3.5804~Max Driven Width"
+     add row to data  "J[HR]~256T~" "DRIVENMAXWIDTH~3.5804~Max Driven Width"
+     add row to data  "JQ~143T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "JQ~145T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "JQ~182T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "JQ~184T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "JQ~213T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "JQ~215T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "JQ~254T~" "DRIVENMAXWIDTH~3.7404~Max Driven Width"
+     add row to data  "JQ~256T~" "DRIVENMAXWIDTH~3.7404~Max Driven Width"
+     add row to data  "KG~143T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "KG~145T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "KG~182T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "KG~184T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "KG~213T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "KG~215T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "KG~254T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "KG~256T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "KG~284T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "KG~286T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "K[HR]~143T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "K[HR]~145T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "K[HR]~182T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "K[HR]~184T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "K[HR]~213T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "K[HR]~215T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "K[HR]~254T~" "DRIVENMAXWIDTH~3.7554~Max Driven Width"
+     add row to data  "K[HR]~256T~" "DRIVENMAXWIDTH~3.7554~Max Driven Width"
+     add row to data  "K[HR]~284T~" "DRIVENMAXWIDTH~3.7554~Max Driven Width"
+     add row to data  "K[HR]~286T~" "DRIVENMAXWIDTH~3.7554~Max Driven Width"
+     add row to data  "[KL]Q~143T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "[KL]Q~145T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "[KL]Q~182T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "[KL]Q~184T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "[KL]Q~213T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "[KL]Q~215T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "[KL]Q~254T~" "DRIVENMAXWIDTH~3.5804~Max Driven Width"
+     add row to data  "[KL]Q~256T~" "DRIVENMAXWIDTH~3.5804~Max Driven Width"
+     add row to data  "LG~143T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "LG~145T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "LG~182T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "LG~184T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "LG~213T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "LG~215T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "LG~254T~" "DRIVENMAXWIDTH~4.0204~Max Driven Width"
+     add row to data  "LG~256T~" "DRIVENMAXWIDTH~4.0204~Max Driven Width"
+     add row to data  "LG~284T~" "DRIVENMAXWIDTH~4.0204~Max Driven Width"
+     add row to data  "LG~286T~" "DRIVENMAXWIDTH~4.0204~Max Driven Width"
+     add row to data  "L[HR]~143T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "L[HR]~145T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "L[HR]~182T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "L[HR]~184T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "L[HR]~213T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "L[HR]~215T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "L[HR]~254T~" "DRIVENMAXWIDTH~3.5204~Max Driven Width"
+     add row to data  "L[HR]~256T~" "DRIVENMAXWIDTH~3.5204~Max Driven Width"
+     add row to data  "L[HR]~284T~" "DRIVENMAXWIDTH~3.5204~Max Driven Width"
+     add row to data  "L[HR]~286T~" "DRIVENMAXWIDTH~3.5204~Max Driven Width"
+     add row to data  "MG~143T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "MG~145T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "MG~182T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "MG~184T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "MG~213T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "MG~215T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "MG~254T~" "DRIVENMAXWIDTH~3.9457~Max Driven Width"
+     add row to data  "MG~256T~" "DRIVENMAXWIDTH~3.9457~Max Driven Width"
+     add row to data  "MG~284T~" "DRIVENMAXWIDTH~3.9457~Max Driven Width"
+     add row to data  "MG~286T~" "DRIVENMAXWIDTH~3.9457~Max Driven Width"
+     add row to data  "M[HR]~143T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "M[HR]~145T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "M[HR]~182T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "M[HR]~184T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "M[HR]~213T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "M[HR]~215T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "M[HR]~254T~" "DRIVENMAXWIDTH~4~Max Driven Width"
+     add row to data  "M[HR]~256T~" "DRIVENMAXWIDTH~4~Max Driven Width"
+     add row to data  "M[HR]~284T~" "DRIVENMAXWIDTH~4.5707~Max Driven Width"
+     add row to data  "M[HR]~286T~" "DRIVENMAXWIDTH~4.5707~Max Driven Width"
+     add row to data  "MQ~143T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "MQ~145T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "MQ~182T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "MQ~184T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "MQ~213T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "MQ~215T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "MQ~254T~" "DRIVENMAXWIDTH~3.9457~Max Driven Width"
+     add row to data  "MQ~256T~" "DRIVENMAXWIDTH~3.9457~Max Driven Width"
+     add row to data  "MQ~284T~" "DRIVENMAXWIDTH~3.9457~Max Driven Width"
+     add row to data  "MQ~286T~" "DRIVENMAXWIDTH~3.9457~Max Driven Width"
+     add row to data  "NG~145T~" "DRIVENMAXWIDTH~4.75~Max Driven Width"
+     add row to data  "NG~182T~" "DRIVENMAXWIDTH~4.75~Max Driven Width"
+     add row to data  "NG~184T~" "DRIVENMAXWIDTH~4.75~Max Driven Width"
+     add row to data  "NG~213T~" "DRIVENMAXWIDTH~4.75~Max Driven Width"
+     add row to data  "NG~215T~" "DRIVENMAXWIDTH~4.75~Max Driven Width"
+     add row to data  "NG~254T~" "DRIVENMAXWIDTH~4.75~Max Driven Width"
+     add row to data  "NG~256T~" "DRIVENMAXWIDTH~4.75~Max Driven Width"
+     add row to data  "NG~284T~" "DRIVENMAXWIDTH~4.75~Max Driven Width"
+     add row to data  "NG~286T~" "DRIVENMAXWIDTH~4.75~Max Driven Width"
+     add row to data  "NG~324T~" "DRIVENMAXWIDTH~4.75~Max Driven Width"
+     add row to data  "N[HR]~145T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "N[HR]~182T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "N[HR]~184T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "N[HR]~213T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "N[HR]~215T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "N[HR]~254T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "N[HR]~256T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "N[HR]~284T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "N[HR]~286T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "N[HR]~324T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "[NP]Q~143T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "[NP]Q~145T~" "DRIVENMAXWIDTH~2.25~Max Driven Width"
+     add row to data  "[NP]Q~182T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "[NP]Q~184T~" "DRIVENMAXWIDTH~3.7~Max Driven Width"
+     add row to data  "[NP]Q~213T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "[NP]Q~215T~" "DRIVENMAXWIDTH~3.38~Max Driven Width"
+     add row to data  "[NP]Q~254T~" "DRIVENMAXWIDTH~4~Max Driven Width"
+     add row to data  "[NP]Q~256T~" "DRIVENMAXWIDTH~4~Max Driven Width"
+     add row to data  "[NP]Q~284T~" "DRIVENMAXWIDTH~4.5707~Max Driven Width"
+     add row to data  "[NP]Q~286T~" "DRIVENMAXWIDTH~4.5707~Max Driven Width"
+     add row to data  "PG~184T~" "DRIVENMAXWIDTH~4.75~Max Driven Width"
+     add row to data  "PG~213T~" "DRIVENMAXWIDTH~4.75~Max Driven Width"
+     add row to data  "PG~215T~" "DRIVENMAXWIDTH~4.75~Max Driven Width"
+     add row to data  "PG~254T~" "DRIVENMAXWIDTH~4.75~Max Driven Width"
+     add row to data  "PG~256T~" "DRIVENMAXWIDTH~4.75~Max Driven Width"
+     add row to data  "PG~284T~" "DRIVENMAXWIDTH~4.75~Max Driven Width"
+     add row to data  "PG~286T~" "DRIVENMAXWIDTH~4.75~Max Driven Width"
+     add row to data  "P[HR]~182T~" "DRIVENMAXWIDTH~4.125~Max Driven Width"
+     add row to data  "P[HR]~184T~" "DRIVENMAXWIDTH~4.125~Max Driven Width"
+     add row to data  "P[HR]~213T~" "DRIVENMAXWIDTH~4.125~Max Driven Width"
+     add row to data  "P[HR]~215T~" "DRIVENMAXWIDTH~4.125~Max Driven Width"
+     add row to data  "P[HR]~254T~" "DRIVENMAXWIDTH~4.125~Max Driven Width"
+     add row to data  "P[HR]~256T~" "DRIVENMAXWIDTH~4.125~Max Driven Width"
+     add row to data  "P[HR]~284T~" "DRIVENMAXWIDTH~4.125~Max Driven Width"
+     add row to data  "P[HR]~286T~" "DRIVENMAXWIDTH~4.125~Max Driven Width"
+     add row to data  "QG~184T~" "DRIVENMAXWIDTH~4.625~Max Driven Width"
+     add row to data  "QG~213T~" "DRIVENMAXWIDTH~4.625~Max Driven Width"
+     add row to data  "QG~215T~" "DRIVENMAXWIDTH~4.625~Max Driven Width"
+     add row to data  "QG~254T~" "DRIVENMAXWIDTH~4.625~Max Driven Width"
+     add row to data  "QG~256T~" "DRIVENMAXWIDTH~4.625~Max Driven Width"
+     add row to data  "QG~284T~" "DRIVENMAXWIDTH~4.625~Max Driven Width"
+     add row to data  "QG~286T~" "DRIVENMAXWIDTH~4.625~Max Driven Width"
+     add row to data  "QG~324T~" "DRIVENMAXWIDTH~4.625~Max Driven Width"
+     add row to data  "Q[HR]~184T~" "DRIVENMAXWIDTH~5.875~Max Driven Width"
+     add row to data  "Q[HR]~213T~" "DRIVENMAXWIDTH~5.875~Max Driven Width"
+     add row to data  "Q[HR]~215T~" "DRIVENMAXWIDTH~5.875~Max Driven Width"
+     add row to data  "Q[HR]~254T~" "DRIVENMAXWIDTH~5.875~Max Driven Width"
+     add row to data  "Q[HR]~256T~" "DRIVENMAXWIDTH~5.875~Max Driven Width"
+     add row to data  "Q[HR]~284T~" "DRIVENMAXWIDTH~5.875~Max Driven Width"
+     add row to data  "Q[HR]~286T~" "DRIVENMAXWIDTH~5.875~Max Driven Width"
+     add row to data  "Q[HR]~324T~" "DRIVENMAXWIDTH~5.875~Max Driven Width"
+     add row to data  "QQ~182T~" "DRIVENMAXWIDTH~4.125~Max Driven Width"
+     add row to data  "QQ~184T~" "DRIVENMAXWIDTH~4.125~Max Driven Width"
+     add row to data  "QQ~213T~" "DRIVENMAXWIDTH~4.125~Max Driven Width"
+     add row to data  "QQ~215T~" "DRIVENMAXWIDTH~4.125~Max Driven Width"
+     add row to data  "QQ~254T~" "DRIVENMAXWIDTH~4.125~Max Driven Width"
+     add row to data  "QQ~256T~" "DRIVENMAXWIDTH~4.125~Max Driven Width"
+     add row to data  "QQ~284T~" "DRIVENMAXWIDTH~4.125~Max Driven Width"
+     add row to data  "QQ~286T~" "DRIVENMAXWIDTH~4.125~Max Driven Width"
+     add row to data  "RG~184T~" "DRIVENMAXWIDTH~5.875~Max Driven Width"
+     add row to data  "RG~213T~" "DRIVENMAXWIDTH~5.875~Max Driven Width"
+     add row to data  "RG~215T~" "DRIVENMAXWIDTH~5.875~Max Driven Width"
+     add row to data  "RG~254T~" "DRIVENMAXWIDTH~5.875~Max Driven Width"
+     add row to data  "RG~256T~" "DRIVENMAXWIDTH~5.875~Max Driven Width"
+     add row to data  "RG~284T~" "DRIVENMAXWIDTH~5.875~Max Driven Width"
+     add row to data  "RG~286T~" "DRIVENMAXWIDTH~5.875~Max Driven Width"
+     add row to data  "RG~324T~" "DRIVENMAXWIDTH~5.875~Max Driven Width"
+     add row to data  "RG~326T~" "DRIVENMAXWIDTH~5.875~Max Driven Width"
+     add row to data  "R[HR]~184T~" "DRIVENMAXWIDTH~6.28~Max Driven Width"
+     add row to data  "R[HR]~213T~" "DRIVENMAXWIDTH~6.28~Max Driven Width"
+     add row to data  "R[HR]~215T~" "DRIVENMAXWIDTH~6.28~Max Driven Width"
+     add row to data  "R[HR]~254T~" "DRIVENMAXWIDTH~6.28~Max Driven Width"
+     add row to data  "R[HR]~256T~" "DRIVENMAXWIDTH~6.28~Max Driven Width"
+     add row to data  "R[HR]~284T~" "DRIVENMAXWIDTH~6.28~Max Driven Width"
+     add row to data  "R[HR]~286T~" "DRIVENMAXWIDTH~6.28~Max Driven Width"
+     add row to data  "R[HR]~324T~" "DRIVENMAXWIDTH~6.28~Max Driven Width"
+     add row to data  "R[HR]~326T~" "DRIVENMAXWIDTH~6.28~Max Driven Width"
+     add row to data  "RQ~184T~" "DRIVENMAXWIDTH~5.875~Max Driven Width"
+     add row to data  "RQ~213T~" "DRIVENMAXWIDTH~5.875~Max Driven Width"
+     add row to data  "RQ~215T~" "DRIVENMAXWIDTH~5.875~Max Driven Width"
+     add row to data  "RQ~254T~" "DRIVENMAXWIDTH~5.875~Max Driven Width"
+     add row to data  "RQ~256T~" "DRIVENMAXWIDTH~5.875~Max Driven Width"
+     add row to data  "RQ~284T~" "DRIVENMAXWIDTH~5.875~Max Driven Width"
+     add row to data  "RQ~286T~" "DRIVENMAXWIDTH~5.875~Max Driven Width"
+     add row to data  "RQ~324T~" "DRIVENMAXWIDTH~5.875~Max Driven Width"
+     add row to data  "RQ~326T~" "DRIVENMAXWIDTH~5.875~Max Driven Width"
+     add row to data  "[BCDFGHJKLMNPQR][12345678]~.*~" "DRIVENMAXWIDTH~19~Max Driven Width"
+   processLauRawRequiredFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.2310.20231004"
+when
+   fansledLauRawRule
+   store fansled hit WHEEL as wheel
+   store fansled hit FANSHAFT as fanshaft
+   store fansled hit NOMENCLATURE as nomenclature restriction == "BELTPOSTFIVESIX"
+then
+   LauFanSetup
+   set key to "~"+wheel+"~"+fanshaft+"~"
+   set data to 
+     add row to data  "~121~.*~" "DRIVENMAXWIDTH~19~Max Driven Width"
+     add row to data  "~131~.*~" "DRIVENMAXWIDTH~19~Max Driven Width"
+     add row to data  "~161~.*~" "DRIVENMAXWIDTH~19~Max Driven Width"
+     add row to data  "~181~.*~" "DRIVENMAXWIDTH~19~Max Driven Width"
+     add row to data  "~201~.*~" "DRIVENMAXWIDTH~19~Max Driven Width"
+     add row to data  "~221~.*~" "DRIVENMAXWIDTH~19~Max Driven Width"
+     add row to data  "~241~.*~" "DRIVENMAXWIDTH~19~Max Driven Width"
+     add row to data  "~271~.*~" "DRIVENMAXWIDTH~19~Max Driven Width"
+     add row to data  "~301~.*~" "DRIVENMAXWIDTH~19~Max Driven Width"
+     add row to data  "~331~.*~" "DRIVENMAXWIDTH~19~Max Driven Width"
+     add row to data  "~361~.*~" "DRIVENMAXWIDTH~19~Max Driven Width"
+     add row to data  "~A15-15A~1.4375~" "DRIVENMAXWIDTH~19~Max Driven Width"
+     add row to data  "~A15-15A~1.6875~" "DRIVENMAXWIDTH~19~Max Driven Width"
+     add row to data  "~A18-18A~.*~" "DRIVENMAXWIDTH~19~Max Driven Width"
+     add row to data  "~A20-15A~.*~" "DRIVENMAXWIDTH~19~Max Driven Width"
+     add row to data  "~A20-18A~.*~" "DRIVENMAXWIDTH~19~Max Driven Width"
+     add row to data  "~A20-18H~.*~" "DRIVENMAXWIDTH~19~Max Driven Width"
+     add row to data  "~A20-20H~.*~" "DRIVENMAXWIDTH~19~Max Driven Width"
+     add row to data  "~A22-22H~.*~" "DRIVENMAXWIDTH~19~Max Driven Width"
+     add row to data  "~A25-25H~.*~" "DRIVENMAXWIDTH~19~Max Driven Width"
+     add row to data  "~A10-8A~.*~" "DRIVENMAXWIDTH~19~Max Driven Width"
+     add row to data  "~A12-12A~.*~" "DRIVENMAXWIDTH~19~Max Driven Width"
+     add row to data  "~A15-15A~1.1875~" "DRIVENMAXWIDTH~19~Max Driven Width"
+     add row to data  "~A25-20H~.*~" "DRIVENMAXWIDTH~19~Max Driven Width"
+     add row to data  "~A27-22H~.*~" "DRIVENMAXWIDTH~19~Max Driven Width"
+     add row to data  "~A27-27H~.*~" "DRIVENMAXWIDTH~19~Max Driven Width"
+     add row to data  "~A30-30H~.*~" "DRIVENMAXWIDTH~19~Max Driven Width"
+   processLauRawRequiredFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.2345.20231004"
+when
+   fansledLauRawRule
+   store fansled hit MOTORFRAME as motorframe
+then
+   LauFanSetup
+   set key to "~"+motorframe+"~"
+   set data to 
+     add row to data  "~56~" "MOTORDVALUE~D0350~Motor D Value"
+     add row to data  "~143T~" "MOTORDVALUE~D0350~Motor D Value"
+     add row to data  "~145T~" "MOTORDVALUE~D0350~Motor D Value"
+     add row to data  "~182T~" "MOTORDVALUE~D0450~Motor D Value"
+     add row to data  "~184T~" "MOTORDVALUE~D0450~Motor D Value"
+     add row to data  "~213T~" "MOTORDVALUE~D0525~Motor D Value"
+     add row to data  "~215T~" "MOTORDVALUE~D0525~Motor D Value"
+     add row to data  "~254T~" "MOTORDVALUE~D0625~Motor D Value"
+     add row to data  "~256T~" "MOTORDVALUE~D0625~Motor D Value"
+     add row to data  "~284T~" "MOTORDVALUE~D0700~Motor D Value"
+     add row to data  "~286T~" "MOTORDVALUE~D0700~Motor D Value"
+     add row to data  "~324T~" "MOTORDVALUE~D0800~Motor D Value"
+     add row to data  "~326T~" "MOTORDVALUE~D0800~Motor D Value"
+     add row to data  "~364T~" "MOTORDVALUE~D0900~Motor D Value"
+     add row to data  "~365T~" "MOTORDVALUE~D0900~Motor D Value"
+     add row to data  "~404T~" "MOTORDVALUE~D1000~Motor D Value"
+     add row to data  "~405T~" "MOTORDVALUE~D1000~Motor D Value"
+     add row to data  "~444T~" "MOTORDVALUE~D1100~Motor D Value"
+     add row to data  "~445T~" "MOTORDVALUE~D1100~Motor D Value"
+   processLauRawRequiredFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.2368.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P5 as p5
+   store fansled hit P6 as p6
+   store fansled hit NOMENCLATURE as nomenclature restriction == "BELTPOSTFIVESIX"
+then
+   LauFanSetup
+   set key to p5+p6
+   set data to 
+     add row to data  "[BCDFGHJKLMNPQRSTVW]." "CENTERFIVESIXCODE~---~Not used for this sled"
+     add row to data  "13" "CENTERFIVESIXCODE~C0-~Center Five Six Code"
+     add row to data  "0-" "CENTERFIVESIXCODE~C0-~Center Five Six Code"
+     add row to data  "0[RV]" "CENTERFIVESIXCODE~C0R~Center Five Six Code"
+     add row to data  "0[SW]" "CENTERFIVESIXCODE~C0S~Center Five Six Code"
+     add row to data  "0[TX]" "CENTERFIVESIXCODE~C0T~Center Five Six Code"
+     add row to data  "0[UY]" "CENTERFIVESIXCODE~C0U~Center Five Six Code"
+     add row to data  "12" "CENTERFIVESIXCODE~C0Z~Center Five Six Code"
+     add row to data  "0Z" "CENTERFIVESIXCODE~C0Z~Center Five Six Code"
+     add row to data  "23" "CENTERFIVESIXCODE~C1-~Center Five Six Code"
+     add row to data  "1-" "CENTERFIVESIXCODE~C1-~Center Five Six Code"
+     add row to data  "1[04]" "CENTERFIVESIXCODE~C10~Center Five Six Code"
+     add row to data  "1[15]" "CENTERFIVESIXCODE~C11~Center Five Six Code"
+     add row to data  "1[6B]" "CENTERFIVESIXCODE~C16~Center Five Six Code"
+     add row to data  "1[7C]" "CENTERFIVESIXCODE~C17~Center Five Six Code"
+     add row to data  "1[8D]" "CENTERFIVESIXCODE~C18~Center Five Six Code"
+     add row to data  "1[AE]" "CENTERFIVESIXCODE~C1A~Center Five Six Code"
+     add row to data  "1[FK]" "CENTERFIVESIXCODE~C1F~Center Five Six Code"
+     add row to data  "1[GL]" "CENTERFIVESIXCODE~C1G~Center Five Six Code"
+     add row to data  "1[HM]" "CENTERFIVESIXCODE~C1H~Center Five Six Code"
+     add row to data  "1[JN]" "CENTERFIVESIXCODE~C1J~Center Five Six Code"
+     add row to data  "1[PT]" "CENTERFIVESIXCODE~C1P~Center Five Six Code"
+     add row to data  "1[QU]" "CENTERFIVESIXCODE~C1Q~Center Five Six Code"
+     add row to data  "1[RV]" "CENTERFIVESIXCODE~C1R~Center Five Six Code"
+     add row to data  "1[SW]" "CENTERFIVESIXCODE~C1S~Center Five Six Code"
+     add row to data  "20" "CENTERFIVESIXCODE~C1X~Center Five Six Code"
+     add row to data  "1X" "CENTERFIVESIXCODE~C1X~Center Five Six Code"
+     add row to data  "21" "CENTERFIVESIXCODE~C1Y~Center Five Six Code"
+     add row to data  "1Y" "CENTERFIVESIXCODE~C1Y~Center Five Six Code"
+     add row to data  "22" "CENTERFIVESIXCODE~C1Z~Center Five Six Code"
+     add row to data  "1Z" "CENTERFIVESIXCODE~C1Z~Center Five Six Code"
+     add row to data  "2[48]" "CENTERFIVESIXCODE~C24~Center Five Six Code"
+     add row to data  "2[5A]" "CENTERFIVESIXCODE~C25~Center Five Six Code"
+     add row to data  "2[6B]" "CENTERFIVESIXCODE~C26~Center Five Six Code"
+     add row to data  "2[7C]" "CENTERFIVESIXCODE~C27~Center Five Six Code"
+     add row to data  "2[DH]" "CENTERFIVESIXCODE~C2D~Center Five Six Code"
+     add row to data  "2[EJ]" "CENTERFIVESIXCODE~C2E~Center Five Six Code"
+     add row to data  "2[FK]" "CENTERFIVESIXCODE~C2F~Center Five Six Code"
+     add row to data  "2[GL]" "CENTERFIVESIXCODE~C2G~Center Five Six Code"
+     add row to data  "63" "CENTERFIVESIXCODE~C5-~Center Five Six Code"
+     add row to data  "5-" "CENTERFIVESIXCODE~C5-~Center Five Six Code"
+     add row to data  "60" "CENTERFIVESIXCODE~C5X~Center Five Six Code"
+     add row to data  "5X" "CENTERFIVESIXCODE~C5X~Center Five Six Code"
+     add row to data  "61" "CENTERFIVESIXCODE~C5Y~Center Five Six Code"
+     add row to data  "5Y" "CENTERFIVESIXCODE~C5Y~Center Five Six Code"
+     add row to data  "62" "CENTERFIVESIXCODE~C5Z~Center Five Six Code"
+     add row to data  "5Z" "CENTERFIVESIXCODE~C5Z~Center Five Six Code"
+     add row to data  "6[48]" "CENTERFIVESIXCODE~C64~Center Five Six Code"
+     add row to data  "6[5A]" "CENTERFIVESIXCODE~C65~Center Five Six Code"
+     add row to data  "6[6B]" "CENTERFIVESIXCODE~C66~Center Five Six Code"
+     add row to data  "6[7C]" "CENTERFIVESIXCODE~C67~Center Five Six Code"
+     add row to data  "6[DH]" "CENTERFIVESIXCODE~C6D~Center Five Six Code"
+     add row to data  "6[EJ]" "CENTERFIVESIXCODE~C6E~Center Five Six Code"
+     add row to data  "6[FK]" "CENTERFIVESIXCODE~C6F~Center Five Six Code"
+     add row to data  "6[GL]" "CENTERFIVESIXCODE~C6G~Center Five Six Code"
+     add row to data  "6[MR]" "CENTERFIVESIXCODE~C6M~Center Five Six Code"
+     add row to data  "6[NS]" "CENTERFIVESIXCODE~C6N~Center Five Six Code"
+     add row to data  "6[PT]" "CENTERFIVESIXCODE~C6P~Center Five Six Code"
+     add row to data  "6[QU]" "CENTERFIVESIXCODE~C6Q~Center Five Six Code"
+     add row to data  "6[VZ]" "CENTERFIVESIXCODE~C6V~Center Five Six Code"
+     add row to data  "6[-W]" "CENTERFIVESIXCODE~C6W~Center Five Six Code"
+     add row to data  "70" "CENTERFIVESIXCODE~C6X~Center Five Six Code"
+     add row to data  "6X" "CENTERFIVESIXCODE~C6X~Center Five Six Code"
+     add row to data  "71" "CENTERFIVESIXCODE~C6Y~Center Five Six Code"
+     add row to data  "6Y" "CENTERFIVESIXCODE~C6Y~Center Five Six Code"
+     add row to data  "7[26]" "CENTERFIVESIXCODE~C72~Center Five Six Code"
+     add row to data  "7[37]" "CENTERFIVESIXCODE~C73~Center Five Six Code"
+     add row to data  "7[48]" "CENTERFIVESIXCODE~C74~Center Five Six Code"
+     add row to data  "7[5A]" "CENTERFIVESIXCODE~C75~Center Five Six Code"
+     add row to data  "7[BF]" "CENTERFIVESIXCODE~C7B~Center Five Six Code"
+     add row to data  "7[CG]" "CENTERFIVESIXCODE~C7C~Center Five Six Code"
+     add row to data  "7[DH]" "CENTERFIVESIXCODE~C7D~Center Five Six Code"
+     add row to data  "7[EJ]" "CENTERFIVESIXCODE~C7E~Center Five Six Code"
+     add row to data  "7[KP]" "CENTERFIVESIXCODE~C7K~Center Five Six Code"
+     add row to data  "7[LQ]" "CENTERFIVESIXCODE~C7L~Center Five Six Code"
+     add row to data  "7[MR]" "CENTERFIVESIXCODE~C7M~Center Five Six Code"
+     add row to data  "7[NS]" "CENTERFIVESIXCODE~C7N~Center Five Six Code"
+     add row to data  "8[04]" "CENTERFIVESIXCODE~C80~Center Five Six Code"
+     add row to data  "8[15]" "CENTERFIVESIXCODE~C81~Center Five Six Code"
+     add row to data  "8[26]" "CENTERFIVESIXCODE~C82~Center Five Six Code"
+     add row to data  "8[37]" "CENTERFIVESIXCODE~C83~Center Five Six Code"
+     add row to data  "0[8D]" "CENTERFIVESIXCODE~C08~Center Five Six Code"
+     add row to data  "0[AE]" "CENTERFIVESIXCODE~C0A~Center Five Six Code"
+     add row to data  "0[BF]" "CENTERFIVESIXCODE~C0B~Center Five Six Code"
+     add row to data  "0[CG]" "CENTERFIVESIXCODE~C0C~Center Five Six Code"
+     add row to data  "2[MR]" "CENTERFIVESIXCODE~C2M~Center Five Six Code"
+     add row to data  "2[NS]" "CENTERFIVESIXCODE~C2N~Center Five Six Code"
+     add row to data  "2[PT]" "CENTERFIVESIXCODE~C2P~Center Five Six Code"
+     add row to data  "2[QU]" "CENTERFIVESIXCODE~C2Q~Center Five Six Code"
+     add row to data  "2[VZ]" "CENTERFIVESIXCODE~C2V~Center Five Six Code"
+     add row to data  "2[W-]" "CENTERFIVESIXCODE~C2W~Center Five Six Code"
+     add row to data  "2X" "CENTERFIVESIXCODE~C2X~Center Five Six Code"
+     add row to data  "2Y" "CENTERFIVESIXCODE~C2Y~Center Five Six Code"
+     add row to data  "30" "CENTERFIVESIXCODE~C2X~Center Five Six Code"
+     add row to data  "31" "CENTERFIVESIXCODE~C2Y~Center Five Six Code"
+     add row to data  "3[26]" "CENTERFIVESIXCODE~C32~Center Five Six Code"
+     add row to data  "3[37]" "CENTERFIVESIXCODE~C33~Center Five Six Code"
+     add row to data  "3[48]" "CENTERFIVESIXCODE~C34~Center Five Six Code"
+     add row to data  "3[5A]" "CENTERFIVESIXCODE~C35~Center Five Six Code"
+     add row to data  "3[BF]" "CENTERFIVESIXCODE~C3B~Center Five Six Code"
+     add row to data  "3[CG]" "CENTERFIVESIXCODE~C3C~Center Five Six Code"
+     add row to data  "3[DH]" "CENTERFIVESIXCODE~C3D~Center Five Six Code"
+     add row to data  "3[EJ]" "CENTERFIVESIXCODE~C3E~Center Five Six Code"
+     add row to data  "3[KP]" "CENTERFIVESIXCODE~C3K~Center Five Six Code"
+     add row to data  "3[LQ]" "CENTERFIVESIXCODE~C3L~Center Five Six Code"
+     add row to data  "3[MR]" "CENTERFIVESIXCODE~C3M~Center Five Six Code"
+     add row to data  "3[NS]" "CENTERFIVESIXCODE~C3N~Center Five Six Code"
+     add row to data  "3[TX]" "CENTERFIVESIXCODE~C3T~Center Five Six Code"
+     add row to data  "3[UY]" "CENTERFIVESIXCODE~C3U~Center Five Six Code"
+     add row to data  "3[VZ]" "CENTERFIVESIXCODE~C3V~Center Five Six Code"
+     add row to data  "3[W-]" "CENTERFIVESIXCODE~C3W~Center Five Six Code"
+     add row to data  "4[8D]" "CENTERFIVESIXCODE~C48~Center Five Six Code"
+     add row to data  "4[AE]" "CENTERFIVESIXCODE~C4A~Center Five Six Code"
+     add row to data  "4[BF]" "CENTERFIVESIXCODE~C4B~Center Five Six Code"
+     add row to data  "4[CG]" "CENTERFIVESIXCODE~C4C~Center Five Six Code"
+     add row to data  "4Z" "CENTERFIVESIXCODE~C4Z~Center Five Six Code"
+     add row to data  "4-" "CENTERFIVESIXCODE~C4-~Center Five Six Code"
+     add row to data  "52" "CENTERFIVESIXCODE~C4Z~Center Five Six Code"
+     add row to data  "53" "CENTERFIVESIXCODE~C4-~Center Five Six Code"
+     add row to data  "5[04]" "CENTERFIVESIXCODE~C50~Center Five Six Code"
+     add row to data  "5[15]" "CENTERFIVESIXCODE~C51~Center Five Six Code"
+     add row to data  "5[6B]" "CENTERFIVESIXCODE~C56~Center Five Six Code"
+     add row to data  "5[7C]" "CENTERFIVESIXCODE~C57~Center Five Six Code"
+     add row to data  "5[8D]" "CENTERFIVESIXCODE~C58~Center Five Six Code"
+     add row to data  "5[AE]" "CENTERFIVESIXCODE~C5A~Center Five Six Code"
+     add row to data  "5[FK]" "CENTERFIVESIXCODE~C5F~Center Five Six Code"
+     add row to data  "5[GL]" "CENTERFIVESIXCODE~C5G~Center Five Six Code"
+     add row to data  "5[HM]" "CENTERFIVESIXCODE~C5H~Center Five Six Code"
+     add row to data  "5[JN]" "CENTERFIVESIXCODE~C5J~Center Five Six Code"
+     add row to data  "7[TX]" "CENTERFIVESIXCODE~C7T~Center Five Six Code"
+     add row to data  "7[UY]" "CENTERFIVESIXCODE~C7U~Center Five Six Code"
+     add row to data  "7[VZ]" "CENTERFIVESIXCODE~C7V~Center Five Six Code"
+     add row to data  "7[W-]" "CENTERFIVESIXCODE~C7W~Center Five Six Code"
+     add row to data  "8[8D]" "CENTERFIVESIXCODE~C88~Center Five Six Code"
+     add row to data  "8[AE]" "CENTERFIVESIXCODE~C8A~Center Five Six Code"
+     add row to data  "8[BF]" "CENTERFIVESIXCODE~C8B~Center Five Six Code"
+     add row to data  "8[CG]" "CENTERFIVESIXCODE~C8C~Center Five Six Code"
+     add row to data  "8[HM]" "CENTERFIVESIXCODE~C8H~Center Five Six Code"
+     add row to data  "8[JN]" "CENTERFIVESIXCODE~C8J~Center Five Six Code"
+     add row to data  "8[KP]" "CENTERFIVESIXCODE~C8K~Center Five Six Code"
+     add row to data  "8[LQ]" "CENTERFIVESIXCODE~C8L~Center Five Six Code"
+     add row to data  "8[RV]" "CENTERFIVESIXCODE~C8R~Center Five Six Code"
+     add row to data  "8[SW]" "CENTERFIVESIXCODE~C8S~Center Five Six Code"
+     add row to data  "8[TX]" "CENTERFIVESIXCODE~C8T~Center Five Six Code"
+     add row to data  "8[UY]" "CENTERFIVESIXCODE~C8U~Center Five Six Code"
+     add row to data  "8Z" "CENTERFIVESIXCODE~C8Z~Center Five Six Code"
+     add row to data  "8-" "CENTERFIVESIXCODE~C8-~Center Five Six Code"
+     add row to data  "92" "CENTERFIVESIXCODE~C8Z~Center Five Six Code"
+     add row to data  "93" "CENTERFIVESIXCODE~C8-~Center Five Six Code"
+     add row to data  "9[04]" "CENTERFIVESIXCODE~C90~Center Five Six Code"
+     add row to data  "9[15]" "CENTERFIVESIXCODE~C91~Center Five Six Code"
+   processLauRawRequiredFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.centerlineii.D.2522.20231004"
+when
+   fansledLookupRule
+   store fansled hit P1 as p1
+   store fansled hit NOMENCLATURE as nomenclature restriction == "BELTPOSTFIVESIX"
+   store fansled hit CENTERFIVESIXCODE as centerfivesixcode
+   store fansled hit MOTORDVALUE as motordvalue
+then
+   set key to "CENTERLINEII:"+p1+"~"+centerfivesixcode+"~"+motordvalue+"~"
+   useFanLookupFile
+   processLookupFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.centerline.D.3064.20231004"
+when
+   fansledLookupRule
+   store fansled hit P1 as p1
+   store fansled hit P5 as p5
+   store fansled hit P6 as p6
+   store fansled hit P7 as p7
+   store fansled hit MOTORDVALUE as motordvalue
+   store fansled hit NOMENCLATURE as nomenclature restriction == "BELTPREFIVESIX"
+then
+   set key to "CENTERLINE:"+p1+p5+p6+p7+"~"+motordvalue+"~"
+   useFanLookupFile
+   processLookupFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.4578.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P16 as p16
+   store fansled hit NOMENCLATURE as nomenclature restriction in ("BELTPREFIVESIX","BELTPOSTFIVESIX")
+then
+   LauFanSetup
+   set key to p16
+   set data to 
+     add row to data  "[BDGJL]" "DRIVEPITCH~CONSTANT~Constant Pitch"
+     add row to data  "[CFHKM]" "DRIVEPITCH~VARIABLE~Variable Pitch"
+     add row to data  "[BCJK]" "DRIVESERVICEFACTOR~1.5~1.5 Service Factor Drive"
+     add row to data  "[GHLM]" "DRIVESERVICEFACTOR~1.2~1.2 Service Factor Drive"
+     add row to data  "[DF]" "DRIVESERVICEFACTOR~2.0~2.0 Service Factor Drive"
+     add row to data  "[BCDFGH]" "DRIVEMULTIPLEBELT~NO~Mupltiple Belt Drive NOT required"
+     add row to data  "[JKLM]" "DRIVEMULTIPLEBELT~YES~Mupltiple Belt Drive required"
+     add row to data  "[BCDFGHJKLM]" "DRIVEFIELDSUPPLIED~NO~Factory Supplied Drive"
+     add row to data  "X" "DRIVEFIELDSUPPLIED~YES~Field Supplied Drive"
+   processLauRawRequiredFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.4594.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P5 as p5
+   store fansled hit P6 as p6
+   store fansled hit NOMENCLATURE as nomenclature restriction == "BELTPREFIVESIX"
+then
+   LauFanSetup
+   set key to p5+p6
+   set data to 
+     add row to data  "B[1234]" "$SPRINGS~72.681~AF / PF Springs"
+     add row to data  "C[123456]" "$SPRINGS~72.681~AF / PF Springs"
+     add row to data  "D[12345678]" "$SPRINGS~72.681~AF / PF Springs"
+     add row to data  "F[123456]" "$SPRINGS~72.681~AF / PF Springs"
+     add row to data  "G[123456]" "$SPRINGS~72.681~AF / PF Springs"
+     add row to data  "H[123456]" "$SPRINGS~72.681~AF / PF Springs"
+     add row to data  "J[12345678]" "$SPRINGS~72.681~AF / PF Springs"
+     add row to data  "K[12345678]" "$SPRINGS~72.681~AF / PF Springs"
+     add row to data  "L[12345678]" "$SPRINGS~72.681~AF / PF Springs"
+     add row to data  "M[12345678]" "$SPRINGS~72.681~AF / PF Springs"
+     add row to data  "N[1256]" "$SPRINGS~109.016~AF / PF Springs"
+     add row to data  "N[3478]" "$SPRINGS~72.681~AF / PF Springs"
+     add row to data  "P[1256]" "$SPRINGS~109.016~AF / PF Springs"
+     add row to data  "P[3478]" "$SPRINGS~72.681~AF / PF Springs"
+     add row to data  "Q[1256]" "$SPRINGS~109.016~AF / PF Springs"
+     add row to data  "Q[3478]" "$SPRINGS~72.681~AF / PF Springs"
+     add row to data  "R[1256]" "$SPRINGS~109.016~AF / PF Springs"
+     add row to data  "R[3478]" "$SPRINGS~72.681~AF / PF Springs"
+   processLauRawFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.4615.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P5 as p5
+   store fansled hit P6 as p6
+   store fansled hit P17 as p17
+   store fansled hit NOMENCLATURE as nomenclature restriction in ("BELTPREFIVESIX","BELTPOSTFIVESIX")
+then
+   LauFanSetup
+   set key to p5+p6+p17
+   set data to 
+     add row to data  "B[GHQR][BDGJ]" "$SPRINGS~193.033~FC Springs"
+     add row to data  "CQ[BDGJ]" "$SPRINGS~193.033~FC Springs"
+     add row to data  "B[GHQR][CFHK]" "$SPRINGS~193.083~FC Springs"
+     add row to data  "CQ[CFHK]" "$SPRINGS~193.083~FC Springs"
+     add row to data  "C[GHR][CFHK]" "$SPRINGS~193.183~FC Springs"
+     add row to data  "C[GHR][BDGJ]" "$SPRINGS~193.233~FC Springs"
+     add row to data  "D[HR]." "$SPRINGS~194.182~FC Springs"
+     add row to data  "F[HR]." "$SPRINGS~194.182~FC Springs"
+     add row to data  "GQ." "$SPRINGS~194.182~FC Springs"
+     add row to data  "D[GQ]." "$SPRINGS~194.851~FC Springs"
+     add row to data  "F[GQ]." "$SPRINGS~194.851~FC Springs"
+     add row to data  "G[HR]." "$SPRINGS~196.279~FC Springs"
+     add row to data  "H[HR]." "$SPRINGS~196.879~FC Springs"
+     add row to data  "KQ." "$SPRINGS~196.879~FC Springs"
+     add row to data  "LQ." "$SPRINGS~196.879~FC Springs"
+     add row to data  "J[HR]." "$SPRINGS~197.528~FC Springs"
+     add row to data  "GG." "$SPRINGS~197.588~FC Springs"
+     add row to data  "H[GQ]." "$SPRINGS~198.327~FC Springs"
+     add row to data  "J[GQ]." "$SPRINGS~199.336~FC Springs"
+     add row to data  "K[HR]." "$SPRINGS~202.142~FC Springs"
+     add row to data  "KG." "$SPRINGS~202.412~FC Springs"
+     add row to data  "L[HR]." "$SPRINGS~203.181~FC Springs"
+     add row to data  "LG." "$SPRINGS~206.976~FC Springs"
+     add row to data  "M[HR]." "$SPRINGS~207.186~FC Springs"
+     add row to data  "NQ." "$SPRINGS~207.186~FC Springs"
+     add row to data  "PQ." "$SPRINGS~207.186~FC Springs"
+     add row to data  "M[GQ]." "$SPRINGS~210.062~FC Springs"
+     add row to data  "N[GHR]." "$SPRINGS~211.291~FC Springs"
+     add row to data  "P[HR]." "$SPRINGS~211.291~FC Springs"
+     add row to data  "QQ." "$SPRINGS~211.291~FC Springs"
+     add row to data  "PG." "$SPRINGS~211.351~FC Springs"
+     add row to data  "Q[HR]." "$SPRINGS~211.431~FC Springs"
+     add row to data  "R[HR]." "$SPRINGS~211.86~FC Springs"
+     add row to data  "R[GQ]." "$SPRINGS~212.03~FC Springs"
+     add row to data  "QG." "$SPRINGS~212.07~FC Springs"
+     add row to data  "0[RSTUVWXY]." "$SPRINGS~72.68~AF/FC Springs"
+     add row to data  "0[Z-]." "$SPRINGS~72.68~AF/FC Springs"
+     add row to data  "1[012345]." "$SPRINGS~72.68~AF/FC Springs"
+     add row to data  "1[678ABCDE]." "$SPRINGS~72.68~AF/FC Springs"
+     add row to data  "1[FGHJKLMN]." "$SPRINGS~72.68~AF/FC Springs"
+     add row to data  "1[PQRSTUVW]." "$SPRINGS~72.68~AF/FC Springs"
+     add row to data  "1[XYZ-]." "$SPRINGS~72.68~AF/FC Springs"
+     add row to data  "2[0123]." "$SPRINGS~72.68~AF/FC Springs"
+     add row to data  "2[45678ABC]." "$SPRINGS~109.02~AF/FC Springs"
+     add row to data  "2[DEFGHJKL]." "$SPRINGS~109.02~AF/FC Springs"
+     add row to data  "5[XYZ-]." "$SPRINGS~198.327~AF/FC Springs"
+     add row to data  "6[0123]." "$SPRINGS~198.327~AF/FC Springs"
+     add row to data  "6[45678ABC]." "$SPRINGS~202.41~AF/FC Springs"
+     add row to data  "6[DEFGHJKL]." "$SPRINGS~197.53~AF/FC Springs"
+     add row to data  "6[MNPQRSTU]." "$SPRINGS~206.98~AF/FC Springs"
+     add row to data  "6[VWXYZ-]." "$SPRINGS~203.18~AF/FC Springs"
+     add row to data  "7[01]." "$SPRINGS~203.18~AF/FC Springs"
+     add row to data  "7[2345678A]." "$SPRINGS~210.06~AF/FC Springs"
+     add row to data  "7[BCDEFGHJ]." "$SPRINGS~207.19~AF/FC Springs"
+     add row to data  "7[KLMNPQRS]." "$SPRINGS~211.29~AF/FC Springs"
+     add row to data  "8[01234567]." "$SPRINGS~211.29~AF/FC Springs"
+     add row to data  "0[8ABCDEFG]." "$SPRINGS~72.68~AF/FC Springs"
+     add row to data  "2[MNPQRSTU]." "$SPRINGS~109.02~AF/FC Springs"
+     add row to data  "2[VWXYZ-]." "$SPRINGS~109.02~AF/FC Springs"
+     add row to data  "3[01]." "$SPRINGS~109.02~AF/FC Springs"
+     add row to data  "3[2345678A]." "$SPRINGS~109.02~AF/FC Springs"
+     add row to data  "3[BCDEFGHJ]." "$SPRINGS~109.02~AF/FC Springs"
+     add row to data  "3[KLMNPQRS]." "$SPRINGS~109.02~AF/FC Springs"
+     add row to data  "3[TUVWXYZ-]." "$SPRINGS~109.02~AF/FC Springs"
+     add row to data  "4[8ABCDEFG]." "$SPRINGS~193.23~AF/FC Springs"
+     add row to data  "4[Z-]." "$SPRINGS~194.18~AF/FC Springs"
+     add row to data  "5[012345]." "$SPRINGS~194.18~AF/FC Springs"
+     add row to data  "5[678ABCDE]." "$SPRINGS~194.18~AF/FC Springs"
+     add row to data  "5[FGHJKLMN]." "$SPRINGS~198.33~AF/FC Springs"
+     add row to data  "7[TUVWXYZ-]." "$SPRINGS~211.29~AF/FC Springs"
+     add row to data  "8[8ABCDEFG]." "$SPRINGS~212.07~AF/FC Springs"
+     add row to data  "8[HJKLMNPQ]." "$SPRINGS~211.43~AF/FC Springs"
+     add row to data  "8[RSTUVWXY]." "$SPRINGS~211.43~AF/FC Springs"
+     add row to data  "8[Z-]." "$SPRINGS~211.86~AF/FC Springs"
+     add row to data  "9[012345]." "$SPRINGS~211.86~AF/FC Springs"
+   processLauRawFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.4693.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P7 as p7
+   store fansled hit P8 as p8
+   store fansled hit P16 as p16
+   store fansled hit NOMENCLATURE as nomenclature restriction == "DDPF"
+then
+   LauFanSetup
+   set key to p7+p8+p16
+   set data to 
+     add row to data  "B[QRSTVW][BC]" "$OPTIONS.InletScreen~66.379~Direct Drive Inlet Screen"
+     add row to data  "C[QRSTVW][BC]" "$OPTIONS.InletScreen~68.656~Direct Drive Inlet Screen"
+     add row to data  "D[QRSTVW][BC]" "$OPTIONS.InletScreen~69.395~Direct Drive Inlet Screen"
+     add row to data  "F[QRSTVW][BC]" "$OPTIONS.InletScreen~71.662~Direct Drive Inlet Screen"
+     add row to data  "G[QRSTVW][BC]" "$OPTIONS.InletScreen~73.66~Direct Drive Inlet Screen"
+     add row to data  "H[QRSTVW][BC]" "$OPTIONS.InletScreen~73.909~Direct Drive Inlet Screen"
+     add row to data  "J[QRSTVW][BC]" "$OPTIONS.InletScreen~81.979~Direct Drive Inlet Screen"
+     add row to data  "K[QRSTVW][BC]" "$OPTIONS.InletScreen~86.394~Direct Drive Inlet Screen"
+     add row to data  "L[QRSTVW][BC]" "$OPTIONS.InletScreen~89.38~Direct Drive Inlet Screen"
+     add row to data  "M[QRSTVW][BC]" "$OPTIONS.InletScreen~92.147~Direct Drive Inlet Screen"
+     add row to data  "N[QRSTVW][BC]" "$OPTIONS.InletScreen~100.197~Direct Drive Inlet Screen"
+     add row to data  "P[QRSTVW][BC]" "$OPTIONS.InletScreen~108.357~Direct Drive Inlet Screen"
+     add row to data  "Q[QRSTVW][BC]" "$OPTIONS.InletScreen~116.567~Direct Drive Inlet Screen"
+     add row to data  "[RS][QRSTVW][BC]" "$OPTIONS.InletScreen~128.812~Direct Drive Inlet Screen"
+     add row to data  "B[DFGHSTVW][BC]" "$OPTIONS.PiezoRing~30.113~Piezo Ring"
+     add row to data  "C[DFGHSTVW][BC]" "$OPTIONS.PiezoRing~30.213~Piezo Ring"
+     add row to data  "D[DFGHSTVW][BC]" "$OPTIONS.PiezoRing~30.363~Piezo Ring"
+     add row to data  "F[DFGHSTVW][BC]" "$OPTIONS.PiezoRing~30.463~Piezo Ring"
+     add row to data  "G[DFGHSTVW][BC]" "$OPTIONS.PiezoRing~30.563~Piezo Ring"
+     add row to data  "H[DFGHSTVW][BC]" "$OPTIONS.PiezoRing~30.662~Piezo Ring"
+     add row to data  "J[DFGHSTVW][BC]" "$OPTIONS.PiezoRing~30.812~Piezo Ring"
+     add row to data  "K[DFGHSTVW][BC]" "$OPTIONS.PiezoRing~30.962~Piezo Ring"
+     add row to data  "L[DFGHSTVW][BC]" "$OPTIONS.PiezoRing~31.162~Piezo Ring"
+     add row to data  "M[DFGHSTVW][BC]" "$OPTIONS.PiezoRing~31.362~Piezo Ring"
+     add row to data  "N[DFGHSTVW][BC]" "$OPTIONS.PiezoRing~31.561~Piezo Ring"
+     add row to data  "P[DFGHSTVW][BC]" "$OPTIONS.PiezoRing~31.811~Piezo Ring"
+     add row to data  "Q[DFGHSTVW][BC]" "$OPTIONS.PiezoRing~32.061~Piezo Ring"
+     add row to data  "[RS][DFGHSTVW][BC]" "$OPTIONS.PiezoRing~32.31~Piezo Ring"
+     add row to data  ".[GHVW][BC]" "$OPTIONS.PiezoTransducer~129.155~Piezo Transducer"
+     add row to data  "H[QRSTVW]D" "$OPTIONS.InletScreen~295.637~Direct Drive Inlet Screen x 4"
+     add row to data  "J[QRSTVW]D" "$OPTIONS.InletScreen~327.916~Direct Drive Inlet Screen x 4"
+     add row to data  "L[QRSTVW]D" "$OPTIONS.InletScreen~357.521~Direct Drive Inlet Screen x 4"
+     add row to data  "H[DFGHSTVW]D" "$OPTIONS.PiezoRing~0.001~Piezo Ring x 4"
+     add row to data  "J[DFGHSTVW]D" "$OPTIONS.PiezoRing~0.001~Piezo Ring x 4"
+     add row to data  "L[DFGHSTVW]D" "$OPTIONS.PiezoRing~0.001~Piezo Ring x 4"
+     add row to data  ".[GHVW]D" "$OPTIONS.PiezoTransducer~516.62~Piezo Transducer x 4"
+     add row to data  "H[QRSTVW]F" "$OPTIONS.InletScreen~443.456~Direct Drive Inlet Screen x 6"
+     add row to data  "J[QRSTVW]F" "$OPTIONS.InletScreen~491.874~Direct Drive Inlet Screen x 6"
+     add row to data  "L[QRSTVW]F" "$OPTIONS.InletScreen~536.282~Direct Drive Inlet Screen x 6"
+     add row to data  "H[DFGHSTVW]F" "$OPTIONS.PiezoRing~0.001~Piezo Ring x 6"
+     add row to data  "J[DFGHSTVW]F" "$OPTIONS.PiezoRing~0.001~Piezo Ring x 6"
+     add row to data  "L[DFGHSTVW]F" "$OPTIONS.PiezoRing~0.001~Piezo Ring x 6"
+     add row to data  ".[GHVW]F" "$OPTIONS.PiezoTransducer~774.93~Piezo Transducer x 6"
+   processLauRawFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.optionsprice.D.4747.20231004"
+when
+   fansledLookupRule
+   store fansled hit P5 as p5
+   store fansled hit P6 as p6
+   store fansled hit P8 as p8 restriction not matches("TBL")
+   store fansled hit NOMENCLATURE as nomenclature restriction == "BELTPREFIVESIX"
+then
+   set key to "OPTIONSPRICE:"+p5+p6+p8
+   useFanLookupFile
+   processLookupFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.optionspriceii.D.5111.20231004"
+when
+   fansledLookupRule
+   store fansled hit P5 as p5
+   store fansled hit P6 as p6
+   store fansled hit P8 as p8 restriction not matches("TBL")
+   store fansled hit NOMENCLATURE as nomenclature restriction == "BELTPOSTFIVESIX"
+then
+   set key to "OPTIONSPRICEII:"+p5+p6+p8
+   useFanLookupFile
+   processLookupFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.5266.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P8 as p8
+   store fansled hit NOMENCLATURE as nomenclature restriction in ("BELTPREFIVESIX","BELTPOSTFIVESIX")
+then
+   LauFanSetup
+   set key to p8
+   set data to 
+     add row to data  "[LMNPQRSW]" "$OPTIONS.PiezoTransducer~129.155~Piezo Transducer (Belt)"
+   processLauRawFanRule
+end
+
+
+
+rule "pricing.fansled.v1.xls.sourced.D.5271.20231004"
+when
+   fansledLauRawRule
+   store fansled hit P8 as p8
+   store fansled hit WHEEL as wheel
+   store fansled hit NOMENCLATURE as nomenclature restriction in ("BELTPREFIVESIX","BELTPOSTFIVESIX")
+then
+   LauFanSetup
+   set key to p8+"~"+wheel+"~"
+   set data to 
+     add row to data  "[BCDFGHJKLMNPQRSW]~101~" "$OPTIONS.PiezoRing~75.088~Piezo Ring on 101"
+     add row to data  "[BCDFGHJKLMNPQRSW]~121~" "$OPTIONS.PiezoRing~75.348~Piezo Ring on 121"
+     add row to data  "[BCDFGHJKLMNPQRSW]~123~" "$OPTIONS.PiezoRing~75.348~Piezo Ring on 123"
+     add row to data  "[BCDFGHJKLMNPQRSW]~131~" "$OPTIONS.PiezoRing~75.587~Piezo Ring on 131"
+     add row to data  "[BCDFGHJKLMNPQRSW]~153~" "$OPTIONS.PiezoRing~76.047~Piezo Ring on 153"
+     add row to data  "[BCDFGHJKLMNPQRSW]~161~" "$OPTIONS.PiezoRing~77.315~Piezo Ring on 161"
+     add row to data  "[BCDFGHJKLMNPQRSW]~163~" "$OPTIONS.PiezoRing~77.315~Piezo Ring on 163"
+     add row to data  "[BCDFGHJKLMNPQRSW]~181~" "$OPTIONS.PiezoRing~77.415~Piezo Ring on 181"
+     add row to data  "[BCDFGHJKLMNPQRSW]~201~" "$OPTIONS.PiezoRing~77.465~Piezo Ring on 201"
+     add row to data  "[BCDFGHJKLMNPQRSW]~221~" "$OPTIONS.PiezoRing~77.485~Piezo Ring on 221"
+     add row to data  "[BCDFGHJKLMNPQRSW]~241~" "$OPTIONS.PiezoRing~78.304~Piezo Ring on 241"
+     add row to data  "[BCDFGHJKLMNPQRSW]~271~" "$OPTIONS.PiezoRing~79.273~Piezo Ring on 271"
+     add row to data  "[BCDFGHJKLMNPQRSW]~301~" "$OPTIONS.PiezoRing~79.862~Piezo Ring on 301"
+     add row to data  "[BCDFGHJKLMNPQRSW]~331~" "$OPTIONS.PiezoRing~80.451~Piezo Ring on 331"
+     add row to data  "[BCDFGHJKLMNPQRSW]~361~" "$OPTIONS.PiezoRing~82.019~Piezo Ring on 361"
+     add row to data  "[BCDFGHJKLMNPQRSW]~183Q~" "$OPTIONS.PiezoRing~77.415~Piezo Ring on 183Q"
+     add row to data  "[BCDFGHJKLMNPQRSW]~223Q~" "$OPTIONS.PiezoRing~77.485~Piezo Ring on 223Q"
+     add row to data  "[BCDFGHJKLMNPQRSW]~243Q~" "$OPTIONS.PiezoRing~78.304~Piezo Ring on 243Q"
+     add row to data  "[BCDFGHJKLMNPQRSW]~273Q~" "$OPTIONS.PiezoRing~79.273~Piezo Ring on 273Q"
+     add row to data  "[BCDFGHJKLMNPQRSW]~303Q~" "$OPTIONS.PiezoRing~79.862~Piezo Ring on 303Q"
+     add row to data  "[BCDFGHJKLMNPQRSW]~333Q~" "$OPTIONS.PiezoRing~80.451~Piezo Ring on 333Q"
+     add row to data  "[BCDFGHJKLMNPQRSW]~363Q~" "$OPTIONS.PiezoRing~82.019~Piezo Ring on 363Q"
+     add row to data  "[BCDFGHJKLMNPQRSW]~403Q~" "$OPTIONS.PiezoRing~82.788~Piezo Ring on 403Q"
+     add row to data  "[BCDFGHJKLMNPQRSW]~443Q~" "$OPTIONS.PiezoRing~83.548~Piezo Ring on 443Q"
+     add row to data  "[BCDFGHJKLMNPQRSW]~493Q~" "$OPTIONS.PiezoRing~84.357~Piezo Ring on 493Q"
+     add row to data  "[BCDFGHJKLMNPQRSW]~A10-8A~" "$OPTIONS.PiezoRing~54.663~Piezo Ring on A10-8A"
+     add row to data  "[BCDFGHJKLMNPQRSW]~A12-11A~" "$OPTIONS.PiezoRing~56.051~Piezo Ring on A12-11A"
+     add row to data  "[BCDFGHJKLMNPQRSW]~A12-12A~" "$OPTIONS.PiezoRing~56.051~Piezo Ring on A12-12A"
+     add row to data  "[BCDFGHJKLMNPQRSW]~A15-15A~" "$OPTIONS.PiezoRing~58.408~Piezo Ring on A15-15A"
+     add row to data  "[BCDFGHJKLMNPQRSW]~A18-18A~" "$OPTIONS.PiezoRing~61.704~Piezo Ring on A18-18A"
+     add row to data  "[BCDFGHJKLMNPQRSW]~A20-15A~" "$OPTIONS.PiezoRing~68.166~Piezo Ring on A20-15A"
+     add row to data  "[BCDFGHJKLMNPQRSW]~A20-18A~" "$OPTIONS.PiezoRing~68.166~Piezo Ring on A20-18A"
+     add row to data  "[BCDFGHJKLMNPQRSW]~A20-18H~" "$OPTIONS.PiezoRing~68.166~Piezo Ring on A20-18H"
+     add row to data  "[BCDFGHJKLMNPQRSW]~A20-20H~" "$OPTIONS.PiezoRing~68.166~Piezo Ring on A20-20H"
+     add row to data  "[BCDFGHJKLMNPQRSW]~A22-22H~" "$OPTIONS.PiezoRing~70.514~Piezo Ring on A22-22H"
+     add row to data  "[BCDFGHJKLMNPQRSW]~A25-20H~" "$OPTIONS.PiezoRing~73.33~Piezo Ring on A25-20H"
+     add row to data  "[BCDFGHJKLMNPQRSW]~A25-25H~" "$OPTIONS.PiezoRing~73.33~Piezo Ring on A25-25H"
+     add row to data  "[BCDFGHJKLMNPQRSW]~A27-22H~" "$OPTIONS.PiezoRing~74.748~Piezo Ring on A27-22H"
+     add row to data  "[BCDFGHJKLMNPQRSW]~A27-27H~" "$OPTIONS.PiezoRing~74.748~Piezo Ring on A27-27H"
+     add row to data  "[BCDFGHJKLMNPQRSW]~A30-30H~" "$OPTIONS.PiezoRing~77.545~Piezo Ring on A30-30H"
+     add row to data  "[BCDFGHJKLMNPQRSW]~A9-4A~" "$OPTIONS.PiezoRing~53.714~Piezo Ring on A9-4A"
+   processLauRawFanRule
+end
+
+
+

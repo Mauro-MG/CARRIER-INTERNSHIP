@@ -1,0 +1,338 @@
+{% extends "base.html" %}
+
+{% block title %}Design Hour Estimator{% endblock %}
+
+{% block content %}
+{% if error_message %}
+<div class="error-banner">
+    {{ error_message }}
+</div>
+{% endif %}
+
+{% if success_message %}
+<div class="success-banner">
+    {{ success_message }}
+</div>
+{% endif %}
+
+{% if overwrite_pending %}
+<div class="warning-banner">
+    {{ warning_message }}
+    <div style="margin-top: 10px;">
+        <button type="submit" form="mainForm" name="action" value="save_csv" class="btn">
+            Overwrite Existing File
+        </button>
+        <a href="/" class="btn btn-secondary">Cancel</a>
+    </div>
+</div>
+{% endif %}
+<script>
+function cleanFilePart(value) {
+    value = (value || "").trim();
+
+    const invalidChars = /[<>:"/\\|?*]/g;
+    value = value.replace(invalidChars, "_");
+
+    // Replace multiple spaces with underscores
+    value = value.split(/\s+/).join("_");
+
+    return value;
+}
+
+function buildQbomFilename(projectName, selectedQbom, team) {
+    projectName = cleanFilePart(projectName);
+    selectedQbom = (selectedQbom || "").trim();
+    team = (team || "").trim().toUpperCase();
+
+    if (!projectName) {
+        return "";
+    }
+
+    let qbomSuffix = "";
+
+    if (team === "ETO") {
+        qbomSuffix = cleanFilePart(selectedQbom);
+    } else {
+        const qbomParts = selectedQbom.split(/\s+/);
+
+        if (qbomParts.length > 1) {
+            qbomSuffix = cleanFilePart(qbomParts.slice(1).join(" "));
+        }
+    }
+
+    let finalName = qbomSuffix ? `${projectName}_${qbomSuffix}` : projectName;
+
+    if (!finalName.toLowerCase().endsWith(".csv")) {
+        finalName += ".csv";
+    }
+
+    return finalName;
+}
+
+function confirmSaveCSV() {
+    const projectName = document.querySelector('input[name="save_file_name"]').value;
+    const qbom = document.querySelector('select[name="qbom"]').value;
+    const team = document.querySelector('select[name="team"]').value;
+
+    const finalName = buildQbomFilename(projectName, qbom, team);
+
+    if (!finalName) {
+        alert("Please enter a project name before saving.");
+        return false;
+    }
+
+    return confirm(
+        "The file will be saved as:\n\n" +
+        finalName +
+        "\n\nDo you want to continue?"
+    );
+}
+</script>
+<div class="card">
+    <div class="card-topbar">
+        <div>
+            <h2 class="section-title section-title-tight">Project Inputs</h2>
+            <div class="section-subtitle">Select the project filters or open a saved estimate.</div>
+        </div>
+
+        <div class="file-toolbar">
+            <div class="save-inline-group">
+                <input
+                    type="text"
+                    name="save_file_name"
+                    form="mainForm"
+                    value="{{ save_file_name if save_file_name is defined else '' }}"
+                    placeholder="Project file name"
+                    class="save-name-input"
+                >
+            <button type="submit" form="mainForm" name="action" value="save_csv"
+                    class="btn btn-secondary btn-small"
+                    onclick="return confirmSaveCSV()">
+                Save CSV
+            </button>
+            </div>
+
+            <form method="POST" action="/" enctype="multipart/form-data" class="file-inline-form" id="csvAutoLoadForm">
+                <input type="hidden" name="action" value="load_csv">
+
+                <label for="csv_file_upload" class="file-upload-chip">
+                    Load CSV
+                </label>
+                <input
+                    type="file"
+                    name="csv_file"
+                    id="csv_file_upload"
+                    accept=".csv"
+                    required
+                    class="file-input-hidden"
+                    onchange="document.getElementById('csvAutoLoadForm').submit();"
+                >
+            </form>
+        </div>
+    </div>
+
+    <form method="POST" action="/" id="mainForm">
+        <input type="hidden" name="confirm_overwrite" value="{{ confirm_overwrite if confirm_overwrite is defined else '0' }}">
+        <div class="filters-grid">
+            <div class="field">
+                <label for="team">TEAM</label>
+                <select name="team" id="team" required onchange="this.form.submit()">
+                    <option value="">Select Team</option>
+                    {% for item in team_options %}
+                        <option value="{{ item }}" {% if selected_team == item %}selected{% endif %}>
+                            {{ item }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="product_family">Product Family</label>
+                <select name="product_family" id="product_family" required onchange="this.form.submit()">
+                    <option value="">Select Product Family</option>
+                    {% for item in product_family_options %}
+                        <option value="{{ item }}" {% if selected_product_family == item %}selected{% endif %}>
+                            {{ item }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="qbom">Subsystem</label>
+                <select name="qbom" id="qbom" required>
+                    <option value="">Select Subsystem</option>
+                    {% for item in qbom_options %}
+                        <option value="{{ item }}" {% if selected_qbom == item %}selected{% endif %}>
+                            {{ item }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button type="submit" name="action" value="load_table" class="btn">
+                Load Estimator Table
+            </button>
+
+            <a href="/" class="btn btn-secondary" onclick="return confirm('Start a new project? All data will be cleared.')">
+                Start New Project
+            </a>
+        </div>
+        <br>
+        <div class="card inner-card">
+            <h2 class="section-title">Estimated Hours by Part</h2>
+
+            {% if rows and rows|length > 0 %}
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Part Name</th>
+                                <th>SET</th>
+                                <th>Low</th>
+                                <th>Medium</th>
+                                <th>Complex</th>
+                                <th>Modeling Hrs</th>
+                                <th>Detailing Hrs</th>
+                                <th>BOM Hrs</th>
+                                <th>QC Hrs</th>
+                                <th>Total Design Hrs</th>
+                                <th>Total Hrs</th>
+                                <th>Comments</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in rows %}
+                            <tr>
+                                <td class="part-name">
+                                    {{ row["Part Name"] }}
+                                    <input type="hidden" name="part_name_{{ loop.index0 }}" value="{{ row['Part Name'] }}">
+                                </td>
+                                <td class="set-name">
+                                    {{ row["SET"] }}
+                                    <input type="hidden" name="set_{{ loop.index0 }}" value="{{ row['SET'] }}">
+                                </td>
+                                <td>
+                                    <input
+                                        type="number"
+                                        min="0"
+                                        max="99"
+                                        name="low_qty_{{ loop.index0 }}"
+                                        value="{{ row['Low Qty'] }}"
+                                        class="qty-input"
+                                    >
+                                </td>
+                                <td>
+                                    <input
+                                        type="number"
+                                        min="0"
+                                        max="99"
+                                        name="med_qty_{{ loop.index0 }}"
+                                        value="{{ row['Medium Qty'] }}"
+                                        class="qty-input"
+                                    >
+                                </td>
+                                <td>
+                                    <input
+                                        type="number"
+                                        min="0"
+                                        max="99"
+                                        name="complex_qty_{{ loop.index0 }}"
+                                        value="{{ row['Complex Qty'] }}"
+                                        class="qty-input"
+                                    >
+                                </td>
+                                <td>
+                                    {{ row["Modeling Hrs"] }}
+                                    <input type="hidden" name="modeling_hrs_{{ loop.index0 }}" value="{{ row['Modeling Hrs'] }}">
+                                </td>
+                                <td>
+                                    {{ row["Detailing Hrs"] }}
+                                    <input type="hidden" name="detailing_hrs_{{ loop.index0 }}" value="{{ row['Detailing Hrs'] }}">
+                                </td>
+                                <td>
+                                    {{ row["BOM Hrs"] }}
+                                    <input type="hidden" name="bom_hrs_{{ loop.index0 }}" value="{{ row['BOM Hrs'] }}">
+                                </td>
+                                <td>
+                                    {{ row["QC Hrs"] }}
+                                    <input type="hidden" name="qc_hrs_{{ loop.index0 }}" value="{{ row['QC Hrs'] }}">
+                                </td>
+                                <td>
+                                    {{ row["TotalDesignHrs"] }}
+                                    <input type="hidden" name="total_design_hrs_{{ loop.index0 }}" value="{{ row['TotalDesignHrs'] }}">
+                                </td>
+                                <td>
+                                    {{ row["Total Hrs"] }}
+                                    <input type="hidden" name="total_hrs_{{ loop.index0 }}" value="{{ row['Total Hrs'] }}">
+                                </td>
+                                <td>
+                                    <input type="text"
+                                        name="comments_{{ loop.index0 }}"
+                                        value="{{ row.get('Comments', '') }}"
+                                        class="table-input comments-input">
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+                <input type="hidden" name="row_count" value="{{ rows|length }}">
+
+                <div class="actions" style="margin-top: 18px;">
+                    <button type="submit" name="action" value="recalculate" class="btn">
+                        Calculate Hours
+                    </button>
+                    <button type="submit" name="action" value="reset_complexity" class="btn btn-secondary">
+                        Complexity Reset
+                    </button>
+                </div>
+            {% else %}
+                <div class="empty-state">
+                    No results loaded yet. Select the inputs above to display the estimator table.
+                </div>
+            {% endif %}
+        </div>
+    </form>
+</div>
+
+<div class="card">
+    <h2 class="section-title">Hours Summary</h2>
+
+    <div class="summary-grid">
+        <div class="summary-item">
+            <div class="summary-label">Modeling Hrs</div>
+            <div class="summary-value">{{ summary["Modeling Hrs"] }}</div>
+        </div>
+
+        <div class="summary-item">
+            <div class="summary-label">Detailing Hrs</div>
+            <div class="summary-value">{{ summary["Detailing Hrs"] }}</div>
+        </div>
+
+        <div class="summary-item">
+            <div class="summary-label">BOM Hrs</div>
+            <div class="summary-value">{{ summary["BOM Hrs"] }}</div>
+        </div>
+
+        <div class="summary-item">
+            <div class="summary-label">QC Hrs</div>
+            <div class="summary-value">{{ summary["QC Hrs"] }}</div>
+        </div>
+
+        <div class="summary-item">
+            <div class="summary-label">Total Design Hrs</div>
+            <div class="summary-value">{{ summary["TotalDesignHrs"] }}</div>
+        </div>
+    </div>
+
+    <div class="grand-total-box" style="margin-top: 22px;">
+        <div class="grand-total-label">Grand Total Hours</div>
+        <div class="grand-total-value">{{ summary["Total Hrs"] }}</div>
+    </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product Configuration Builder</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/configuration_phase1.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/configuration_matrix.css') }}">
+</head>
+<body>
+<main class="container wide">
+  <header class="results-header">
+    <div>
+      <p class="eyebrow">Version 2</p>
+      <h1>Product Configuration Builder</h1>
+      <p>Create, edit, and save reusable catalog-position configuration rules.</p>
+      <p><span class="mode-badge">Search Mode: {{ search_mode_label }}</span></p>
+    </div>
+    <div class="actions">
+      <a class="secondary-button" href="{{ url_for('configuration_manager') }}">Configuration manager</a>
+    </div>
+  </header>
+
+  <section id="builder-messages" class="message-stack" aria-live="polite"></section>
+
+  <section class="card configuration-form">
+    <div class="form-section">
+      <h2>Product information</h2>
+      <div class="form-grid four-columns">
+        <div>
+          <label for="product_type">Product type</label>
+          <input id="product_type" name="product_type" placeholder="30MP" required>
+        </div>
+        <div>
+          <label for="configuration_date">Configuration date</label>
+          <input id="configuration_date" name="configuration_date" type="date" required>
+        </div>
+        <div>
+          <label for="version">Version</label>
+          <input id="version" name="version" required>
+        </div>
+        <div>
+          <label for="description">Description</label>
+          <input id="description" name="description" placeholder="30MP Product Configuration">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <h2>Available DOCX search positions</h2>
+      <p class="section-note">Use this range to tell appV2 which POSITION tables actually exist for this product. Both Code Based and Character Based configurations use it to avoid searching unrelated catalog positions.</p>
+      <div class="form-grid four-columns">
+        <div>
+          <label for="option_positions_start">Start Position</label>
+          <input id="option_positions_start" type="number" min="1" step="1" value="10">
+        </div>
+        <div>
+          <label for="option_positions_end">End Position</label>
+          <input id="option_positions_end" type="number" min="1" step="1" value="19">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-section code-mode-only">
+      <h2>Select configurable positions</h2>
+      <div class="position-grid" id="position-grid">
+        {% for position in positions %}
+          <label class="position-card" data-position-card="{{ position }}">
+            <input type="checkbox" data-position-toggle="{{ position }}">
+            <span>Position {{ position }}</span>
+            <small data-position-status="{{ position }}">Not selected</small>
+          </label>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="form-section">
+      <div class="section-heading-row">
+        <div>
+          <h2>Catalog structure</h2>
+          <p class="section-note">Assign a characteristic key to each catalog-number position or range of positions. Rows can be kept unused but still saved for the product.</p>
+        </div>
+        <button type="button" class="secondary-button" id="add-structure-row">Add structure row</button>
+      </div>
+      <div class="structure-table-wrap">
+        <table class="structure-table">
+          <thead>
+            <tr>
+              <th>Use</th>
+              <th>Characteristic Key</th>
+              <th>Start Position</th>
+              <th>End Position</th>
+              <th>Description</th>
+              <th>Specifications</th>
+            </tr>
+          </thead>
+          <tbody id="structure-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <h2>Base Unit Master Price Rule</h2>
+      <p class="section-note">Derive the base-unit tag from the complete SAP catalog number, then search DOCX tables for that tag under a Master Price column.</p>
+      <div class="form-grid four-columns">
+        <label class="checkbox-field">
+          <span>Enable Base Unit Price Extraction</span>
+          <input id="base_unit_enabled" type="checkbox">
+        </label>
+        <div>
+          <label for="base_unit_search_type">Search Type</label>
+          <select id="base_unit_search_type">
+            <option value="range">Range Search</option>
+            <option value="full_search">Full Search</option>
+          </select>
+        </div>
+        <div class="base-unit-range-field">
+          <label for="base_unit_start_position">Start Position</label>
+          <input id="base_unit_start_position" type="number" min="1" step="1" value="1">
+        </div>
+        <div class="base-unit-range-field">
+          <label for="base_unit_end_position">End Position</label>
+          <input id="base_unit_end_position" type="number" min="1" step="1" value="9">
+        </div>
+      </div>
+      <div class="form-grid two-columns base-unit-template-field">
+        <div>
+          <label for="base_unit_template">Base Unit Template</label>
+          <input id="base_unit_template" placeholder="{1:4}-{6:10}--{13}---0">
+          <p class="section-note">{1} = character 1, {13} = character 13, {1:4} = characters 1 through 4. Positions are 1-based and inclusive.</p>
+        </div>
+      </div>
+      <div class="form-grid two-columns">
+        <div>
+          <label for="base_unit_sample_catalog">Sample Catalog</label>
+          <input id="base_unit_sample_catalog" placeholder="65LL-1002PM-3GG41">
+        </div>
+        <div>
+          <label>Generated Base Unit Search</label>
+          <output id="base_unit_preview" class="code-preview">-</output>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <h2>Conditional price expressions</h2>
+      <p class="section-note">Enable this for DOCX tables where one option character has multiple price rows controlled by expressions like {13}=3 or {13}=D. appV2 will evaluate the expression against the complete catalog number before reading the last-column price.</p>
+      <div class="form-grid two-columns">
+        <label class="checkbox-field">
+          <span>Enable Conditional Price Expressions</span>
+          <input id="conditional_price_enabled" type="checkbox">
+        </label>
+        <div>
+          <label for="conditional_price_positions">Positions that use conditional rows</label>
+          <input id="conditional_price_positions" placeholder="14">
+          <p class="section-note">Enter one or more positions separated by commas, for example: 14 or 14, 16.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card character-mode-only hidden" id="character-mode-panel">
+    <h2>Character-based option search</h2>
+    <p class="section-note">No option-code matrix is needed. appV2 will use the catalog structure row named OPTIONS to process each option position and search the character directly in the matching DOCX POSITION table.</p>
+    <div class="form-actions">
+      <button type="button" class="secondary-button" id="character-save-configuration">Save configuration</button>
+      <button type="button" class="secondary-button" id="character-save-new-version">Save as new version</button>
+    </div>
+  </section>
+
+  <section class="stats builder-stats code-mode-only">
+    <div><strong id="selected-count">0</strong><span>Selected positions</span></div>
+    <div><strong id="configured-count">0</strong><span>Configured positions</span></div>
+    <div><strong id="needs-count">0</strong><span>Still need configuration</span></div>
+    <div><strong id="cell-count">0</strong><span>Selected matrix cells</span></div>
+  </section>
+
+  <section class="card matrix-workbench code-mode-only">
+    <div class="position-tabs" id="position-tabs"></div>
+    <div id="empty-position-message" class="empty-state">
+      Select at least one position above to configure its option-code ranges and matrix.
+    </div>
+
+    <div id="position-editor" class="hidden">
+      <div class="editor-header">
+        <div>
+          <p class="eyebrow" id="active-position-label">Position</p>
+          <h2 id="active-position-title">Position</h2>
+          <p id="active-position-summary" class="section-note"></p>
+        </div>
+        <div class="actions">
+          <button type="button" class="secondary-button" id="select-all-cells">Select all cells</button>
+          <button type="button" class="secondary-button" id="clear-all-cells">Clear all cells</button>
+        </div>
+      </div>
+
+      <details class="range-editor" open>
+        <summary>Option-code ranges</summary>
+        <div class="range-table-wrap">
+          <table class="range-table">
+            <thead>
+              <tr>
+                <th>Use</th>
+                <th>Group</th>
+                <th>Start</th>
+                <th>End</th>
+                <th>Quick meaning</th>
+              </tr>
+            </thead>
+            <tbody id="range-editor-body"></tbody>
+          </table>
+        </div>
+      </details>
+
+      <div class="matrix-toolbar">
+        <span id="matrix-column-count">0 option-code columns</span>
+        <span id="matrix-selection-count">0 selected cells</span>
+        <label class="matrix-orientation-control" for="matrix-orientation">
+          <span>Matrix orientation</span>
+          <select id="matrix-orientation">
+            <option value="characters_as_rows">Characters as rows</option>
+            <option value="characters_as_columns">Characters as columns</option>
+          </select>
+        </label>
+        <button type="button" class="secondary-button" id="save-configuration">Save configuration</button>
+        <button type="button" class="secondary-button" id="save-new-version">Save as new version</button>
+      </div>
+
+      <section class="matrix-bulk-editor" aria-labelledby="matrix-bulk-title">
+        <div>
+          <h3 id="matrix-bulk-title">Position characters</h3>
+          <p class="section-note">Excluded characters are hidden from this position and cannot be assigned to any option code.</p>
+        </div>
+        <fieldset class="position-exclusions">
+          <legend>Exclude Characters</legend>
+          <div class="exclude-character-list" id="exclude-character-list"></div>
+        </fieldset>
+        <button type="button" class="secondary-button" id="apply-position-exclusions">Apply Exclusions</button>
+        <label class="bulk-code-target">
+          <span>Option code bulk actions</span>
+          <select id="bulk-option-code"></select>
+        </label>
+        <div class="bulk-code-actions">
+          <button type="button" class="secondary-button" id="select-all-for-code">Select All Visible</button>
+          <button type="button" class="secondary-button" id="clear-all-for-code">Clear All</button>
+        </div>
+      </section>
+
+      <div class="matrix-scroll" id="matrix-scroll"></div>
+    </div>
+  </section>
+</main>
+
+<script>
+  window.configurationBuilderData = {
+    positions: {{ positions|tojson }},
+    optionGroups: {{ option_groups|tojson }},
+    rangeSuffixes: {{ range_suffixes|tojson }},
+    matrixRows: {{ matrix_rows|tojson }},
+    today: {{ today|tojson }},
+    currentFileName: {{ current_file_name|tojson }},
+    initialConfiguration: {{ initial_configuration|tojson }},
+    defaultStructure: {{ default_structure|tojson }}
+  };
+</script>
+<script src="{{ url_for('static', filename='js/configuration_matrix_state.js') }}"></script>
+<script src="{{ url_for('static', filename='js/configuration_builder.js') }}"></script>
+</body>
+</html>

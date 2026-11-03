@@ -1,0 +1,48 @@
+<div class="summary-grid">
+  <article class="summary-card summary-card--add"><span>Needs to be added</span><strong>{{ comparison_results.NEEDS_TO_BE_ADDED|length }}</strong></article>
+  <article class="summary-card summary-card--delete"><span>Needs to be deleted</span><strong>{{ comparison_results.NEEDS_TO_BE_DELETED|length }}</strong></article>
+  <article class="summary-card summary-card--neutral"><span>No change</span><strong>{{ comparison_results.NO_CHANGE|length }}</strong></article>
+</div>
+
+<div class="result-columns">
+  <section class="action-panel action-panel--add">
+    <div class="action-panel__heading">
+      <div><p class="step">Action list</p><h3>Needs to be added to SAP</h3></div>
+      {% if comparison_results.NEEDS_TO_BE_ADDED %}<button class="copy-button" type="button" data-copy-group="add-record">Copy adds</button>{% endif %}
+    </div>
+    {% for item in comparison_results.NEEDS_TO_BE_ADDED %}
+      <article class="record-card">
+        <div><strong>{{ item.part_number }}</strong><p>{{ item.reason }}</p></div>
+        {% if item.record %}<button class="copy-icon" type="button" data-copy-id="add-{{ forloop.counter }}">Copy</button>{% endif %}
+        {% if item.record %}<code id="add-{{ forloop.counter }}" data-copy-record="add-record">{{ item.record }}</code>{% endif %}
+      </article>
+    {% empty %}
+      <div class="empty-state"><span>✓</span><strong>No additions needed</strong><p>There are no missing parts requested in Adds.</p></div>
+    {% endfor %}
+  </section>
+
+  <section class="action-panel action-panel--delete">
+    <div class="action-panel__heading">
+      <div><p class="step">Action list</p><h3>Needs to be deleted from SAP</h3></div>
+      {% if comparison_results.NEEDS_TO_BE_DELETED %}<button class="copy-button" type="button" data-copy-group="delete-record">Copy deletes</button>{% endif %}
+    </div>
+    {% for item in comparison_results.NEEDS_TO_BE_DELETED %}
+      <article class="record-card">
+        <div><strong>{{ item.part_number }}</strong><p>{{ item.reason }}</p></div>
+        {% if item.record %}<button class="copy-icon" type="button" data-copy-id="delete-{{ forloop.counter }}">Copy</button>{% endif %}
+        {% if item.record %}<code id="delete-{{ forloop.counter }}" data-copy-record="delete-record">{{ item.record }}</code>{% endif %}
+      </article>
+    {% empty %}
+      <div class="empty-state"><span>✓</span><strong>No deletions needed</strong><p>There are no requested removals present in SAP or the Standard BOM.</p></div>
+    {% endfor %}
+  </section>
+</div>
+
+<details class="no-change-panel">
+  <summary><span><b>No change needed</b> — show details</span><strong>{{ comparison_results.NO_CHANGE|length }}</strong></summary>
+  <div class="no-change-list">
+    {% for item in comparison_results.NO_CHANGE %}
+      <article><strong>{{ item.part_number }}</strong><span>{{ item.reason }}</span></article>
+    {% empty %}<p>Every part requires an Add or Delete action.</p>{% endfor %}
+  </div>
+</details>

@@ -1,0 +1,3 @@
+RULEBEGIN.RAW	P4																					HIT.CATEGORY	HIT.VALUE	HIT.DESCRIPTION																				
+	^B																					ERRORPOSITION	P4	Position P4 is not in list  [^B]
+RULEEND																				

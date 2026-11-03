@@ -1,0 +1,37 @@
+   firstRun = True
+
+      Do
+         ' search Rules sheet for RULEBEGIN
+         Set cellStart = Cells.Find(What:=RULEBEGIN, After:=ActiveCell, LookIn:=xlValues, _
+           LookAt:=xlWhole, SearchOrder:=xlByRows, SearchDirection:=xlNext, _
+           MatchCase:=False)
+        
+         If cellStart Is Nothing Then
+            ErrorMessage RULEBEGIN + " not found on sheet " + ActiveSheet
+           Exit Do
+         Else
+           ' search will loop around, stop
+           If firstRun Then
+              Set firstHit = cellStart
+              firstRun = False
+           Else
+              If firstHit.Address = cellStart.Address Then
+                ' back to the first one, exit
+                Exit Do
+              End If
+           End If
+           ' At this point - we have a new RULEBEGIN at cellStart
+           ' find the RuleEnd
+           cellStart.Activate
+           Set cellStop = Cells.Find(What:=RULEEND, After:=ActiveCell, LookIn:=xlValues, _
+             LookAt:=xlWhole, SearchOrder:=xlByRows, SearchDirection:=xlNext, _
+             MatchCase:=False)
+           If cellStop Is Nothing Then
+             ErrorMessage RULEEND + " not found on sheet " + ActiveSheet
+             Exit Do
+           Else
+             Set exportThis = Range(cellStart, cellStop.Offset(0, COLUMNCOUNT - 1))
+             RunARule exportThis
+           End If
+         End If ' cellStart is nothing
+      Loop

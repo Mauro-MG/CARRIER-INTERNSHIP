@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Intern Program</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/management.css">
+  <script defer src="/vendor/highcharts.js"></script>
+  <script defer src="/vendor/accessibility.js"></script>
+  <script defer src="/vendor/no-data-to-display.js"></script>
+  <script defer src="/app.js"></script>
+  <script defer src="/management.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Primary navigation">
+      <div class="sidebar-brand"><div class="brand-mark" aria-hidden="true">IP</div><div><p class="eyebrow">PEOPLE &amp; CULTURE</p><strong>Intern Program</strong></div></div>
+      <nav class="sidebar-nav" aria-label="Views">
+        <button class="nav-tab active" type="button" data-view="dashboard-view" aria-controls="dashboard-view" aria-selected="true"><span aria-hidden="true">▦</span> Dashboard</button>
+        <button class="nav-tab" type="button" data-view="management-view" aria-controls="management-view" aria-selected="false"><span aria-hidden="true">☷</span> Intern management</button>
+      </nav>
+      <p class="sidebar-note">Talent today.<br>A cooler tomorrow.</p>
+    </aside>
+    <main class="page">
+    <header class="header">
+      <div class="brand"><div><p class="eyebrow">PROGRAM OVERVIEW</p><h1>Intern Program</h1><p class="tagline">Keep the program connected to your workbook.</p></div></div>
+      <div class="header-actions"><span id="connection-badge" class="badge">Not connected</span><button id="refresh" class="button secondary" disabled><span aria-hidden="true">↻</span> Refresh</button><button id="connect" class="button primary" disabled>Connect to Excel <span aria-hidden="true">↗</span></button></div>
+    </header>
+    <section id="dashboard-view" class="app-view" aria-labelledby="filters-heading">
+    <section class="panel filters-panel" aria-labelledby="filters-heading">
+      <div class="section-heading"><h2 id="filters-heading">Filters</h2><button id="clear" class="text-button" disabled>Clear filters</button></div>
+      <div id="filters" class="filters"></div>
+    </section>
+    <div id="error" class="error" role="alert" hidden></div>
+    <section id="metrics" class="metrics" aria-label="Program metrics"></section>
+    <section class="dashboard-grid" aria-label="Intern insights">
+      <article class="panel chart-panel"><div class="panel-heading"><h2>Interns by role</h2><span class="panel-note">TOP 8</span></div><div id="chart-role" class="chart"></div></article>
+      <article class="panel chart-panel"><div class="panel-heading"><h2>Interns by gender</h2><span class="panel-note">DISTRIBUTION</span></div><div id="chart-gender" class="chart"></div></article>
+      <article class="panel chart-panel"><div class="panel-heading"><h2>Interns by university</h2><span class="panel-note">TOP 8</span></div><div id="chart-university" class="chart"></div></article>
+      <article class="panel chart-panel"><div class="panel-heading"><h2>Interns by supervisor</h2><span class="panel-note">TOP 8</span></div><div id="chart-supervisor" class="chart"></div></article>
+      <article class="panel recent-panel"><div class="panel-heading"><h2>Recent interns</h2><span class="panel-note">LATEST 8</span></div><div id="recent" class="table-scroll"></div></article>
+      <article class="panel chart-panel"><div class="panel-heading"><h2>Interns by career</h2><span class="panel-note">TOP 8</span></div><div id="chart-career" class="chart"></div></article>
+    </section>
+    </section>
+    <section id="management-view" class="app-view" aria-labelledby="management-heading" hidden>
+    <section class="panel management-panel" aria-labelledby="management-heading">
+      <div class="management-heading">
+        <div><p class="eyebrow">INTERN DIRECTORY</p><h2 id="management-heading">Intern management</h2><p class="management-subtitle">Manage the current team and keep its history.</p></div>
+        <div class="management-actions"><button id="add-intern" class="button primary" disabled>Add intern</button></div>
+      </div>
+      <div class="management-toolbar">
+        <label class="search-field"><span class="filter-label">Search interns</span><input id="intern-search" type="search" placeholder="Name, university, department, supervisor…" maxlength="200"></label>
+        <label><span class="filter-label">Participant status</span><select id="intern-status" aria-label="Participant status"><option>Active</option><option>Candidate</option><option>In process</option><option>Intern</option><option>Hired</option><option>Graduate</option><option>Offboarded</option><option>Completed</option><option>Inactive</option><option value="Former">Former participants</option><option value="All">All records</option></select></label>
+        <label><span class="filter-label">Sort by</span><select id="intern-sort"><option value="name">Full name</option><option value="start_date">Internship start date</option><option value="duration">Months as Intern</option></select></label>
+        <label><span class="filter-label">Order</span><select id="intern-direction"><option value="asc">Ascending</option><option value="desc">Descending</option></select></label>
+        <button id="intern-reload" class="button secondary">Reload list</button>
+      </div>
+      <div id="management-error" class="error" role="alert" hidden></div>
+      <div id="management-notice" class="management-notice" hidden><p id="management-notice-text"></p><button id="prepare-workbook" class="button secondary" hidden>Review workbook setup</button></div>
+      <div id="intern-table" class="intern-table" aria-live="polite"></div>
+      <div class="management-footer"><p id="intern-count" role="status"></p><p id="duration-date"></p><div class="pagination"><button id="intern-previous" class="button secondary">Previous</button><span id="intern-page">Page 1</span><button id="intern-next" class="button secondary">Next</button></div></div>
+    </section>
+    </section>
+    <footer class="footer"><p id="status" role="status" aria-live="polite">Starting the dashboard…</p><p id="loaded">Data not connected</p></footer>
+    <div id="source" class="source" hidden></div>
+    <noscript><p class="error">Enable JavaScript to use the dashboard.</p></noscript>
+  </main>
+  </div>
+  <dialog id="intern-dialog" class="app-dialog" aria-labelledby="intern-dialog-title">
+    <form id="intern-form"><div class="dialog-heading"><h2 id="intern-dialog-title">Add intern</h2><button type="button" class="dialog-close" data-close="intern-dialog" aria-label="Close intern form">×</button></div>
+      <p id="intern-form-intro" class="dialog-intro"></p><p id="intern-form-error" class="error" role="alert" hidden></p>
+      <div id="intern-fields" class="form-sections"></div>
+      <div class="dialog-actions"><button type="button" class="button secondary" data-close="intern-dialog">Close</button><button id="intern-save" class="button primary" type="submit">Save intern</button></div>
+    </form>
+  </dialog>
+  <dialog id="migration-dialog" class="app-dialog small-dialog" aria-labelledby="migration-title">
+    <div class="dialog-heading"><h2 id="migration-title">Prepare workbook fields</h2><button type="button" class="dialog-close" data-close="migration-dialog" aria-label="Close workbook setup">×</button></div>
+    <p class="dialog-intro">This will append missing columns, assign stable record keys, and default new status cells to Active. Existing intern information and the original Months column will be retained. A workbook backup is created first.</p>
+    <ul id="migration-columns"></ul><p id="migration-error" class="error" role="alert" hidden></p>
+    <div class="dialog-actions"><button type="button" class="button secondary" data-close="migration-dialog">Cancel</button><button id="migration-save" class="button primary">Prepare workbook</button></div>
+  </dialog>
+</body>
+</html>

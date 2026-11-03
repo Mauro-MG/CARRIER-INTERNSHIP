@@ -1,0 +1,28 @@
+﻿Name,Description,Assignee,Due Date,Product,Priority,Target Date,Project,Status,Labels,Estimated Time,ECN,Task Type
+demo_demo1_BOM INTAKE_PRT,V-SERIES,Eduardo.Solano@carrier.com,09/15/2026,ART,Normal,,DOAS,Pending,PRT,39,,SW
+demo_demo1_BOM INTAKE_ASSY,V-SERIES,Eduardo.Solano@carrier.com,09/15/2026,ART,Normal,,DOAS,Pending,ASSY,3,,SW
+demo_demo1_BOM INTAKE_L1 Modeling,V-SERIES,Eduardo.Solano@carrier.com,09/15/2026,ART,Normal,,DOAS,Pending,ASSY,14,,SW
+demo_demo1_BOM INTAKE_DRW PRT,V-SERIES,Eduardo.Solano@carrier.com,09/15/2026,ART,Normal,,DOAS,Pending,DRW-S,28,,SW
+demo_demo1_BOM INTAKE_DRW ASSY,V-SERIES,Eduardo.Solano@carrier.com,09/15/2026,ART,Normal,,DOAS,Pending,ASSY-DRW,4,,SW
+demo_demo1_BOM INTAKE_L1 DRW,V-SERIES,Eduardo.Solano@carrier.com,09/15/2026,ART,Normal,,DOAS,Pending,L1-DRW,29,,SW
+demo_demo1_BOM INTAKE_L1 BOM,V-SERIES,Eduardo.Solano@carrier.com,09/15/2026,ART,Normal,,DOAS,Pending,BOM,4,,SW
+demo_demo1_BOM INTAKE_BOM/WT,V-SERIES,Eduardo.Solano@carrier.com,09/15/2026,ART,Normal,,DOAS,Pending,BOM/WT,5,,SW
+demo_demo2_BOM INTAKE_PRT_1,V-SERIES,Eduardo.Solano@carrier.com,09/15/2026,ART,Normal,,DOAS,Pending,PRT,40,,SW
+demo_demo2_BOM INTAKE_PRT_2,V-SERIES,Eduardo.Solano@carrier.com,09/15/2026,ART,Normal,,DOAS,Pending,PRT,1,,SW
+demo_demo2_BOM INTAKE_ASSY,V-SERIES,Eduardo.Solano@carrier.com,09/15/2026,ART,Normal,,DOAS,Pending,ASSY,10,,SW
+demo_demo2_BOM INTAKE_L1 Modeling,V-SERIES,Eduardo.Solano@carrier.com,09/15/2026,ART,Normal,,DOAS,Pending,ASSY,13,,SW
+demo_demo2_BOM INTAKE_DRW PRT,V-SERIES,Eduardo.Solano@carrier.com,09/15/2026,ART,Normal,,DOAS,Pending,DRW-S,27,,SW
+demo_demo2_BOM INTAKE_DRW ASSY,V-SERIES,Eduardo.Solano@carrier.com,09/15/2026,ART,Normal,,DOAS,Pending,ASSY-DRW,12,,SW
+demo_demo2_BOM INTAKE_L1 DRW,V-SERIES,Eduardo.Solano@carrier.com,09/15/2026,ART,Normal,,DOAS,Pending,L1-DRW,27,,SW
+demo_demo2_BOM INTAKE_L1 BOM,V-SERIES,Eduardo.Solano@carrier.com,09/15/2026,ART,Normal,,DOAS,Pending,BOM,3,,SW
+demo_demo2_BOM INTAKE_BOM/WT,V-SERIES,Eduardo.Solano@carrier.com,09/15/2026,ART,Normal,,DOAS,Pending,BOM/WT,7,,SW
+demo_demo3_BOM INTAKE_PRT_1,V-SERIES,Eduardo.Solano@carrier.com,09/15/2026,ART,Normal,,DOAS,Pending,PRT,40,,SW
+demo_demo3_BOM INTAKE_PRT_2,V-SERIES,Eduardo.Solano@carrier.com,09/15/2026,ART,Normal,,DOAS,Pending,PRT,7,,SW
+demo_demo3_BOM INTAKE_ASSY,V-SERIES,Eduardo.Solano@carrier.com,09/15/2026,ART,Normal,,DOAS,Pending,ASSY,10,,SW
+demo_demo3_BOM INTAKE_L1 Modeling,V-SERIES,Eduardo.Solano@carrier.com,09/15/2026,ART,Normal,,DOAS,Pending,ASSY,29,,SW
+demo_demo3_BOM INTAKE_DRW PRT,V-SERIES,Eduardo.Solano@carrier.com,09/15/2026,ART,Normal,,DOAS,Pending,DRW-S,33,,SW
+demo_demo3_BOM INTAKE_DRW ASSY,V-SERIES,Eduardo.Solano@carrier.com,09/15/2026,ART,Normal,,DOAS,Pending,ASSY-DRW,10,,SW
+demo_demo3_BOM INTAKE_L1 DRW_1,V-SERIES,Eduardo.Solano@carrier.com,09/15/2026,ART,Normal,,DOAS,Pending,L1-DRW,40,,SW
+demo_demo3_BOM INTAKE_L1 DRW_2,V-SERIES,Eduardo.Solano@carrier.com,09/15/2026,ART,Normal,,DOAS,Pending,L1-DRW,18,,SW
+demo_demo3_BOM INTAKE_L1 BOM,V-SERIES,Eduardo.Solano@carrier.com,09/15/2026,ART,Normal,,DOAS,Pending,BOM,7,,SW
+demo_demo3_BOM INTAKE_BOM/WT,V-SERIES,Eduardo.Solano@carrier.com,09/15/2026,ART,Normal,,DOAS,Pending,BOM/WT,10,,SW

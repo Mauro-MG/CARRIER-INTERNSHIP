@@ -1,0 +1,5 @@
+﻿sheet_name,table_name,ref,path
+Run_All_EDRs,Scripts_To_Run,A1:A2,xl/tables/table3.xml
+Run_All_EDRs,tPossible_Scripts,G1:G10,xl/tables/table2.xml
+Run_All_EDRs,Run_EDR_Files_Path,B1:B3,xl/tables/table1.xml
+Info_Plate,iHeatLevelOffset,S4:S5,xl/tables/table4.xml

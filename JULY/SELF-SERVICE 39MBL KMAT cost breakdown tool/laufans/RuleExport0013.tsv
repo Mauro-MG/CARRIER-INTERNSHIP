@@ -1,0 +1,3 @@
+RULEBEGIN.RAW	P6	P16																				HIT.CATEGORY	HIT.VALUE	HIT.DESCRIPTION																				
+	^9	^BCDFGHJKLMX																				ERRORPOSITION	P16	Position P16 is not in list  [^BCDFGHJKLMX]
+RULEEND																				

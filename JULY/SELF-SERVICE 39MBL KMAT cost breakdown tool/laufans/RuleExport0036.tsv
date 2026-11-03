@@ -1,0 +1,6 @@
+RULEBEGIN.RAW.REQUIRED									P9										NOMENCLATURE			HIT.CATEGORY	HIT.VALUE	HIT.DESCRIPTION																				
+									BCFGJ										BELTPREFIVESIX			SHAFTGROUNDING	NO	No Motor Shaft Grounding (Not DDP)
+									RSVWZ										BELTPREFIVESIX			SHAFTGROUNDING	YES	Yes Motor Shaft Grounding (Not DDP)
+									BCFGJ										BELTPOSTFIVESIX			SHAFTGROUNDING	NO	No Motor Shaft Grounding (Not DDP)
+									RSVWZ										BELTPOSTFIVESIX			SHAFTGROUNDING	YES	Yes Motor Shaft Grounding (Not DDP)
+RULEEND																				

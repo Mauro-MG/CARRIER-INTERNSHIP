@@ -1,0 +1,32 @@
+RULEBEGIN.RAW.REQUIRED																WHEEL	FANSHAFT		NOMENCLATURE			HIT.CATEGORY	HIT.VALUE	HIT.DESCRIPTION																				
+																121						DRIVENMAXWIDTH	19	Max Driven Width
+																131						DRIVENMAXWIDTH	19	Max Driven Width
+																161						DRIVENMAXWIDTH	19	Max Driven Width
+																			
+																181						DRIVENMAXWIDTH	19	Max Driven Width
+																201						DRIVENMAXWIDTH	19	Max Driven Width
+																221						DRIVENMAXWIDTH	19	Max Driven Width
+																			
+																241						DRIVENMAXWIDTH	19	Max Driven Width
+																271						DRIVENMAXWIDTH	19	Max Driven Width
+																301						DRIVENMAXWIDTH	19	Max Driven Width
+																331						DRIVENMAXWIDTH	19	Max Driven Width
+																361						DRIVENMAXWIDTH	19	Max Driven Width
+																A15-15A	1.4375					DRIVENMAXWIDTH	19	Max Driven Width
+																A15-15A	1.6875					DRIVENMAXWIDTH	19	Max Driven Width
+																A18-18A						DRIVENMAXWIDTH	19	Max Driven Width
+																A20-15A						DRIVENMAXWIDTH	19	Max Driven Width
+																A20-18A						DRIVENMAXWIDTH	19	Max Driven Width
+																A20-18H						DRIVENMAXWIDTH	19	Max Driven Width
+																A20-20H						DRIVENMAXWIDTH	19	Max Driven Width
+																A22-22H						DRIVENMAXWIDTH	19	Max Driven Width
+																A25-25H						DRIVENMAXWIDTH	19	Max Driven Width
+																A10-8A						DRIVENMAXWIDTH	19	Max Driven Width
+																A12-12A						DRIVENMAXWIDTH	19	Max Driven Width
+																A15-15A	1.1875					DRIVENMAXWIDTH	19	Max Driven Width
+																A25-20H						DRIVENMAXWIDTH	19	Max Driven Width
+																A27-22H						DRIVENMAXWIDTH	19	Max Driven Width
+																A27-27H						DRIVENMAXWIDTH	19	Max Driven Width
+																A30-30H						DRIVENMAXWIDTH	19	Max Driven Width
+																			
+RULEEND																				

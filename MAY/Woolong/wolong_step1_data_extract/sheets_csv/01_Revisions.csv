@@ -1,0 +1,80 @@
+﻿REV,DATE,REVISION RECORD,BY,CHK'D,APP'D,ECN NO.
+A,45093,"Note: Revision A is released only for MES testing purposes.
+VBA code updates for new model numbers;  Indoor & outdoor fan BHP added to data sheets and printing on info-plate; compressor data update Scorpion models. Apex compressors waiting for final E-data from supplier. ","NB,DS",AJ,,ECN1169063
+B,45190,"VBA code updates for model number changes under Rev B comments
+Added Apex compressor names to tables on Data_FE; added electrical data for fixed speed 3-5 ton compressors;
+Future: YAS60 460V and 575V data
+Future: Update refrigerant quantities after MCS validation
+Future: Mid tier GE and GEQ & Premium tier JE will need compressor data updates. 
+Future: Update unit performance ratings ",NB,NB,,ECN1174090
+C,45233,Apex Phase 1 update. Added YAS60 460V and 575V. Confirmed performance ratings and charge quantity. FE05 charge quantity to be double checked.,NB,NB,,ECN1175360
+D,45272,"Updates for Apex GE electrical andcharge data
+Updates for Scorpion GE Ch5 charge amounts. Updates for FE and GE ODF BHP
+Updates for GE ERV and Intake Options",NB/AJ,,,
+E,45355,"Eco R454B Splits Update. Add Macros, compressor electrical data and data reUpdates for Scorpion GE Ch5 charge amounts. 
+Updates on Apex compressor RLA and MCC data, HSPF2 Values Apex Data_FE
+Updates for Scorpiont Bryant SS Gas model numbers",TL,,,
+F (See Note Below),"3/25/2024
+4/4/2024","Update FEQ14 Compressor from YA61 to 67
+Update FE charge amounts, GE preliminary charge amounts
+Update LRA for YA44-TFE 575V. Correction from 4.1A to 41A
+Update electrical data for YA42-TFD 400V ratings
+Added electrical data for YA24 and YA29",AJ,,,ECN1180782 
+,45392,"Update Backend VBA code to accommodate R454B Splits Integration. Still need to work on Byrant and ICP.
+Update splits CDU fan motor electrical data.
+Update rigging weights, charge data for Splits CDU",TL,DM,,
+,45407,"Updated Data_Common with Apex MidTier HP RLA values and Data_GE correct compressor names, mGenerate_Lit_cdu Code  had ""TranHeater"" which stopped GenLit for SRT from excecuting, instead now has ""TranHeaterCDU"" in code.",NLC,,,
+,45414,"Update Charge Information to show R-454B for Split CDU models.
+Update Artwork Drawing Table and Backend codes for Split CDU models",TL,,,
+G,45488,"Updates for QE Initial Release.
+Updates to GE05, 06 efficiency and capacity ratings.
+Updates to GE07-14 ODF data.
+Updates to GE07-14 Ratings
+Update to YAS40K1E-TFD-ASC RLA
+Updated missing BRY & ICP Tier 2 code",DS,DS,,ECN1180796
+H,45531,"Updated YA54 LRA
+Updated GEQ12 Electric Heat Accessory
+Updated Position 18  Option ""Z"" for audit.
+Updated macros for 3AX  Bryant and ICP model numbers
+Updated FEQ06 charge amount to 11.2
+Updated 7/11 Valid Intake Options",DS,DS,,ECN1185949
+J,45587,"Fixed missing FEQ Title 20 Information
+Fixed MM data printout for Splits                                                                                                                                                                          Charge Update for FEQ04, GEQ05, GEQ06                                                                                                                                                 compressor info rows add GEQ05,                                                                                                                                                                   Chassis size upated GEQ04,                                                                                                                                                                                      Code updated to run QE models SRT
+Charge updates for GE07, GE14, GEQ12, FE14",TL/DS/NLC/AJ,AJ,,ECN118330
+K,"1/17/2025
+1/31/2025","Charge updates for GE07
+Updated ERV rounding
+Updated HSCCR artwork numbers
+Cleaned up and corrected artwork drawing numbers
+Updated PE Kit code for writing to the EDR
+Updated GEQ04-06 compressor RLA data from updated testing and Copeland data
+Added Option Z for 18th digits of 38AX due to audit purposes
+Update to FE14 capacity and EER/IEER, Update to GE12 IEER
+Update to QE07-12 Performance Data",DS/TL/AJ,DS/TL/AJ,,ECN1190798
+L,45744,"Updated Heater Level Cleance for GE05 Voltage 5
+Updated FEQ04-06 HSPF2 to match with AHRI listing and EDR.
+Updated FEQM07 COP to match with AHRI listing and EDR,
+Update GEQ04 charge to 12 lb from 11.2lb
+Update to FE_Bryant Module to correct 581L145 gas heat sizes
+Update CAL/CHL ICP Model number: last four digits are now ""A---""
+Update Split Macros to account Size 12 Tandem and Three Stage (RK.7)
+Update Split Macros for factory charge on single circuit tandem (RK.8)
+Update QE05 and QE06 ratings (RK.9)",TL/AJ,,,ECN1194732
+M,45831,"3 stage GE-GEQ-QE Updates
+HSPF2/COP call update for labels",DS,AJ,,ECN1196910
+N,45908,"Add support for RDG and 549Q KMATS
+Added logic to support dual fuel FTC Label
+Added QE04 ratings
+Added Charge for HP Reheat Units
+Added ratings for 3 Stage AC
+Updated GE07 RH Charge to 15.8 lb",LCR,DM,DS,ECN1199890
+O,45959,"Updated Charge for HP Reheat Units
+Updated Charge for GE08 RH
+Added Ratings for 3 Stage HPs
+Changed HeatLevelOffset back to 6",DS/DM,,,ECN120986
+P,45986,"Fixed size 04 Fusion Low NOX option code
+Finalized GE HHP Charge Amounts",DS,,,ECN1202574
+,,,,,,
+Note:,"When revisions are made, save the file under a new name reflecting the latest revision level.",,,,,
+,"Also, revise drawing # 48TC006476 to reflect the latest revision.",,,,,
+,"For Revision F ignore initial iterations .1, .2 &.3 some updates were made but were then able to be added to an ECN sent back for re-work.",,,,,

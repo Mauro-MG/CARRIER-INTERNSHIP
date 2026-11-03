@@ -1,0 +1,643 @@
+'---------------------------------------------------------
+' Main procedure: Splits CU51 BOM into two sheets (Generic & Extracted),
+' cleans each sheet, extracts component codes, and merges results.
+'---------------------------------------------------------
+Sub MASTER_L1Validation()
+
+    Dim sourceWS As Worksheet
+    Dim currentWS As Worksheet
+    Dim sectionStart As Long
+    Dim sectionCount As Long
+    Dim i As Long
+    Dim lastRow As Long
+    Dim labelText As String
+
+    ' Set the source worksheet
+    Set sourceWS = ThisWorkbook.Sheets("CU51 BOM")
+
+    ' The first section starts at row 1
+    sectionStart = 1
+
+    ' First section becomes "Generic", second becomes "Extracted"
+    sectionCount = 1
+
+    ' This is the marker text that indicates a new section
+    labelText = "Dynamic Label"
+
+    ' Find last used row in column A
+    lastRow = sourceWS.Cells(sourceWS.Rows.Count, "A").End(xlUp).Row
+
+    ' Loop through CU51 BOM looking for section breaks
+    For i = 1 To lastRow
+
+        ' When the label appears, a new section begins
+        If Trim(sourceWS.Cells(i, 1).Value) = labelText Then
+
+            ' Create a new sheet for this section
+            Set currentWS = Worksheets.Add
+
+            ' Name the sheet depending on whether it's the first or second section
+            If sectionCount = 1 Then
+                currentWS.Name = "Generic"
+            Else
+                currentWS.Name = "Extracted"
+            End If
+
+            ' Copy the rows belonging to this section into the new sheet
+            sourceWS.Rows(sectionStart & ":" & i - 1).Copy Destination:=currentWS.Range("A1")
+
+            ' Clean and format the new sheet
+            CleanSheet currentWS
+
+            ' Update starting row for next section
+            sectionStart = i + 1
+            sectionCount = sectionCount + 1
+        End If
+    Next i
+
+    ' Handle the final section after the last label
+    If sectionStart <= lastRow Then
+        Set currentWS = Worksheets.Add
+        currentWS.Name = "Extracted"
+
+        sourceWS.Rows(sectionStart & ":" & lastRow).Copy Destination:=currentWS.Range("A1")
+        CleanSheet currentWS
+    End If
+
+    ' Now extract component codes from the Extracted sheet
+    On Error Resume Next
+    Set currentWS = ThisWorkbook.Sheets("Extracted")
+    On Error GoTo 0
+
+    If Not currentWS Is Nothing Then
+        ExtractComponentData currentWS
+    Else
+        MsgBox "Extracted sheet not found. Extraction skipped.", vbExclamation
+    End If
+
+    ' Merge Generic + Extracted into CombinedData
+    CombineAndMergeComponents
+
+End Sub
+
+
+
+'---------------------------------------------------------
+' Cleans the newly created Generic or Extracted sheet
+' by removing unwanted rows and extracting text segments.
+'---------------------------------------------------------
+Sub CleanSheet(ws As Worksheet)
+
+    Dim i As Long
+    Dim lastRow As Long
+    Dim cellValue As String
+    Dim nameText As String
+    Dim quantityText As String
+    Dim tableRow As Long
+
+    With ws
+
+        ' Find last used row
+        lastRow = .Cells(.Rows.Count, "A").End(xlUp).Row
+
+        Select Case .Name
+
+            '-------------------------
+            ' CLEANING FOR GENERIC TAB
+            '-------------------------
+            Case "Generic"
+
+                ' Delete every 3rd row (pattern in your data)
+                For i = 3 To lastRow Step 3
+                    .Rows(i).Delete
+                    i = i - 1
+                    lastRow = lastRow - 1
+                Next i
+
+                ' Recalculate last row after deletions
+                lastRow = .Cells(.Rows.Count, "A").End(xlUp).Row
+
+                ' Extract part of the text into column B
+                For i = 2 To lastRow
+                    cellValue = .Cells(i, 1).Value
+
+                    ' If row starts with "1", extract quantity differently
+                    If Left(cellValue, 1) = "1" Then
+                        .Cells(i, 2).Value = Mid(cellValue, 28, 5)
+                    Else
+                        .Cells(i, 2).Value = Mid(cellValue, 11, 18)
+                    End If
+                Next i
+
+                ' Build a table in columns E & F
+                tableRow = 1
+                For i = 2 To lastRow - 1
+
+                    ' Rows starting with "1" contain quantity
+                    If Left(.Cells(i, 1).Value, 1) = "1" Then
+                        quantityText = .Cells(i, 2).Value
+                        nameText = .Cells(i + 1, 2).Value
+
+                        ' Write name and quantity into columns E & F
+                        .Cells(tableRow, 5).Value = nameText
+                        .Cells(tableRow, 6).Value = quantityText
+
+                        tableRow = tableRow + 1
+                    End If
+                Next i
+
+
+            '-------------------------
+            ' CLEANING FOR EXTRACTED TAB
+            '-------------------------
+            Case "Extracted"
+
+                ' Delete every 2nd row (pattern in your data)
+                For i = 2 To lastRow Step 2
+                    .Rows(i).Delete
+                    i = i - 1
+                    lastRow = lastRow - 1
+                Next i
+
+        End Select
+
+    End With
+
+End Sub
+
+
+
+'---------------------------------------------------------
+' Extracts component codes and quantities from the cleaned
+' Extracted sheet and writes them into columns D and E.
+'---------------------------------------------------------
+Sub ExtractComponentData(ws As Worksheet)
+
+    Dim cell As Range
+    Dim startChar As Integer
+    Dim code As String
+    Dim extractLength As Integer
+    Dim result As String
+    Dim resultE As String
+
+    ' Component codes always begin at character 9
+    startChar = 9
+
+    ' Loop through all rows in column A
+    For Each cell In ws.Range("A1:A" & ws.Cells(ws.Rows.Count, "A").End(xlUp).Row)
+
+        If Trim(cell.Value) <> "" Then
+
+            ' Ensure the row is long enough to extract a code
+            If Len(cell.Value) >= startChar + 2 Then
+
+                ' Read the 3-character code
+                code = Mid(cell.Value, startChar, 3)
+
+                ' Determine how many characters to extract based on code type
+                Select Case code
+                    Case "39M": extractLength = 12
+                    Case "93A": extractLength = 18
+                    Case "93M": extractLength = 17
+                    Case "99R": extractLength = 11
+                    Case Else: extractLength = 0
+                End Select
+
+                ' Extract full code or fallback 7-digit code
+                If extractLength > 0 Then
+                    result = Mid(cell.Value, startChar, extractLength)
+                    ws.Cells(cell.Row, "D").Value = result
+                Else
+                    result = Mid(cell.Value, startChar, 7)
+                    ws.Cells(cell.Row, "D").Value = result
+
+                    ' Highlight unknown codes
+                    ws.Cells(cell.Row, "D").Interior.Color = RGB(204, 153, 255)
+                End If
+
+            Else
+                ws.Cells(cell.Row, "D").Value = "Too short"
+            End If
+
+            ' Extract quantity from characters 28–36
+            If Len(cell.Value) >= 36 Then
+                resultE = Mid(cell.Value, 28, 9)
+                ws.Cells(cell.Row, "E").Value = resultE
+            Else
+                ws.Cells(cell.Row, "E").Value = "Too short"
+            End If
+
+        End If
+
+    Next cell
+
+End Sub
+
+
+
+'---------------------------------------------------------
+' Combines the cleaned Generic + Extracted data into a new
+' sheet, sums duplicate codes, highlights 7-digit codes,
+' and hides the working tabs.
+'---------------------------------------------------------
+Sub CombineAndMergeComponents()
+
+    Dim wsGeneric As Worksheet, wsExtracted As Worksheet, wsCombined As Worksheet
+    Dim lastRowGeneric As Long, lastRowExtracted As Long, lastRowCombined As Long
+    Dim i As Long, combinedRow As Long
+    Dim valA As String, valB As Double
+    Dim dict As Object
+    Dim Key As Variant
+
+    ' Get references to the cleaned sheets
+    Set wsGeneric = ThisWorkbook.Sheets("Generic")
+    Set wsExtracted = ThisWorkbook.Sheets("Extracted")
+
+    ' Create output sheet
+    Set wsCombined = Worksheets.Add
+    wsCombined.Name = "CombinedData"
+
+    ' Dictionary used to sum duplicate codes
+    Set dict = CreateObject("Scripting.Dictionary")
+
+    combinedRow = 1
+
+    '-----------------------------------------
+    ' Pull data from Generic sheet
+    '-----------------------------------------
+    lastRowGeneric = wsGeneric.Cells(wsGeneric.Rows.Count, "E").End(xlUp).Row
+
+    For i = 1 To lastRowGeneric
+
+        valA = Trim(wsGeneric.Cells(i, "E").Value)
+
+        If IsNumeric(wsGeneric.Cells(i, "F").Value) Then
+            valB = CDbl(wsGeneric.Cells(i, "F").Value)
+        Else
+            valB = 0
+        End If
+
+        If valA <> "" And valB <> 0 Then
+            wsCombined.Cells(combinedRow, "A").Value = valA
+            wsCombined.Cells(combinedRow, "B").Value = valB
+            combinedRow = combinedRow + 1
+        End If
+
+    Next i
+
+    '-----------------------------------------
+    ' Pull data from Extracted sheet
+    '-----------------------------------------
+    lastRowExtracted = wsExtracted.Cells(wsExtracted.Rows.Count, "D").End(xlUp).Row
+
+    For i = 1 To lastRowExtracted
+
+        valA = Trim(wsExtracted.Cells(i, "D").Value)
+
+        If IsNumeric(wsExtracted.Cells(i, "E").Value) Then
+            valB = CDbl(wsExtracted.Cells(i, "E").Value)
+        Else
+            valB = 0
+        End If
+
+        If valA <> "" And valB <> 0 Then
+            wsCombined.Cells(combinedRow, "A").Value = valA
+            wsCombined.Cells(combinedRow, "B").Value = valB
+            combinedRow = combinedRow + 1
+        End If
+
+    Next i
+
+    '-----------------------------------------
+    ' Consolidate duplicates using dictionary
+    '-----------------------------------------
+    lastRowCombined = wsCombined.Cells(wsCombined.Rows.Count, "A").End(xlUp).Row
+
+    For i = 1 To lastRowCombined
+
+        valA = wsCombined.Cells(i, "A").Value
+        valB = wsCombined.Cells(i, "B").Value
+
+        If valA <> "" And IsNumeric(valB) Then
+            If dict.exists(valA) Then
+                dict(valA) = dict(valA) + valB
+            Else
+                dict.Add valA, valB
+            End If
+        End If
+
+    Next i
+
+    '-----------------------------------------
+    ' Output consolidated results into columns D & E
+    '-----------------------------------------
+    i = 1
+
+    For Each Key In dict.Keys
+        wsCombined.Cells(i, "D").Value = Key
+        wsCombined.Cells(i, "E").Value = dict(Key)
+        i = i + 1
+    Next Key
+
+    '-----------------------------------------
+    ' Highlight 7-digit codes
+    '-----------------------------------------
+    lastRowCombined = wsCombined.Cells(wsCombined.Rows.Count, "D").End(xlUp).Row
+
+    For i = 1 To lastRowCombined
+        If Len(wsCombined.Cells(i, "D").Value) = 7 Then
+            wsCombined.Cells(i, "D").Interior.Color = RGB(204, 153, 255)
+            wsCombined.Cells(i, "E").Interior.Color = RGB(204, 153, 255)
+        End If
+    Next i
+
+    ' Remove temporary columns A–C
+    wsCombined.Columns("A:C").Delete
+
+    ' Hide working sheets
+    On Error Resume Next
+    ThisWorkbook.Sheets("Generic").Visible = xlSheetHidden
+    ThisWorkbook.Sheets("Extracted").Visible = xlSheetHidden
+    ThisWorkbook.Sheets("CombinedData").Visible = xlSheetHidden
+    On Error GoTo 0
+
+    'MsgBox "Combined and merged successfully!", vbInformation
+    
+    Level1_L1_ValidationTransfer
+
+End Sub
+
+Sub Level1_L1_ValidationTransfer()
+
+    ' === Declare all variables ===
+    Dim wbSource As Workbook
+    Dim wbTarget As Workbook
+    Dim wbAddDel As Workbook
+    Dim wsBom As Worksheet
+    Dim wsL1_Validation As Worksheet
+    Dim wsCombined As Worksheet
+    Dim wsAddDel As Worksheet
+    Dim lastRow As Long, lastRowCombined As Long, lastRowAddDel As Long
+    Dim i As Long, j As Long
+    Dim digitsPattern As String
+    Dim matchFound As Boolean
+    Dim dict As Object
+    Dim nameVal As String
+    Dim qtyVal As Double
+    Dim Key As Variant
+    Dim delimDigit As String
+    Dim startRow As Long, endRow As Long
+    Dim foundStart As Boolean
+    Dim fileKey As String
+    Dim addDelValue As String
+    
+    ' === Source workbook is the one running the macro ===
+    Set wbSource = ThisWorkbook
+    
+    ' === Extract 5-digit sequence from source workbook name ===
+    digitsPattern = ExtractFiveDigits(wbSource.Name)
+    If digitsPattern = "" Then
+        MsgBox "No 5-digit sequence found in source workbook name.", vbExclamation
+        Exit Sub
+    End If
+    
+    ' === Get delimiting digit (7th character including dash) ===
+    If Len(wbSource.Name) >= 7 Then
+        delimDigit = Mid(wbSource.Name, 7, 1)
+    Else
+        MsgBox "Workbook name too short to extract delimiting digit.", vbExclamation
+        Exit Sub
+    End If
+    
+    ' === Build the 7-character file key (5 digits + "-" + delimDigit) ===
+    fileKey = digitsPattern & "-" & delimDigit
+    
+    ' === Look for another open workbook with same 5 digits ===
+    matchFound = False
+    For Each wbTarget In Application.Workbooks
+        If wbTarget.Name <> wbSource.Name Then
+            If InStr(wbTarget.Name, digitsPattern) > 0 Then
+                matchFound = True
+                Exit For
+            End If
+        End If
+    Next wbTarget
+    
+    If Not matchFound Then
+        MsgBox "No matching workbook found with digits " & digitsPattern, vbExclamation
+        Exit Sub
+    End If
+    
+    ' === Reference Bom sheet in target workbook ===
+    On Error Resume Next
+    Set wsBom = wbTarget.Sheets("Bom")
+    On Error GoTo 0
+    
+    If wsBom Is Nothing Then
+        MsgBox "Bom sheet not found in " & wbTarget.Name, vbExclamation
+        Exit Sub
+    End If
+    
+    ' === Find start row: column C has delimDigit at 14th char AND column E contains "Air Handler Sz" ===
+    lastRow = wsBom.Cells(wsBom.Rows.Count, "C").End(xlUp).Row
+    foundStart = False
+    For i = 1 To lastRow
+        If Len(wsBom.Cells(i, "C").Value) >= 14 Then
+            If Mid(wsBom.Cells(i, "C").Value, 14, 1) = delimDigit And _
+               InStr(1, wsBom.Cells(i, "E").Value, "Air Handler Sz", vbTextCompare) > 0 Then
+                startRow = i + 1 ' start collecting BELOW this row
+                foundStart = True
+                Exit For
+            End If
+        End If
+    Next i
+    
+    If Not foundStart Then
+        MsgBox "Start delimiter not found in Bom sheet.", vbExclamation
+        Exit Sub
+    End If
+    
+    ' === Find end row: next occurrence of "Air Handler Sz" in column E after startRow ===
+    endRow = lastRow
+    For i = startRow + 1 To lastRow
+        If InStr(1, wsBom.Cells(i, "E").Value, "Air Handler Sz", vbTextCompare) > 0 Then
+            endRow = i - 1
+            Exit For
+        End If
+    Next i
+    
+    ' === Create or clear L1_Validation sheet in source workbook ===
+    On Error Resume Next
+    Set wsL1_Validation = wbSource.Sheets("L1_Validation")
+    On Error GoTo 0
+    
+    If wsL1_Validation Is Nothing Then
+        Set wsL1_Validation = wbSource.Sheets.Add
+        wsL1_Validation.Name = "L1_Validation"
+    Else
+        wsL1_Validation.Cells.Clear
+    End If
+    
+    ' === Use dictionary to consolidate duplicates ===
+    Set dict = CreateObject("Scripting.Dictionary")
+    
+    For i = startRow To endRow
+        nameVal = Trim(wsBom.Cells(i, 3).Value) ' Column C (names)
+        If IsNumeric(wsBom.Cells(i, 4).Value) Then
+            qtyVal = CDbl(wsBom.Cells(i, 4).Value) ' Column D (quantities)
+        Else
+            qtyVal = 0
+        End If
+        
+        If nameVal <> "" Then
+            If dict.exists(nameVal) Then
+                dict(nameVal) = dict(nameVal) + qtyVal
+            Else
+                dict.Add nameVal, qtyVal
+            End If
+        End If
+    Next i
+    
+    ' === Paste consolidated results into L1_Validation sheet (columns A and B) ===
+    i = 1
+    For Each Key In dict.Keys
+        wsL1_Validation.Cells(i, 1).Value = Key
+        wsL1_Validation.Cells(i, 2).Value = dict(Key)
+        i = i + 1
+    Next Key
+    
+    ' === Copy CombinedData A:B into L1_Validation D:E ===
+    On Error Resume Next
+    Set wsCombined = wbSource.Sheets("CombinedData")
+    On Error GoTo 0
+    
+    If Not wsCombined Is Nothing Then
+        lastRowCombined = wsCombined.Cells(wsCombined.Rows.Count, "A").End(xlUp).Row
+        wsCombined.Range("A1:B" & lastRowCombined).Copy Destination:=wsL1_Validation.Range("D1")
+    End If
+                               ' === Highlight matches from AddDel immediately ===
+On Error Resume Next
+For Each wbAddDel In Application.Workbooks
+    If wbAddDel.Name <> wbSource.Name Then Exit For
+Next wbAddDel
+On Error GoTo 0
+
+' <<< ADDED: summary collectors
+Dim matchList As String
+Dim errorList As String
+matchList = ""
+errorList = ""
+
+If Not wbAddDel Is Nothing Then
+    On Error Resume Next
+    Set wsAddDel = wbAddDel.Sheets("AddDel")
+    On Error GoTo 0
+    
+    If Not wsAddDel Is Nothing Then
+        lastRowAddDel = wsAddDel.Cells(wsAddDel.Rows.Count, "E").End(xlUp).Row
+        Dim lastRowVal As Long
+        lastRowVal = wsL1_Validation.Cells(wsL1_Validation.Rows.Count, "A").End(xlUp).Row
+        
+        For i = 1 To lastRowAddDel
+            If InStr(1, wsAddDel.Cells(i, "E").Value, fileKey, vbTextCompare) > 0 Then
+                addDelValue = Trim(wsAddDel.Cells(i, "G").Value)
+                
+                ' Capture AddDel quantity from column I
+                Dim addDelQty As Double
+                If IsNumeric(wsAddDel.Cells(i, "I").Value) Then
+                    addDelQty = CDbl(wsAddDel.Cells(i, "I").Value)
+                Else
+                    addDelQty = 0
+                End If
+                
+                For j = 1 To lastRowVal
+                    ' === Check column A (component) ===
+                    If StrComp(Trim(wsL1_Validation.Cells(j, "A").Value), addDelValue, vbTextCompare) = 0 Then
+                        
+                        ' Highlight the match in L1_Validation column A
+                        wsL1_Validation.Cells(j, "A").Font.Color = vbBlack
+                        wsL1_Validation.Cells(j, "A").Interior.Color = vbYellow
+                        wsL1_Validation.Cells(j, "B").Interior.Color = vbYellow
+                        
+                        ' Get L1_Validation quantity from column B
+                        Dim valQtyA As Double
+                        If IsNumeric(wsL1_Validation.Cells(j, "B").Value) Then
+                            valQtyA = CDbl(wsL1_Validation.Cells(j, "B").Value)
+                        Else
+                            valQtyA = 0
+                        End If
+                        
+                        ' === Search column D for same component ===
+                        Dim k As Long
+                        Dim valQtyD As Double
+                        valQtyD = 0
+                        Dim rowD As Long
+                        rowD = 0
+                        For k = 1 To lastRowVal
+                            If StrComp(Trim(wsL1_Validation.Cells(k, "D").Value), addDelValue, vbTextCompare) = 0 Then
+                                rowD = k
+                                If IsNumeric(wsL1_Validation.Cells(k, "E").Value) Then
+                                    valQtyD = CDbl(wsL1_Validation.Cells(k, "E").Value)
+                                End If
+                                Exit For
+                            End If
+                        Next k
+                        
+                        ' === Perform subtraction ===
+                        Dim subtractionResult As Double
+                        subtractionResult = valQtyA - addDelQty
+                        
+                        ' === Compare subtraction result to column E value ===
+                        If subtractionResult = valQtyD Then
+                            
+                            ' Highlight column D/E in green
+                            If rowD > 0 Then
+                                wsL1_Validation.Cells(rowD, "E").Interior.Color = vbGreen
+                                wsL1_Validation.Cells(rowD, "D").Interior.Color = vbGreen
+                            End If
+                            
+                            ' <<< ADDED: record match
+                            matchList = matchList & vbCrLf & "  • " & addDelValue & " | Final Qty: " & valQtyD
+                            
+                        Else
+                            ' <<< ADDED: record error
+                            errorList = errorList & vbCrLf & "  • " & addDelValue & " | Final Qty: " & valQtyD
+                            
+                            ' <<< ADDED: highlight mismatched component in RED
+                            If rowD > 0 Then
+                                wsL1_Validation.Cells(rowD, "E").Interior.Color = vbRed
+                                wsL1_Validation.Cells(rowD, "D").Interior.Color = vbRed
+                            End If
+                        End If
+                        
+                    End If
+                Next j
+            End If
+        Next i
+    End If
+End If
+
+' === Final summary message box ===
+Dim finalMsg As String
+finalMsg = "L1 Validation Results" & vbCrLf & vbCrLf & _
+           "Matches Found:" & IIf(matchList = "", " None", matchList) & vbCrLf & vbCrLf & _
+           "Mismatches Found:" & IIf(errorList = "", " None", errorList)
+
+MsgBox finalMsg, vbInformation, "L1 Validation Summary"
+
+End Sub
+' === Helper function to extract first 5-digit sequence from text ===
+Private Function ExtractFiveDigits(ByVal text As String) As String
+    Dim i As Long
+    Dim temp As String
+    
+    ExtractFiveDigits = ""
+    For i = 1 To Len(text) - 4
+        temp = Mid(text, i, 5)
+        If IsNumeric(temp) And Len(temp) = 5 Then
+            ExtractFiveDigits = temp
+            Exit Function
+        End If
+    Next i
+End Function
+

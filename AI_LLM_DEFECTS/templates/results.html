@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+    <h2>Classification Results</h2>
+
+    {% if not results %}
+        <p>No results yet. Classify claims first.</p>
+    {% else %}
+    <form method="post" action="{{ url_for('save_results') }}">
+        <table>
+            <thead>
+                <tr>
+                    <th>Claim</th>
+                    <th>Service Performed</th>
+                    <th>AI Result</th>
+                    <th>Final Review</th>
+                    <th>Evidence</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in results %}
+                {% set i = loop.index0 %}
+                <tr>
+                    <td>{{ row.ClaimNumber }}<br><small>{{ row.Serial }}</small></td>
+                    <td class="service-text">{{ row.ServicePerformed }}</td>
+                    <td>
+                        <strong>{{ row.AI_PrimaryComponent }}</strong><br>
+                        {{ row.AI_SecondaryComponent }}<br>
+                        {{ row.AI_FailureReason }}<br>
+                        Confidence: {{ row.AI_Confidence }}
+                    </td>
+                    <td>
+                        <label>Primary</label>
+                        <select name="primary_{{ i }}">
+                            {% for opt in primary_components %}
+                            <option value="{{ opt }}" {% if opt == row.Final_PrimaryComponent %}selected{% endif %}>{{ opt }}</option>
+                            {% endfor %}
+                        </select>
+
+                        <label>Secondary</label>
+                        <select name="secondary_{{ i }}">
+                            {% for opt in secondary_components %}
+                            <option value="{{ opt }}" {% if opt == row.Final_SecondaryComponent %}selected{% endif %}>{{ opt }}</option>
+                            {% endfor %}
+                        </select>
+
+                        <label>Failure Reason</label>
+                        <select name="reason_{{ i }}">
+                            {% for opt in failure_reasons %}
+                            <option value="{{ opt }}" {% if opt == row.Final_FailureReason %}selected{% endif %}>{{ opt }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                    <td class="evidence">{{ row.AI_EvidencePhrases }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="toolbar">
+            <button type="submit">Save Reviewed Results</button>
+            <a class="button" href="{{ url_for('download') }}">Download CSV</a>
+        </div>
+    </form>
+    {% endif %}
+</section>
+{% endblock %}

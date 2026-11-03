@@ -1,0 +1,176 @@
+{
+  "base_unit_price_rule": {
+    "enabled": true,
+    "search_type": "full_search",
+    "start_position": 1,
+    "end_position": 9,
+    "template": "{1:4}-{6:10}--{13}---0"
+  },
+  "conditional_price_rules": {
+    "enabled": true,
+    "positions": [
+      14
+    ]
+  },
+  "configuration_date": "2026-08-17",
+  "configured_positions": [],
+  "created_at": "2026-08-17T09:47:22",
+  "description": "65LL PRODUCT",
+  "option_positions": {
+    "start": 11,
+    "end": 17
+  },
+  "positions": {},
+  "product_type": "65LL",
+  "schema_version": 1,
+  "search_mode": "character_based",
+  "structure": [
+    {
+      "characteristic_key": "PRODUCT_TYPE",
+      "description": "Product family or type",
+      "end_position": 4,
+      "specifications": [],
+      "start_position": 1,
+      "used": true
+    },
+    {
+      "characteristic_key": "UNIT_TYPE",
+      "description": "Product/unit design character",
+      "end_position": 5,
+      "specifications": [
+        {
+          "allowed": true,
+          "catalog_value": "A",
+          "description": "",
+          "label": "Std without condenser"
+        },
+        {
+          "allowed": true,
+          "catalog_value": "W",
+          "description": "",
+          "label": "Std with condenser"
+        },
+        {
+          "allowed": true,
+          "catalog_value": "Q",
+          "description": "",
+          "label": "Std with condenser"
+        }
+      ],
+      "start_position": 5,
+      "used": true
+    },
+    {
+      "characteristic_key": "TONNAGE",
+      "description": "Unit size or tonnage",
+      "end_position": 8,
+      "specifications": [
+        {
+          "allowed": true,
+          "catalog_value": "017",
+          "description": "",
+          "label": "017"
+        },
+        {
+          "allowed": true,
+          "catalog_value": "021",
+          "description": "",
+          "label": "021"
+        },
+        {
+          "allowed": true,
+          "catalog_value": "031",
+          "description": "",
+          "label": "031"
+        },
+        {
+          "allowed": true,
+          "catalog_value": "033",
+          "description": "",
+          "label": "033"
+        },
+        {
+          "allowed": true,
+          "catalog_value": "041",
+          "description": "",
+          "label": "041"
+        },
+        {
+          "allowed": true,
+          "catalog_value": "046",
+          "description": "",
+          "label": "046"
+        },
+        {
+          "allowed": true,
+          "catalog_value": "051",
+          "description": "",
+          "label": "051"
+        },
+        {
+          "allowed": true,
+          "catalog_value": "056",
+          "description": "",
+          "label": "056"
+        },
+        {
+          "allowed": true,
+          "catalog_value": "066",
+          "description": "",
+          "label": "066"
+        },
+        {
+          "allowed": true,
+          "catalog_value": "080",
+          "description": "",
+          "label": "080"
+        }
+      ],
+      "start_position": 6,
+      "used": true
+    },
+    {
+      "characteristic_key": "VOLTAGE",
+      "description": "Voltage character",
+      "end_position": 9,
+      "specifications": [
+        {
+          "allowed": true,
+          "catalog_value": "1",
+          "description": "",
+          "label": "575-3-60"
+        },
+        {
+          "allowed": true,
+          "catalog_value": "2",
+          "description": "",
+          "label": "380-3-60"
+        },
+        {
+          "allowed": true,
+          "catalog_value": "5",
+          "description": "",
+          "label": "208/230-3-60"
+        },
+        {
+          "allowed": true,
+          "catalog_value": "6",
+          "description": "",
+          "label": "460-3-60"
+        }
+      ],
+      "start_position": 9,
+      "used": true
+    },
+    {
+      "characteristic_key": "OPTIONS",
+      "description": "Configurable option characters",
+      "end_position": 19,
+      "specifications": [],
+      "start_position": 10,
+      "used": true
+    }
+  ],
+  "updated_at": "2026-08-17T09:47:22",
+  "version": 2
+}

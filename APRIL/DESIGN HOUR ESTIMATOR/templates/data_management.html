@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}Data Management{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-topbar">
+        <div>
+            <h2 class="section-title section-title-tight">Data Management</h2>
+            <div class="section-subtitle">Select a team and choose which data sheet to inspect.</div>
+        </div>
+    </div>
+
+    <form method="POST" action="/data-management" id="dataManagementForm">
+        <div class="filters-grid">
+            <div class="field">
+                <label for="team">Team</label>
+                <select name="team" id="team" required>
+                    <option value="">Select Team</option>
+                    {% for item in team_options %}
+                        <option value="{{ item }}" {% if selected_team == item %}selected{% endif %}>
+                            {{ item }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="sheet_view">Sheet</label>
+                <select name="sheet_view" id="sheet_view" required>
+                    <option value="">Select Sheet</option>
+                    <option value="parts" {% if selected_sheet == "parts" %}selected{% endif %}>Parts</option>
+                    <option value="hours" {% if selected_sheet == "hours" %}selected{% endif %}>Hours</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button type="submit" class="btn">Load Data</button>
+        </div>
+    </form>
+</div>
+
+<div class="card">
+    <h2 class="section-title">Selected Data</h2>
+
+    {% if rows and rows|length > 0 %}
+        <div class="table-wrapper data-management-table-wrapper">
+            <table class="data-management-table">
+                <thead>
+                    <tr>
+                        {% for col in columns %}
+                            <th>{{ col }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in rows %}
+                    <tr>
+                        {% for col in columns %}
+                            <td>{{ row[col] }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <div class="empty-state">
+            Select a team and sheet to display data.
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

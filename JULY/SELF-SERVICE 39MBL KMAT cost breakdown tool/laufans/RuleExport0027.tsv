@@ -1,0 +1,97 @@
+RULEBEGIN.RAW.REQUIRED					P5	P6										WHEEL	WHEELCLASS		NOMENCLATURE			HIT.CATEGORY	HIT.VALUE	HIT.DESCRIPTION																				
+																181	1					FANSHAFT	1.6875	Fan Shaft 181 Class 1 1.6875
+																201	1					FANSHAFT	1.6875	Fan Shaft 201 Class 1 1.6875
+																221	1					FANSHAFT	1.9375	Fan Shaft 221 Class 1 1.9375
+																241	1					FANSHAFT	2.1875	Fan Shaft 241 Class 1 2.1875
+																271	1					FANSHAFT	2.1875	Fan Shaft 271 Class 1 2.1875
+																301	1					FANSHAFT	2.4375	Fan Shaft 301 Class 1 2.4375
+																331	1					FANSHAFT	2.4375	Fan Shaft 331 Class 1 2.4375
+																361	1					FANSHAFT	2.6875	Fan Shaft 361 Class 1 2.6875
+																101	2					FANSHAFT	1	Fan Shaft 101 Class 2 1
+																121	2					FANSHAFT	1.1875	Fan Shaft 121 Class 2 1.1875
+																131	2					FANSHAFT	1.4375	Fan Shaft 131 Class 2 1.4375
+																161	2					FANSHAFT	1.6875	Fan Shaft 161 Class 2 1.6875
+																181	2					FANSHAFT	1.9375	Fan Shaft 181 Class 2 1.9375
+																201	2					FANSHAFT	1.9375	Fan Shaft 201 Class 2 1.9375
+																221	2					FANSHAFT	2.1875	Fan Shaft 221 Class 2 2.1875
+																241	2					FANSHAFT	2.4375	Fan Shaft 241 Class 2 2.4375
+																271	2					FANSHAFT	2.4375	Fan Shaft 271 Class 2 2.4375
+																301	2					FANSHAFT	1.9375	Fan Shaft 301 Class 2 1.9375
+																331	2					FANSHAFT	2.1875	Fan Shaft 331 Class 2 2.1875
+																361	2					FANSHAFT	2.1875	Fan Shaft 361 Class 2 2.1875
+					C											A10-8A	1					FANSHAFT	1	Fan Shaft A10-8A Class 1 1 on Size(s) C
+					D											A10-8A	1					FANSHAFT	1.1875	Fan Shaft A10-8A Class 1 1.1875 on Size(s) D
+					4											A10-8A	1					FANSHAFT	1.1875	Fan Shaft A10-8A Class 1 1.1875 on 56 Codes 4
+																A12-11A	1					FANSHAFT	1.4375	Fan Shaft A12-11A Class 1 1.4375
+																A12-12A	1					FANSHAFT	1.1875	Fan Shaft A12-12A Class 1 1.1875
+					FG											A15-15A	1					FANSHAFT	1.1875	Fan Shaft A15-15A Class 1 1.1875 on Size(s) FG
+					5	FGHJKLMN										A15-15A	1					FANSHAFT	1.1875	Fan Shaft A15-15A Class 1 1.1875 on 56 Codes 5 FGHJKLMN
+					HJ											A15-15A	1					FANSHAFT	1.4375	Fan Shaft A15-15A Class 1 1.4375 on Size(s) HJ
+					K											A15-15A	1					FANSHAFT	1.6875	Fan Shaft A15-15A Class 1 1.6875 on Size(s) K
+					5	XYZ-										A15-15A	1					FANSHAFT	1.4375	Fan Shaft A15-15A Class 1 1.4375 on 56 Codes 5 XYZ-
+					6	0123										A15-15A	1					FANSHAFT	1.4375	Fan Shaft A15-15A Class 1 1.4375 on 56 Codes 6 0123
+					6	45678ABC										A15-15A	1					FANSHAFT	1.6875	Fan Shaft A15-15A Class 1 1.6875 on 56 Codes 6 45678ABC
+																A18-18A	1					FANSHAFT	1.1875	Fan Shaft A18-18A Class 1 1.1875
+																A20-15A	1					FANSHAFT	1.6875	Fan Shaft A20-15A Class 1 1.6875
+																A20-18A	1					FANSHAFT	1.4375	Fan Shaft A20-18A Class 1 1.4375
+																A20-18H	1					FANSHAFT	1.6875	Fan Shaft A20-18H Class 1 1.6875
+																A20-20H	1					FANSHAFT	1.6875	Fan Shaft A20-20H Class 1 1.6875
+																A22-22H	1					FANSHAFT	2.1875	Fan Shaft A22-22H Class 1 1.BUILT AS CLASS II
+																A25-20H	1					FANSHAFT	2.4375	Fan Shaft A25-20H Class 1 BUILT AS CLASS II
+																A25-25H	1					FANSHAFT	2.4375	Fan Shaft A25-25H Class 1 BUILT AS CLASS II
+																A27-22H	1					FANSHAFT	2.4375	Fan Shaft A27-22H Class 1 BUILT AS CLASS II
+																A27-27H	1					FANSHAFT	2.4375	Fan Shaft A27-27H Class 1 BUILT AS CLASS II
+																A30-30H	1					FANSHAFT	2.6875	Fan Shaft A30-30H Class 1 BUILT AS CLASS II
+																A9-4A	1					FANSHAFT	1	Fan Shaft A9-4A Class 1 1
+					C											A10-8A	2					FANSHAFT	1	Fan Shaft A10-8A Class 2 1 on Size(s) C
+					D											A10-8A	2					FANSHAFT	1.1875	Fan Shaft A10-8A Class 2 1.1875 on Size(s) D
+					4											A10-8A	2					FANSHAFT	1.1875	Fan Shaft A10-8A Class 2 1.1875 on 56 Codes 4
+																A12-11A	2					FANSHAFT	1.4375	Fan Shaft A12-11A Class 2 1.4375
+																A12-12A	2					FANSHAFT	1.1875	Fan Shaft A12-12A Class 2 1.1875
+					FG											A15-15A	2					FANSHAFT	1.1875	Fan Shaft A15-15A Class 2 1.1875 on Size(s) FG
+					5	FGHJKLMN										A15-15A	2					FANSHAFT	1.1875	Fan Shaft A15-15A Class 2 1.1875 on 56 Codes 5 FGHJKLMN
+					HJ											A15-15A	2					FANSHAFT	1.4375	Fan Shaft A15-15A Class 2 1.4375 on Size(s) HJ
+					K											A15-15A	2					FANSHAFT	1.6875	Fan Shaft A15-15A Class 2 1.6875 on Size(s) K
+					5	XYZ-										A15-15A	2					FANSHAFT	1.4375	Fan Shaft A15-15A Class 2 1.4375 on 56 Codes 5 XYZ-
+					6	0123										A15-15A	2					FANSHAFT	1.4375	Fan Shaft A15-15A Class 2 1.4375 on 56 Codes 6 0123
+					6	45678ABC										A15-15A	2					FANSHAFT	1.6875	Fan Shaft A15-15A Class 2 1.6875 on 56 Codes 6 45678ABC
+																A18-18A	2					FANSHAFT	1.4375	Fan Shaft A18-18A Class 2 1.4375
+																A20-15A	2					FANSHAFT	1.6875	Fan Shaft A20-15A Class 2 1.6875
+																A20-18A	2					FANSHAFT	1.4375	Fan Shaft A20-18A Class 2 1.4375
+																A20-18H	2					FANSHAFT	1.6875	Fan Shaft A20-18H Class 2 1.6875
+																A20-20H	2					FANSHAFT	1.6875	Fan Shaft A20-20H Class 2 1.6875
+																A22-22H	2					FANSHAFT	2.1875	Fan Shaft A22-22H Class 2 2.1875
+																A25-20H	2					FANSHAFT	2.4375	Fan Shaft A25-20H Class 2 2.4375
+																A25-25H	2					FANSHAFT	2.4375	Fan Shaft A25-25H Class 2 2.4375
+																A27-22H	2					FANSHAFT	2.4375	Fan Shaft A27-22H Class 2 2.4375
+																A27-27H	2					FANSHAFT	2.4375	Fan Shaft A27-27H Class 2 2.4375
+																A30-30H	2					FANSHAFT	2.6875	Fan Shaft A30-30H Class 2 2.6875
+																A9-4A	2					FANSHAFT	1	Fan Shaft A9-4A Class 2 1
+																123	1					FANSHAFT	1	Fan Shaft 123 Class 1 1
+																153	1					FANSHAFT	1	Fan Shaft 153 Class 1 1
+																163	1					FANSHAFT	1	Fan Shaft 163 Class 1 1
+																183Q	1					FANSHAFT	1	Fan Shaft 183Q Class 1 1
+																223Q	1					FANSHAFT	1.4375	Fan Shaft 223Q Class 1 1.4375
+																243Q	1					FANSHAFT	1.4375	Fan Shaft 243Q Class 1 1.4375
+																273Q	1					FANSHAFT	1.4375	Fan Shaft 273Q Class 1 1.4375
+																303Q	1					FANSHAFT	1.4375	Fan Shaft 303Q Class 1 1.4375
+																333Q	1					FANSHAFT	1.6875	Fan Shaft 333Q Class 1 1.6875
+																363Q	1					FANSHAFT	1.6875	Fan Shaft 363Q Class 1 1.6875
+																403Q	1					FANSHAFT	1.9375	Fan Shaft 403Q Class 1 1.9375
+																443Q	1					FANSHAFT	2.1875	Fan Shaft 443Q Class 1 2.1875
+																493Q	1					FANSHAFT	2.6875	Fan Shaft 493Q Class 1 2.6875
+																123	2					FANSHAFT	1.1875	Fan Shaft 123 Class 2 1.1875
+																153	2					FANSHAFT	1.1875	Fan Shaft 153 Class 2 1.1875
+																163	2					FANSHAFT	1	Fan Shaft 163 Class 2 1
+																183Q	2					FANSHAFT	1.1875	Fan Shaft 183Q Class 2 1.1875
+																223Q	2					FANSHAFT	1.4375	Fan Shaft 223Q Class 2 1.4375
+																243Q	2					FANSHAFT	1.4375	Fan Shaft 243Q Class 2 1.4375
+																273Q	2					FANSHAFT	1.4375	Fan Shaft 273Q Class 2 1.4375
+																303Q	2					FANSHAFT	1.4375	Fan Shaft 303Q Class 2 1.4375
+																333Q	2					FANSHAFT	1.6875	Fan Shaft 333Q Class 2 1.6875
+																363Q	2					FANSHAFT	1.6875	Fan Shaft 363Q Class 2 1.6875
+																403Q	2					FANSHAFT	1.9375	Fan Shaft 403Q Class 2 1.9375
+																443Q	2					FANSHAFT	2.1875	Fan Shaft 443Q Class 2 2.1875
+																493Q	2					FANSHAFT	2.6875	Fan Shaft 493Q Class 2 2.6875
+																			
+RULEEND																				

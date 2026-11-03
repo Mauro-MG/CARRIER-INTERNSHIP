@@ -1,0 +1,22 @@
+RULEBEGIN.RAW.REQUIRED																	MOTORFRAME					HIT.CATEGORY	HIT.VALUE	HIT.DESCRIPTION																				
+																	56					MOTORDVALUE	D0350	Motor D Value
+																	143T					MOTORDVALUE	D0350	Motor D Value
+																	145T					MOTORDVALUE	D0350	Motor D Value
+																	182T					MOTORDVALUE	D0450	Motor D Value
+																	184T					MOTORDVALUE	D0450	Motor D Value
+																	213T					MOTORDVALUE	D0525	Motor D Value
+																	215T					MOTORDVALUE	D0525	Motor D Value
+																	254T					MOTORDVALUE	D0625	Motor D Value
+																	256T					MOTORDVALUE	D0625	Motor D Value
+																	284T					MOTORDVALUE	D0700	Motor D Value
+																	286T					MOTORDVALUE	D0700	Motor D Value
+																	324T					MOTORDVALUE	D0800	Motor D Value
+																	326T					MOTORDVALUE	D0800	Motor D Value
+																	364T					MOTORDVALUE	D0900	Motor D Value
+																	365T					MOTORDVALUE	D0900	Motor D Value
+																	404T					MOTORDVALUE	D1000	Motor D Value
+																	405T					MOTORDVALUE	D1000	Motor D Value
+																	444T					MOTORDVALUE	D1100	Motor D Value
+																	445T					MOTORDVALUE	D1100	Motor D Value
+																			
+RULEEND																				

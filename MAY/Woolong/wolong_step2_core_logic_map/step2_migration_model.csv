@@ -1,0 +1,10 @@
+priority,area,excel_vba,flask_equivalent,notes
+1,UI input trigger,Sheet5.Worksheet_Change -> Main,POST /calculate form submit,Only run calculation when user submits/changes model data; no Excel event logic needed.
+1,Model input,Info_Plate!E33 / named range ModelNum,model_number input field,Main reads Info_Plate cell row 33 col 5 and handles special orders.
+1,Model parser,CheckModelNumber + unit-specific modules,services/model_parser.py,Build ModelNumber dataclass and decode model string before calculations.
+1,Data source selection,"sDataSheetName, sDataSheet_Gas constants",select lookup CSV/DataFrame by product family/manufacturer,"Data_FE_LG, Data_FE_Copeland, Data_GE, Data_JE, Data_38AX, Data_Gas* are core lookup tables."
+1,Electrical/nameplate rows,"WriteIndoorFan, WriteCompressors, WriteOutdoorFan, WriteCombustionFan, WritePowerExhaustFan, WriteConvenienceOutlet, WriteERVWheel, WriteERVSupply",services/electrical_data.py,"These populate named output ranges Motor1..Motor7 and Comp1..Comp3, then MCA uses those values."
+1,MCA/MOCP calculation,CalculateMCA -> GetMCAMOCP/GetMCAMOCP50/GetLRA/GetSinglePointBox,services/mca_mocp.py,Core MVP calculation. Avoid writing to cells; return structured result.
+2,Errors/warnings,"Error_Type, StoreError, PrintErrortoScreen",errors list in JSON/result page,Keep errors as structured messages.
+2,Special order handling,"bSpecialOrder, Info_Plate_Special_Order, SOMNCR_48TM500235.xlsx",optional special-order lookup/import path,Can be deferred unless special order models are required in MVP.
+3,Literature generation,"mGenerate_Lit*, mLitMaster",report/pdf generation module,Large and separate from MCA/MOCP; defer.

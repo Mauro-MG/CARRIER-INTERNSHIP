@@ -1,0 +1,14 @@
+{
+  "total_modules": 60,
+  "total_procedures": 352,
+  "total_call_edges": 725,
+  "core_nodes_traced": 171,
+  "core_reference_rows": 629,
+  "core_defined_names_used": 127,
+  "core_sheet_refs_count": 12,
+  "root_traces": {
+    "Main": 171,
+    "CalculateMCA": 86,
+    "CalculateSplitMCA": 86
+  }
+}

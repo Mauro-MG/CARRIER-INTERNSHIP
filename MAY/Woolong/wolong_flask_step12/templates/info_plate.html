@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wolong Info Plate Preview</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="container wide">
+        <section class="hero-card">
+            <div>
+                <p class="eyebrow">Excel Info_Plate replacement</p>
+                <h1>Type a model number and visualize the full info plate</h1>
+                <p class="muted">The page calculates and renders the current Python version of the Excel/VBA output: nameplate fields, electrical ratings, compressors, motors, accessories, notes, warnings, and raw data.</p>
+            </div>
+            <a class="secondary-link" href="/validate">Validation mode</a>
+        </section>
+
+        <section class="input-panel">
+            <form id="model-form" action="/calculate" method="post">
+                <label for="model_number">Model number</label>
+                <div class="input-row">
+                    <input id="model_number" name="model_number" placeholder="Example: 48FEDM08A2A6A0A0A0" autocomplete="off" value="{{ result.model.model_number if result else '' }}" required>
+                    <button type="submit">Calculate</button>
+                </div>
+                <p class="hint">Auto-calculates while typing after enough characters are entered. Press Enter to calculate manually.</p>
+            </form>
+        </section>
+
+        <section id="status" class="status-bar hidden"></section>
+
+        <section id="info-plate-root"></section>
+    </main>
+
+    <script>
+        window.__INITIAL_RESULT__ = {{ result|tojson if result else 'null' }};
+    </script>
+    <script src="{{ url_for('static', filename='info_plate.js') }}"></script>
+</body>
+</html>

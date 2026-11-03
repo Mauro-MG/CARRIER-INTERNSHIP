@@ -1,0 +1,845 @@
+{
+  "base_unit_price_rule": {
+    "enabled": true,
+    "search_type": "full_search",
+    "start_position": 1,
+    "end_position": 10,
+    "template": "{1:4}-{6:10}L2-67S0"
+  },
+  "conditional_price_rules": {
+    "enabled": false,
+    "positions": []
+  },
+  "configuration_date": "2026-08-19",
+  "configured_positions": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "created_at": "2026-08-19T11:45:19",
+  "description": "30XF PPG 08/13/2026",
+  "option_positions": {
+    "start": 11,
+    "end": 17
+  },
+  "positions": {
+    "11": {
+      "allowed_values_by_option_code": {
+        "17": [
+          "L",
+          "M"
+        ],
+        "1M": [
+          "L",
+          "W"
+        ],
+        "1N": [
+          "M",
+          "X"
+        ],
+        "17A": [
+          "W",
+          "X"
+        ]
+      },
+      "applicable_groups": [
+        1,
+        17
+      ],
+      "excluded_characters": [
+        "-",
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "Y",
+        "Z"
+      ],
+      "option_code_ranges": [
+        {
+          "end": "1N",
+          "group": 1,
+          "start": "1M"
+        },
+        {
+          "end": "17A",
+          "group": 17,
+          "start": "17"
+        }
+      ],
+      "option_codes": [
+        "1M",
+        "1N",
+        "17",
+        "17A"
+      ]
+    },
+    "12": {
+      "allowed_values_by_option_code": {
+        "16": [
+          "2",
+          "Q"
+        ],
+        "20": [
+          "Q",
+          "S",
+          "T"
+        ],
+        "21": [
+          "Q",
+          "S",
+          "T"
+        ],
+        "2C": [
+          "2",
+          "8",
+          "9",
+          "Q",
+          "S",
+          "T"
+        ],
+        "16A": [
+          "S"
+        ],
+        "16B": [
+          "T"
+        ],
+        "16C": [
+          "8"
+        ],
+        "16D": [
+          "9"
+        ],
+        "20A": [
+          "2",
+          "8",
+          "9"
+        ],
+        "21A": [
+          "2",
+          "8",
+          "9"
+        ]
+      },
+      "applicable_groups": [
+        2,
+        16,
+        20,
+        21
+      ],
+      "excluded_characters": [
+        "-",
+        "0",
+        "1",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "R",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z"
+      ],
+      "option_code_ranges": [
+        {
+          "end": "2C",
+          "group": 2,
+          "start": "2C"
+        },
+        {
+          "end": "16D",
+          "group": 16,
+          "start": "16"
+        },
+        {
+          "end": "20A",
+          "group": 20,
+          "start": "20"
+        },
+        {
+          "end": "21A",
+          "group": 21,
+          "start": "21"
+        }
+      ],
+      "option_codes": [
+        "2C",
+        "16",
+        "16A",
+        "16B",
+        "16C",
+        "16D",
+        "20",
+        "20A",
+        "21",
+        "21A"
+      ]
+    },
+    "13": {
+      "allowed_values_by_option_code": {
+        "3": [
+          "-",
+          "1"
+        ],
+        "4": [
+          "-"
+        ],
+        "15": [
+          "-",
+          "1"
+        ],
+        "4A": [
+          "1"
+        ]
+      },
+      "applicable_groups": [
+        3,
+        4,
+        15
+      ],
+      "excluded_characters": [
+        "0",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z"
+      ],
+      "option_code_ranges": [
+        {
+          "end": "3",
+          "group": 3,
+          "start": "3"
+        },
+        {
+          "end": "4A",
+          "group": 4,
+          "start": "4"
+        },
+        {
+          "end": "15",
+          "group": 15,
+          "start": "15"
+        }
+      ],
+      "option_codes": [
+        "3",
+        "4",
+        "4A",
+        "15"
+      ]
+    },
+    "14": {
+      "allowed_values_by_option_code": {
+        "6": [
+          "6"
+        ],
+        "19": [
+          "6"
+        ],
+        "5A": [
+          "6"
+        ],
+        "7A": [
+          "6"
+        ]
+      },
+      "applicable_groups": [
+        5,
+        6,
+        7,
+        19
+      ],
+      "excluded_characters": [
+        "-",
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "7",
+        "8",
+        "9",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z"
+      ],
+      "option_code_ranges": [
+        {
+          "end": "5A",
+          "group": 5,
+          "start": "5A"
+        },
+        {
+          "end": "6",
+          "group": 6,
+          "start": "6"
+        },
+        {
+          "end": "7A",
+          "group": 7,
+          "start": "7A"
+        },
+        {
+          "end": "19",
+          "group": 19,
+          "start": "19"
+        }
+      ],
+      "option_codes": [
+        "5A",
+        "6",
+        "7A",
+        "19"
+      ]
+    },
+    "15": {
+      "allowed_values_by_option_code": {
+        "9": [
+          "7",
+          "J",
+          "Q"
+        ],
+        "22": [
+          "7",
+          "B"
+        ],
+        "24": [
+          "7",
+          "B",
+          "J",
+          "K",
+          "Q",
+          "R"
+        ],
+        "8A": [
+          "7",
+          "B",
+          "J",
+          "K",
+          "Q",
+          "R"
+        ],
+        "9A": [
+          "B",
+          "K",
+          "R"
+        ],
+        "10A": [
+          "7",
+          "B",
+          "J",
+          "K",
+          "Q",
+          "R"
+        ],
+        "22A": [
+          "J",
+          "K"
+        ],
+        "22B": [
+          "Q",
+          "R"
+        ]
+      },
+      "applicable_groups": [
+        8,
+        9,
+        10,
+        22,
+        24
+      ],
+      "excluded_characters": [
+        "-",
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "8",
+        "9",
+        "A",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z"
+      ],
+      "option_code_ranges": [
+        {
+          "end": "8A",
+          "group": 8,
+          "start": "8A"
+        },
+        {
+          "end": "9A",
+          "group": 9,
+          "start": "9"
+        },
+        {
+          "end": "10A",
+          "group": 10,
+          "start": "10A"
+        },
+        {
+          "end": "22B",
+          "group": 22,
+          "start": "22"
+        },
+        {
+          "end": "24",
+          "group": 24,
+          "start": "24"
+        }
+      ],
+      "option_codes": [
+        "8A",
+        "9",
+        "9A",
+        "10A",
+        "22",
+        "22A",
+        "22B",
+        "24"
+      ]
+    },
+    "16": {
+      "allowed_values_by_option_code": {
+        "12": [
+          "T",
+          "W"
+        ],
+        "13": [
+          "T",
+          "W"
+        ],
+        "25": [
+          "T"
+        ],
+        "11A": [
+          "T",
+          "W"
+        ],
+        "18A": [
+          "T",
+          "W"
+        ],
+        "23A": [
+          "T",
+          "W"
+        ],
+        "25A": [
+          "W"
+        ]
+      },
+      "applicable_groups": [
+        11,
+        12,
+        13,
+        18,
+        23,
+        25
+      ],
+      "excluded_characters": [
+        "-",
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "U",
+        "V",
+        "X",
+        "Y",
+        "Z"
+      ],
+      "option_code_ranges": [
+        {
+          "end": "11A",
+          "group": 11,
+          "start": "11A"
+        },
+        {
+          "end": "12",
+          "group": 12,
+          "start": "12"
+        },
+        {
+          "end": "13",
+          "group": 13,
+          "start": "13"
+        },
+        {
+          "end": "18A",
+          "group": 18,
+          "start": "18A"
+        },
+        {
+          "end": "23A",
+          "group": 23,
+          "start": "23A"
+        },
+        {
+          "end": "25A",
+          "group": 25,
+          "start": "25"
+        }
+      ],
+      "option_codes": [
+        "11A",
+        "12",
+        "13",
+        "18A",
+        "23A",
+        "25",
+        "25A"
+      ]
+    },
+    "17": {
+      "allowed_values_by_option_code": {
+        "14A": [
+          "0"
+        ],
+        "14D": [
+          "3"
+        ]
+      },
+      "applicable_groups": [
+        14
+      ],
+      "excluded_characters": [
+        "-",
+        "1",
+        "2",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z"
+      ],
+      "option_code_ranges": [
+        {
+          "end": "14D",
+          "group": 14,
+          "start": "14A"
+        }
+      ],
+      "option_codes": [
+        "14A",
+        "14B",
+        "14C",
+        "14D"
+      ]
+    }
+  },
+  "product_type": "30XF",
+  "schema_version": 1,
+  "search_mode": "code_based",
+  "structure": [
+    {
+      "characteristic_key": "PRODUCT_TYPE",
+      "description": "Product family",
+      "end_position": 4,
+      "specifications": [
+        {
+          "allowed": true,
+          "catalog_value": "30XF",
+          "description": "",
+          "label": "30XF"
+        }
+      ],
+      "start_position": 1,
+      "used": true
+    },
+    {
+      "characteristic_key": "TONNAGE",
+      "description": "Unit size",
+      "end_position": 8,
+      "specifications": [
+        {
+          "allowed": true,
+          "catalog_value": "400",
+          "description": "",
+          "label": "400"
+        },
+        {
+          "allowed": true,
+          "catalog_value": "450",
+          "description": "",
+          "label": "450"
+        },
+        {
+          "allowed": true,
+          "catalog_value": "500",
+          "description": "",
+          "label": "500"
+        }
+      ],
+      "start_position": 6,
+      "used": true
+    },
+    {
+      "characteristic_key": "VOLTAGE",
+      "description": "Voltage character",
+      "end_position": 9,
+      "specifications": [
+        {
+          "allowed": false,
+          "catalog_value": "1",
+          "description": "",
+          "label": "575-3-60"
+        },
+        {
+          "allowed": false,
+          "catalog_value": "2",
+          "description": "",
+          "label": "380-3-60"
+        },
+        {
+          "allowed": false,
+          "catalog_value": "5",
+          "description": "",
+          "label": "208/230-3-60"
+        },
+        {
+          "allowed": true,
+          "catalog_value": "6",
+          "description": "",
+          "label": "460-3-60"
+        }
+      ],
+      "start_position": 9,
+      "used": true
+    },
+    {
+      "characteristic_key": "OPTIONS",
+      "description": "Configurable option characters",
+      "end_position": 17,
+      "specifications": [],
+      "start_position": 11,
+      "used": true
+    },
+    {
+      "characteristic_key": "REVISION",
+      "description": "Engineering Revision",
+      "end_position": 5,
+      "specifications": [
+        {
+          "allowed": true,
+          "catalog_value": "-",
+          "description": "",
+          "label": "Charlotte"
+        },
+        {
+          "allowed": true,
+          "catalog_value": "M",
+          "description": "",
+          "label": "CMX-F"
+        }
+      ],
+      "start_position": 5,
+      "used": true
+    },
+    {
+      "characteristic_key": "TIER",
+      "description": "Product Tier",
+      "end_position": 10,
+      "specifications": [
+        {
+          "allowed": true,
+          "catalog_value": "M",
+          "description": "",
+          "label": "Mid Tier"
+        },
+        {
+          "allowed": true,
+          "catalog_value": "H",
+          "description": "",
+          "label": "High Tier"
+        }
+      ],
+      "start_position": 10,
+      "used": true
+    }
+  ],
+  "price_column_criteria": {
+    "enabled": true,
+    "keys": [
+      "TONNAGE",
+      "TIER"
+    ]
+  },
+  "updated_at": "2026-08-19T13:54:44",
+  "version": 2
+}

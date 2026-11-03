@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>New Product Configuration</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/configuration_phase1.css') }}">
+</head>
+<body>
+<main class="container wide">
+  <header class="page-header">
+    <p class="eyebrow">Version 2</p>
+    <h1>Product Configuration Builder</h1>
+    <p>Define the product, selected catalog-number positions, and option-code ranges before building the matrix.</p>
+  </header>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% for category, message in messages %}<div class="alert {{ category }}">{{ message }}</div>{% endfor %}
+  {% endwith %}
+
+  <form action="{{ url_for('preview_configuration') }}" method="post" class="card configuration-form" id="phase1-form">
+    <section class="form-section">
+      <h2>Product information</h2>
+      <div class="form-grid four-columns">
+        <div>
+          <label for="product_type">Product type</label>
+          <input id="product_type" name="product_type" value="{{ form_state.product_type|default('') }}" placeholder="30MP" required>
+        </div>
+        <div>
+          <label for="configuration_date">Configuration date</label>
+          <input id="configuration_date" name="configuration_date" type="date" value="{{ form_state.configuration_date|default(today) }}" required>
+        </div>
+        <div>
+          <label for="version">Version</label>
+          <input id="version" name="version" value="{{ form_state.version|default('1') }}" required>
+        </div>
+        <div>
+          <label for="description">Description</label>
+          <input id="description" name="description" value="{{ form_state.description|default('') }}" placeholder="30MP Product Configuration">
+        </div>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <h2>Select configurable positions</h2>
+      <div class="position-grid" id="position-grid">
+        {% for position in positions %}
+          {% set selected = position in form_state.selected_positions|default([]) %}
+          <label class="position-card {{ 'selected' if selected else '' }}" data-position-card="{{ position }}">
+            <input type="checkbox" name="position_{{ position }}" data-position-toggle="{{ position }}" {% if selected %}checked{% endif %}>
+            <span>Position {{ position }}</span>
+            <small data-position-status="{{ position }}">{{ 'Selected' if selected else 'Not selected' }}</small>
+          </label>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="form-section">
+      <h2>Option-code ranges by position</h2>
+      <p class="section-note">For each selected position, include the option-code groups that apply. Blank suffix means the base code, such as 1 or 12.</p>
+
+      {% for position in positions %}
+        {% set selected = position in form_state.selected_positions|default([]) %}
+        <article class="position-ranges {{ '' if selected else 'hidden' }}" data-position-panel="{{ position }}">
+          <div class="position-ranges-header">
+            <h3>Position {{ position }}</h3>
+            <span data-position-summary="{{ position }}">No groups selected yet</span>
+          </div>
+          <div class="range-table-wrap">
+            <table class="range-table">
+              <thead>
+                <tr>
+                  <th>Use</th>
+                  <th>Group</th>
+                  <th>Start</th>
+                  <th>End</th>
+                  <th>Quick meaning</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for group in option_groups %}
+                {% set range_state = form_state.ranges.get(position|string, {}).get(group|string, {}) if form_state.ranges else {} %}
+                {% set enabled = range_state.enabled|default(false) %}
+                {% set start_suffix = range_state.start_suffix|default('') %}
+                {% set end_suffix = range_state.end_suffix|default('Z') %}
+                <tr>
+                  <td><input type="checkbox" name="range_{{ position }}_{{ group }}_enabled" data-range-toggle data-position="{{ position }}" data-group="{{ group }}" {% if enabled %}checked{% endif %}></td>
+                  <td>Group {{ group }}</td>
+                  <td>
+                    <select name="range_{{ position }}_{{ group }}_start" data-range-input data-position="{{ position }}" data-group="{{ group }}">
+                      {% for suffix in range_suffixes %}
+                        <option value="{{ suffix }}" {% if suffix == start_suffix %}selected{% endif %}>{{ group }}{{ suffix }}</option>
+                      {% endfor %}
+                    </select>
+                  </td>
+                  <td>
+                    <select name="range_{{ position }}_{{ group }}_end" data-range-input data-position="{{ position }}" data-group="{{ group }}">
+                      {% for suffix in range_suffixes %}
+                        <option value="{{ suffix }}" {% if suffix == end_suffix %}selected{% endif %}>{{ group }}{{ suffix }}</option>
+                      {% endfor %}
+                    </select>
+                  </td>
+                  <td><span class="range-preview" data-range-preview="{{ position }}_{{ group }}">Excluded</span></td>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </article>
+      {% endfor %}
+    </section>
+
+    <div class="form-actions">
+      <button type="submit">Generate Phase 1 JSON preview</button>
+    </div>
+  </form>
+</main>
+<script src="{{ url_for('static', filename='js/configuration_phase1.js') }}"></script>
+</body>
+</html>

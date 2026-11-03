@@ -1,0 +1,63 @@
+{
+  "Assignee": [
+    "JessicaJanett.Gonzalez@carrier.com",
+    "Eduardo.Solano@carrier.com",
+    "LuisDaniel.Aguirre@carrier.com",
+    "Rodrigo.Moreno@carrier.com",
+    "JoseHugo.MartinezVillarreal@carrier.com",
+    "Kevin.Perez@carrier.com"
+  ],
+  "Project": [
+    "No BU",
+    "AHU",
+    "Breeze",
+    "VAR",
+    "DOAS",
+    "DW 27-35",
+    "DW All",
+    "XR",
+    "TechDev",
+    "B&I",
+    "30CF",
+    "CLT",
+    "ART"
+  ],
+  "Labels": [
+    "All",
+    "ASSY-DRW",
+    "L1-DRW",
+    "DRW-C",
+    "DRW-S",
+    "WTPART",
+    "BOM",
+    "PRT",
+    "ASSY",
+    "GRAL",
+    "SWI"
+  ],
+  "Task Type": [
+    "Rework",
+    "Rework Ext",
+    "Task",
+    "Attachments",
+    "Support",
+    "Meeting",
+    "Training",
+    "Review",
+    "Audit",
+    "SW"
+  ],
+  "Priority": [
+    "Low",
+    "Normal",
+    "High",
+    "Urgent"
+  ],
+  "Status": [
+    "Pending",
+    "On Hold",
+    "In Progress",
+    "Done",
+    "Backlog"
+  ]
+}

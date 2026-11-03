@@ -1,0 +1,20 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ validation.tumbling_name }} · Past Validation</title>
+  <link rel="stylesheet" href="{% static 'validatesap/app.css' %}">
+  <script src="{% static 'validatesap/app.js' %}" defer></script>
+</head>
+<body>
+  <header class="masthead masthead--compact"><div class="shell masthead__inner"><div><p class="eyebrow">Past validation</p><h1>Tumbling: {{ validation.tumbling_name }}</h1><p class="subtitle">Saved {{ validation.modified|date:"F j, Y \a\t g:i A" }}</p></div></div></header>
+  <main class="shell page-stack">
+    <div class="page-actions"><a class="secondary-button" href="{% url 'validatesap:history' %}">Back to past validations</a><a class="primary-button button-link" href="{% url 'validatesap:index' %}">New validation</a></div>
+    <section class="results">
+      <div class="success-banner"><div><p class="step">Saved result</p><h2>{{ validation.filename }}</h2></div><p>Loaded directly from CSV. No validation or comparison was rerun.</p></div>
+      {% include "validatesap/partials/result_sections.html" with comparison_results=validation.results %}
+    </section>
+  </main>
+</body>
+</html>

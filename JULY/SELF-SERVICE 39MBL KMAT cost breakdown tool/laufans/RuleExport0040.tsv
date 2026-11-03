@@ -1,0 +1,3 @@
+RULEBEGIN.MANUAL														P14	P15							HIT.CATEGORY	HIT.VALUE	HIT.DESCRIPTION																				
+														^U	^U							CONVERTTOMOTORBASECODE	*P14#*P15#	Motor Base Code
+RULEEND																				

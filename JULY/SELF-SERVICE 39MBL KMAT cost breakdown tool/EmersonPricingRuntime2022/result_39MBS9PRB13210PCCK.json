@@ -1,0 +1,60 @@
+{
+  "part_number": "39MBS9PRB13210PCCK",
+  "ok": true,
+  "total_price": 4075.621779,
+  "price_hits": [
+    {
+      "name": "PRICEHIT",
+      "category": "$BASE",
+      "description": "DDPF 330 Base Fan",
+      "price": 1585.086,
+      "value": "",
+      "why": "E509",
+      "base": false
+    },
+    {
+      "name": "PRICEHIT",
+      "category": "$MOTOR",
+      "description": "EM2528T-G F1 GND 20HP Premium Efficiency 208-230/460V-3-60 ODP 1200 RPM",
+      "price": 2102.34,
+      "value": "",
+      "why": "E1714",
+      "base": false
+    },
+    {
+      "name": "PRICEHIT",
+      "category": "$OPTIONS.InletScreen",
+      "description": "Direct Drive Inlet Screen",
+      "price": 108.357,
+      "value": "",
+      "why": "E4708",
+      "base": false
+    }
+  ],
+  "variables": {
+    "WHEELRPM": "1321",
+    "NOMENCLATURE": "DDPF",
+    "WHEEL": "330",
+    "WHEELCLASS": "2",
+    "FANSHAFT": "NONE",
+    "MAXRPM": "NONE",
+    "MOTORFIELDSUPPLIED": "NO",
+    "DRIVENMAXPD": "0",
+    "FANQUANTITY": "1",
+    "MOTORBOX": "F1",
+    "SHAFTGROUNDING": "YES",
+    "EXTRABELTS": "NO",
+    "MOTORBASECODE": "0P",
+    "MOTORHP": "20",
+    "MOTORRPM": "1200",
+    "MOTORFRAME": "286T",
+    "MOTORDVALUE": "D0700",
+    "DRIVEFACTOR": "1.04",
+    "MOTORFACTOR": "0.8915838",
+    "SLEDFACTOR": "1.2998426830086107"
+  },
+  "errors": [],
+  "warnings": [],
+  "drive_solutions": [],
+  "selected_drive": null
+}

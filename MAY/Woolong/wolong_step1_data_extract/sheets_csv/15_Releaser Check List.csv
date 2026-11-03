@@ -1,0 +1,51 @@
+﻿,,Rev AT,Rev AS,Rev AQ,Rev AP,Rev AC,Rev AB
+Review and understand changes - talk to the engineer who made the changes.,,,,,,,
+"Are the changes to MCA, MOCP, etc documented?",,N/A,N/A,N/A,N/A,N/A,N/A
+Does the ActiveNamePlate region need to change because the size of the infoplate increased?,,No-JAT,Yes-JAT,Yes-JAT,No-NB,No-ACJ,NO-MMC
+F9 to recalculate formula's etc.,,Done-JAT,Done-JAT,Done-JAT,Done-NB,Done-ACJ,Done-MMC
+Run MassGenLit to determine if any of the master data has changed for all active EDRs in the Work in process area..  Create a folder in Windchill in Projects > CMU Engineering Data > Folders > Data Release - Test to reflect the product type and rev letter of the nameplate going to so that it can be shown that the EDRs were checked.  (i.e. SRT Rev BB),,Done-JAT,Done-JAT,Done-JAT,Done-NB,Done-ACJ,Done-MMC
+Run MassCompareLitData to check the status of the literature sheets for all active EDRs.,,Done-JAT,Done-JAT,Done-JAT,Done-NB,Done-ACJ,Done-MMC
+Run GetLiteratureSheets for all active EDRs.,,Done-JAT,Done-JAT,Done-JAT,Done-NB,Done-ACJ,Done-MMC
+F9 to recalculate formula's etc.,,Done-JAT,Done-JAT,Done-JAT,Done-NB,Done-ACJ,Done-MMC
+Review worksheet wLiterature Sheets for all active EDRs.,,Done-JAT,Done-JAT,Done-JAT,Done-NB,Done-ACJ,Done-MMC
+Did expected changes show up on the literature sheets for all active EDRs.,,Yes-JAT,Yes-JAT,Yes-JAT,Yes-NB,Yes-ACJ,YES-MMC
+Are there any unepected changes to the literature sheets for all active EDRs.,,No-JAT,No-JAT,No-JAT,No-NB,No-ACJ,NO-MMC
+"If all changes are approved, run MassCopyLiteratureData to update righthand-side of literature tabs for all affected EDRs.",,Done-JAT,Done-JAT,Done-JAT,Done-NB,Done-ACJ,Done-MMC
+Run MassCompareLitData to verify copy for all affected EDRs.,,Done-JAT,Done-JAT,Done-JAT,Done-NB,Done-ACJ,Done-MMC
+Run GetLiteratureSheets to confirm copy for all affected EDRs.,,Done-JAT,Done-JAT,Done-JAT,Done-NB,Done-ACJ,Done-MMC
+"1.) Check out and download ""Master Data File"" off windchill file path: Projects > CMU Engineering Data > Folders > Data Release - Work In Process > Test Master.    NOTE: This nameplate file needs to remain open                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             2.) Under the ""Error Log"" worksheet erase all errors before begining                                                                                                                           3.) Are there any changes that need new model numbers to be created in the Master List Workbook?                                                         If YES, create them and generate data with the previous released version of the nameplate program and continue on to 4).                                     If NO, continue on to step 6).
+4.) In the ""Master Data file"" under the ""Lit_Mater_XX"" (XX being the discrete digits ex. TC) worksheet add new model numbers at the bottom of the list in the 1st column. The 1st column comes from columns 5th -18th. 
+5.) Run “CallCopyLitertureData” at the worksheet you adding on new models.
+6.) With the nameplate program open, run the macro “MassGenLitMaster”
+7.) Run the “MassCompareLitData” Macro.
+8.) Check any difference on each sheet. The difference will shows on the columns of  “CFQ and “CFR”
+9.) On the “Error Log” tab, verify that all changes were expected
+10.) Once you have verified all changes, run “CallCopyLitertureData”
+11.)  Run the GetLiteratureSheets to confirm copy for all worksheets.
+12.) You can now update the revisions tab and save the file.
+",,Done-JAT,Done-JAT,Done-JAT,Done-NB,Done-ACJ,Done-MMC
+,,,,,,,
+Run MassGenLit to determine if any of the master data has changed for this workbook.,,NA,NA,NA,NA,NA,NA
+Run MassCompareLitData to check the status of the literature sheets for this workbook.,,NA,NA,NA,NA,NA,NA
+Run GetLiteratureSheets for this workbook.,,NA,NA,NA,NA,NA,NA
+F9 to recalculate formula's etc.,,NA,NA,NA,NA,NA,NA
+Review worksheet wLiterature Sheets for this workbook.,,NA,NA,NA,NA,NA,NA
+Did expected changes show up on the literature sheets for this workbook.,,NA,NA,NA,NA,NA,NA
+Are there any unepected changes to the literature sheets for this workbook.,,NA,NA,NA,NA,NA,NA
+"If all changes are approved, run MassCopyLiteratureData to update righthand-side of literature tabs for this workbook.",,NA,NA,NA,NA,NA,NA
+Run MassCompareLitData to verify copy for this workbook.,,NA,NA,NA,NA,NA,NA
+Run GetLiteratureSheets to confirm copy for this workbook.,,NA,NA,NA,NA,NA,NA
+,,,,,,,
+Has the ECN number been entered on the revision sheet.,,Done-JAT,Done-JAT,Done-JAT,,Done-ACJ,
+"Has the blower been changed for the TC 14 Chassis 4S high static?  If so, parsing might have to be updated to trap 80A rule.",,NA,NA,NA,NA,NA,NA
+Verify that there are no external links using the Menu: Data -> Connections.,,Done-JAT,Done-JAT,Done-JAT,Done-NB,Done-ACJ,Done-MMC
+Run unhides sheets so that the following seach is comprehensive.,,Done-JAT,Done-JAT,Done-JAT,Done-NB,Done-ACJ,Done-MMC
+"Search the entire workbook for ""C:"" in the formulas.  If any external reference is found, it must be removed.",,Done-JAT,Done-JAT,,Done-NB,Done-ACJ,Done-MMC
+Run HideSheets to hide literature sheets and turn on password protection.,,,,,,,Done-MMC
+Run at least one valid model number.,,Done-JAT,Done-JAT,,Done-NB,Done-ACJ,Done-MMC
+Test the following special order part numbers,,Done-JAT,Done-JAT,,NA,NA,Done-MMC
+To test these special order part numbers you must add a file (SOMNCR_48TM500235) in the same directory as the nameplate file. The file is on Windchill in the following Path:                                                                                                                                                                        (Projects > CMU Engineering Data > Folders > Infoplate - Work in Process > SOMNCR Test Files)                                      Should work.  Valid standard base model.,,Done-JAT,,,,,NA
+Should work.  Valid special base model. ,50GCQM04A1A1123456,Done-JAT,Done-JAT,,,,NA
+Should work.  Valid special model. ,50GCQM04A1A1123457,Done-JAT,Done-JAT,,,,NA
+Will not work.  Base model is bad.,50GCQM04A1A1123458,Done-JAT,Done-JAT,,,,NA
+Will not work.  Model is not on the SOMNCR.,50GCQM04A1A1123459,Done-JAT,Done-JAT,,,,

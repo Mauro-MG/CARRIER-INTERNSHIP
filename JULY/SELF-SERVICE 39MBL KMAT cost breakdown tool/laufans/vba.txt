@@ -1,0 +1,2084 @@
+'(c) Copyright 2013,2014 Davis Programming, Incorporated. All rights reserved.
+
+
+Option Explicit
+
+Const DRIVENAME = "$DRIVEDLL"
+Const CONVERTMOTORCODE = "CONVERTTOMOTORBASECODE"
+Const MOTORBASECODE = "MOTORBASECODE"
+Const BASECODE = "0123456789ABCDEFGHJKLMNPQRSTVWXYZ-"
+Const RULENAMEPREFIX = "rule ""pricing.fansled.v1.xls.sourced"
+Const RULEEXPORTRULEFILE = "generated.rule"
+Const RULEEXPORTLOOKUPFILE = "generated.lookup.tsv"
+Const VENDORNAMERANGE = "vendorName"
+
+
+' storage of working variables, includes each part position
+Public Type hit
+   why As String  ' a cell reference on the rule sheet
+   name As String ' used on categories that do not being with $
+   category As String ' category column
+   description As String ' description column
+   price As Double
+   value As String 'used on categories that do not being with $
+   base As Boolean ' set to true when this entry is based on the input part number
+End Type
+
+' setup based on RULEBEGIN column headings
+Public Type Matcher
+   col As Integer ' col number(relative to rule range) that will be compared to value
+   value As String ' value that will be compared in each row (using col)
+End Type
+   
+   
+Public Type PayloadColumns
+   categoryNdx As Integer
+   valueNdx As Integer
+   descriptionNdx As Integer
+End Type
+      
+      
+Public Type EnumerationColumns
+   startNdx As Integer ' index of [
+   stopNdx As Integer ' index of ]
+   optionCount As Integer 'stopNdx - startNdx -1
+   currentNdx As Integer
+End Type
+      
+   
+Public Type DriveSolution
+   driverSheave As String
+   driverBushing As String
+   drivenSheave As String
+   drivenBushing As String
+   belt   As String
+   beltQty As Integer
+   extraBeltCost As Double
+   totalCost As Double
+End Type
+   
+   
+   
+ Const RULEBEGIN = "RULEBEGIN." ' start of rule identifier
+ Const RULEEND = "RULEEND" ' end of rule identifier
+ Const LOGSHEETNAME = "Log" ' sheet that contains the log entries
+ Const LOGSTARTROW = 20  ' start the log on row 20 on sheet "Log"
+ Const PARTCELLRANGE = "PARTSTARTSHERE" ' range use to identify input cell (also used for ouput to the right of this cell)
+ Const RULESHEETNAME = "Rules" ' sheet that contains the rules
+ 
+ Const COLUMNCOUNT = 150 ' amount of columns to clear to the right of the PARTCELLRANGE range
+ 
+ Const MAXHITS = 150
+ 
+   
+ Dim hits(1 To MAXHITS) As hit ' storage of Hit Types
+ Dim hitHead As Integer ' pointer to next free entry in hits
+ 
+ Dim logSheet As Object ' sheet to log messages
+ Dim logRow As Long  ' row on log sheet to use for next log entry
+ 
+ Dim ruleSheet As Object
+ 
+ Dim partOK As Boolean
+ 
+ Function getXMLFragment(startHere As Integer, maxNdx As Integer, searchfor As String, length As Integer, xml As String) As String
+    Dim x As Integer
+    x = InStr(startHere, xml, searchfor)
+    If (x > startHere) And (x < maxNdx) Then
+      getXMLFragment = Mid(xml, x, length)
+    Else
+      getXMLFragment = ""
+    End If
+ End Function
+ 
+ Function getXMLFragmentTagToTag(startHere As Integer, maxNdx As Integer, searchfor As String, endWith As String, xml As String) As String
+    Dim x As Integer
+    Dim y As Integer
+    
+    x = InStr(startHere, xml, searchfor)
+    If x > 0 Then
+      y = InStr(x, xml, endWith)
+    End If
+    If (x > startHere) And (x < maxNdx) And (y > startHere) And (y < maxNdx) Then
+      getXMLFragmentTagToTag = Mid(xml, x, y - x + Len(endWith))
+    Else
+      getXMLFragmentTagToTag = ""
+    End If
+ End Function
+ 
+
+Function getValue(xmlFragment As String, tagName As String, closeTag As String) As String
+    Dim x As Integer
+    Dim y As Integer
+    Dim z As Integer
+    
+    x = InStr(xmlFragment, tagName)
+    y = InStr(xmlFragment, closeTag)
+    
+    If (x > 0) And (x < y) Then
+      Dim results As String
+      results = Mid(xmlFragment, x + Len(tagName), 100)
+      z = InStr(results, "<")
+      results = Left(results, z - 1)
+      getValue = results
+
+    Else
+      getValue = ""
+    End If
+
+End Function
+
+
+Function processDriveResults(results As String) As DriveSolution()
+  Dim solutions(0 To 100) As DriveSolution
+  
+  Dim solution As DriveSolution
+  ' make certain "option base" is not defined or not 1
+  ' very crude code. Does not use xml parser. This is a brittle solution. (order of the ID within a Solution tag is critical)
+  Dim idNdx As Integer
+  
+  
+  Dim idStrings As Variant
+  idStrings = Array("<ID>1</ID>", "<ID>2</ID>", "<ID>3</ID>", "<ID>4</ID>", "<ID>5</ID>", "<ID>6</ID>", "<ID>7</ID>", "<ID>8</ID>", "<ID>9</ID>", "<ID>10</ID>", "<ID>999999</ID>")
+  Dim idIndex(0 To 10) As Integer
+  Dim x As Integer
+  Dim y As Integer
+  
+  Dim frag As String
+  Dim needAdd As Boolean
+  Dim solutionNdx As Integer
+  Dim interchangeStart As Integer
+  Dim ifrag As String
+  Dim sourceNdx As Integer
+  
+  
+  ' establish string positions of the first three ID strings
+  For x = LBound(idStrings) To UBound(idStrings)
+     idIndex(x) = InStr(results, idStrings(x))
+     If (idIndex(x) <= 0) Then
+        idIndex(x) = Len(results)
+     End If
+  Next
+  
+  If (idIndex(0) = 0) Then
+    processDriveResults = solutions
+    Exit Function
+  End If
+  
+  ' read all solutions
+  For x = LBound(idIndex) To UBound(idIndex) - 1
+     
+    frag = getXMLFragment(idIndex(x), idIndex(x + 1), "<Name>DriverSheave</Name>", 90, results)
+    If (Len(frag) > 0) Then
+     solution.driverSheave = getValue(frag, "<Value>", "</Property>")
+     frag = getXMLFragment(idIndex(x), idIndex(x + 1), "<Name>DriverBushing</Name>", 90, results)
+     solution.driverBushing = getValue(frag, "<Value>", "</Property>")
+     frag = getXMLFragment(idIndex(x), idIndex(x + 1), "<Name>DrivenSheave</Name>", 90, results)
+     solution.drivenSheave = getValue(frag, "<Value>", "</Property>")
+     frag = getXMLFragment(idIndex(x), idIndex(x + 1), "<Name>DrivenBushing</Name>", 90, results)
+     solution.drivenBushing = getValue(frag, "<Value>", "</Property>")
+     
+     frag = getXMLFragment(idIndex(x), idIndex(x + 1), "<Name>Belt</Name>", 90, results)
+     solution.belt = getValue(frag, "<Value>", "</Property>")
+     frag = getXMLFragment(idIndex(x), idIndex(x + 1), "<Name>BeltQty</Name>", 90, results)
+     solution.beltQty = CInt(getValue(frag, "<Value>", "</Property>"))
+     
+     sourceIndex = solutionNdx
+     solutions(solutionNdx) = solution
+     solutionNdx = solutionNdx + 1
+     
+     'find max offset
+     interchangeStart = idIndex(x)
+     
+     
+     
+     For y = 1 To 10 ' 10 limit pulled out of air, break in middle
+        interchangeStart = InStr(interchangeStart + 1, results, "<Interchange>")
+        If interchangeStart > idIndex(x) And interchangeStart < idIndex(x + 1) Then
+            ifrag = getXMLFragmentTagToTag(interchangeStart - 1, idIndex(x + 1), "<Interchange>", "</Interchange>", results)
+            solution = solutions(sourceIndex)  ' reset to base configuration
+     
+    ' now lets look for intergchanges
+            needAdd = False
+     
+            frag = getXMLFragment(1, Len(ifrag), "<DriverSheave>", 200, ifrag)
+            If (Len(frag) > 1) Then
+                needAdd = True
+                solution.driverSheave = getValue(ifrag, "<DriverSheave>", "</Interchange>")
+          
+                frag = getXMLFragment(1, Len(ifrag), "<DriverBushing>", 200, ifrag)
+                solution.driverBushing = getValue(ifrag, "<DriverBushing>", "</Interchange>")
+            End If
+            frag = getXMLFragment(1, Len(ifrag), "<DrivenSheave>", 200, ifrag)
+            If (Len(frag) > 1) Then
+                needAdd = True
+                solution.drivenSheave = getValue(ifrag, "<DrivenSheave>", "</Interchange>")
+                frag = getXMLFragment(1, Len(ifrag), "<DrivenBushing>", 200, ifrag)
+                solution.drivenBushing = getValue(ifrag, "<DrivenBushing>", "</Interchange>")
+            End If
+     
+            If (needAdd) Then
+              solutions(solutionNdx) = solution
+              solutionNdx = solutionNdx + 1
+            End If
+       Else
+         Exit For
+       End If
+     Next
+   End If
+  Next
+  processDriveResults = solutions
+  
+  
+  
+End Function
+
+ 
+ ' This is the main routine
+Sub RunRules()
+   
+   Dim partCell As Object ' points to an input part number
+   
+   Set logSheet = ActiveWorkbook.Sheets(LOGSHEETNAME)
+   Set ruleSheet = ActiveWorkbook.Sheets(RULESHEETNAME)
+   
+   ' set the logRow global variable
+   setLogRow
+   
+   LogMessage "Begin Run"
+   
+   ' get the first part cell
+   Set partCell = Range(PARTCELLRANGE).Cells(1, 1)
+   
+  
+   Do
+      If partCell.value = "" Then
+         ' stop on first blank cell in the Part Number column
+         Exit Do
+      End If
+      
+      ' clear old output
+      Range(partCell.Offset(0, 1), partCell.Offset(0, COLUMNCOUNT - 1)).Clear
+      
+      
+      hitHead = 1 ' set the hit head pointer to empty
+      partOK = True ' set the status, assume OK
+      
+      SplitPartnumber Trim(UCase(partCell.value)) ' creates hit entries based on part number positions
+   
+      LogMessage "Begin Calculation =" + Trim(UCase(partCell.value))
+      
+      ' start processing the rules
+   
+      Dim startHere As Range
+      Dim firstHit As Range
+      Dim exportThis As Range
+      Dim searchHere As Range
+      Set firstHit = Nothing
+      
+      initializeRuleSearch searchHere, startHere, firstHit
+
+      Do
+         Set exportThis = getNextRuleRange(searchHere, startHere, firstHit)
+         If exportThis Is Nothing Then
+           Exit Do
+         Else
+           RunARule exportThis
+         End If
+      Loop
+      
+      reportOutput partCell
+      
+      ' move down one row
+      Set partCell = partCell.Offset(1, 0)
+      
+   Loop
+ 
+   LogMessage "End Run"
+   If Not partCell Is Nothing Then
+    Application.GoTo Reference:=Range(PARTCELLRANGE).Cells(1, 1) ', Scroll:=True
+   End If
+
+End Sub
+
+Sub reportOutput(partCell As Object)
+
+  Dim p As Double
+  Dim x As Integer
+  Dim c As Integer
+  Dim highColor As Boolean
+  Dim ndx As Integer
+  Const PRICEOFFSET = 1
+  Const ERRORFLAGOFFSET = 2
+  ndx = 4 ' detail starts on the 4th column from the part number
+  
+  p = 0 ' sum price
+  For x = 1 To hitHead - 1
+     'hits(x).name = "P" & Trim(Str(x))
+     p = p + hits(x).price
+     If (hits(x).base = False) Then
+       If Abs(hits(x).price) > 0 Then
+         LogMessage "Price Entry: " + hits(x).category + " [" + hits(x).description + "] " + str(hits(x).price) + " " + hits(x).why
+       Else
+         LogMessage "Variable Entry: " + hits(x).name + "=" + hits(x).value + " [" + hits(x).description + "] " + hits(x).why
+       End If
+     End If
+     
+  Next x
+  
+  partCell.Offset(0, ERRORFLAGOFFSET).value = partOK
+  partCell.Offset(0, PRICEOFFSET).value = p
+  If (partOK) Then
+     partCell.Offset(0, PRICEOFFSET).Interior.Color = RGB(128, 255, 128)
+  Else
+     partCell.Offset(0, PRICEOFFSET).Interior.Color = RGB(255, 0, 0)
+  End If
+  
+  LogMessage "Part " + partCell.value + " Price = " + str(p)
+  
+  ' store all entries with a price
+  For x = 1 To hitHead - 1
+     If (hits(x).base = False) Then
+       If Abs(hits(x).price) > 0 Then
+       'hits(x).name = "P" & Trim(Str(x))
+         partCell.Offset(0, ndx).value = hits(x).category
+         partCell.Offset(0, ndx + 1).value = hits(x).description
+         partCell.Offset(0, ndx + 2).value = hits(x).price
+         partCell.Offset(0, ndx + 3).Formula = "=HYPERLINK(""#Rules!" + hits(x).why + """,""" + hits(x).why + """)"
+         
+         For c = 0 To 3
+            If highColor Then
+               partCell.Offset(0, ndx + c).Interior.Color = RGB(128, 255, 128)
+            Else
+               partCell.Offset(0, ndx + c).Interior.Color = RGB(0, 230, 0)
+            End If
+         Next
+         highColor = Not highColor
+         
+         ndx = ndx + 4
+       End If
+     End If
+  Next x
+  
+  ' store all the non price entries
+  For x = 1 To hitHead - 1
+     If (hits(x).base = False) Then
+       If Abs(hits(x).price) < 0.00001 Then
+         partCell.Offset(0, ndx).value = hits(x).name
+         partCell.Offset(0, ndx + 1).value = hits(x).value
+         partCell.Offset(0, ndx + 2).value = hits(x).description
+         partCell.Offset(0, ndx + 3).Formula = "=HYPERLINK(""#Rules!" + hits(x).why + """,""" + hits(x).why + """)"
+         
+         For c = 0 To 3
+            If highColor Then
+               partCell.Offset(0, ndx + c).Interior.ColorIndex = 34
+            Else
+               partCell.Offset(0, ndx + c).Interior.ColorIndex = 35
+            End If
+         Next
+         highColor = Not highColor
+         
+         
+         ndx = ndx + 4
+       End If
+     End If
+  Next x
+  
+   
+End Sub
+
+Sub AddHit(h As hit)
+      hits(hitHead) = h
+      If (hitHead + 1 = MAXHITS) Then
+         ErrorMessage "Too many hits"
+      Else
+         hitHead = hitHead + 1
+      End If
+End Sub
+
+Function getHitCount() As Integer
+   getHitCount = hitHead - 1
+End Function
+
+
+
+Sub RunARule(exportRange As Range)
+
+  Dim rowCount As Long
+  Dim colCount As Integer
+  Dim rowNdx As Long
+  Dim colNdx As Integer
+  
+  Dim alertMessage As String
+  Dim s As String
+  Dim h As hit
+  
+  ' output offsets from range
+  Const MAXCATEGORY = 10
+  Dim outputNdx As Integer
+  Dim hitNdx As Integer
+  Dim categoryNdx(1 To MAXCATEGORY) As Integer
+  Dim valueNdx(1 To MAXCATEGORY) As Integer
+  Dim descriptionNdx(1 To MAXCATEGORY) As Integer
+  
+  Dim match As Matcher
+  Dim matches(1 To 100) As Matcher
+  Dim matchesHead As Integer
+  Dim aHit As Boolean
+  Dim ndx As Integer
+  
+  Dim required As Boolean
+  Dim hitsAtStart As Integer
+  
+  Dim p6 As hit
+  Dim p8 As hit
+  
+  
+  
+  
+  matchesHead = 1
+  outputNdx = 1
+  
+  rowCount = exportRange.Rows.Count
+  colCount = exportRange.Columns.Count
+  
+  If InStr(exportRange.Cells(1, 1).value, "OPTIONSPRICE.DUP.REQUIRED") > 0 Then
+     p6 = FindHitByName("P6")
+     p8 = FindHitByName("P8")
+     If ((p6.value <> "9") And (p8.value <> "T")) Then
+       required = True
+       hitsAtStart = getHitCount()
+     End If
+  End If
+  
+  ' build up the header
+  Dim values(1 To COLUMNCOUNT) As String
+  
+  For colNdx = 2 To colCount
+     If IsError(exportRange.Cells(1, colNdx).value) Then
+         ErrorMessage "Cell " + exportRange.Cells(rowNdx, colNdx).Address + " on " + ActiveWorkbook.FullName + " contains an error. "
+         Exit Sub ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+     End If
+     If (Len(exportRange.Cells(1, colNdx).value) > 0) Then
+       s = exportRange.Cells(1, colNdx).value
+       If StartsWithHIT(s) Then
+          If s = "HIT.CATEGORY" Then
+             If categoryNdx(outputNdx) > 0 Then
+                outputNdx = outputNdx + 1
+             End If
+             categoryNdx(outputNdx) = colNdx
+          ElseIf s = "HIT.VALUE" Then
+             valueNdx(outputNdx) = colNdx
+          ElseIf s = "HIT.DESCRIPTION" Then
+             descriptionNdx(outputNdx) = colNdx
+          Else
+             ErrorMessage "Cell " + exportRange.Cells(1, colNdx).Address + " on " + ActiveWorkbook.FullName + " contains an unknown HIT. entry. Only HIT.CATEGORY, HIT.VALUE and HIT.DESCRIPTION are valid"
+             Exit Sub ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+          End If
+       Else
+         h = FindHitByName(s)
+         If Len(h.name) = 0 Then
+            ErrorMessage "Cell " + exportRange.Cells(1, colNdx).Address + " on " + ActiveWorkbook.FullName + " contains an unknown. " & s
+            Exit Sub ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+         Else
+            match.col = colNdx
+            match.value = h.value
+            matches(matchesHead) = match
+            matchesHead = matchesHead + 1
+         End If
+       End If
+     End If
+  Next
+  
+  
+  For rowNdx = 2 To rowCount
+     aHit = False
+     For ndx = 1 To matchesHead - 1
+          If IsError(exportRange.Cells(rowNdx, matches(ndx).col).value) Then
+             ErrorMessage "Cell " + exportRange.Cells(rowNdx, matches(ndx).col).Address + " on " + ActiveWorkbook.FullName + " contains an error."
+             aHit = False
+             Exit For
+          End If
+          ' set cell value to s
+          s = exportRange.Cells(rowNdx, matches(ndx).col).value
+          If (Len(s) > 0) Then
+             If Left(s, 1) = "^" Then
+                ' ^ = not match
+                If InStr(1, s, matches(ndx).value) > 0 Then
+                   aHit = False
+                   ndx = matchesHead
+                   ' exit the loop
+                Else
+                   aHit = True
+
+                End If
+             Else
+                ' does the possible cell value in the rule match the variable
+                If InStr(1, s, matches(ndx).value) > 0 Then
+                  aHit = True
+                Else
+                   aHit = False
+                   ndx = matchesHead
+                   ' exit the loop
+                End If
+             End If
+          End If
+      Next
+      If (aHit) Then
+         For hitNdx = 1 To outputNdx
+            h.category = exportRange.Cells(rowNdx, categoryNdx(hitNdx)).value
+            h.description = exportRange.Cells(rowNdx, descriptionNdx(hitNdx)).value
+            If Left(h.category, 1) = "$" Then
+               h.name = "PRICEHIT"
+               h.price = exportRange.Cells(rowNdx, valueNdx(hitNdx)).value
+               h.value = ""
+               If (h.price = 0) Then
+                  partOK = False
+                  ErrorMessage "Zero price added " + h.category + " " + h.description + " source " + exportRange.Cells(rowNdx, 2).Address
+                  Exit Sub ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+               End If
+            Else
+               h.name = h.category
+               h.value = exportRange.Cells(rowNdx, valueNdx(hitNdx)).value
+               h.price = 0
+            End If
+            h.why = exportRange.Cells(rowNdx, 2).Address
+            h.base = False
+            
+            processHitParameters h
+            checkForDuplicateHit h
+            checkForErrorHit h
+            
+            AddHit h
+            
+         Next
+      End If
+  Next
+  
+   If getHitCount() = hitsAtStart And required Then
+     ErrorMessage "Error : Required rule did not return 1 result [" + exportRange.Cells(1, colNdx).Address + "] "
+  End If
+     
+
+End Sub
+
+Sub checkForDuplicateHit(h As hit)
+ ' ensure the category is unique
+
+  Dim x As Integer
+  For x = 1 To hitHead - 1
+     If hits(x).category = h.category Then
+       ErrorMessage "Duplicate category detected [" + hits(x).category + "] sources [" + hits(x).why + "] [" + h.why + "]"
+     End If
+  Next x
+End Sub
+
+Sub processHitParameters(h As hit)
+ 'a *xx# in a HIT.VALUE entry will be replaced by the the value of the xx entry
+ 'also calls Drive DLL
+  Dim startNdx As Integer
+  Dim stopNdx As Integer
+  Dim nameToFind As String
+  Dim htoUse As hit
+  Const REMOVEFLAG = "REMOVE."
+  Const REMOVEFLAGLENGTH = 7 'Len(REMOVEFLAG)
+  
+  While InStr(h.value, "*") > 0
+    startNdx = InStr(h.value, "*")
+    stopNdx = InStr(h.value, "#")
+    nameToFind = Mid(h.value, startNdx + 1, stopNdx - startNdx - 1)
+    htoUse = FindHitByName(nameToFind)
+    
+    h.value = Replace(h.value, Mid(h.value, startNdx, stopNdx - startNdx + 1), htoUse.value)
+  Wend
+  
+  If h.category = DRIVENAME Then
+      ' assume failure
+       h.category = "ERRORDRIVEDLL"
+       runDriveCalculation h
+  End If
+  
+  If h.category = CONVERTMOTORCODE Then
+     convertMotorBaseCode h
+  End If
+  
+  If Left(h.category, REMOVEFLAGLENGTH) = REMOVEFLAG Then
+     purgeHit Right(h.category, Len(h.category) - REMOVEFLAGLENGTH)
+  End If
+  
+  
+  
+End Sub
+
+
+Sub purgeHit(hitToRemove As String)
+Dim x As Integer
+Dim xToRemove As Integer
+Dim xx As Integer
+
+
+  For x = 1 To hitHead - 1
+     If hits(x).category = hitToRemove Then
+        xToRemove = x
+        LogMessage "Purge hit: " + hits(x).category + " [" + hits(x).description + "] " + hits(x).why
+        Exit For
+     End If
+  Next x
+  
+  If xToRemove > 0 Then
+       If xToRemove < hitHead - 1 Then ' last one is easy - do nothing but alter hitHead
+        For x = xToRemove To hitHead - 2
+          hits(x) = hits(x + 1)
+        Next
+     End If
+     hitHead = hitHead - 1
+  End If
+  
+
+End Sub
+
+Sub checkForErrorHit(h As hit)
+ 
+  If InStr(1, h.category, "ERROR", vbTextCompare) > 0 Then
+       ErrorMessage "Error Rule fired [" + h.category + "] description [" + h.description + "] [" + h.why + "]"
+  End If
+  
+  
+End Sub
+
+
+
+' create a hit for each part position
+Sub SplitPartnumber(part As String)
+  Dim x As Integer
+  Dim aHit As hit
+  For x = 1 To Len(part)
+     aHit.name = "P" & Trim(str(x))
+     aHit.price = 0
+     aHit.value = Mid(part, x, 1)
+     aHit.why = "Part number decode"
+     aHit.base = True
+     
+     AddHit aHit
+     
+  Next x
+End Sub
+
+Function FindHitByName(nameIn As String) As hit
+  Dim x As Integer
+  
+  FindHitByName.name = ""
+  
+  For x = 1 To hitHead - 1
+     If hits(x).name = nameIn Then
+        FindHitByName = hits(x)
+        Exit For
+     End If
+  Next x
+End Function
+
+
+Function StartsWithHIT(s As String) As Boolean
+   If Left(s, 4) = "HIT." Then
+      StartsWithHIT = True
+   Else
+      StartsWithHIT = False
+   End If
+End Function
+Sub ErrorMessage(message As String)
+   partOK = False ' invalidate this run
+   'MsgBox message
+   If Not logSheet Is Nothing Then
+      LogMessage "ERROR: " + message
+   End If
+End Sub
+
+
+' Establish the row to use on the log sheet
+Sub setLogRow()
+        Dim rowNum As Long
+        logRow = LOGSTARTROW
+        With logSheet
+          Do Until .Cells(logRow, 1).value = "" And .Cells(logRow + 1, 1).value = ""
+            logRow = logRow + 1
+          Loop
+        End With
+        ' add one more row for spacing
+        logRow = logRow + 1
+End Sub
+
+Sub LogMessage(message As String)
+    
+        With logSheet
+          .Cells(logRow, 1).value = Date
+          .Cells(logRow, 2).value = Time
+          .Cells(logRow, 3).value = message
+        End With
+        logRow = logRow + 1
+End Sub
+
+Sub initializeRuleSearch(ByRef searchHere As Range, ByRef startHere As Range, ByRef firstHit As Range)
+      Set searchHere = ruleSheet.Range(ruleSheet.Cells(1, 1), ruleSheet.Cells(ruleSheet.Rows.Count, ruleSheet.Columns.Count))
+      Set startHere = ruleSheet.Cells(1, 1)
+      Set firstHit = Nothing
+End Sub
+
+Function getNextRuleRange(ByRef searchHere As Object, ByRef startHere As Object, ByRef firstHit As Object) As Range
+
+      Dim cellStart, cellStop, exportThis As Object
+      
+     ' search Rules sheet for RULEBEGIN
+       Set cellStart = searchHere.Find(What:=RULEBEGIN, After:=startHere, LookIn:=xlValues, _
+           LookAt:=xlPart, SearchOrder:=xlByRows, SearchDirection:=xlNext, _
+           MatchCase:=False)
+        
+       If cellStart Is Nothing Then
+           ErrorMessage RULEBEGIN + " not found on sheet " + ActiveSheet
+           Exit Function '''''''''''''''''''''''''''''''''''''''''''''''
+       End If
+           
+       If firstHit Is Nothing Then
+          Set firstHit = cellStart
+       Else
+          If firstHit.Address = cellStart.Address Then
+            ' search loop'ed around, stop
+             Exit Function '''''''''''''''''''''''''''''''''''''''''''''''
+          End If
+       End If
+       ' At this point - we have a new RULEBEGIN at cellStart
+       ' find the RuleEnd
+          
+       Set cellStop = searchHere.Find(What:=RULEEND, After:=cellStart, LookIn:=xlValues, _
+             LookAt:=xlWhole, SearchOrder:=xlByRows, SearchDirection:=xlNext, _
+             MatchCase:=False)
+       If cellStop Is Nothing Then
+             ErrorMessage RULEEND + " not found on sheet " + ActiveSheet
+             Exit Function '''''''''''''''''''''''''''''''''''''''''''''''
+       Else
+             Set exportThis = Range(cellStart, cellStop.Offset(0, COLUMNCOUNT - 1))
+             Set getNextRuleRange = exportThis
+       End If
+       Set startHere = cellStop
+End Function
+
+Sub ExportRules()
+   
+   Set logSheet = ActiveWorkbook.Sheets(LOGSHEETNAME)
+   Set ruleSheet = ActiveWorkbook.Sheets(RULESHEETNAME)
+   
+   ' set the logRow global variable
+   setLogRow
+   
+   LogMessage "Begin Export"
+   
+   Dim searchHere As Range
+   Dim startHere As Range
+   Dim firstHit As Range
+   Dim ruleRange As Range
+   
+   initializeRuleSearch searchHere, startHere, firstHit
+   
+   Dim ruleIndex As Integer
+   
+   
+   Do
+      Set ruleRange = getNextRuleRange(searchHere, startHere, firstHit)
+      If ruleRange Is Nothing Then
+         Exit Do
+      Else
+         ruleIndex = ruleIndex + 1
+         ExportRule ruleIndex, ruleRange
+      End If
+   Loop
+ 
+   LogMessage "End Export"
+
+End Sub
+
+
+Sub ExportRule(index As Integer, ruleRange As Range)
+    Dim filename As String
+    
+    filename = ActiveWorkbook.Path + "\RuleExport" + Format(index, "0000") + ".tsv"
+    
+    MakeTSVFromRange filename, ruleRange
+    
+End Sub
+
+Sub MakeTSVFromRange(filename As String, exportRange As Range)
+
+  Dim filenumber As Integer
+  Dim exportCount As Integer
+  Dim rowCount As Long
+  Dim colCount As Integer
+  Dim rowNdx As Long
+  Dim colNdx As Integer
+  Dim blankCount As Integer
+  Dim warned As Boolean
+  Dim alertMessage As String
+  Dim colHeaderCount As Integer
+  
+  Const BLANK_CELL_COUNT_TERMINATE_LINE = 20
+  
+  
+  warned = False
+  
+  filenumber = FreeFile()
+  exportCount = 0
+  Open filename For Output As #filenumber
+  
+  rowCount = exportRange.Rows.Count
+  colCount = exportRange.Columns.Count
+  
+  For rowNdx = 1 To rowCount
+  
+    If IsError(exportRange.Cells(rowNdx, 1).value) Then
+       ErrorMessage "Cell " + exportRange.Cells(rowNdx, 1).Address + " on " + ActiveWorkbook.FullName + " contains an error. It will not be fully exported"
+       Exit For
+    End If
+    
+    'If Len(exportRange.Cells(rowNdx, 1).value) > 3 Then
+       blankCount = 0
+       For colNdx = 1 To colCount
+          
+          If IsError(exportRange.Cells(rowNdx, colNdx).value) Then
+             ErrorMessage "Cell " + exportRange.Cells(rowNdx, colNdx).Address + " on " + ActiveWorkbook.FullName + " contains an error. It will not be fully exported"
+             Exit For
+          End If
+          If (Len(exportRange.Cells(rowNdx, colNdx).value) < 1) Then
+             blankCount = blankCount + 1
+             If blankCount > BLANK_CELL_COUNT_TERMINATE_LINE Then
+               Exit For
+             End If
+          Else
+             blankCount = 0
+             If rowNdx = 1 Then
+                colHeaderCount = colNdx
+             End If
+          End If
+          If colNdx = 1 Then
+             Print #filenumber, exportRange.Cells(rowNdx, 1).value;
+          Else
+             Print #filenumber, Chr$(9); Trim(exportRange.Cells(rowNdx, colNdx).value);
+          End If
+          If (colNdx > (COLUMNCOUNT - BLANK_CELL_COUNT_TERMINATE_LINE)) And blankCount < 2 Then
+            alertMessage = "Cell " + exportRange.Cells(rowNdx, colNdx).Address + " on " + ActiveWorkbook.FullName + " contains data - This is near the limit of exported columns. It will not be fully exported"
+            ErrorMessage alertMessage
+          End If
+          
+          If rowNdx > 1 Then
+             If colNdx = colHeaderCount Then
+                 Exit For
+             End If
+          End If
+          
+       Next
+       Print #filenumber, ""
+    'End If
+  Next
+  
+  Close #filenumber
+
+End Sub
+' ////////////////////////////////////////////////////////////////////////////////////
+' ////////////////////////////////////////////////////////////////////////////////////
+' /////////////////////////   RULE GENERATION CODE BELOW /////////////////////////////
+' ////////////////////////////////////////////////////////////////////////////////////
+' ////////////////////////////////////////////////////////////////////////////////////
+      
+Sub GenerateRules()
+   
+   Dim ruleFileNumber As Integer
+   Dim lookupFileNumber As Integer
+   Dim rowNdx As Long
+   Dim colNdx As Integer
+   
+   Set logSheet = ActiveWorkbook.Sheets(LOGSHEETNAME)
+   Set ruleSheet = ActiveWorkbook.Sheets(RULESHEETNAME)
+   
+   ' set the logRow global variable
+   setLogRow
+   
+   LogMessage "Begin Rule Generation"
+   
+    
+   ' create the output files
+   ruleFileNumber = FreeFile()
+   Open ActiveWorkbook.Path + "\" + RULEEXPORTRULEFILE For Output As #ruleFileNumber
+   
+   lookupFileNumber = FreeFile()
+   Open ActiveWorkbook.Path + "\" + RULEEXPORTLOOKUPFILE For Output As #lookupFileNumber
+   
+      
+   Dim searchHere As Range
+   Dim startHere As Range
+   Dim firstHit As Range
+   Dim ruleRange As Range
+   
+   initializeRuleSearch searchHere, startHere, firstHit
+   
+   Dim ruleIndex As Integer
+   
+   
+   Do
+      Set ruleRange = getNextRuleRange(searchHere, startHere, firstHit)
+      If ruleRange Is Nothing Then
+         Exit Do
+      Else
+         ruleIndex = ruleIndex + 1
+         GenerateARule ruleRange, ruleFileNumber, lookupFileNumber
+      End If
+   Loop
+   
+   Close #ruleFileNumber
+   Close #lookupFileNumber
+ 
+   LogMessage "End Rule Generation"
+
+End Sub
+Sub GenerateARule(exportRange As Range, ruleFile As Integer, lookupFile As Integer)
+
+
+  If InStr(exportRange.Cells(1, 1).value, ".RAW") > 0 Then
+      LogMessage "Rule Generation: " + exportRange.Cells(1, 1).value + " " + exportRange.Cells(1, 1).Address
+      GenerateARuleRaw exportRange, ruleFile
+  ElseIf InStr(exportRange.Cells(1, 1).value, ".LOOKUP") > 0 Then
+       LogMessage "Rule Generation: " + exportRange.Cells(1, 1).value + " " + exportRange.Cells(1, 1).Address
+       GenerateARuleLookup exportRange, ruleFile, lookupFile
+  ElseIf InStr(exportRange.Cells(1, 1).value, ".MANUAL") > 0 Then
+       LogMessage "Rule Generation: Skipping MANUAL rule " + exportRange.Cells(1, 1).Address
+      
+  Else
+       LogMessage "Rule NOT Generated: " + exportRange.Cells(1, 1).value + " " + exportRange.Cells(1, 1).Address
+  End If
+
+End Sub
+
+Sub GenerateARuleLookup(exportRange As Range, ruleFile As Integer, lookupFile As Integer)
+  
+  Dim match As Matcher
+  Dim matches(1 To 100) As Matcher
+  Dim matchesHead As Integer
+  
+  Dim com As comment
+  
+  Dim payload As PayloadColumns
+  Dim payloads(1 To 100) As PayloadColumns
+  Dim payloadsHead As Integer
+  
+  Dim rowCount As Long
+  Dim colCount As Integer
+  Dim rowNdx As Long
+  Dim colNdx As Integer
+  
+  Dim s As String
+  Dim c As String
+  Dim sd As String
+  Dim linePayload As String
+  
+  Dim spacer As String
+  Dim lastWasSpacer As Boolean
+  Dim postfixNdx As Integer
+  
+  Const PAYLOADDELIM = "~"
+  
+  Dim ndx As Integer
+  
+  Dim emptyLine As Boolean
+  
+  matchesHead = 1
+  payloadsHead = 1
+  
+  Dim lookupprefix As String
+  
+  ' RULEBEGIN.LOOKUP.name
+  ' 12345678901234567
+  
+  lookupprefix = LCase(Right(exportRange.Cells(1, 1).value, Len(exportRange.Cells(1, 1).value) - 17))
+  
+  Dim addPostfix As Boolean
+  addPostfix = False
+    
+  If Right(lookupprefix, 4) = ".dup" Then
+    lookupprefix = Left(lookupprefix, Len(lookupprefix) - 4)
+    addPostfix = True
+    postfixNdx = 1
+  End If
+  
+
+  Print #ruleFile, RULENAMEPREFIX + "." + lookupprefix + Replace(exportRange.Cells(1, 1).Address, "$", ".") + "." + Format(Date, "yyyymmdd") + Chr(34)
+  Print #ruleFile, "when"
+  Print #ruleFile, "   fansledLookupRule"
+   
+  lookupprefix = UCase(lookupprefix) + ":"
+   
+  rowCount = exportRange.Rows.Count
+  colCount = exportRange.Columns.Count
+  
+  ' build up the header
+    
+  For colNdx = 2 To colCount
+     If IsError(exportRange.Cells(1, colNdx).value) Then
+         ErrorMessage "Cell " + exportRange.Cells(rowNdx, colNdx).Address + " on " + ActiveWorkbook.FullName + " contains an error. "
+         Exit Sub ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+     End If
+     If (Len(exportRange.Cells(1, colNdx).value) > 0) Then
+       s = exportRange.Cells(1, colNdx).value
+       If StartsWithHIT(s) Then
+          If s = "HIT.CATEGORY" Then
+             ' assumes HIT.CATEGORY occurs first
+             payload.categoryNdx = colNdx
+             payloads(payloadsHead) = payload
+             payloadsHead = payloadsHead + 1
+          ElseIf s = "HIT.VALUE" Then
+             payloads(payloadsHead - 1).valueNdx = colNdx
+          ElseIf s = "HIT.DESCRIPTION" Then
+            payloads(payloadsHead - 1).descriptionNdx = colNdx
+          Else
+             ErrorMessage "Cell " + exportRange.Cells(1, colNdx).Address + " on " + ActiveWorkbook.FullName + " contains an unknown HIT. entry. Only HIT.CATEGORY, HIT.VALUE and HIT.DESCRIPTION are valid"
+             Exit Sub ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+          End If
+       Else
+          Set com = exportRange.Cells(1, colNdx).comment
+          If com Is Nothing Then
+            c = ""
+          Else
+            c = com.Text
+          End If
+          
+          If Len(c) > 0 Then
+            Print #ruleFile, "   store fansled hit " + s + " as " + LCase(s) + " restriction " + c
+          Else
+            Print #ruleFile, "   store fansled hit " + s + " as " + LCase(s)
+          End If
+       
+         
+          match.col = colNdx
+          match.value = s
+          matches(matchesHead) = match
+          matchesHead = matchesHead + 1
+       End If
+     End If
+  Next
+  
+  Set com = exportRange.Cells(1, 1).comment
+  If com Is Nothing Then
+     ' nothing
+  Else
+    c = com.Text
+    If Len(c) > 0 Then
+      Print #ruleFile, "   " + c
+    End If
+  End If
+          
+        
+  
+  
+  
+  Print #ruleFile, "then"
+  
+  
+  
+  
+  ' define the key
+  s = "   set key to " + Chr(34) + lookupprefix + Chr(34) + "+"
+  spacer = Chr(34) + "~" + Chr(34) + "+"
+  lastWasSpacer = False
+  For ndx = 1 To matchesHead - 1
+     If Left(matches(ndx).value, 1) = "P" Then
+        s = s + LCase(matches(ndx).value) + "+"
+        lastWasSpacer = False
+     Else
+        If lastWasSpacer = True Then
+          s = s + LCase(matches(ndx).value) + "+" + spacer
+        Else
+          s = s + spacer + LCase(matches(ndx).value) + "+" + spacer
+        End If
+        lastWasSpacer = True
+     End If
+  Next
+  ' eliminate last +
+  s = Left(s, Len(s) - 1)
+  
+  Print #ruleFile, s
+  
+  
+  
+  Print #ruleFile, "   useFanLookupFile"
+  
+  
+  
+    ' build up a line and send it to another sub to enumerate posibilities
+    ' barf on ^ for now
+  For rowNdx = 2 To rowCount
+     emptyLine = True
+     sd = ""
+     lastWasSpacer = False
+     For ndx = 1 To matchesHead - 1
+       s = CStr(exportRange.Cells(rowNdx, matches(ndx).col).value)
+       If (Left(matches(ndx).value, 1) = "P") Then
+         lastWasSpacer = False
+         If Len(s) > 1 Then
+           ' make it a 1 position re
+           s = "[" + s + "]"
+         ElseIf Len(s) = 0 Then
+           ' blank on a P entry means is will match all valid positions
+           s = "[0123456789ABCDEFGHIJKLMNPQRSTUVWXYZ]"
+         End If
+       Else
+        ' make sure it does not bleed into another field
+         If lastWasSpacer = True Then
+           s = s + "~"
+         Else
+           s = "~" + s + "~"
+         End If
+         lastWasSpacer = True
+       End If
+       sd = sd + s
+     Next
+     
+  
+     
+    
+     linePayload = ""
+     For ndx = 1 To payloadsHead - 1
+        linePayload = linePayload + CStr(exportRange.Cells(rowNdx, payloads(ndx).categoryNdx).value) + PAYLOADDELIM
+        If Len(exportRange.Cells(rowNdx, payloads(ndx).categoryNdx).value) > 0 Then
+          emptyLine = False
+        End If
+        linePayload = linePayload + CStr(exportRange.Cells(rowNdx, payloads(ndx).valueNdx).value) + PAYLOADDELIM
+        linePayload = linePayload + CStr(exportRange.Cells(rowNdx, payloads(ndx).descriptionNdx).value) + PAYLOADDELIM
+     Next
+     ' remove trailing tab
+     linePayload = Left(linePayload, Len(linePayload) - Len(PAYLOADDELIM))
+     
+     If emptyLine = False Then
+        ExpandLine lookupprefix, sd, linePayload, lookupFile, postfixNdx
+     End If
+     
+     
+
+     
+  Next
+  
+  Print #ruleFile, "   processLookupFanRule"
+  Print #ruleFile, "end"
+  Print #ruleFile, ""
+  Print #ruleFile, ""
+  Print #ruleFile, ""
+
+End Sub
+
+Sub ExpandLine(prefix As String, key As String, payload As String, lookupFile As Integer, ByRef postfix As Integer)
+   Dim startX As Integer
+   Dim ndxOpen As Integer
+   Dim ndxClose As Integer
+   
+   Dim enumeration As EnumerationColumns
+   Dim enumerations(1 To 100) As EnumerationColumns
+   Dim enumerationHead As Integer
+   
+   Dim outputLines As Integer
+   
+   Dim x As Integer
+   
+   
+   enumerationHead = 1
+  
+   
+   
+   outputLines = 1
+   
+   startX = 1
+   ' find and define the multiple codes
+   Do While True
+     ndxOpen = InStr(startX, key, "[")
+     If ndxOpen = 0 Then
+        Exit Do
+     End If
+     
+     ndxClose = InStr(ndxOpen, key, "]")
+     If ndxClose = 0 Then
+        ErrorMessage "unable to expand line. Missing ] " + key
+        Exit Sub ''''''''''''''''''''''''''
+     End If
+     ' store results
+     enumeration.startNdx = ndxOpen
+     enumeration.stopNdx = ndxClose
+     enumeration.optionCount = enumeration.stopNdx - enumeration.startNdx - 1
+     enumeration.currentNdx = 1
+     enumerations(enumerationHead) = enumeration
+     enumerationHead = enumerationHead + 1
+     
+     outputLines = outputLines * enumeration.optionCount
+     
+     startX = ndxClose
+   Loop
+   
+   If enumerationHead = 1 Then
+      ' nothing to enumerate
+      Print #lookupFile, prefix + key + Chr(9) + payload
+   Else
+     For x = 1 To outputLines
+        Print #lookupFile, prefix + RenderALine(key, enumerations, enumerationHead, postfix) + Chr(9) + payload
+        IncrementEnumeration enumerations, enumerationHead
+        If postfix > 0 Then
+          postfix = postfix + 1
+        End If
+     Next
+   
+   End If
+End Sub
+Function RenderALine(key As String, enumerations() As EnumerationColumns, head As Integer, postfix) As String
+   Dim s As String
+   Dim x As Integer
+   Dim startX As Integer
+   startX = 1
+   
+   For x = 1 To head - 1
+      If enumerations(x).startNdx > startX Then
+        ' add text before key
+        s = s + Mid(key, startX, enumerations(x).startNdx - 1)
+      End If
+      
+      s = s + Mid(key, enumerations(x).startNdx + enumerations(x).currentNdx, 1)
+      
+     
+      startX = enumerations(x).stopNdx + 1
+   Next
+   
+   If startX < Len(key) Then
+     ' add trailing text
+     s = s + Mid(key, startX, Len(key) - startX + 1)
+   End If
+   
+   If (postfix > 0) Then
+     s = s + "." + CStr(postfix)
+   End If
+   
+   
+   
+   RenderALine = s
+End Function
+Sub IncrementEnumeration(enumerations() As EnumerationColumns, head As Integer)
+   
+   Dim x As Integer
+   
+   x = head - 1
+   Do While x > 0
+     If enumerations(x).currentNdx = enumerations(x).optionCount Then
+        enumerations(x).currentNdx = 1
+        ' increment with overflow to next enumeration digit, keep going
+        x = x - 1
+     Else
+        ' increment w/o overflow
+        enumerations(x).currentNdx = enumerations(x).currentNdx + 1
+        Exit Do
+     End If
+   Loop
+   
+End Sub
+
+
+Sub GenerateARuleRaw(exportRange As Range, ruleFile As Integer)
+  
+  
+  Dim vendor As String
+  
+  
+  Dim match As Matcher
+  Dim matches(1 To 100) As Matcher
+  Dim matchesHead As Integer
+  
+  Dim payload As PayloadColumns
+  Dim payloads(1 To 100) As PayloadColumns
+  Dim payloadsHead As Integer
+  
+  Dim rowCount As Long
+  Dim colCount As Integer
+  Dim rowNdx As Long
+  Dim colNdx As Integer
+  
+  Dim s As String
+  Dim sd As String
+  Dim pay As String
+  Dim c As String
+  Dim com As comment
+  
+  
+  
+  
+  Dim spacer As String
+  Dim lastWasSpacer As Boolean
+  
+  
+  Dim ndx As Integer
+  
+  Dim emptyLine As Boolean
+  
+  matchesHead = 1
+  payloadsHead = 1
+    
+  vendor = Range(VENDORNAMERANGE).Cells(1, 1).Text
+
+
+  Print #ruleFile, RULENAMEPREFIX + Replace(exportRange.Cells(1, 1).Address, "$", ".") + "." + Format(Date, "yyyymmdd") + Chr(34)
+  Print #ruleFile, "when"
+  Print #ruleFile, "   fansled" + vendor + "RawRule"
+   
+  rowCount = exportRange.Rows.Count
+  colCount = exportRange.Columns.Count
+  
+  ' build up the header
+    
+  For colNdx = 2 To colCount
+     If IsError(exportRange.Cells(1, colNdx).value) Then
+         ErrorMessage "Cell " + exportRange.Cells(rowNdx, colNdx).Address + " on " + ActiveWorkbook.FullName + " contains an error. "
+         Exit Sub ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+     End If
+     If (Len(exportRange.Cells(1, colNdx).value) > 0) Then
+       s = exportRange.Cells(1, colNdx).value
+       If StartsWithHIT(s) Then
+          If s = "HIT.CATEGORY" Then
+             ' assumes HIT.CATEGORY occurs first
+             payload.categoryNdx = colNdx
+             payloads(payloadsHead) = payload
+             payloadsHead = payloadsHead + 1
+          ElseIf s = "HIT.VALUE" Then
+             payloads(payloadsHead - 1).valueNdx = colNdx
+          ElseIf s = "HIT.DESCRIPTION" Then
+            payloads(payloadsHead - 1).descriptionNdx = colNdx
+          Else
+             ErrorMessage "Cell " + exportRange.Cells(1, colNdx).Address + " on " + ActiveWorkbook.FullName + " contains an unknown HIT. entry. Only HIT.CATEGORY, HIT.VALUE and HIT.DESCRIPTION are valid"
+             Exit Sub ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+          End If
+       Else
+          Set com = exportRange.Cells(1, colNdx).comment
+          If com Is Nothing Then
+            c = ""
+          Else
+            c = com.Text
+          End If
+          
+          If Len(c) > 0 Then
+            Print #ruleFile, "   store fansled hit " + s + " as " + LCase(s) + " restriction " + c
+          Else
+            Print #ruleFile, "   store fansled hit " + s + " as " + LCase(s)
+          End If
+       
+          
+          match.col = colNdx
+          match.value = s
+          matches(matchesHead) = match
+          matchesHead = matchesHead + 1
+       End If
+     End If
+  Next
+  
+  Set com = exportRange.Cells(1, 1).comment
+  If com Is Nothing Then
+     ' nothing
+  Else
+    c = com.Text
+    If Len(c) > 0 Then
+      Print #ruleFile, "   " + c
+    End If
+  End If
+
+  
+  Print #ruleFile, "then"
+  Print #ruleFile, "   " + vendor + "FanSetup"
+  
+  
+  ' define the key
+  s = "   set key to "
+  spacer = Chr(34) + "~" + Chr(34) + "+"
+  lastWasSpacer = False
+  For ndx = 1 To matchesHead - 1
+     If Left(matches(ndx).value, 1) = "P" Then
+        s = s + LCase(matches(ndx).value) + "+"
+        lastWasSpacer = False
+     Else
+        If lastWasSpacer = True Then
+          s = s + LCase(matches(ndx).value) + "+" + spacer
+        Else
+          s = s + spacer + LCase(matches(ndx).value) + "+" + spacer
+        End If
+        lastWasSpacer = True
+     End If
+  Next
+  ' eliminate last +
+  s = Left(s, Len(s) - 1)
+  
+  Print #ruleFile, s
+  
+  ' setup data string
+  ' data has a | between the payload and a ~ between the fields
+  
+  s = "   set data to "
+  Print #ruleFile, s
+  
+  ' now process each line
+  
+  
+  
+  For rowNdx = 2 To rowCount
+     emptyLine = True
+     sd = ""
+     lastWasSpacer = False
+     For ndx = 1 To matchesHead - 1
+       s = CStr(exportRange.Cells(rowNdx, matches(ndx).col).value)
+       If s = "" Then
+         If Left(matches(ndx).value, 1) = "P" Then
+            s = "." ' eat one char
+         Else
+            s = ".*" ' eat one to many chars
+         End If
+       End If
+       If (Left(matches(ndx).value, 1) = "P") Then
+         lastWasSpacer = False
+         If Len(s) > 1 Then
+           ' make it a 1 position re
+           s = "[" + s + "]"
+         End If
+       Else
+        ' make sure it does not bleed into another field
+         If lastWasSpacer = True Then
+           s = s + "~"
+         Else
+           s = "~" + s + "~"
+         End If
+         lastWasSpacer = True
+       End If
+       sd = sd + s
+     Next
+     'sd = sd + "|"
+     
+     pay = ""
+     For ndx = 1 To payloadsHead - 1
+        pay = pay + CStr(exportRange.Cells(rowNdx, payloads(ndx).categoryNdx).value) + "~"
+        If Len(exportRange.Cells(rowNdx, payloads(ndx).categoryNdx).value) > 0 Then
+          emptyLine = False
+        End If
+        pay = pay + CStr(exportRange.Cells(rowNdx, payloads(ndx).valueNdx).value) + "~"
+        pay = pay + CStr(exportRange.Cells(rowNdx, payloads(ndx).descriptionNdx).value) + "~"
+     Next
+     ' remove trailing ~
+     pay = Left(pay, Len(pay) - 1)
+     If emptyLine = False Then
+        Print #ruleFile, "     add row to data  " + Chr(34) + sd + Chr(34) + " " + Chr(34) + pay + Chr(34)
+     End If
+  Next
+  If InStr(exportRange.Cells(1, 1).value, ".OPT") > 0 Then
+    Print #ruleFile, "   process" + vendor + "RawOptionalFanRule"
+  ElseIf InStr(exportRange.Cells(1, 1).value, ".REQUIRED") > 0 Then
+    Print #ruleFile, "   process" + vendor + "RawRequiredFanRule"
+  Else
+    Print #ruleFile, "   process" + vendor + "RawFanRule"
+  End If
+  
+  Print #ruleFile, "end"
+  Print #ruleFile, ""
+  Print #ruleFile, ""
+  Print #ruleFile, ""
+
+End Sub
+
+
+
+    
+' ////////////////////////////////////////////////////////////////////////////////////
+' ////////////////////////////////////////////////////////////////////////////////////
+' /////////////////////////   DRIVE CODE BELOW ///////////////////////////////////////
+' ////////////////////////////////////////////////////////////////////////////////////
+' ////////////////////////////////////////////////////////////////////////////////////
+
+' uses a string to build xml. should be ok to skip all xml escape strings (&, <, ...)
+
+Sub runDriveCalculation(h As hit)
+
+   Dim EmersonW As EmersonWrapper.EmersonWrapper
+   Set EmersonW = New EmersonWrapper.EmersonWrapper
+   
+   Dim outStr As String
+   
+   If (EmersonW Is Nothing) Then
+      ErrorMessage "EmersonWrapper is nothing in drive calculation"
+      h.price = 0
+      Exit Sub
+   End If
+   
+       
+   Dim inputString As String
+   inputString = makeDriveInputXml()
+   
+   On Error Resume Next
+   outStr = EmersonW.EmitResults(inputString)
+   On Error GoTo 0
+   
+   
+   Dim outHit As hit
+   outHit.name = "DRIVERESULTS"
+   outHit.value = Trim(Left(outStr, 4))
+   outHit.description = outStr
+   outHit.why = h.why
+   
+   AddHit outHit
+   
+   Dim inHit As hit
+   
+   inHit.name = "DRIVEREQUEST"
+   If (Len(inputString) > 1) Then
+      inHit.value = "OK"
+   Else
+      inHit.value = "BAD"
+   End If
+   inHit.description = inputString
+   inHit.why = h.why
+   
+   AddHit inHit
+   
+   
+   
+   
+   If Left(outStr, 5) = "GOOD:" Then
+      '
+      Dim extraBeltsHit As hit
+      
+      Dim tentativeSolutions() As DriveSolution
+            
+      tentativeSolutions = processDriveResults(outStr)
+      costSolutions tentativeSolutions
+      
+      Dim first As Integer
+      Dim second As Integer
+      first = -1
+      second = -1
+      Dim cost As Single
+      Dim costA As Single
+      Dim costB As Single
+      Dim x As Integer
+      
+      ' find lowest cost
+      costA = 9999999
+      For x = LBound(tentativeSolutions) To UBound(tentativeSolutions)
+        cost = tentativeSolutions(x).totalCost
+        If (cost > 0) Then
+           If (cost < costA) Then
+              costA = cost
+              first = x
+           End If
+        End If
+      Next
+      If costA = 9999999 Then
+        ErrorMessage "No costs in drive results"
+        h.price = 0
+        Exit Sub
+      End If
+      ' find second lowest cost
+      costB = 999999
+      For x = LBound(tentativeSolutions) To UBound(tentativeSolutions)
+        cost = tentativeSolutions(x).totalCost
+        If (cost > 0) Then
+           If (cost < costB And cost > costA) Then
+              costB = cost
+              second = x
+           End If
+        End If
+      Next
+      If (costB = 999999) Then
+         second = first
+         costA = costB
+      End If
+      
+      
+      
+      
+      extraBeltsHit = FindHitByName("EXTRABELTS")
+      If Len(extraBeltsHit.name) = 0 Then
+        ErrorMessage "Unknown EXTRABELTS in drive calculation"
+        h.price = 0
+        Exit Sub
+      End If
+      
+      Dim costDelta As Single
+      
+      Dim extraBeltDescription As String
+      Dim extraBeltCost As Single
+      extraBeltCost = 0
+      extraBeltDescription = ""
+      
+      costDelta = costB - costA
+      
+      If (costB > 1) Then
+        If extraBeltsHit.value = "YES" Then
+
+           extraBeltCost = tentativeSolutions(second).extraBeltCost
+           
+           extraBeltDescription = " Extra belt Cost w/o factor = " + CStr(extraBeltCost)
+           If (extraBeltCost < 1) Then
+              ErrorMessage "Extra belt cost and/or quantity error in drive calculation ExtraBeltCost=" + Format(extraBeltCost, "#,##0.00")
+              h.price = 0
+           End If
+        ElseIf extraBeltsHit.value <> "NO" Then
+           ErrorMessage "EXTRABELTS not YES or NO [" + extraBeltsHit.value + "]"
+           h.price = 0
+        End If
+      
+        h.description = "Drive cost delta " + Format(costDelta, "#,##0.00") + " w/o " + CStr(h.price) + " factor." & extraBeltDescription
+        h.price = (extraBeltCost + costB) * h.price
+       ' if ok change the Category name
+        h.category = DRIVENAME
+      Else
+        h.description = "Drive cost in results is 0"
+        h.price = 0
+        
+      End If
+     
+   Else
+      h.description = "Failed to run drive selection " + outStr
+      h.price = 0
+   End If
+      
+
+End Sub
+
+Function adjustEmersonPartNumber(pn As String) As String
+  ' do not use on belts
+  Dim x As Integer
+  x = InStr(pn, "X")
+  If (x > 2) Then
+    adjustEmersonPartNumber = Left(pn, x - 1)
+  Else
+    adjustEmersonPartNumber = pn
+  End If
+  
+End Function
+
+
+
+Sub costSolutions(ByRef solutions() As DriveSolution)
+' bushing prefix  b
+' sheave prefix   s
+' belt prefix l
+Dim x As Integer
+Dim cost As Double
+
+For x = LBound(solutions) To UBound(solutions)
+  cost = 0
+  If (Len(solutions(x).drivenSheave) > 0) Then
+      cost = cost + Application.WorksheetFunction.VLookup(adjustEmersonPartNumber("s" & solutions(x).drivenSheave), Range("emersonCost"), 2, 0)
+      If (Len(solutions(x).drivenBushing) > 0) Then
+        cost = cost + Application.WorksheetFunction.VLookup(adjustEmersonPartNumber("b" & solutions(x).drivenBushing), Range("emersonCost"), 2, 0)
+      End If
+      If (Len(solutions(x).driverBushing) > 0) Then
+        cost = cost + Application.WorksheetFunction.VLookup(adjustEmersonPartNumber("b" & solutions(x).driverBushing), Range("emersonCost"), 2, 0)
+      End If
+      cost = cost + Application.WorksheetFunction.VLookup(adjustEmersonPartNumber("s" & solutions(x).driverSheave), Range("emersonCost"), 2, 0)
+      solutions(x).extraBeltCost = (Application.WorksheetFunction.VLookup("l" & solutions(x).belt, Range("emersonCost"), 2, 0) * solutions(x).beltQty)
+      
+      cost = cost + solutions(x).extraBeltCost
+      solutions(x).totalCost = cost
+      
+       
+  End If
+  
+Next
+     
+End Sub
+
+
+
+Function makeDriveInputXml() As String
+   Dim sb As String
+   Dim h As hit
+   Dim motorrpmh As hit
+   Dim rpm As String
+   Dim driverRpm As String
+   
+   
+   sb = "<Main><Settings><IgnoreNEMAStandards>True</IgnoreNEMAStandards><Data>XML</Data><Data><XMLPath>"
+  ' sb = "<Main><Settings><IgnoreNEMAStandards>False</IgnoreNEMAStandards><Data>XML</Data><Data><XMLPath>"
+   
+   sb = sb + ActiveWorkbook.Path
+   sb = sb + "</XMLPath></Data></Settings><InputString><RequiredInputs>"
+   
+ ' Required below
+ 
+ 
+ 
+ '  sb = sb + addFromHit("MAXRPM", "ReqInp_DoNotExceedSpeed")
+   sb = sb + addConstant("ReqInp_DoNotExceedSpeed", 9999)  ' test on March 15 2013
+ 
+   
+   sb = sb + addFromHit("FANSHAFT", "ReqInp_DrivenDiameter")
+   
+   '
+   sb = sb + addFromHit("WHEELRPM", "ReqInp_DrivenSpeed")
+   
+   h = FindHitByName("MOTORFRAME")
+   If Len(h.name) = 0 Then
+      ErrorMessage "Unknown MOTORFRAME in drive calculation"
+      Exit Function
+   End If
+   
+   Dim driverDiameter As String
+   driverDiameter = Application.WorksheetFunction.VLookup(h.value, Range("motorFrame"), 3, 0)
+   
+   ' do this while we have the hit
+   Dim maxDriverDiameter As String
+   maxDriverDiameter = Application.WorksheetFunction.VLookup(h.value, Range("motorFrame"), 2, 0)
+   
+   sb = sb + addConstant("ReqInp_DriverDiameter", driverDiameter)
+   
+   
+   motorrpmh = FindHitByName("MOTORRPM")
+   If Len(motorrpmh.name) = 0 Then
+      ErrorMessage "Did not find MOTORRPM in drive calculation"
+      Exit Function
+   End If
+   rpm = motorrpmh.value
+   If rpm = "1200" Then
+     driverRpm = "1160"
+   ElseIf rpm = "1800" Then
+     driverRpm = "1750"
+   ElseIf rpm = "3600" Then
+     driverRpm = "3450"
+   ElseIf rpm = "1500" Then
+     driverRpm = "1450"
+   ElseIf rpm = "3000" Then
+     driverRpm = "2900"
+   End If
+   
+   If Len(driverRpm) < 1 Then
+      ErrorMessage "Unknown MOTORRPM in drive calculation " & rpm
+      Exit Function
+   End If
+   sb = sb + addConstant("ReqInp_DriverSpeed", driverRpm)
+   'sb = sb + addFromHit("MOTORRPMACTUAL", "ReqInp_DriverSpeed")
+   sb = sb + addFromHit("MOTORHP", "ReqInp_Horsepower")
+   sb = sb + addFromHit("CENTERLINELOW", "ReqInp_MinCenterDistance")
+   sb = sb + addFromHit("CENTERLINEHIGH", "ReqInp_MaxCenterDistance")
+   sb = sb + addFromHit("DRIVESERVICEFACTOR", "ReqInp_ServiceFactor")
+   
+   Dim wheelRPM As Integer
+   Dim drivenRPM As Integer
+   
+   Dim maxRPM As Integer
+   
+   h = FindHitByName("WHEELRPM")
+   If Len(h.name) = 0 Then
+      ErrorMessage "Unknown WHEELRPM in drive calculation"
+      Exit Function
+   End If
+   wheelRPM = CSng(h.value)
+   drivenRPM = wheelRPM ' default driveRPM to wheelRPM
+   h = FindHitByName("MAXRPM")
+   If Len(h.name) = 0 Then
+      ErrorMessage "Unknown MAXRPM in drive calculation"
+      Exit Function
+   End If
+   maxRPM = CSng(h.value)
+   
+   
+   
+   h = FindHitByName("DRIVEPITCH")
+   If Len(h.name) = 0 Then
+      ErrorMessage "Unknown DRIVEPITCH in drive calculation"
+      Exit Function
+   End If
+   
+   
+   Dim variableSpeed As String
+   Dim minTolerance As String
+   Dim maxTolerance As String
+   
+   If h.value = "CONSTANT" Then
+     variableSpeed = "False"
+     minTolerance = "2"
+     maxTolerance = "3"
+     ' NB if maxTolerance plus desired RPM is > max rpm, we should de-rate the maxTolerance.
+  '   If wheelRPM * 1.03 > maxRPM Then
+  '     maxTolerance = CStr(100 * (maxRPM - wheelRPM - 1) / wheelRPM)
+  '   End If
+   ElseIf h.value = "VARIABLE" Then
+     variableSpeed = "True"
+     minTolerance = "5"
+     maxTolerance = "5"
+  '   If wheelRPM * 1.05 > maxRPM Then
+       ' maxTolerance = CStr(100 * (maxRPM - wheelRPM - 1) / wheelRPM) ' reduce max tolerance
+       ' shift mid range point down 5% from max
+  '     drivenRPM = maxRPM * 0.95
+  '   End If
+
+   Else
+     ErrorMessage "DRIVEPITCH not CONSTANT or VARIABLE [" + h.value + "]"
+   End If
+   
+   'sb = sb + addConstant("ReqInp_DrivenSpeed", CStr(drivenRPM))
+   
+   sb = sb + addConstant("ReqInp_VariableSpeed", variableSpeed)
+   sb = sb + addConstant("ReqInp_DrivenDiameterIsMetric", "False")
+   sb = sb + addConstant("ReqInp_DrivenSpeedIsMidrange", "True")
+   sb = sb + addConstant("ReqInp_DriverDiameterIsMetric", "False")
+   sb = sb + addConstant("ReqInp_OptionsInvoked", "True")
+   sb = sb + addConstant("ReqInp_OrderDrive", "False")
+   sb = sb + addConstant("ReqInp_OutputMode", "1")
+   sb = sb + addConstant("ReqInp_InputPowerMode", "1")
+   sb = sb + addConstant("ReqInp_CenterDistanceMode", "1")
+   sb = sb + addConstant("SelectedMultID", "0")
+   sb = sb + addConstant("ReqInp_ProvideNetPrice", "True")
+ '  sb = sb + addConstant("ReqInp_ProvideInterchanges", "False") 'JLD TEST March 9
+   sb = sb + addConstant("ReqInp_ProvideInterchanges", "True")
+   
+   sb = sb + "</RequiredInputs><OptionalInputs>"
+   
+   h = FindHitByName("DRIVEMULTIPLEBELT")
+   If Len(h.name) = 0 Then
+      ErrorMessage "Unknown DRIVEMULTIPLEBELT in drive calculation"
+      Exit Function
+   End If
+   Dim minGrooves As String
+   If h.value = "YES" Then
+      minGrooves = "2"
+   ElseIf h.value = "NO" Then
+      minGrooves = "1"
+   Else
+     ErrorMessage "DRIVEMULTIPLEBELT not YES or NO [" + h.value + "]"
+   End If
+
+ ' Optional below
+    sb = sb + addConstant("OptInp_MinNumGrooves", minGrooves)
+    sb = sb + addConstant("OptInp_MaxSpeedVariation", Format("0.0000", maxTolerance))
+    sb = sb + addConstant("OptInp_MinSpeedVariation", minTolerance)
+    sb = sb + addConstant("OptInp_MaxDriverPD", maxDriverDiameter)
+    
+    sb = sb + addConstant("OptInp_Allow3VXBelts", "True")
+    sb = sb + addConstant("OptInp_Allow4LBelts", "False") ' per Paul V email March 15 2013 (was True)
+    sb = sb + addConstant("OptInp_Allow5LBelts", "False") ' per Paul V email March 15 2013 (was True)
+    sb = sb + addConstant("OptInp_Allow5VBelts", "True")
+    sb = sb + addConstant("OptInp_Allow5VXBelts", "True")
+    'sb = sb + addConstant("OptInp_Allow8VBelts", "False") ' per Paul V email March 15 2013 (was True)
+    
+    sb = sb + addConstant("OptInp_Allow8VBelts", "True") ' JLD text march 11
+    
+    sb = sb + addConstant("OptInp_AllowABelts", "True")
+    sb = sb + addConstant("OptInp_AllowAXBelts", "True")
+    sb = sb + addConstant("OptInp_AllowBBelts", "True")
+    sb = sb + addConstant("OptInp_AllowBrowningBushedSheaves", "True")
+    sb = sb + addConstant("OptInp_AllowBXBelts", "True")
+    sb = sb + addConstant("OptInp_AllowCBelts", "False") ' per Paul V email March 15 2013 (was True)
+    sb = sb + addConstant("OptInp_AllowCXBelts", "False") ' per Paul V email March 15 2013 (was True)
+    sb = sb + addConstant("OptInp_AllowFinishedBoreSheaves", "True")
+    sb = sb + addConstant("OptInp_AllowQDBushedSheaves", "True")
+    sb = sb + addConstant("OptInp_ConformToNEMAStandard", "False")
+    sb = sb + addConstant("OptInp_LimitHubLoad", "False")
+    sb = sb + addConstant("OptInp_MaxBeltFPM", "6500")
+    sb = sb + addFromHit("DRIVENMAXPD", "OptInp_MaxDrivenPD")
+   ' sb = sb + addConstant("OptInp_MaxDrivenPD", "63.8")
+   ' sb = sb + addConstant("OptInp_MaxFaceWidth", "19")
+    sb = sb + addFromHit("DRIVENMAXWIDTH", "OptInp_MaxFaceWidth")
+    sb = sb + addConstant("OptInp_MaxHubLoad", "9999")
+    sb = sb + addConstant("OptInp_MaxNumGrooves", "16")
+ ' sb = sb + addConstant("OptInp_MaxNumGrooves", "3")
+    sb = sb + addConstant("OptInp_MinBeltFPM", "900")
+    sb = sb + addConstant("OptInp_MinDrivenPD", "1.5")
+    sb = sb + addConstant("OptInp_MinDriverPD", "1.5")
+    sb = sb + addConstant("OptInp_NEMANumber", "0")
+ '   sb = sb + addFromHit("MOTORFRAME", "OptInp_NEMANumber")
+   ' sb = sb + addConstant("OptInp_NEMANumber", "254")
+    
+    
+    sb = sb + addConstant("OptInp_UseDesignatedPartsOnly", "False")
+    sb = sb + addConstant("SelectedDesgPartsListID", "-1")
+    sb = sb + addConstant("OptInp_UseMinSpeedInHorsepowerCalculation", "False") ' confirmed Paul V email March 15 2013
+    
+    sb = sb + "</OptionalInputs></InputString></Main>"
+    
+    makeDriveInputXml = sb
+
+End Function
+
+Function addFromHit(hitName As String, idName As String)
+   Dim sb As String
+   Dim h As hit
+
+   h = FindHitByName(hitName)
+   If Len(h.name) = 0 Then
+      ErrorMessage "Unknown " + hitName + " in drive calculation"
+      Exit Function
+   End If
+  
+   addFromHit = "<Input><ID>" + idName + "</ID><Value>" + h.value + "</Value></Input>"
+   
+End Function
+
+Function addConstant(idName As String, value As String)
+   addConstant = "<Input><ID>" + idName + "</ID><Value>" + value + "</Value></Input>"
+End Function
+
+
+
+        
+Function getCost(str As String, ndx As Integer) As Single
+   Dim costNdx As Integer
+   Const SEARCH = "<Name>Cost</Name><Value>"
+
+   costNdx = 0
+   While ndx > 0
+      costNdx = costNdx + 1
+      costNdx = InStr(costNdx, str, SEARCH)
+      ndx = ndx - 1
+   Wend
+   If costNdx > 0 Then
+      Dim results As String
+      results = Mid(str, costNdx + Len(SEARCH), 100)
+      costNdx = InStr(results, "<")
+      results = Left(results, costNdx - 1)
+     ' MsgBox results
+      getCost = CSng(results)
+   End If
+   
+End Function
+        
+        
+        
+Function getBeltPart(str As String, ndx As Integer) As String
+   Dim costNdx As Integer
+   Const SEARCH = "<Name>Belt</Name><Value>"
+
+   costNdx = 0
+   While ndx > 0
+      costNdx = costNdx + 1
+      costNdx = InStr(costNdx, str, SEARCH)
+      ndx = ndx - 1
+   Wend
+   If costNdx > 0 Then
+      Dim results As String
+      results = Mid(str, costNdx + Len(SEARCH), 100)
+      costNdx = InStr(results, "<")
+      results = Left(results, costNdx - 1)
+      getBeltPart = results
+   End If
+   
+End Function
+        
+        
+Function getBeltQty(str As String, ndx As Integer) As Single
+   Dim costNdx As Integer
+   Const SEARCH = "<Name>BeltQty</Name><Value>"
+
+   costNdx = 0
+   While ndx > 0
+      costNdx = costNdx + 1
+      costNdx = InStr(costNdx, str, SEARCH)
+      ndx = ndx - 1
+   Wend
+   If costNdx > 0 Then
+      Dim results As String
+      results = Mid(str, costNdx + Len(SEARCH), 100)
+      costNdx = InStr(results, "<")
+      results = Left(results, costNdx - 1)
+     ' MsgBox results
+      getBeltQty = CSng(results)
+   End If
+   
+End Function
+        
+' ////////////////////////////////////////////////////////////////////////////////////
+' ////////////////////////////////////////////////////////////////////////////////////
+' /////////////////////////   BASE 34  routines  ///////////////////////////////////
+' ////////////////////////////////////////////////////////////////////////////////////
+' ////////////////////////////////////////////////////////////////////////////////////
+' ////////////////////////////////////////////////////////////////////////////////////
+
+
+Sub convertMotorBaseCode(h As hit)
+   Dim l As Long
+   Dim s As String
+   
+   l = decodeBase34(h.value)
+   ' base code conversion occurs at the mid way point of the two digit base 34 code (34*34 / 2)
+   s = h.description + " " + h.value
+   If l > 578 Then
+     l = Abs(l - 1155)
+   End If
+   
+   h.category = MOTORBASECODE
+   h.name = MOTORBASECODE
+   h.value = Right("0" + encodeBase34(l), 2)
+   h.description = s + " " + h.value
+
+End Sub
+
+
+Public Function base34(x As Integer) As String
+   If (x < 0 Or x > 33) Then
+     base34 = "ERROR: Can not convert " + x + " to a base 34 digit"
+   Else
+     base34 = Mid(BASECODE, x + 1, 1)
+   End If
+End Function
+
+
+Public Function encodeBase34(i As Long) As String
+   Dim backwards As String
+   Dim forward As String
+   Dim b As Integer
+   Dim x As Double
+   
+   
+   Dim w As Double
+   Dim p As Double
+   Const base = 34
+   x = i
+   Do
+      p = Fix(x) Mod base
+      backwards = backwards + base34(Int(p))
+      x = x / base
+      If x < 1 Then
+        Exit Do
+      End If
+   Loop
+   
+   For b = 1 To Len(backwards)
+     forward = forward + Mid(backwards, Len(backwards) + 1 - b, 1)
+   Next
+   
+   encodeBase34 = forward
+   
+   
+End Function
+
+Public Function decodeBase34(b As String) As Long
+   Const base = 34
+   Dim p As Double
+   Dim n As Double
+   Dim result As Long
+   
+   p = 1
+   For n = 1 To Len(b)
+     result = result + ((InStr(1, BASECODE, Mid(b, Len(b) + 1 - n, 1)) - 1) * p)
+     p = p * base
+   Next
+   decodeBase34 = result
+End Function
+
+Public Function testAll() As Long
+  Dim x As Long
+  Dim s As String
+  
+  For x = 0 To 45435424
+  '424
+   s = encodeBase34(x)
+   If (Abs(decodeBase34(s) - x) > 0) Then
+    
+     Exit For
+   End If
+  Next
+  testAll = x
+End Function
+
+
+
+

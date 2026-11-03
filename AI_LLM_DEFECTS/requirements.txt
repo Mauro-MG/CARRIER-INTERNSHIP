@@ -1,0 +1,4 @@
+flask
+pandas
+pyodbc
+requests

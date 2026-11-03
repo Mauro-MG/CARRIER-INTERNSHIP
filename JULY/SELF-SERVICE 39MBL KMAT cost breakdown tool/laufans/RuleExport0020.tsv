@@ -1,0 +1,5 @@
+RULEBEGIN.RAW.REQUIRED					P5	P6																HIT.CATEGORY	HIT.VALUE	HIT.DESCRIPTION																				
+					BCDFGHJKLMNPQR	^9																NOMENCLATURE	BELTPREFIVESIX	Belt Fan, Pre 2016 56 code change
+					01234567890	^9																NOMENCLATURE	BELTPOSTFIVESIX	Belt Fan, Post 2016 56 code change
+						9																NOMENCLATURE	DDPF	DDPF Layout (P6 = 9)
+RULEEND																				

@@ -1,0 +1,36 @@
+# Python caches and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+asana_project_fields*.json
+
+# Generated application data
+Project Files/
+ASANA-UPLOADS/
+*.asana-draft.json
+
+# Build and packaging output
+build/
+dist/
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local notes and test artifacts
+comments.txt
+.pytest_cache/
+.coverage
+
+# Source-data maintenance utilities and superseded workbook
+loadcomplexity.py
+estimator_data.xlsx

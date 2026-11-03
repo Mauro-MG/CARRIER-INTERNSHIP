@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="card">
+    <h2>Classification Review</h2>
+    <p>Claims are grouped by Serial when their Date Failed values are within 1 month of each other.</p>
+</section>
+
+{% if grouped_results %}
+
+<form method="POST" action="{{ url_for('review') }}">
+
+    {% for group in grouped_results %}
+
+    <section class="card results-card">
+
+        <h3>
+            Classification Results for Serial: {{ group.serial }}
+            {% if group.group_number > 1 %}
+                <span class="group-badge">Group {{ group.group_number }}</span>
+            {% endif %}
+        </h3>
+
+        <div class="table-wrapper">
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>Claim #</th>
+                        <th>Date Failed</th>
+                        <th>Model</th>
+                        <th>Plant</th>
+                        <th>Service Performed</th>
+                        <th>Primary Component</th>
+                        <th>Secondary Component</th>
+                        <th>Failure Reason</th>
+                        <th>Confidence</th>
+                        <th>Evidence</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for claim in group.claims %}
+                    <tr>
+                        <td>{{ claim.ClaimNumber }}</td>
+                        <td>{{ claim.DateFailed }}</td>
+                        <td>{{ claim.Model }}</td>
+                        <td>{{ claim.Plant }}</td>
+
+                        <td class="service-text">
+                            {{ claim.ServicePerformed[:300] }}...
+                        </td>
+
+                        <td>
+                            <select name="primary_{{ loop.index0 }}_{{ claim.ClaimNumber }}" class="review-select">
+                                {% for option in primary_components %}
+                                    <option value="{{ option }}"
+                                        {% if option == claim.Final_PrimaryComponent %}selected{% endif %}>
+                                        {{ option }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </td>
+
+                        <td>
+                            <select name="secondary_{{ loop.index0 }}_{{ claim.ClaimNumber }}" class="review-select wide-select">
+                                {% for option in secondary_components %}
+                                    <option value="{{ option }}"
+                                        {% if option == claim.Final_SecondaryComponent %}selected{% endif %}>
+                                        {{ option }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </td>
+
+                        <td>
+                            <select name="reason_{{ loop.index0 }}_{{ claim.ClaimNumber }}" class="review-select">
+                                {% for option in failure_reasons %}
+                                    <option value="{{ option }}"
+                                        {% if option == claim.Final_FailureReason %}selected{% endif %}>
+                                        {{ option }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </td>
+
+                        <td>{{ claim.AI_Confidence }}</td>
+
+                        <td class="evidence-text">
+                            {{ claim.AI_EvidencePhrases }}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+    {% endfor %}
+
+    <button type="submit" class="btn btn-primary">
+        Save Reviewed Classifications
+    </button>
+
+</form>
+
+{% else %}
+<section class="card">
+    <p>No classification results yet.</p>
+</section>
+{% endif %}
+
+{% endblock %}

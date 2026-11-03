@@ -1,0 +1,48 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Past Validations · ValidateSAP</title>
+  <link rel="stylesheet" href="{% static 'validatesap/app.css' %}">
+  <script src="{% static 'validatesap/app.js' %}" defer></script>
+</head>
+<body>
+  <header class="masthead masthead--compact"><div class="shell masthead__inner"><div><p class="eyebrow">Saved comparison results</p><h1>Past Validations</h1><p class="subtitle">Reopen the exact results preserved in each saved CSV.</p></div></div></header>
+  <main class="shell page-stack">
+    <div class="page-actions"><a class="secondary-button" href="{% url 'validatesap:index' %}">Back to validation</a></div>
+    <section class="history-panel">
+      <div class="section-heading">
+        <div><p class="step">History</p><h2>{{ validations|length }} saved validation{{ validations|length|pluralize }}</h2></div>
+        <form method="get" class="search-box"><label><span class="sr-only">Search Tumbling</span><input name="q" type="search" placeholder="Search Tumbling..." value="{{ history_query }}" data-history-search></label></form>
+      </div>
+      {% if history_error %}<div class="inline-error">{{ history_error }}</div>{% endif %}
+      {% if validations %}
+        <div class="history-table-wrap">
+          <table class="history-table">
+            <thead><tr><th>Tumbling</th><th>Added</th><th>Deleted</th><th>No Change</th><th>Last Modified</th></tr></thead>
+            <tbody>
+              {% for item in validations %}
+                <tr data-history-row data-tumbling="{{ item.tumbling_name|lower }}">
+                  <td><a href="{% url 'validatesap:history_detail' item.tumbling_name %}">{{ item.tumbling_name }}</a>{% if not item.valid %}<span class="invalid-badge">Invalid CSV</span>{% endif %}</td>
+                  <td>{{ item.counts.NEEDS_TO_BE_ADDED }}</td>
+                  <td>{{ item.counts.NEEDS_TO_BE_DELETED }}</td>
+                  <td>{{ item.counts.NO_CHANGE }}</td>
+                  <td>{{ item.modified|date:"M j, Y g:i A" }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <div class="empty-state" data-history-no-match hidden><strong>No matching Tumbling found</strong><p>Try a shorter or different search.</p></div>
+        </div>
+      {% else %}
+        {% if history_query %}
+          <div class="empty-state empty-state--large"><span>0</span><strong>No matching Tumbling found.</strong><p>Try a shorter or different search.</p><a class="secondary-button" href="{% url 'validatesap:history' %}">Clear search</a></div>
+        {% else %}
+          <div class="empty-state empty-state--large"><span>0</span><strong>No past validations have been saved yet.</strong><p>Run a validation and save the results to see it here.</p><a class="primary-button button-link" href="{% url 'validatesap:index' %}">New validation</a></div>
+        {% endif %}
+      {% endif %}
+    </section>
+  </main>
+</body>
+</html>

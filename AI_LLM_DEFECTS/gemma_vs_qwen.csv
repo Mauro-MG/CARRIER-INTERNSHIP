@@ -1,0 +1,540 @@
+index,claim_number,audit_batch,qwen_audit_decision,gemma_audit_decision,preferred_model,label_quality,audit_confidence,audit_comment
+0,CRM3949GZ,batch1,MODEL_CORRECT,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,MEDIUM,Qwen keeps leak noncomponent and avoids unsupported coil part failure
+1,CRM3949W3,batch1,MODEL_CORRECT,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,MEDIUM,Qwen keeps leak noncomponent and avoids unsupported coil part failure
+2,CRM3949RJ,batch1,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,MEDIUM,Leak label is plausible but installation cause is weak while Gemma over specifies coil failure
+3,CRM7DDY7Q,batch1,MODEL_WRONG,MODEL_WRONG,GEMMA,GOOD_LABEL,MEDIUM,Gasket and sealing repair supports leak design more than no fault found
+4,CRM7DDYM8,batch1,MODEL_WRONG,MODEL_WRONG,GEMMA,GOOD_LABEL,MEDIUM,Gasket and sealing repair supports leak design more than no fault found
+5,CRM187CT8,batch1,MODEL_CORRECT,BOTH_DEFENSIBLE,QWEN,QUESTIONABLE_LABEL,MEDIUM,Bearing replacement supports fan assembly and part failure more than manufacturing
+6,CRKCVWPQR,batch1,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Safety rework bulletin supports electrical wiring design while Gemma only misses root cause
+7,CRK2KTXWM,batch1,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,GOOD_LABEL,MEDIUM,Grounding fix can read as installed work but bulletin style supports design
+8,CRMCJN9ZY,batch1,MODEL_CORRECT,BOTH_DEFENSIBLE,QWEN,QUESTIONABLE_LABEL,HIGH,Text is about configuration and setpoint changes not electrical wiring
+9,CRM28HY1X,batch1,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Grounding kit is electrical wiring and design is stronger than fan motor
+10,CRM5BSBC3,batch1,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match contactor power part failure
+11,CRLA5QD9Q,batch1,BOTH_DEFENSIBLE,MODEL_CORRECT,GEMMA,GOOD_LABEL,MEDIUM,Loose high voltage wires on VFD make both plausible but Gemma captures wiring and manufacturing
+12,CRMCJRQ7V,batch1,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Reset alarm and ran fine supports no fault found resettable alarm
+13,CRK1JQ9TV,batch1,NO_DISAGREEMENT,BOTH_DEFENSIBLE,QWEN,GOOD_LABEL,MEDIUM,Service bulletin ground wire supports design though installation wording is present
+14,CRL72WCB9,batch1,NO_DISAGREEMENT,BOTH_DEFENSIBLE,QWEN,GOOD_LABEL,MEDIUM,Field supplied wire per bulletin instructions supports design
+15,CRL7378L7,batch1,NO_DISAGREEMENT,BOTH_DEFENSIBLE,QWEN,GOOD_LABEL,MEDIUM,Field supplied wire per bulletin instructions supports design
+16,CRM6CPGDR,batch1,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,QUESTIONABLE_LABEL,MEDIUM,Installed ground wire gives limited evidence for manufacturing versus installation
+17,CRKCVZHHV,batch1,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Ground wire repair is electrical wiring and Gemma only misses design root cause
+18,CRKBV8H4G,batch1,NO_DISAGREEMENT,BOTH_DEFENSIBLE,QWEN,GOOD_LABEL,HIGH,Bulletin SMB repair supports electrical wiring design
+19,CRMAH527R,batch1,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,QWEN,GOOD_LABEL,MEDIUM,VFD leads were landed improperly so Qwen is closer on component
+20,CRK8QTHK6,batch1,NO_DISAGREEMENT,BOTH_DEFENSIBLE,QWEN,GOOD_LABEL,MEDIUM,Harness and relocated wiring support electrical wiring design
+21,CRM6D6JNV,batch1,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Piping leak repair and recharge supports noncomponent leak part failure
+22,CRM7F6BYR,batch1,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match sensor part failure
+23,CRM28NMJX,batch1,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Grounding kit is electrical wiring not evaporator fan motor
+24,CRM28NMNN,batch1,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Grounding kit is electrical wiring not evaporator fan motor
+25,CRK6NY7L9,batch1,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Ground wire repair is electrical wiring not starter VFD wiring
+26,CRK2KTZ2X,batch1,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Both get wiring and Gemma gives a more specific plausible cause
+27,CRLB6L74H,batch1,NO_DISAGREEMENT,MODEL_WRONG,QWEN,GOOD_LABEL,HIGH,Harness replacement preauthorization supports wiring part failure
+28,CRLB6L8BV,batch1,NO_DISAGREEMENT,MODEL_WRONG,QWEN,GOOD_LABEL,HIGH,Replacing wire harnesses supports wiring part failure and not ambiguous
+29,CRLB6L7RP,batch1,NO_DISAGREEMENT,MODEL_WRONG,QWEN,GOOD_LABEL,HIGH,Cost of harness supports wiring part failure and not ambiguous
+30,CRLB6L81T,batch1,NO_DISAGREEMENT,MODEL_WRONG,QWEN,GOOD_LABEL,HIGH,Harness replacement supports wiring part failure
+31,CRL72NG7W,batch1,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Added jumpers for heat supports wiring installation
+32,CRK3LFZRG,batch1,BOTH_DEFENSIBLE,MODEL_CORRECT,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Factory caused wiring short makes manufacturing more reasonable than part failure
+33,CRL4YYQ61,batch1,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,MIXED_BY_FIELD,GOOD_LABEL,MEDIUM,Loose thermistor wiring favors wiring installation but sensor reading is also plausible
+34,CRL4Z28JY,batch1,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Factory gas valve harnesses swapped supports wiring manufacturing
+35,CRL2XSSK3,batch1,NO_DISAGREEMENT,BOTH_DEFENSIBLE,QWEN,GOOD_LABEL,MEDIUM,Bad sensor connection supports wiring issue and cause is ambiguous
+36,CRL4YYQ8T,batch1,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Loose thermistor board connections support wiring installation
+37,CRL1WZLX1,batch1,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,GOOD_LABEL,MEDIUM,Extra factory wires can be manufacturing but installation interpretation is defensible
+38,CRK3M8XPZ,batch1,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Connections were poor and required rewiring so installation is supported
+39,CRL94BMBW,batch1,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match contactor power part failure
+40,CRM39B2NH,batch1,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Roof panel leak supports noncomponent leak while root cause is ambiguous
+41,CRMCJRPY1,batch1,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,MIXED_BY_FIELD,GOOD_LABEL,MEDIUM,Factory rivets preventing sealing supports leak manufacturing or design overlap
+42,CRL61WSY9,batch1,NO_DISAGREEMENT,MODEL_WRONG,QWEN,GOOD_LABEL,HIGH,Roof curb water issue supports noncomponent leak installation
+43,CRL3YT7ZM,batch1,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,MEDIUM,Leak is clear but manufacturing versus installation is not explicit
+44,CRM4B6DL6,batch1,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Multiple sealing and drain leaks support leak classification over other
+45,CRM39FKVR,batch1,MODEL_CORRECT,MODEL_CORRECT,TIE_BOTH_CORRECT,QUESTIONABLE_LABEL,HIGH,VFD failed so actual Gas primary is likely mislabeled
+46,CRM7DRN9H,batch1,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,VFD causing blower vibration supports VFD part failure
+47,CRL4ZJX61,batch1,MODEL_CORRECT,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,MEDIUM,Communication problem on CCN side supports network controls more than part failure
+48,CRM5C6RXK,batch1,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match burned board part failure
+49,CRL83TXYB,batch1,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match communication boards part failure
+50,CRM9GVSHX,batch1,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match broken VFD part failure
+51,CRK5NR3ZX,batch2,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,EXV board communication failure supports electrical controls board part failure
+52,CRL8455QM,batch2,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match failed MBB relay board part failure
+53,CRK1JZ2ZH,batch2,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,VFD caused fan knocking and replacement part supports VFD part failure
+54,CRK1JZ39F,batch2,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,VFD making knocking sound supports VFD part failure rather than insufficient evidence
+55,CRK1JZ37D,batch2,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,VFD causing knocking supports part failure not applications systems
+56,CRK2KLDVQ,batch2,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match defective purge fan VFD part failure
+57,CRK3M4NHW,batch2,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match failed supply fan drive VFD part failure
+58,CRL7341Y3,batch2,MODEL_CORRECT,MODEL_CORRECT,TIE_BOTH_CORRECT,QUESTIONABLE_LABEL,HIGH,Wrong EPROM shipped makes manufacturing more reasonable than simple part failure
+59,CRL4ZN6VM,batch2,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Startup setup and gas pressure adjustment support noncomponent while Gemma is closer than Qwen
+60,CRMBJHVZN,batch2,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match UPC board communication part failure
+61,CRMBJ3ZWV,batch2,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,New UPC not communicating and replacement supports board part failure
+62,CRMCJVHL3,batch2,MODEL_CORRECT,MODEL_CORRECT,TIE_BOTH_CORRECT,QUESTIONABLE_LABEL,HIGH,Board burned out of package supports manufacturing issue more than normal part failure
+63,CRLA5QDR4,batch2,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match BACnet card failure at startup
+64,CRLA5QDB6,batch2,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match BACnet card failure at startup
+65,CRLA5QDM1,batch2,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match BACnet card failure at startup
+66,CRK9SM9HC,batch2,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match board not communicating part failure
+67,CRK5NSLRW,batch2,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,MEDIUM,Board buttons not working with board part supports part failure
+68,CRK6P722H,batch2,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match OPN UPC board communication failure
+69,CRK6P729K,batch2,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match OPN UPC board communication failure
+70,CRL5ZT82W,batch2,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match board replacement for communication failure
+71,CRL83PX14,batch2,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match compressor board error replacement
+72,CRL1XBSCH,batch2,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match defective control board software part failure
+73,CRLB6H4SG,batch2,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match failed board replacement
+74,CRK6NYCV3,batch2,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Unit shipped without fan motor supports sales order issue better than service call installation
+75,CRM6CQN5S,batch2,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match TXV replacement part failure
+76,CRMAH4SWG,batch2,MODEL_WRONG,BOTH_DEFENSIBLE,MIXED_BY_FIELD,GOOD_LABEL,MEDIUM,Qwen gets failure better while Gemma gets electrical controls primary and power context better
+77,CRK8R78LF,batch2,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match slow opening TXV part failure
+78,CRM7DPPQJ,batch2,MODEL_CORRECT,MODEL_CORRECT,TIE_BOTH_CORRECT,QUESTIONABLE_LABEL,MEDIUM,Blown fuse on transformer supports electrical power more than transformer part failure
+79,CRL625LWM,batch2,NO_DISAGREEMENT,MODEL_WRONG,QWEN,GOOD_LABEL,HIGH,Failed transformer replacement supports transformer classification
+80,CRK7QC3FC,batch2,NO_DISAGREEMENT,MODEL_WRONG,QWEN,GOOD_LABEL,HIGH,Transformer part and shorted no start condition support transformer part failure
+81,CRL94F4V3,batch2,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,QWEN,GOOD_LABEL,MEDIUM,Broken wire inside transformer makes wiring defensible but transformer remains stronger
+82,CRL4Z7QDS,batch2,NO_DISAGREEMENT,MODEL_WRONG,QWEN,GOOD_LABEL,HIGH,Transformer with no output and replacement supports transformer classification
+83,CRL83YP79,batch2,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match bad transformer part failure
+84,CRL83YP2C,batch2,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match bad transformer part failure
+85,CRL83YPGQ,batch2,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match bad transformer part failure
+86,CRL83YNWS,batch2,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match bad transformer part failure
+87,CRK9RXH79,batch2,NO_DISAGREEMENT,MODEL_WRONG,QWEN,GOOD_LABEL,HIGH,Burnt transformer replacement supports transformer part failure
+88,CRM5CFXNW,batch2,NO_DISAGREEMENT,MODEL_WRONG,QWEN,GOOD_LABEL,HIGH,Static pressure controller transducer supports input device sensor part failure
+89,CRM6CVH99,batch2,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Faulty DPTB pressure transducer supports sensor and Qwen is closer than board software
+90,CRM4BDZZG,batch2,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match defective pressure transducer sensor part failure
+91,CRMAHP6R4,batch2,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Bad suction pressure transducer supports input device sensor and Qwen captures sensor better
+92,CRM39B1XF,batch2,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match duct pressure transducer sensor part failure
+93,CRLC6V8ZX,batch2,NO_DISAGREEMENT,MODEL_WRONG,QWEN,GOOD_LABEL,HIGH,Failed transducer replacement supports input device sensor part failure
+94,CRL3YHPMB,batch2,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,MIXED_BY_FIELD,GOOD_LABEL,LOW,Long service text includes VFD configuration wiring and final transducer replacement
+95,CRL83C3XC,batch2,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match duct transducer replacement
+96,CRL3YQK9B,batch2,NO_DISAGREEMENT,MODEL_WRONG,QWEN,GOOD_LABEL,HIGH,Duct static transducer replacement supports input device sensor part failure
+97,CRL734YFH,batch2,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Shorted pressure transducer supports sensor and Qwen is closer than board software
+98,CRLA52RC1,batch2,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Static pressure transducer failure supports sensor and Qwen is closer than board software
+99,CRM186QR7,batch2,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,MIXED_BY_FIELD,QUESTIONABLE_LABEL,MEDIUM,IAQ kit and sensor harness issue mixes sensor manufacturing wiring and installation evidence
+100,CRLA54SM3,batch2,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Faulty pressure transducer supports sensor and Qwen is closer than board software
+101,CRL1X6RJ2,batch3,NO_DISAGREEMENT,MODEL_WRONG,QWEN,GOOD_LABEL,HIGH,Defective transducer and replacement part support input device sensor part failure
+102,CRLB5Y2NS,batch3,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match static sensor transducer part failure
+103,CRKASVWWX,batch3,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Discharge pressure transducer supports sensor and Qwen is closer than board software
+104,CRL4ZP24S,batch3,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Smoke detector not detecting with sensor part supports part failure
+105,CRL731V5Y,batch3,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match duct static pressure transducer sensor part failure
+106,CRL8475JY,batch3,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Pressure transducer fault supports sensor and Qwen is closer than board software
+107,CRL1WZCTR,batch3,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match bad CO2 sensor part failure
+108,CRM7DYKM3,batch3,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,MEDIUM,Newly installed wording suggests installation but changed sensors support part failure
+109,CRM185QWG,batch3,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match failed thermistor sensor part failure
+110,CRM8FLS42,batch3,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match replaced sensor part failure
+111,CRL4ZFZG7,batch3,BOTH_DEFENSIBLE,MODEL_CORRECT,GEMMA,QUESTIONABLE_LABEL,HIGH,Sensor bad from factory supports manufacturing and Gemma keeps the right component
+112,CRKBTT6MT,batch3,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,MEDIUM,Thermistor alarm supports sensor failure while wiring was only a possible cause
+113,CRLB688L2,batch3,NO_DISAGREEMENT,MODEL_WRONG,QWEN,GOOD_LABEL,HIGH,Supply return and outdoor sensors not installed clearly support sensor installation
+114,CRL61NZNR,batch3,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,HIGH,High pressure switch replacement supports sensor switch part failure
+115,CRL83BCXP,batch3,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Loose thermistor wires support wiring installation and Gemma has the right reason
+116,CRK9SQ7XQ,batch3,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,MEDIUM,Suction line header leak can be piping leak but noncomponent leak label is stronger
+117,CRLB696X2,batch3,MODEL_CORRECT,MODEL_CORRECT,TIE_BOTH_CORRECT,QUESTIONABLE_LABEL,HIGH,Factory stripped terminal supports manufacturing more than simple part failure
+118,CRK8QVB23,batch3,MODEL_WRONG,MODEL_CORRECT,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Reheat valve stepper motor supports Gemma stepper classification better than solenoid
+119,CRM17Z5ZD,batch3,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,INSUFFICIENT_EVIDENCE,MEDIUM,No final fault was found and Gemma avoids unsupported damper classification
+120,CRMCJN7FG,batch3,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Defective staged gas board supports board issue while installation is weak
+121,CRL2XJMVY,batch3,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Software update after support call fits design better than part failure
+122,CRKBVDTGQ,batch3,BOTH_DEFENSIBLE,MODEL_CORRECT,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Thermistor sensor inoperable supports input device sensor more than board software
+123,CRK4MVZDD,batch3,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,QWEN,GOOD_LABEL,LOW,Board troubleshooting with engineering supports controls design but evidence is unresolved
+124,CRL83YVL6,batch3,MODEL_CORRECT,MODEL_CORRECT,TIE_BOTH_CORRECT,QUESTIONABLE_LABEL,HIGH,Bad ECB board with no lights and replacement supports part failure not design
+125,CRL2XM8MD,batch3,MODEL_CORRECT,MODEL_CORRECT,TIE_BOTH_CORRECT,QUESTIONABLE_LABEL,HIGH,Defective ECB board replacement supports part failure not design
+126,CRK4MTC1N,batch3,BOTH_DEFENSIBLE,MODEL_CORRECT,GEMMA,QUESTIONABLE_LABEL,HIGH,Economizer board failed and was replaced so Gemma is more specific
+127,CRL2XSLM7,batch3,MODEL_CORRECT,MODEL_CORRECT,TIE_BOTH_CORRECT,QUESTIONABLE_LABEL,HIGH,Board not sending signal and replacement supports part failure not design
+128,CRK8RRSTK,batch3,NO_DISAGREEMENT,BOTH_DEFENSIBLE,QWEN,GOOD_LABEL,MEDIUM,Earth fault alarm was disabled and reset which supports resettable alarm
+129,CRMBHZDKM,batch3,MODEL_CORRECT,BOTH_DEFENSIBLE,QWEN,QUESTIONABLE_LABEL,MEDIUM,Bad connection on SCB board supports wiring or board issue more than sensor part failure
+130,CRM9GG8WM,batch3,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Sensor missing or not functioning with sensor part supports sensor part failure
+131,CRL94XFJT,batch3,BOTH_DEFENSIBLE,MODEL_CORRECT,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Sensor calibration and setpoint adjustments support configuration more than part failure
+132,CRL7314HG,batch3,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,MEDIUM,Bad staged gas thermistor supports sensor part failure and Gemma matches taxonomy
+133,CRL83S5SN,batch3,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match high limit thermistor sensor part failure
+134,CRM17JK3V,batch3,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match thermistor sensor replacement
+135,CRLB65FSD,batch3,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match supply air sensor replacement
+136,CRK2L5Q5B,batch3,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match sensor not communicating part failure
+137,CRL94BFW1,batch3,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match sensor relocation installation
+138,CRLC7DDF1,batch3,NO_DISAGREEMENT,MODEL_WRONG,QWEN,GOOD_LABEL,HIGH,Rollout switch replacement supports input device sensor part failure
+139,CRL842JXF,batch3,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,INSUFFICIENT_EVIDENCE,LOW,Parts purchased for startup gives too little evidence for a confirmed failure
+140,CRL622V92,batch3,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,MEDIUM,Sensor alarm and replacement support sensor failure though rewiring is also present
+141,CRL3YBVJ4,batch3,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Sensors reading wrong temperature and replaced support input device sensor part failure
+142,CRL2XN1VF,batch3,MODEL_WRONG,MODEL_CORRECT,GEMMA,QUESTIONABLE_LABEL,HIGH,Damaged loose wiring at SGB supports electrical controls wiring installation
+143,CRMCK2CPJ,batch3,MODEL_CORRECT,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,HIGH,Missing supply air sensor and install supports installation rather than part failure
+144,CRM39D4HF,batch3,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Scrolling marquee display part supports board software part failure
+145,CRK9S6QZT,batch3,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,LOW,Replacement display part gives limited evidence but sensor prediction is unsupported
+146,CRK6P5GFB,batch3,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Burnt scrolling marquee supports electrical controls board software part failure
+147,CRK6P5FFC,batch3,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Scrolling marquee not communicating supports electrical controls board software part failure
+148,CRK4MYWZ9,batch3,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Replaced scrolling marquee supports electrical controls board software part failure
+149,CRL3YJ4WY,batch3,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Controller not communicating and replaced supports board software part failure
+150,CRM6D8MY8,batch3,MODEL_WRONG,MODEL_WRONG,TIE_BOTH_WRONG,GOOD_LABEL,MEDIUM,Programmed display buttons failed but input device sensor is not the right taxonomy
+151,CRMAHK8S5,batch4,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Display replacement supports electrical controls board while Qwen is closer than sensor
+152,CRM8FYMYR,batch4,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match display board software part failure
+153,CRMAHQ966,batch4,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Bad scrolling marquee replacement supports board software part failure
+154,CRMBJJQ25,batch4,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,MEDIUM,Programmed display is board software and Gemma is more specific than other
+155,CRMCJV1TS,batch4,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,MEDIUM,Display replacement supports board software and Gemma is more specific
+156,CRL83FFS3,batch4,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Failed programmed display supports electrical controls board software
+157,CRK2KTPS6,batch4,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match comfort link interface board part failure
+158,CRLA5BZFT,batch4,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,MIXED_BY_FIELD,QUESTIONABLE_LABEL,MEDIUM,Bad marquee supports display board but sensor wiring installation is also described
+159,CRK1KBXPV,batch4,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Burnt display replacement supports board software part failure
+160,CRK5NWRYS,batch4,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,MEDIUM,Replacement display supports part failure though service text is brief
+161,CRM28T8B3,batch4,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Incomplete display with programmed display part supports board software failure
+162,CRLA52SK1,batch4,NO_DISAGREEMENT,MODEL_WRONG,QWEN,GOOD_LABEL,HIGH,Marquee controller button failure supports board software not sensor
+163,CRK1JQ46H,batch4,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match SCB communication board part failure
+164,CRKCW61BM,batch4,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match replaced board part failure
+165,CRMBJ52NJ,batch4,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match circuit board communication part failure
+166,CRLA5LDTM,batch4,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,VFD earth fault reset supports starter VFD more than electrical controls wiring
+167,CRL94ZPYS,batch4,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match relay power part failure
+168,CRM17VJM5,batch4,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Bad phase monitor replacement supports electrical controls power part failure
+169,CRM17N5HX,batch4,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,MEDIUM,Phase monitor replacement supports power while loose terminal makes wiring partly defensible
+170,CRM398BJD,batch4,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,MEDIUM,Heat relay replacement supports power component and Gemma is more specific
+171,CRMAH9LZB,batch4,MODEL_CORRECT,BOTH_DEFENSIBLE,QWEN,QUESTIONABLE_LABEL,MEDIUM,Distributor tube leak into evaporator makes piping leak more specific than noncomponent
+172,CRMAHS8X8,batch4,MODEL_WRONG,MODEL_WRONG,TIE_BOTH_WRONG,QUESTIONABLE_LABEL,MEDIUM,Startup flat circuit held pressure so charge issue is stronger than part failure
+173,CRMCJZ1BP,batch4,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Large evaporator coil leak makes Gemma closer though manufacturing cause is plausible
+174,CRK4MRQHS,batch4,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Coil leak repair supports evaporator coil leak part failure
+175,CRK1K74YK,batch4,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Evaporator leak location supports coil leak part failure
+176,CRK7PYBPD,batch4,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,MEDIUM,Evaporator leak supports Gemma coil leak while Qwen piping leak is partly defensible
+177,CRK1JQBCM,batch4,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Coil leaking repair supports evaporator coil leak part failure
+178,CRLC76JZQ,batch4,BOTH_DEFENSIBLE,MODEL_CORRECT,GEMMA,QUESTIONABLE_LABEL,HIGH,Evaporator leaks make Gemma more specific than generic noncomponent label
+179,CRMAHL83M,batch4,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Loss of charge supports noncomponent leak and Gemma is closer than electrical controls
+180,CRL83CVM1,batch4,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Flat refrigerant circuit supports noncomponent leak part failure
+181,CRL7388TD,batch4,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Flat on startup supports noncomponent refrigerant issue better than electrical power
+182,CRK4MR12V,batch4,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match terminal board communication part failure
+183,CRK5NKR7V,batch4,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,MEDIUM,Factory wiring seal issue is root cause but terminal board replacement supports Gemma
+184,CRM5C5KFH,batch4,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match RCB board part failure
+185,CRM39KRYV,batch4,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match current sensor board part failure
+186,CRM6CVB3K,batch4,NO_DISAGREEMENT,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Charging and operation check support refrigerant issue more than installation
+187,CRK2L18PF,batch4,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Troubleshoot fix leak and charge supports noncomponent leak part failure
+188,CRL61S3PH,batch4,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,MIXED_BY_FIELD,QUESTIONABLE_LABEL,MEDIUM,Braze joint leak supports Qwen manufacturing piping and Gemma noncomponent leak
+189,CRK1JPKPB,batch4,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Distributor line leak repair supports noncomponent leak part failure
+190,CRL94D4HJ,batch4,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Pinched SAT sensor wiring mixes sensor manufacturing and wiring installation
+191,CRMAGYDNX,batch4,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,MIXED_BY_FIELD,QUESTIONABLE_LABEL,LOW,Service has overcharge correction plus missing VFD module so evidence is mixed
+192,CRMBHXNW3,batch4,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,QUESTIONABLE_LABEL,MEDIUM,Recovered refrigerant shows charge issue while part failure cause is weak
+193,CRMBHXMQH,batch4,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,QUESTIONABLE_LABEL,MEDIUM,High head pressure and recovered charge support charge issue more than part failure
+194,CRMBHXN2F,batch4,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,QUESTIONABLE_LABEL,MEDIUM,Reconfigured dehumidification and recovered charge make leak label weak
+195,CRM7DYXRF,batch4,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,QUESTIONABLE_LABEL,MEDIUM,Overcharged circuits support refrigerant charge issue more than part failure
+196,CRMBHXNY8,batch4,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Recovered charge supports noncomponent charge issue and Gemma is closer
+197,CRMBHXMTR,batch4,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Configuration change and recovered charge fit noncomponent better than electrical power
+198,CRMBHSZNZ,batch4,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Recovered refrigerant from high head condition supports Gemma over compressor
+199,CRMBHSZRQ,batch4,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Recovered refrigerant from high head condition supports Gemma over compressor
+200,CRM6CP66M,batch4,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,QUESTIONABLE_LABEL,MEDIUM,Overcharged circuits support charge issue while both keep noncomponent leak
+201,CRM6CP68H,batch5,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Overcharge is clear but factory cause is not explicit and Gemma keeps the right component
+202,CRMBHT11T,batch5,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,MIXED_BY_FIELD,QUESTIONABLE_LABEL,MEDIUM,Text includes recovered charge and swapped sensors so evidence supports more than one taxonomy
+203,CRM8FLSRB,batch5,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,QUESTIONABLE_LABEL,MEDIUM,Both capture refrigerant charge issue while manufacturing cause is not explicit
+204,CRK9SPL2W,batch5,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Factory overcharge is explicit and Gemma matches the main warranty issue
+205,CRK6PRB13,batch5,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Unit came overcharged from factory so Gemma matches and compressor primary is unsupported
+206,CRL734296,batch5,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Service mixes removed refrigerant with forced static pressure configuration so Gemma is closer
+207,CRL83LB1Y,batch5,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Factory overcharge supports manufacturing and Qwen avoids unsupported part failure
+208,CRKCVXFHL,batch5,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,QUESTIONABLE_LABEL,MEDIUM,Overcharge and recovered refrigerant are clear but factory manufacturing cause is not stated
+209,CRKCVZ6PP,batch5,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match explicit factory overcharge manufacturing issue
+210,CRLC717HS,batch5,MODEL_CORRECT,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,MEDIUM,RHV valve behavior is specifically described while EXV and noncomponent leak labels are weak
+211,CRL94CN9P,batch5,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Controller and high head refrigerant work are both present and Gemma keeps manufacturing context
+212,CRK8QTPS5,batch5,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match explicit overcharged from factory claim
+213,CRL6268S5,batch5,MODEL_WRONG,MODEL_CORRECT,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Only refrigerant removal is documented so Gemma noncomponent other is more reasonable than compressor failure
+214,CRL72PMVB,batch5,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,QUESTIONABLE_LABEL,MEDIUM,Noncondensables and reclaimed refrigerant support charge issue but exact cause is unclear
+215,CRK7Q4LSH,batch5,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Both see leak charge issue but Gemma keeps the correct noncomponent primary
+216,CRK8RC4RM,batch5,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Startup high head issue led to pulling charge and Qwen captures refrigerant issue better
+217,CRK6PRHYS,batch5,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,MEDIUM,Compressors tested normal and possible overcharge makes Qwen closer than compressor motor failure
+218,CRK7QLJQ8,batch5,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,QUESTIONABLE_LABEL,MEDIUM,Removed refrigerant from both circuits supports charge issue but manufacturing is not explicit
+219,CRL94C8FQ,batch5,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,MEDIUM,High head from likely overcharge is supported while condenser coil leak is not shown
+220,CRL8455H1,batch5,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Recovered charge plus thermostat and wiring findings make Gemma closer than wiring part failure
+221,CRKCW5YPZ,batch5,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match explicit factory overcharge and refrigerant recovery
+222,CRK8RSB35,batch5,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,QUESTIONABLE_LABEL,MEDIUM,High subcooling and recharge support noncomponent charge issue more than generic other primary
+223,CRKBTSTVX,batch5,BOTH_DEFENSIBLE,MODEL_CORRECT,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Altitude charge adjustment makes installation or application context more reasonable than manufacturing
+224,CRK1KFHC9,batch5,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,UNCLEAR_LABEL,INSUFFICIENT_EVIDENCE,LOW,Preauthorization text only says chasing high pressure issues so evidence is too thin
+225,CRK3LNY34,batch5,MODEL_CORRECT,BOTH_DEFENSIBLE,QWEN,QUESTIONABLE_LABEL,MEDIUM,Adding iVu for remote diagnostics fits configuration troubleshooting better than leak part failure
+226,CRM28T82V,batch5,MODEL_CORRECT,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,MEDIUM,Drive fuses and motor overamping from duct and sensor setup support VFD or wiring installation
+227,CRK4MGJ22,batch5,MODEL_WRONG,MODEL_CORRECT,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Unrepairable top panel and cover replacement support noncomponent other more than no fault found
+228,CRM5CGBRS,batch5,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Leak was suspected but not located so Gemma ambiguity is more defensible than confirmed piping leak
+229,CRLB641ZD,batch5,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,QWEN,GOOD_LABEL,MEDIUM,Testing and parts coordination support no fault or applications better than ambiguous output
+230,CRL3YC853,batch5,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,DOA alarms include starter protector and VFD fault so Qwen captures the right subsystem
+231,CRK4MKWNP,batch5,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Drive alarm was reset with no problem found and Gemma is closer to VFD control context
+232,CRK3M6XC7,batch5,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Reset and no duplicate alarm support no fault found resettable alarm exactly
+233,CRK6P3397,batch5,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,MIXED_BY_FIELD,GOOD_LABEL,MEDIUM,Drive trip power concern and tightened connections make both wiring and power interpretations plausible
+234,CRK1KDBYP,batch5,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,INSUFFICIENT_EVIDENCE,LOW,Troubleshoot alarms is too vague to strongly prefer either failure reason
+235,CRL51J3WT,batch5,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Breaker was off and no issues found so Gemma matches no fault resettable alarm
+236,CRKASY5P2,batch5,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Customer cycled power and technician found nothing abnormal so Gemma matches resettable no fault
+237,CRK6PRNP3,batch5,MODEL_WRONG,MODEL_CORRECT,GEMMA,QUESTIONABLE_LABEL,MEDIUM,No unit fault was found and duct or airflow issue makes Gemma other more reasonable than resettable
+238,CRK1K59KB,batch5,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Compressor complaint was investigated but no problem found so Qwen is closer
+239,CRK9S2535,batch5,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,VFD start enable fault supports starter VFD control better than ambiguous output
+240,CRL94RF64,batch5,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Ground fault alarms on VFDs with resets support Gemma exact VFD control resettable label
+241,CRL51CF1N,batch5,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Wrong VFD parameters and programming issue support starter VFD control more than electrical power
+242,CRK7PZBCN,batch5,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,No alarms present after field assist check supports no fault found resettable alarm
+243,CRMBJHV8W,batch5,MODEL_WRONG,MODEL_CORRECT,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Damper default settings and calibration make configuration installation more supported than no fault other
+244,CRM8FM49V,batch5,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Filter frame modification supports noncomponent other and Gemma is closer though design cause is stronger
+245,CRK7QBF1L,batch5,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match bad Motormaster VFD control part failure
+246,CRL61PRMF,batch5,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match Motormaster drive blowing fuses and replacement
+247,CRL2XH1LJ,batch5,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Pulley issue is present but most findings are startup and installation related
+248,CRK6PDT14,batch5,MODEL_CORRECT,MODEL_CORRECT,TIE_BOTH_CORRECT,QUESTIONABLE_LABEL,HIGH,Shorted motor replacement supports fan motor part failure more than starter VFD control
+249,CRK3M52RD,batch5,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Drive replacement and airflow misapplication make Qwen applications reason closer to design
+250,CRKBV1JWW,batch5,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,MIXED_BY_FIELD,QUESTIONABLE_LABEL,MEDIUM,VFD overcurrent reset and possible power issue split evidence between subsystem and resettable alarm
+251,CRM6CVJD1,batch6,MODEL_WRONG,MODEL_WRONG,TIE_BOTH_WRONG,GOOD_LABEL,HIGH,Motor drive replacement supports Starter VFD control and both models miss the VFD subsystem
+252,CRM6CXWFV,batch6,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Motor drive overcurrent replacement supports Starter VFD control part failure
+253,CRM8FN7JS,batch6,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match failed frequency drive part failure
+254,CRL732S3N,batch6,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match replaced motor drive control part failure
+255,CRL2XHSN5,batch6,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match burnt shorted VFD board and drive replacement
+256,CRK8QYP3W,batch6,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match burnt blower VFD drive replacement
+257,CRL61MQM3,batch6,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match ABB drive failure and motor drive replacement
+258,CRKBV7YPD,batch6,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match bad VFD after ABB support and replacement
+259,CRK8RHDHB,batch6,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match DOA motor drive replacement
+260,CRK6PS7RM,batch6,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,MEDIUM,Text only says motor stopped so Qwen motor is closer than noncomponent while gas inducer label is under supported
+261,CRK8R91RK,batch6,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Blower motor failed and was replaced which supports evaporator fan motor part failure
+262,CRM9GNZVR,batch6,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Fifteen horsepower blower motor replacement supports motor issue and Qwen is closer than VFD control
+263,CRLC6Z3CC,batch6,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,MEDIUM,Missing drain pans from shipment can resemble sales order but manufacturing noncomponent label is stronger
+264,CRLC6Z3JY,batch6,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,MEDIUM,Missing drain pans from shipment supports noncomponent manufacturing and Gemma matches
+265,CRM28KZGR,batch6,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,QUESTIONABLE_LABEL,MEDIUM,Compressor not starting makes compressor motor defensible against mechanical failure label
+266,CRLA5KRDM,batch6,MODEL_CORRECT,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,HIGH,Compressor operated after faulty reversed contactor was fixed so electrical power is better than compressor failure
+267,CRLA59STS,batch6,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,GOOD_LABEL,MEDIUM,Compressor blowing breaker supports compressor failure and motor subtype is also defensible
+268,CRM6D8J25,batch6,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Bad A1 compressor supports compressor failure while Gemma motor subtype is closer than no fault found
+269,CRM9GSSF4,batch6,MODEL_CORRECT,BOTH_DEFENSIBLE,QWEN,QUESTIONABLE_LABEL,MEDIUM,Startup recharge after vacuum supports refrigerant issue more than compressor mechanical failure
+270,CRM8FXWB3,batch6,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Combustion section air leak supports gas leak and Qwen is closer though cause could be design or installation
+271,CRMBHYDM9,batch6,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Condemned MBB and installed new board supports board software part failure
+272,CRM9GRNSK,batch6,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Fan relay contacts open with main board part supports board software part failure
+273,CRL4ZQS1Z,batch6,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match MBB replacement due communication failure
+274,CRKBVL4PB,batch6,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match main board replacement and configuration work
+275,CRL51C1CP,batch6,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match MBB replacement with configuration and operation check
+276,CRK8RH8HF,batch6,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match board not communicating and board replacement
+277,CRK9SFPLZ,batch6,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match board communication error and replacement
+278,CRL83B42X,batch6,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match MBB replacement and verified operation
+279,CRL94X5VL,batch6,BOTH_DEFENSIBLE,MODEL_CORRECT,GEMMA,QUESTIONABLE_LABEL,HIGH,Service says coil leak and coil replacement so board software label is likely wrong
+280,CRK7Q72PR,batch6,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match non responding board replacement
+281,CRKASY3D8,batch6,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match main base board failure and replacement
+282,CRK9SCWHV,batch6,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match part not working and board replacement
+283,CRK2L6CGK,batch6,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match board indicating failures and recommended board replacement
+284,CRKATGM5J,batch6,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match main control board fault requiring replacement
+285,CRKBTYM71,batch6,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match module board not communicating and replacement
+286,CRKBVLHMC,batch6,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match module board communication failure and replacement
+287,CRKBVCL4G,batch6,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match board not communicating and replacement
+288,CRK6PG5HH,batch6,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match failed board causing incorrect compressor lockout codes
+289,CRM17NHV8,batch6,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match shorted board replacement
+290,CRLB63MDP,batch6,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match failed main base board replacement
+291,CRK5N68WF,batch6,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Main base board and communication loss support board software part failure
+292,CRK8RNPFB,batch6,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match communication loss in main base board and board replacement
+293,CRMCJQ3HF,batch6,BOTH_DEFENSIBLE,MODEL_CORRECT,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Loose VFD signal wire supports electrical controls wiring and installation is more explicit than manufacturing
+294,CRM8F8SYS,batch6,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match main base board bad output and replacement
+295,CRMAH5258,batch6,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,QWEN,GOOD_LABEL,MEDIUM,Drive leads not secured supports Starter VFD wiring and Qwen keeps the correct subsystem
+296,CRL1WM6SW,batch6,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Factory disconnect not secured supports electrical controls power manufacturing
+297,CRM28FKY8,batch6,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Gas leak at gas valve fitting supports gas valve installation and Qwen is closer than noncomponent
+298,CRMCJVLZH,batch6,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,MEDIUM,Hot gas line crack makes piping leak defensible but Gemma matches noncomponent leak taxonomy
+299,CRM6D51MF,batch6,NO_DISAGREEMENT,MODEL_WRONG,QWEN,GOOD_LABEL,HIGH,Bad VFD keypad display supports Starter VFD control part failure
+300,CRK9SCVNF,batch6,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Insulation fallen during shipping supports noncomponent other manufacturing
+301,CRKBV6QD3,batch7,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Insulation repair and parameter changes support configuration or noncomponent issue more than no fault found
+302,CRKBV5TV2,batch7,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Water entry and open hole make leak plausible but Gemma keeps noncomponent other closer
+303,CRKATL3RB,batch7,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Falling insulation reattached to roof supports noncomponent other more than no fault found
+304,CRM8FNPZ1,batch7,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,QUESTIONABLE_LABEL,MEDIUM,Condensation caused board failures but repair was insulation so both board design and noncomponent are plausible
+305,CRM8FNQL3,batch7,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,QUESTIONABLE_LABEL,MEDIUM,Condensation caused board failures but repair was insulation so both board design and noncomponent are plausible
+306,CRM8F8D33,batch7,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Insulation repair found at startup supports noncomponent other better than no fault found
+307,CRL72H3SD,batch7,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,QUESTIONABLE_LABEL,MEDIUM,Impacted condenser coil leak supports coil damage while installation responsibility is also plausible
+308,CRM7DYH87,batch7,BOTH_DEFENSIBLE,MODEL_CORRECT,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Cooling motor replacement supports fan motor more than gas inducer
+309,CRLB66J48,batch7,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,INSUFFICIENT_EVIDENCE,LOW,Text only says motor dead at startup so the exact motor subsystem is unclear
+310,CRK2KS4Z9,batch7,MODEL_CORRECT,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,MEDIUM,Motor not ramping up supports motor classification more than service call or gas inducer
+311,CRMCJL451,batch7,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Shorted motor replacement supports evaporator fan motor and Gemma matches exactly
+312,CRKATBWMN,batch7,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match ignition control board part failure
+313,CRMCJVM31,batch7,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Cracked hot gas line supports piping leak but Gemma matches noncomponent leak taxonomy better
+314,CRK3M8XV2,batch7,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Hot gas bypass weld leak supports piping leak but Gemma matches noncomponent leak taxonomy better
+315,CRM7DBLKZ,batch7,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match broken high pressure switch part failure
+316,CRK7QBP5B,batch7,MODEL_WRONG,MODEL_WRONG,TIE_BOTH_WRONG,GOOD_LABEL,HIGH,Bad high pressure control supports input device high pressure switch not electrical power
+317,CRL94BBBF,batch7,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,QWEN,QUESTIONABLE_LABEL,MEDIUM,Detached HPS wire makes wiring plausible while planned HPS replacement supports switch label
+318,CRM6D3QSV,batch7,NO_DISAGREEMENT,BOTH_DEFENSIBLE,QWEN,GOOD_LABEL,HIGH,Grounded compressor supports compressor motor more specifically than mechanical failure
+319,CRL6215CS,batch7,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Gas valve leaking supports gas valve part failure and Gemma matches exactly
+320,CRL6219MS,batch7,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,QWEN,QUESTIONABLE_LABEL,MEDIUM,Gas valve adjustment keeps valve context while configuration also has some support
+321,CRK1JVS6X,batch7,MODEL_CORRECT,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,HIGH,Gas valve did not work and Qwen captures gas valve despite taxonomy naming mismatch
+322,CRL61R6PV,batch7,MODEL_CORRECT,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,HIGH,Gas valve failed in high fire and Qwen captures gas valve better than EXV TXV
+323,CRK1JZVZW,batch7,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Stuck unregulatable gas valve replacement supports Gemma exact gas valve part failure
+324,CRL2XTZ9K,batch7,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,HIGH,Bad gas valve supports Qwen gas valve context while Gemma predicts wrong valve type
+325,CRLC6T44T,batch7,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,HIGH,Heat gas valve would not open so Qwen solenoid valve is closer than EXV TXV
+326,CRL1WRP2B,batch7,MODEL_CORRECT,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,HIGH,Gas valve fault supports Qwen gas valve even if primary taxonomy differs
+327,CRL94X5FG,batch7,MODEL_CORRECT,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,HIGH,Bad gas valves with no gas pressure supports Qwen gas valve and Gemma wrong valve type
+328,CRK1KFNXW,batch7,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,MEDIUM,Multiple issues exist but bad gas valve is listed and Gemma matches the label
+329,CRLC73K3M,batch7,MODEL_CORRECT,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,HIGH,Gas valve stuck and no gas flow supports Qwen gas valve over EXV TXV
+330,CRK6P3TH6,batch7,MODEL_CORRECT,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,HIGH,Bad gas valves replaced supports Qwen gas valve more than Gemma EXV TXV
+331,CRL4ZKYN8,batch7,MODEL_CORRECT,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,HIGH,Gas valve failed stuck closed supports Qwen gas valve over EXV TXV
+332,CRMBHVBX8,batch7,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,QUESTIONABLE_LABEL,MEDIUM,DOA gas valve at startup makes manufacturing plausible but Gemma matches recorded label
+333,CRMBJ31HY,batch7,MODEL_CORRECT,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,HIGH,Gas valves leaking at startup supports Qwen gas valve over charging service valve
+334,CRM7F4S4X,batch7,MODEL_CORRECT,MODEL_CORRECT,TIE_BOTH_CORRECT,QUESTIONABLE_LABEL,HIGH,Rollout switch is more naturally an input sensor than a gas sensor label
+335,CRM4B9C3L,batch7,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,INSUFFICIENT_EVIDENCE,LOW,Service says valve would not open but part and actual label suggest switch context
+336,CRK1JYRLB,batch7,MODEL_CORRECT,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,HIGH,Failed rollout switches fit input sensor or switch better than board software
+337,CRM7DPKL8,batch7,MODEL_CORRECT,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,HIGH,Faulty rollout switch fits input sensor better than board software
+338,CRLB677L3,batch7,MODEL_CORRECT,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,HIGH,Rollout switch replacement fits input switch better than board software
+339,CRL3YCF32,batch7,MODEL_CORRECT,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,HIGH,Rollout switch stuck open fits input sensor better than board software
+340,CRL61RWRX,batch7,MODEL_CORRECT,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,HIGH,Locked out rollout switches replaced fit input sensor better than board software
+341,CRLC7BBTB,batch7,NO_DISAGREEMENT,BOTH_DEFENSIBLE,QWEN,GOOD_LABEL,HIGH,Failed flame rollout switch supports gas sensor while Gemma leak is less specific
+342,CRK3M27WX,batch7,MODEL_WRONG,MODEL_WRONG,TIE_BOTH_WRONG,GOOD_LABEL,MEDIUM,Tripped switch that would not reset supports safety sensor not electrical controls power
+343,CRM28LPFW,batch7,BOTH_DEFENSIBLE,MODEL_CORRECT,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Main rollout out of range supports input sensor more than gas sensor or pressure switch
+344,CRMAH4ZRZ,batch7,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Sealing combustion area leak supports gas leak context more than generic noncomponent other
+345,CRK1K59G7,batch7,MODEL_CORRECT,MODEL_CORRECT,TIE_BOTH_CORRECT,QUESTIONABLE_LABEL,HIGH,Leaking seal by burner supports gas leak better than heat exchanger part failure
+346,CRLC6T6Z2,batch7,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,MEDIUM,Heat exchanger fail brackets and holding bracket make bracket design more useful than ambiguous
+347,CRK5N5XF7,batch7,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Heat exchanger incorrectly supported supports Gas HX while design and manufacturing overlap
+348,CRKATP945,batch7,NO_DISAGREEMENT,MODEL_WRONG,QWEN,GOOD_LABEL,HIGH,Cracked heat exchanger replacement supports Gas HX part failure exactly
+349,CRK2LD5L4,batch7,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,QWEN,GOOD_LABEL,MEDIUM,Tube support plate not secured from factory makes bracket support wording closer than generic noncomponent
+350,CRMBHXHD6,batch7,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Burner tubes out of alignment supports gas burner installation more than gas inducer
+351,CRK2KZ3M7,batch8,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Heat exchanger leak supports HX label while Qwen leak is closer than burner
+352,CRMBJJZXR,batch8,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,HIGH,Cracked heat exchanger supports Gas HX and Qwen only misses failure reason
+353,CRM28FMDC,batch8,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Heating section reseal supports gas heat exchanger more than noncomponent configuration
+354,CRKCWBZ39,batch8,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,MEDIUM,Burner alignment supports gas issue and installation is more explicit than manufacturing
+355,CRKAT5QGB,batch8,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,MIXED_BY_FIELD,QUESTIONABLE_LABEL,MEDIUM,Missing limit switch mixes sensor versus switch and manufacturing versus installation evidence
+356,CRMCJPC44,batch8,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Metal patches over openings support noncomponent repair more than no fault found
+357,CRMCJPC6S,batch8,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Heating section holes support manufacturing issue while Gemma is closer than no fault found
+358,CRM28KKT9,batch8,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,MIXED_BY_FIELD,QUESTIONABLE_LABEL,MEDIUM,Firebox reseal supports gas heat while configuration changes also appear
+359,CRM28FMJT,batch8,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,MIXED_BY_FIELD,QUESTIONABLE_LABEL,MEDIUM,Firebox reseal and burner alignment support gas heat but configuration work is also present
+360,CRM28FM8Y,batch8,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Exchanger reseal and burner alignment support gas heat more than noncomponent configuration
+361,CRMBJ8CJ2,batch8,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Ignition board failed and was replaced so Gemma matches board part failure
+362,CRKBV4Z93,batch8,MODEL_CORRECT,MODEL_CORRECT,TIE_BOTH_CORRECT,QUESTIONABLE_LABEL,HIGH,Ignition board internal fault supports electrical board more than gas sensor
+363,CRLC71C8V,batch8,BOTH_DEFENSIBLE,MODEL_CORRECT,GEMMA,QUESTIONABLE_LABEL,HIGH,Ignition board replacement supports electrical board more than gas sensor
+364,CRM8FKD1N,batch8,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match bad IGC board part failure
+365,CRL5ZYXQB,batch8,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Replacement fuses support electrical power part failure
+366,CRK8R74RV,batch8,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,GOOD_LABEL,MEDIUM,Cracked fan blades support blade failure though condenser versus evaporator is not explicit
+367,CRL83MN2M,batch8,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Factory loose fan blade supports manufacturing and Gemma is closer
+368,CRK9SDGBX,batch8,MODEL_CORRECT,BOTH_DEFENSIBLE,QWEN,QUESTIONABLE_LABEL,HIGH,Return air damper shaft adjustment supports damper installation rather than fan blade manufacturing
+369,CRM7DRJCN,batch8,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,GOOD_LABEL,MEDIUM,Defective fan blade replacement supports blade failure but primary side is not explicit
+370,CRM7F5Y1P,batch8,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Broken fan blade DOA supports blade part failure and Gemma gets the reason
+371,CRM8FLRZJ,batch8,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,QWEN,GOOD_LABEL,MEDIUM,Condenser fan out of balance supports blade issue more than fan motor
+372,CRMAH3JRV,batch8,MODEL_WRONG,MODEL_CORRECT,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Warped plastic cover supports noncomponent other more than fan blade
+373,CRMBJHZJ5,batch8,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Failed supply fan motor supports evaporator fan motor while Qwen is closer than other
+374,CRLA5BNS2,batch8,MODEL_CORRECT,MODEL_CORRECT,TIE_BOTH_CORRECT,QUESTIONABLE_LABEL,HIGH,Leaking condenser coil replacement supports coil leak not fan motor
+375,CRM4B4RF8,batch8,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,QUESTIONABLE_LABEL,MEDIUM,Contactor and loose wire findings make power and wiring labels both plausible
+376,CRK3M8XMS,batch8,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Realigned exhaust fan wheel supports fan blade or wheel issue more than no fault found
+377,CRL844WKP,batch8,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match grounded condenser fan motor replacement
+378,CRL94P8CY,batch8,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match condenser fan motor bearing failure
+379,CRM7DPMP4,batch8,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Defective motor replacement supports fan motor more than compressor motor
+380,CRM6D1J1D,batch8,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Blower motor bearing failure supports evaporator fan motor part failure
+381,CRK6PPGLD,batch8,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,GOOD_LABEL,MEDIUM,Fan motor replacement is clear but condenser versus evaporator is not shown
+382,CRL51CC7K,batch8,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,GOOD_LABEL,MEDIUM,Bad condenser fan and bad contactor make motor and power interpretations plausible
+383,CRK6P7FJQ,bbatch8,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,INSUFFICIENT_EVIDENCE,MEDIUM,Motor replacement is clear but exact fan location is not stated
+384,CRK6PT6FS,batch8,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Grounded motor replacement supports evaporator fan motor part failure
+385,CRK6PK21R,batch8,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Motor would not start and replacement fixed unit so Gemma matches fan motor failure
+386,CRK1JQC76,batch8,MODEL_CORRECT,BOTH_DEFENSIBLE,QWEN,QUESTIONABLE_LABEL,HIGH,Service bulletin for motor grounding supports electrical wiring design more than motor part failure
+387,CRKASVG6M,batch8,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,MEDIUM,Motor manufacturing facility error supports motor manufacturing better than VFD control
+388,CRLC6XYL2,batch8,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,QWEN,GOOD_LABEL,MEDIUM,Motor seized and contactor also replaced so Qwen keeps more motor evidence
+389,CRK4MWZWQ,batch8,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Defective motor replacement supports evaporator fan motor part failure
+390,CRM9GSMLP,batch8,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,MBB plug reset cleared communication alarm so Gemma matches board resettable alarm
+391,CRM7DM5Y4,batch8,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Noisy bearings and motor replaced support motor issue more than generic other
+392,CRM7DM66B,batch8,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Grounded motor replacement supports evaporator fan motor part failure
+393,CRM9GFCK1,batch8,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match bad condenser fan motor replacement
+394,CRM8FM55Q,batch8,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match condenser fan motor bearing failure
+395,CRM6CP731,batch8,BOTH_DEFENSIBLE,MODEL_CORRECT,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Swapped VFD keypads support configuration installation more than no fault resettable alarm
+396,CRK7PXH5P,batch8,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match indoor fan motor bearing failure
+397,CRMCJNZK3,batch8,MODEL_WRONG,MODEL_WRONG,TIE_BOTH_WRONG,GOOD_LABEL,MEDIUM,Technician found no short and no confirmed fault so no fault found label is stronger
+398,CRLA5Q5TP,batch8,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Failed motor replacement supports evaporator fan motor part failure
+399,CRMCJP76P,batch8,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Units ran fine during test so Gemma matches no fault resettable alarm
+400,CRM28FVG6,batch8,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,MIXED_BY_FIELD,GOOD_LABEL,MEDIUM,Rollout reset with low gas or wind issue mixes gas context with application no fault
+401,CRM5CFX1P,batch9,MODEL_WRONG,MODEL_CORRECT,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Fan bracket and motor mount repair supports Gemma fan blade bracket context more than no fault found
+402,CRM9GCDLF,batch9,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Faulty seized motor replacement supports evaporator fan motor part failure
+403,CRMBJCM8B,batch9,MODEL_WRONG,MODEL_WRONG,TIE_BOTH_WRONG,GOOD_LABEL,HIGH,VFD tripped because motor was bad so both models miss the fan motor failure
+404,CRMAGZ3ZF,batch9,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,HIGH,Supply fan motor bearings failed and Qwen captures fan context better than other
+405,CRMCJZ2B9,batch9,MODEL_CORRECT,MODEL_CORRECT,GEMMA,QUESTIONABLE_LABEL,HIGH,Damper repair and economizer gear kit make the actual fan blade label likely wrong
+406,CRMAGY4KX,batch9,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Settings were verified and Gemma matches no fault resettable alarm exactly
+407,CRLC6YM46,batch9,NO_DISAGREEMENT,MODEL_WRONG,QWEN,GOOD_LABEL,HIGH,Bearing damage and vibration support the recorded fan blade bearing failure
+408,CRL1XBCVT,batch9,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,MEDIUM,Service says motor failure so Qwen motor context is closer than service call
+409,CRL737YWG,batch9,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,EXV driver board replacement supports electrical controls board failure
+410,CRK8RH66D,batch9,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,GOOD_LABEL,MEDIUM,Bad EXV board can be read as valve EXV or electrical board software
+411,CRM5BQR92,batch9,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,GOOD_LABEL,MEDIUM,Bad EXV board replacement makes both valve EXV and board labels defensible
+412,CRMCJVHK5,batch9,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Bad board that controls EXV supports electrical controls board part failure
+413,CRM8FMWR7,batch9,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Condensation caused EXV board failures and Gemma captures board failure but misses manufacturing
+414,CRM8FN9BF,batch9,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Condensation causing EXV board failures supports electrical board design or manufacturing
+415,CRKAT4WSG,batch9,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,MIXED_BY_FIELD,QUESTIONABLE_LABEL,LOW,Gas line valve leak work does not clearly support the recorded EXV TXV label
+416,CRM2916PQ,batch9,MODEL_WRONG,MODEL_WRONG,TIE_BOTH_WRONG,GOOD_LABEL,MEDIUM,Exhaust motor was replaced so pump and board predictions are unsupported
+417,CRK6PCNCC,batch9,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,HIGH,Evaporator coil rubbed and leaked so Qwen captures evaporator leak manufacturing better
+418,CRK2L1KBH,batch9,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Indoor coil tube sheet leak supports evaporator coil leak and Gemma is closer
+419,CRK8RKMB1,batch9,MODEL_CORRECT,BOTH_DEFENSIBLE,QWEN,QUESTIONABLE_LABEL,MEDIUM,Startup solder joint evaporator leak supports evaporator leak manufacturing more than noncomponent
+420,CRK5NKZKD,batch9,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Equalizing line leak near TXV panel makes Qwen valve context closer than compressor failure
+421,CRL7347F7,batch9,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match bad control expansion module board failure
+422,CRLA5B9XH,batch9,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match board not communicating and replacement
+423,CRLB65G3K,batch9,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Water infiltration and condensation support leak design while ambiguous output is less useful
+424,CRM9GT7XJ,batch9,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match TXV part failure
+425,CRMAHJTLV,batch9,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,VFD would not send voltage and replacement supports Gemma exact VFD control part failure
+426,CRK1JVN1H,batch9,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match UPC open translator board failure
+427,CRK9S99KX,batch9,NO_DISAGREEMENT,BOTH_DEFENSIBLE,QWEN,GOOD_LABEL,HIGH,BACnet communication programming supports network controls more than installation
+428,CRK5NJXX9,batch9,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Economizer trouble code supports economizer resettable alarm and Qwen is closer
+429,CRM7F5CJT,batch9,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Bad EXV board replacement supports electrical controls board failure
+430,CRKAT5NQ5,batch9,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Leak repair and recharge support noncomponent leak part failure
+431,CRL731CV1,batch9,NO_DISAGREEMENT,BOTH_DEFENSIBLE,QWEN,GOOD_LABEL,HIGH,Condensate drain line repair supports noncomponent leak installation more than configuration
+432,CRL4ZQ753,batch9,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,No motor or VFD fault was found but damaged traps make Qwen closer than resettable alarm
+433,CRL5ZT5PB,batch9,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Disconnect handle shaft repair sounds more installation related than manufacturing
+434,CRMAHR5D6,batch9,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,QUESTIONABLE_LABEL,MEDIUM,Service contains both major leak repair and later confirmed compressor mechanical failure
+435,CRK8R1NKL,batch9,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,MIXED_BY_FIELD,QUESTIONABLE_LABEL,MEDIUM,Damper motor work and add on board addressing split evidence between damper and board
+436,CRMBHVTSW,batch9,MODEL_CORRECT,MODEL_CORRECT,TIE_BOTH_CORRECT,QUESTIONABLE_LABEL,HIGH,Damper actuator not communicating supports valve damper part failure more than board label
+437,CRK8RBF1J,batch9,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Current sensor board replacement supports board software label while Qwen sensor is partly defensible
+438,CRLA5SPKS,batch9,MODEL_WRONG,MODEL_WRONG,TIE_BOTH_WRONG,GOOD_LABEL,HIGH,Crankcase heater failure supports compressor heater and both models miss it
+439,CRKASV5PX,batch9,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Welded contactor caused compressor issue and Qwen captures electrical power context better
+440,CRM9GBRWJ,batch9,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match contactors not sending full voltage
+441,CRL3Y849H,batch9,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match contactor replacement power failure
+442,CRK5NGXBS,batch9,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match failed contactor power part failure
+443,CRM8G3G19,batch9,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,MEDIUM,Contactor and ground fault board work support electrical power while shorted wire is also present
+444,CRMCJVKDP,batch9,NO_DISAGREEMENT,MODEL_CORRECT,GEMMA,QUESTIONABLE_LABEL,HIGH,Factory stripped contactor screw makes manufacturing cause more specific than part failure
+445,CRM9GM42X,batch9,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Loose stripped contactor screw and replacement support electrical power part failure
+446,CRMCK2CHF,batch9,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Sheet metal installer issue near dampers supports installation and noncomponent better than wiring
+447,CRM188QZ2,batch9,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Coil leak and coil replacement support condenser coil leak part failure
+448,CRM6CYZP2,batch9,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Outdoor coil leak supports condenser coil leak and Qwen is closer than evaporator primary
+449,CRM7DMSDN,batch9,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,MIXED_BY_FIELD,GOOD_LABEL,MEDIUM,Outdoor coil part supports condenser primary while Gemma captures coil leak part failure
+450,CRM4B7YD1,batch9,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,GOOD_LABEL,MEDIUM,Factory wiring was missing so manufacturing is stronger but installation work was performed
+451,CRM7DKZJM,batch10,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Loose sensor connections support installation and Gemma captures sensor taxonomy better
+452,CRK4MPSX7,batch10,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,MEDIUM,DOA coil can imply manufacturing but Gemma matches condenser coil leak part failure
+453,CRKAT3K98,batch10,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Condenser coil leak and replacement clearly support Gemma exact label
+454,CRM39S5QC,batch10,MODEL_WRONG,BOTH_DEFENSIBLE,UNCLEAR_LABEL,INSUFFICIENT_EVIDENCE,LOW,Very limited text and corner post part make the exact taxonomy unclear
+455,CRK2KTZBF,batch10,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Coil leak replacement with condenser coil part supports Gemma exact label
+456,CRK3M6P8X,batch10,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Crack in condenser coil and replacement support Gemma exact label
+457,CRM9GJLYS,batch10,BOTH_DEFENSIBLE,MODEL_CORRECT,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Software upgrade and configuration work support noncomponent configuration more than board design
+458,CRKCVX8YB,batch10,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Dealer found condenser coil leaking and Gemma matches the recorded label
+459,CRK7QL87N,batch10,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Cut condenser coil supports coil leak while cause can be installation or part failure
+460,CRK6P227V,batch10,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,MIXED_BY_FIELD,QUESTIONABLE_LABEL,MEDIUM,Startup leak near condenser line mixes coil leak and noncomponent leak evidence
+461,CRK4MLD7Y,batch10,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Outdoor coil part supports condenser but Gemma gets coil leak and part failure
+462,CRL51KLGN,batch10,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Outdoor coil leak evidence supports Gemma exact condenser coil leak label
+463,CRL518PWL,batch10,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Condenser coil leak is clear and Gemma captures leak and part failure despite wrong side
+464,CRM28FTYK,batch10,BOTH_DEFENSIBLE,MODEL_CORRECT,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Drive configuration was incorrect so noncomponent configuration is stronger than resettable alarm
+465,CRK8RC8PV,batch10,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Condenser coil leak replacement supports Gemma exact label
+466,CRM6D832Y,batch10,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Outdoor coil replacement supports condenser but Gemma gets coil leak and part failure
+467,CRM8FN75C,batch10,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Condenser coil was leaking and replaced so Gemma matches exactly
+468,CRM8F9MY9,batch10,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Multiple coil leaks support part failure and Gemma is closer despite evaporator primary
+469,CRL72MZ3C,batch10,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Leak confirmed on condenser coil and replaced so Gemma matches exactly
+470,CRMCJWJT9,batch10,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,LAT sensor connections were reterminated so Gemma matches sensor installation
+471,CRL94KJBH,batch10,BOTH_DEFENSIBLE,MODEL_CORRECT,GEMMA,QUESTIONABLE_LABEL,MEDIUM,Loose skid and wire support installation while Gemma keeps noncomponent other
+472,CRMCJXW49,batch10,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match grounded compressor motor part failure
+473,CRM8F9XPR,batch10,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Open compressor windings support motor failure and Gemma matches exactly
+474,CRM39DXTQ,batch10,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,MEDIUM,Electrical pin issue is wiring related but compressor windings support motor label
+475,CRKCW4N7F,batch10,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Burnt out compressor supports motor failure better than mechanical failure
+476,CRK9RV8DW,batch10,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match compressor shorted to ground motor failure
+477,CRK5NQ1LC,batch10,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match shorted compressor windings motor failure
+478,CRL1WZ7JH,batch10,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Burnt out compressor supports motor failure better than mechanical failure
+479,CRK8RQ6L9,batch10,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match compressor would not start motor failure
+480,CRKAT5HTV,batch10,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,INSUFFICIENT_EVIDENCE,LOW,Text only says diagnose and replace compressor so motor versus mechanical is unclear
+481,CRK2LF87F,batch10,MODEL_CORRECT,MODEL_CORRECT,TIE_BOTH_CORRECT,QUESTIONABLE_LABEL,HIGH,Electrical short to ground on windings clearly supports compressor motor not condenser primary
+482,CRLB6L8W4,batch10,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match compressor shorted to ground motor failure
+483,CRMAGXYSP,batch10,BOTH_DEFENSIBLE,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,MEDIUM,Bad compressor text is broad but Gemma matches the recorded motor label
+484,CRK1KBZVM,batch10,MODEL_WRONG,MODEL_WRONG,TIE_BOTH_WRONG,GOOD_LABEL,HIGH,Crankcase heaters were not working and both models miss compressor heater
+485,CRK5N55HK,batch10,MODEL_WRONG,MODEL_WRONG,TIE_BOTH_WRONG,GOOD_LABEL,HIGH,Crankcase heaters were not working and both models miss compressor heater
+486,CRLB63M4J,batch10,NO_DISAGREEMENT,MODEL_WRONG,QWEN,GOOD_LABEL,HIGH,Defective crankcase heater replacement supports Qwen exact compressor heater label
+487,CRMCJMW7M,batch10,MODEL_CORRECT,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,HIGH,Bad compressor weld and leaking fitting support compressor leak manufacturing better than generic noncomponent leak
+488,CRL94YVT9,batch10,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,GOOD_LABEL,MEDIUM,Locked rotor can reasonably be classified as motor or mechanical compressor failure
+489,CRLC6QS9Z,batch10,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,INSUFFICIENT_EVIDENCE,MEDIUM,Compressor would not start gives limited evidence for motor versus mechanical subtype
+490,CRLA5F8PZ,batch10,NO_DISAGREEMENT,BOTH_DEFENSIBLE,QWEN,GOOD_LABEL,MEDIUM,Compressor replacement is vague but Qwen matches recorded mechanical failure
+491,CRM6CJC4V,batch10,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match locked compressor mechanical failure
+492,CRKASWDHM,batch10,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match explicitly stated mechanical compressor failure
+493,CRK6P7WJR,batch10,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,INSUFFICIENT_EVIDENCE,MEDIUM,Compressor would not start does not clearly separate motor from mechanical failure
+494,CRKATHGHD,batch10,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match loud squealing compressor mechanical failure
+495,CRK6P9G6V,batch10,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match noisy compressor mechanical failure
+496,CRKBVLGC7,batch10,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match seized compressor mechanical failure
+497,CRKASZLNT,batch10,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Seized compressor replacement supports Gemma exact mechanical failure
+498,CRMAHFRQY,batch10,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match compressor mechanical failure
+499,CRL83MQMN,batch10,NO_DISAGREEMENT,MODEL_WRONG,QWEN,GOOD_LABEL,HIGH,Compressor not pumping supports mechanical failure better than motor failure
+500,CRL51GYCF,batch10,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match explicitly stated internal mechanical failure
+501,CRMAHB9RC,batch11,BOTH_DEFENSIBLE,NO_DISAGREEMENT,TIE_BOTH_DEFENSIBLE,GOOD_LABEL,MEDIUM,Would not start can indicate motor or mechanical compressor failure so both are defensible
+502,CRM9G6TGR,batch11,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match noisy compressor mechanical failure
+503,CRK8R7PXZ,batch11,NO_DISAGREEMENT,BOTH_DEFENSIBLE,QWEN,GOOD_LABEL,MEDIUM,Noisy compressor supports mechanical failure while overamping makes motor subtype defensible
+504,CRL62B7J1,batch11,MODEL_CORRECT,MODEL_CORRECT,TIE_BOTH_CORRECT,QUESTIONABLE_LABEL,HIGH,Open windings clearly support compressor motor more than mechanical subtype
+505,CRM39MSCT,batch11,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Compressor coming apart internally supports mechanical compressor failure
+506,CRM29191K,batch11,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Defective compressor replacement supports compressor failure and Gemma is closer than contactor power
+507,CRL2XF4YS,batch11,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match communication board part failure
+508,CRK4MPD9R,batch11,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Scrolling marquee replacement supports electrical controls board software part failure
+509,CRK8R7LT3,batch11,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Display unit failed and replacement supports electrical controls board software
+510,CRL83RF8V,batch11,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,QWEN,QUESTIONABLE_LABEL,MEDIUM,No leaks found and low charge suggests refrigerant undercharge more than leak label
+511,CRM5BVJ2D,batch11,NO_DISAGREEMENT,NO_DISAGREEMENT,TIE_BOTH_CORRECT,GOOD_LABEL,HIGH,Both models match burnt contactor electrical power part failure
+512,CRK7PYG5J,batch11,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,MIXED_BY_FIELD,GOOD_LABEL,MEDIUM,Broken TXV equalizer line supports valve context and noncomponent leak context
+513,CRKATPT3K,batch11,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Circuit breaker service bulletin supports electrical power while Gemma is closer on component
+514,CRLC6QZBF,batch11,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,Disconnect left voltage through supports electrical power part failure or manufacturing
+515,CRM4BKKW8,batch11,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Rusted motor drive internals support VFD control while Gemma only misses design cause
+516,CRL62CYGB,batch11,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Bad disconnect at startup supports electrical controls power part failure
+517,CRM8FQMV8,batch11,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Water leakage through openings supports noncomponent installation and Gemma is closer
+518,CRL72P75Y,batch11,MODEL_CORRECT,BOTH_DEFENSIBLE,QWEN,QUESTIONABLE_LABEL,HIGH,Technician found no blower issue so no fault found is better than fan blade manufacturing
+519,CRL2XX74C,batch11,MODEL_CORRECT,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,HIGH,Fan wheel moved on shaft and set screws were tightened so installation is stronger than manufacturing
+520,CRLC76NXF,batch11,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,GOOD_LABEL,MEDIUM,VFD communication alarm reset with wiring check supports VFD wiring resettable context
+521,CRK9S862D,batch11,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,MIXED_BY_FIELD,QUESTIONABLE_LABEL,MEDIUM,Crossed TXV equalizer lines plus leak repair split evidence between valve and leak installation
+522,CRL2Y4TTV,batch11,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,QWEN,GOOD_LABEL,MEDIUM,Bad connection from keypad to drive supports Starter VFD wiring more than generic electrical wiring
+523,CRL7367WS,batch11,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,QWEN,GOOD_LABEL,MEDIUM,Loose connection causing VFD no start signal supports Starter VFD wiring
+524,CRM5BNRZT,batch11,NO_DISAGREEMENT,BOTH_DEFENSIBLE,QWEN,GOOD_LABEL,MEDIUM,Blower bearing replacement supports fan bearing or blade assembly more than motor
+525,CRMAHGN2V,batch11,NO_DISAGREEMENT,BOTH_DEFENSIBLE,QWEN,GOOD_LABEL,MEDIUM,Failed bearings support fan bearing or blade assembly more than motor
+526,CRM8F8L36,batch11,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,QWEN,QUESTIONABLE_LABEL,MEDIUM,Loose wire on drive supports VFD wiring and installation cause is also plausible
+527,CRKATPSB7,batch11,MODEL_WRONG,NO_DISAGREEMENT,GEMMA,GOOD_LABEL,HIGH,Grounded motor replacement supports evaporator fan motor part failure
+528,CRLB63GNR,batch11,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,MIXED_BY_FIELD,GOOD_LABEL,MEDIUM,Factory air leaks support noncomponent leak manufacturing but each model captures only part of it
+529,CRKBVL5R6,batch11,MODEL_WRONG,MODEL_WRONG,TIE_BOTH_WRONG,GOOD_LABEL,MEDIUM,Supply air leaking into burner section supports noncomponent air leak not gas valve or burner failure
+530,CRM7DBJRC,batch11,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,QUESTIONABLE_LABEL,MEDIUM,Supply air leaks support noncomponent leak while manufacturing versus installation is unclear
+531,CRMAHJHK2,batch11,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,MEDIUM,Air leak troubleshooting supports noncomponent leak but cause is not documented
+532,CRMCJL5M2,batch11,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,TIE_BOTH_DEFENSIBLE,GOOD_LABEL,MEDIUM,Stage control board replacement and BacNet issue make board and network context plausible
+533,CRM39KWQX,batch11,BOTH_DEFENSIBLE,BOTH_DEFENSIBLE,MIXED_BY_FIELD,QUESTIONABLE_LABEL,MEDIUM,Switched economizer actuator setup mixes damper actuator and configuration design evidence
+534,CRM7DDYC8,batch11,MODEL_WRONG,BOTH_DEFENSIBLE,GEMMA,GOOD_LABEL,MEDIUM,Gasket added for panel leak design makes Gemma closer than no fault found
+535,CRKCWBQRM,batch11,NO_DISAGREEMENT,BOTH_DEFENSIBLE,QWEN,GOOD_LABEL,HIGH,Water seeping into space supports noncomponent leak design
+536,CRKCWBQND,batch11,NO_DISAGREEMENT,BOTH_DEFENSIBLE,QWEN,GOOD_LABEL,HIGH,Water seeping into space supports noncomponent leak design
+537,CRKCWBQSW,batch11,NO_DISAGREEMENT,BOTH_DEFENSIBLE,QWEN,GOOD_LABEL,HIGH,Water seeping into space supports noncomponent leak design
+538,CRM8FVPPC,batch11,BOTH_DEFENSIBLE,MODEL_WRONG,QWEN,QUESTIONABLE_LABEL,MEDIUM,Smoke detector control wiring issue supports electrical wiring better than ambiguous output

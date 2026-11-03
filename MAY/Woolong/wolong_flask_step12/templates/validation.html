@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Validation Mode</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="container">
+        <section class="card">
+            <a href="/">← Back</a>
+            <h1>Validation Mode</h1>
+            <p class="muted">Upload a CSV with model_number and expected_* columns to compare Flask results against Excel/VBA reference outputs.</p>
+            <form action="/validate" method="post" enctype="multipart/form-data">
+                <label for="validation_csv">Validation CSV</label>
+                <input id="validation_csv" name="validation_csv" type="file" accept=".csv" required>
+                <label for="tolerance">Numeric tolerance</label>
+                <input id="tolerance" name="tolerance" value="0.01">
+                <button type="submit">Run validation</button>
+            </form>
+        </section>
+
+        {% if run %}
+        <section class="card">
+            <h2>Summary</h2>
+            {% if run.message %}<p>{{ run.message }}</p>{% endif %}
+            <table>
+                <tr><th>Status</th><td>{{ run.status }}</td></tr>
+                <tr><th>Total cases</th><td>{{ run.total_cases }}</td></tr>
+                <tr><th>Passed</th><td>{{ run.passed_cases }}</td></tr>
+                <tr><th>Failed</th><td>{{ run.failed_cases }}</td></tr>
+                <tr><th>Skipped</th><td>{{ run.skipped_cases }}</td></tr>
+            </table>
+        </section>
+
+        {% for case in run.cases %}
+        <section class="card">
+            <h2>{{ case.case_id }} — {{ case.model_number }}</h2>
+            <p><strong>Status:</strong> {{ case.status }}</p>
+            {% if case.error_codes %}<p><strong>Errors:</strong> {{ case.error_codes|join(', ') }}</p>{% endif %}
+            {% if case.warning_codes %}<p><strong>Warnings:</strong> {{ case.warning_codes|join(', ') }}</p>{% endif %}
+            {% if case.messages %}
+            <ul>{% for msg in case.messages %}<li>{{ msg }}</li>{% endfor %}</ul>
+            {% endif %}
+
+            <table>
+                <tr><th>Field</th><th>Expected</th><th>Actual</th><th>Status</th><th>Difference</th></tr>
+                {% for comp in case.comparisons %}
+                <tr>
+                    <td>{{ comp.field }}</td>
+                    <td>{{ comp.expected }}</td>
+                    <td>{{ comp.actual }}</td>
+                    <td>{{ comp.status }}</td>
+                    <td>{{ comp.difference }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </section>
+        {% endfor %}
+        {% endif %}
+    </main>
+</body>
+</html>

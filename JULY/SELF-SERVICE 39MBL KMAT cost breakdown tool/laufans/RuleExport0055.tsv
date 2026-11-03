@@ -1,0 +1,151 @@
+RULEBEGIN.LOOKUP.OPTIONSPRICEII.DUP					P5	P6		P8											NOMENCLATURE			HIT.CATEGORY	HIT.VALUE	HIT.DESCRIPTION																				
+					0	RSTUVWXY		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	455.46	Option Belt Guard
+					0	Z-		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	485.23	Option Belt Guard
+					1	012345		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	485.23	Option Belt Guard
+					1	678ABCDE		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	514.96	Option Belt Guard
+					1	FGHJKLMN		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	514.96	Option Belt Guard
+					1	PQRSTUVW		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	574.48	Option Belt Guard
+					1	XYZ-		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	574.48	Option Belt Guard
+					2	0123		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	574.48	Option Belt Guard
+					2	45678ABC		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	767.6	Option Belt Guard
+					2	DEFGHJKL		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	767.6	Option Belt Guard
+					5	XYZ-		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	507.607	Option Belt Guard
+					6	0123		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	507.607	Option Belt Guard
+					6	45678ABC		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	507.61	Option Belt Guard
+					6	DEFGHJKL		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	536.95	Option Belt Guard
+					6	MNPQRSTU		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	566.27	Option Belt Guard
+					6	VWXYZ-		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	594.73	Option Belt Guard
+					7	01		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	594.73	Option Belt Guard
+					7	2345678A		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	594.73	Option Belt Guard
+					7	BCDEFGHJ		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	624.08	Option Belt Guard
+					7	KLMNPQRS		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	756.62	Option Belt Guard
+					8	01234567		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	796.13	Option Belt Guard
+					0	RSTUVWXY		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	79.54	Option Inlet Screen
+					0	Z-		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	91.31	Option Inlet Screen
+					1	012345		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	91.31	Option Inlet Screen
+					1	678ABCDE		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	91.31	Option Inlet Screen
+					1	FGHJKLMN		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	108.64	Option Inlet Screen
+					1	PQRSTUVW		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	144.97	Option Inlet Screen
+					1	XYZ-		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	144.97	Option Inlet Screen
+					2	0123		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	144.97	Option Inlet Screen
+					2	45678ABC		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	274.3	Option Inlet Screen
+					2	DEFGHJKL		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	289.44	Option Inlet Screen
+					5	XYZ-		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	83.747	Option Inlet Screen
+					6	0123		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	83.747	Option Inlet Screen
+					6	45678ABC		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	83.74	Option Inlet Screen
+					6	DEFGHJKL		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	93.13	Option Inlet Screen
+					6	MNPQRSTU		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	101.44	Option Inlet Screen
+					6	VWXYZ-		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	101.44	Option Inlet Screen
+					7	01		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	101.44	Option Inlet Screen
+					7	2345678A		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	101.44	Option Inlet Screen
+					7	BCDEFGHJ		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	101.44	Option Inlet Screen
+					7	KLMNPQRS		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	270.07	Option Inlet Screen
+					8	01234567		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	352.5	Option Inlet Screen
+					0	RSTUVWXY		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-39.77	Adjustment when Belt and Inlet Screen are ordered
+					0	Z-		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-45.655	Adjustment when Belt and Inlet Screen are ordered
+					1	012345		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-45.655	Adjustment when Belt and Inlet Screen are ordered
+					1	678ABCDE		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-45.655	Adjustment when Belt and Inlet Screen are ordered
+					1	FGHJKLMN		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-54.32	Adjustment when Belt and Inlet Screen are ordered
+					1	PQRSTUVW		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-72.485	Adjustment when Belt and Inlet Screen are ordered
+					1	XYZ-		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-72.485	Adjustment when Belt and Inlet Screen are ordered
+					2	0123		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-72.485	Adjustment when Belt and Inlet Screen are ordered
+					2	45678ABC		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-137.15	Adjustment when Belt and Inlet Screen are ordered
+					2	DEFGHJKL		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-144.72	Adjustment when Belt and Inlet Screen are ordered
+					5	XYZ-		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-41.8735	Adjustment when Belt and Inlet Screen are ordered
+					6	0123		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-41.8735	Adjustment when Belt and Inlet Screen are ordered
+					6	45678ABC		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-41.87	Adjustment when Belt and Inlet Screen are ordered
+					6	DEFGHJKL		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-46.565	Adjustment when Belt and Inlet Screen are ordered
+					6	MNPQRSTU		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-50.72	Adjustment when Belt and Inlet Screen are ordered
+					6	VWXYZ-		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-50.72	Adjustment when Belt and Inlet Screen are ordered
+					7	01		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-50.72	Adjustment when Belt and Inlet Screen are ordered
+					7	2345678A		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-50.72	Adjustment when Belt and Inlet Screen are ordered
+					7	BCDEFGHJ		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-50.72	Adjustment when Belt and Inlet Screen are ordered
+					7	KLMNPQRS		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-135.035	Adjustment when Belt and Inlet Screen are ordered
+					8	01234567		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-176.25	Adjustment when Belt and Inlet Screen are ordered
+					0	RSTUVWXY		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	4.94	Option Extended Lube Line
+					0	Z-		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	6.09	Option Extended Lube Line
+					1	012345		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	6.09	Option Extended Lube Line
+					1	678ABCDE		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	6.84	Option Extended Lube Line
+					1	FGHJKLMN		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	7.6	Option Extended Lube Line
+					1	PQRSTUVW		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	8.36	Option Extended Lube Line
+					1	XYZ-		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	8.36	Option Extended Lube Line
+					2	0123		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	8.36	Option Extended Lube Line
+					2	45678ABC		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	8.76	Option Extended Lube Line
+					2	DEFGHJKL		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	8.76	Option Extended Lube Line
+					7	KLMNPQRS		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	6.77	Option Extended Lube Line
+					8	01234567		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	6.77	Option Extended Lube Line
+					0	8ABCDEFG		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	61.49	Option Inlet Screen
+					2	MNPQRSTU		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	289.44	Option Inlet Screen
+					2	VWXYZ-		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	329.84	Option Inlet Screen
+					3	01		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	329.84	Option Inlet Screen
+					3	2345678A		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	329.84	Option Inlet Screen
+					3	BCDEFGHJ		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	355.09	Option Inlet Screen
+					3	KLMNPQRS		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	355.09	Option Inlet Screen
+					3	TUVWXYZ-		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	355.09	Option Inlet Screen
+					4	8ABCDEFG		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	66.87	Option Inlet Screen
+					4	Z-		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	74.25	Option Inlet Screen
+					5	012345		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	74.25	Option Inlet Screen
+					5	678ABCDE		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	74.25	Option Inlet Screen
+					5	FGHJKLMN		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	83.747	Option Inlet Screen
+					7	TUVWXYZ-		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	352.5	Option Inlet Screen
+					8	8ABCDEFG		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	458.69	Option Inlet Screen
+					8	HJKLMNPQ		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	458.69	Option Inlet Screen
+					8	RSTUVWXY		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	458.69	Option Inlet Screen
+					8	Z-		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	529.94	Option Inlet Screen
+					9	012345		YDNZFP3JS4KW														$OPTIONS.INLETSCREEN	529.94	Option Inlet Screen
+					0	8ABCDEFG		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	4.57	Option Extended Lube Line
+					2	MNPQRSTU		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	8.76	Option Extended Lube Line
+					2	VWXYZ-		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	9.17	Option Extended Lube Line
+					3	01		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	9.17	Option Extended Lube Line
+					3	2345678A		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	9.17	Option Extended Lube Line
+					3	BCDEFGHJ		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	9.17	Option Extended Lube Line
+					3	KLMNPQRS		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	10.99	Option Extended Lube Line
+					3	TUVWXYZ-		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	10.99	Option Extended Lube Line
+					5	678ABCDE		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	0.001	Option Extended Lube Line
+					7	TUVWXYZ-		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	6.77	Option Extended Lube Line
+					8	8ABCDEFG		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	7.1	Option Extended Lube Line
+					8	HJKLMNPQ		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	7.1	Option Extended Lube Line
+					8	RSTUVWXY		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	7.1	Option Extended Lube Line
+					8	Z-		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	7.43	Option Extended Lube Line
+					9	012345		1GQ2HR3JS4KW														$OPTIONS.EXTENDEDLUBE	7.43	Option Extended Lube Line
+					0	8ABCDEFG		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	455.46	Option Belt Guard
+					2	MNPQRSTU		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	767.6	Option Belt Guard
+					2	VWXYZ-		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	807.67	Option Belt Guard
+					3	01		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	807.67	Option Belt Guard
+					3	2345678A		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	847.73	Option Belt Guard
+					3	BCDEFGHJ		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	847.73	Option Belt Guard
+					3	KLMNPQRS		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	847.73	Option Belt Guard
+					3	TUVWXYZ-		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	847.73	Option Belt Guard
+					4	8ABCDEFG		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	448.95	Option Belt Guard
+					4	Z-		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	478.29	Option Belt Guard
+					5	012345		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	478.29	Option Belt Guard
+					5	678ABCDE		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	478.29	Option Belt Guard
+					5	FGHJKLMN		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	507.61	Option Belt Guard
+					7	TUVWXYZ-		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	796.13	Option Belt Guard
+					8	8ABCDEFG		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	835.62	Option Belt Guard
+					8	HJKLMNPQ		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	835.62	Option Belt Guard
+					8	RSTUVWXY		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	835.62	Option Belt Guard
+					8	Z-		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	877.42	Option Belt Guard
+					9	012345		VCMZFP2HR4KW														$OPTIONS.BELTGUARD	877.42	Option Belt Guard
+					0	8ABCDEFG		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-30.75	Adjustment when Belt and Inlet Screen are ordered
+					2	MNPQRSTU		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-144.72	Adjustment when Belt and Inlet Screen are ordered
+					2	VWXYZ-		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-164.92	Adjustment when Belt and Inlet Screen are ordered
+					3	01		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-164.92	Adjustment when Belt and Inlet Screen are ordered
+					3	2345678A		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-164.92	Adjustment when Belt and Inlet Screen are ordered
+					3	BCDEFGHJ		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-177.55	Adjustment when Belt and Inlet Screen are ordered
+					3	KLMNPQRS		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-177.55	Adjustment when Belt and Inlet Screen are ordered
+					3	TUVWXYZ-		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-177.55	Adjustment when Belt and Inlet Screen are ordered
+					4	8ABCDEFG		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-33.44	Adjustment when Belt and Inlet Screen are ordered
+					4	Z-		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-37.13	Adjustment when Belt and Inlet Screen are ordered
+					5	012345		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-37.13	Adjustment when Belt and Inlet Screen are ordered
+					5	678ABCDE		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-37.13	Adjustment when Belt and Inlet Screen are ordered
+					5	FGHJKLMN		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-41.87	Adjustment when Belt and Inlet Screen are ordered
+					7	TUVWXYZ-		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-176.25	Adjustment when Belt and Inlet Screen are ordered
+					8	8ABCDEFG		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-229.35	Adjustment when Belt and Inlet Screen are ordered
+					8	HJKLMNPQ		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-229.35	Adjustment when Belt and Inlet Screen are ordered
+					8	RSTUVWXY		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-229.35	Adjustment when Belt and Inlet Screen are ordered
+					8	Z-		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-264.97	Adjustment when Belt and Inlet Screen are ordered
+					9	012345		FKPWZ4														$OPTIONS.Adjust.BELTandINLETSCREEN	-264.97	Adjustment when Belt and Inlet Screen are ordered
+																			
+																			
+RULEEND																				

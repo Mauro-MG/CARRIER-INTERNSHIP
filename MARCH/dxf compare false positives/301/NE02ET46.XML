@@ -1,0 +1,1238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Unit>
+  <version>5.3</version>
+  <displayName>39MN Indoor Air Handler Sz 21</displayName>
+  <name>R32 DX COIL</name>
+  <BoundingBox>
+    <version>1.5</version>
+    <originX>0</originX>
+    <originY>-6</originY>
+    <originZ>-4.63</originZ>
+    <extentX>24</extentX>
+    <extentY>60.11</extentY>
+    <extentZ>83.63</extentZ>
+    <weight>619.95</weight>
+  </BoundingBox>
+  <model>39MN</model>
+  <created>2025-07-14T16:51:42</created>
+  <modified>2025-07-14T16:51:42</modified>
+  <unitSize>21</unitSize>
+  <defaultHand>SIDETHIS</defaultHand>
+  <crating>NO</crating>
+  <cover>NO</cover>
+  <skid>NO</skid>
+  <pIC>NONE</pIC>
+  <preHeatSensor>NO</preHeatSensor>
+  <splitBefore>BASERAIL</splitBefore>
+  <shippingRules>R</shippingRules>
+  <coilConnectionConstruction>SINGLEWALL</coilConnectionConstruction>
+  <externalPanelMaterial>GALVANIZED</externalPanelMaterial>
+  <internalPanelMaterial>GALVANIZED</internalPanelMaterial>
+  <thermalBreak>NO</thermalBreak>
+  <startup>NONE</startup>
+  <warranty>STANDARD</warranty>
+  <uLPVersion>AHUB650</uLPVersion>
+  <baserailHeight>N0600</baserailHeight>
+  <shipOversize>NO</shipOversize>
+  <fastShip>NO</fastShip>
+  <mountsTo>CURB</mountsTo>
+  <diamondTreadPlate>NO</diamondTreadPlate>
+  <thickerExterior>NO</thickerExterior>
+  <thickerInterior>NO</thickerInterior>
+  <singlePointPower>NONE</singlePointPower>
+  <wireRoute>B</wireRoute>
+  <XIDBELOW>XXXXX</XIDBELOW>
+  <XIDsectionId>UNIT</XIDsectionId>
+  <XIDmodel>39MN</XIDmodel>
+  <XIDunitSize>21</XIDunitSize>
+  <XIDAHUManufacturedComponent>UNIT</XIDAHUManufacturedComponent>
+  <XIDcrating>NO</XIDcrating>
+  <XIDcover>NO</XIDcover>
+  <XIDskid>NO</XIDskid>
+  <XIDdefaultHand>SIDETHIS</XIDdefaultHand>
+  <XIDsplitBefore>BASERAIL</XIDsplitBefore>
+  <XIDpIC>NONE</XIDpIC>
+  <XIDpreHeatSensor>NO</XIDpreHeatSensor>
+  <XIDthermalBreak>NO</XIDthermalBreak>
+  <XIDquarterTurnLatches>NO</XIDquarterTurnLatches>
+  <XIDshippingRules>R</XIDshippingRules>
+  <XIDinternalPanelMaterial>GALVANIZED</XIDinternalPanelMaterial>
+  <XIDcoilConnectionConstruction>SINGLEWALL</XIDcoilConnectionConstruction>
+  <XIDexternalPanelMaterial>GALVANIZED</XIDexternalPanelMaterial>
+  <XIDstartup>NONE</XIDstartup>
+  <XIDwarranty>STANDARD</XIDwarranty>
+  <XIDuLPVersion>AHUB650</XIDuLPVersion>
+  <XIDbaserailHeight>N0600</XIDbaserailHeight>
+  <XIDshipOversize>NO</XIDshipOversize>
+  <XIDfastShip>NO</XIDfastShip>
+  <XIDmountsTo>CURB</XIDmountsTo>
+  <XIDdiamondTreadPlate>NO</XIDdiamondTreadPlate>
+  <XIDthickerExterior>NO</XIDthickerExterior>
+  <XIDthickerInterior>NO</XIDthickerInterior>
+  <XIDsinglePointPower>NONE</XIDsinglePointPower>
+  <XIDwireRoute>B</XIDwireRoute>
+  <XIDcomponentDepth>UNIT</XIDcomponentDepth>
+  <AHUManufacturedComponent>
+    <version>5.3</version>
+    <displayName>Direct Expansion Coil</displayName>
+    <name>DCS</name>
+    <BoundingBox>
+      <version>1.5</version>
+      <originX>0</originX>
+      <originY>0</originY>
+      <originZ>0</originZ>
+      <extentX>24</extentX>
+      <extentY>54.11</extentY>
+      <extentZ>79</extentZ>
+      <weight>619.95</weight>
+    </BoundingBox>
+    <sectionId>196618</sectionId>
+    <uIClass>DELUXECOIL</uIClass>
+    <deck>1</deck>
+    <splitAfter>NONE</splitAfter>
+    <orientation>HORIZONTAL</orientation>
+    <airFlow>DRAW</airFlow>
+    <bypass>NONE</bypass>
+    <coilAlignment>UPSTREAM</coilAlignment>
+    <extendedLength>NO</extendedLength>
+    <discharge>NORMAL</discharge>
+    <uVC>NONE</uVC>
+    <drainLength>20</drainLength>
+    <aWLAdder>00</aWLAdder>
+    <controlBox>NONE</controlBox>
+    <testPort>NONE</testPort>
+    <XIDBELOW>XXXXX</XIDBELOW>
+    <XIDID196618/>
+    <XIDAHUManufacturedComponent>DCS</XIDAHUManufacturedComponent>
+    <XIDairFlow>DRAW</XIDairFlow>
+    <XIDuIClass>DELUXECOIL</XIDuIClass>
+    <XIDdeck>1</XIDdeck>
+    <XIDcoilAlignment>UPSTREAM</XIDcoilAlignment>
+    <XIDextendedLength>NO</XIDextendedLength>
+    <XIDdischarge>NORMAL</XIDdischarge>
+    <XIDorientation>HORIZONTAL</XIDorientation>
+    <XIDsplitAfter>NONE</XIDsplitAfter>
+    <XIDsplitBefore>BASERAIL</XIDsplitBefore>
+    <XIDbypass>NONE</XIDbypass>
+    <XIDuVC>NONE</XIDuVC>
+    <XIDpanelPressure>POSITIVE</XIDpanelPressure>
+    <XIDaWLAdder>00</XIDaWLAdder>
+    <XIDdrainLength>20</XIDdrainLength>
+    <XIDcontrolBox>NONE</XIDcontrolBox>
+    <XIDtestPort>NONE</XIDtestPort>
+    <XIDcomponentDepth>SECTION</XIDcomponentDepth>
+    <DrainPan>
+      <version>5.3</version>
+      <displayName>304 Stainless Steel Drain Pan  Right Side Drain</displayName>
+      <name>DRAINPAN</name>
+      <BoundingBox>
+        <version>1.5</version>
+        <originX>1.89</originX>
+        <originY>-3.9</originY>
+        <originZ>1.89</originZ>
+        <extentX>20.21</extentX>
+        <extentY>3.9</extentY>
+        <extentZ>75.21</extentZ>
+        <weight>28.1</weight>
+      </BoundingBox>
+      <location>SIDETHIS</location>
+      <drainPanMaterial>STAINLESS</drainPanMaterial>
+      <XIDBELOW>XXXXX</XIDBELOW>
+      <XIDDrainPan>DRAINPAN</XIDDrainPan>
+      <XIDlocation>SIDETHIS</XIDlocation>
+      <XIDdrainPanMaterial>STAINLESS</XIDdrainPanMaterial>
+      <XIDsplitAfter>NONE</XIDsplitAfter>
+      <XIDdrainLengthActual>20</XIDdrainLengthActual>
+      <XIDcomponentDepth>COMPONENT</XIDcomponentDepth>
+    </DrainPan>
+    <AHUManufacturedComponent>
+      <version>5.3</version>
+      <displayName>Access</displayName>
+      <name>ACCESSMETHOD</name>
+      <accessMethod>NONE</accessMethod>
+      <location>SIDETHIS</location>
+      <marineLight>NO</marineLight>
+      <viewport>NO</viewport>
+      <outlet>NO</outlet>
+      <XIDBELOW>XXXXX</XIDBELOW>
+      <XIDAHUManufacturedComponent>ACCESSMETHOD</XIDAHUManufacturedComponent>
+      <XIDmarineLight>NO</XIDmarineLight>
+      <XIDlocation>SIDETHIS</XIDlocation>
+      <XIDaccessMethod>NONE</XIDaccessMethod>
+      <XIDsplitAfter>NONE</XIDsplitAfter>
+      <XIDviewport>NO</XIDviewport>
+      <XIDoutlet>NO</XIDoutlet>
+      <XIDcomponentDepth>COMPONENT</XIDcomponentDepth>
+    </AHUManufacturedComponent>
+    <AHUManufacturedComponent>
+      <version>5.3</version>
+      <displayName>Access</displayName>
+      <name>ACCESSMETHOD</name>
+      <accessMethod>NONE</accessMethod>
+      <location>SIDEOPPOSITE</location>
+      <marineLight>NO</marineLight>
+      <viewport>NO</viewport>
+      <outlet>NO</outlet>
+      <XIDBELOW>XXXXX</XIDBELOW>
+      <XIDAHUManufacturedComponent>ACCESSMETHOD</XIDAHUManufacturedComponent>
+      <XIDmarineLight>NO</XIDmarineLight>
+      <XIDlocation>SIDEOPPOSITE</XIDlocation>
+      <XIDaccessMethod>NONE</XIDaccessMethod>
+      <XIDsplitAfter>NONE</XIDsplitAfter>
+      <XIDviewport>NO</XIDviewport>
+      <XIDoutlet>NO</XIDoutlet>
+      <XIDcomponentDepth>COMPONENT</XIDcomponentDepth>
+    </AHUManufacturedComponent>
+    <Coil>
+      <version>5.3</version>
+      <displayName>Coil</displayName>
+      <name>COIL</name>
+      <BoundingBox>
+        <version>1.5</version>
+        <originX>3.05</originX>
+        <originY>0.61</originY>
+        <originZ>5.06</originZ>
+        <extentX>7.5</extentX>
+        <extentY>42.22</extentY>
+        <extentZ>66.74</extentZ>
+        <weight>353.88</weight>
+      </BoundingBox>
+      <coilFunction>COOLING</coilFunction>
+      <face>MFA</face>
+      <coilType>DX</coilType>
+      <coilTube>T0500</coilTube>
+      <coilRow>6</coilRow>
+      <coilFPI>8</coilFPI>
+      <coilCircuit>INTERTWINED_SPLITHALF</coilCircuit>
+      <tubeWallThickness>TW0016</tubeWallThickness>
+      <finMaterial>AL</finMaterial>
+      <casing>ST_STEEL</casing>
+      <header>STEEL</header>
+      <coilCoating>NONE</coilCoating>
+      <coilSequence>1</coilSequence>
+      <location>SIDETHIS</location>
+      <refrigerant>R32</refrigerant>
+      <tXV>FACTORY</tXV>
+      <finThickness>B</finThickness>
+      <XIDBELOW>XXXXX</XIDBELOW>
+      <XIDcoilType>DX</XIDcoilType>
+      <XIDcoilRow>6</XIDcoilRow>
+      <XIDcoilFPI>8</XIDcoilFPI>
+      <XIDcoilCircuit>INTERTWINED_SPLITHALF</XIDcoilCircuit>
+      <XIDcasing>ST_STEEL</XIDcasing>
+      <XIDCoil>COIL</XIDCoil>
+      <XIDheader>STEEL</XIDheader>
+      <XIDcoilTube>T0500</XIDcoilTube>
+      <XIDtubeWallThickness>TW0016</XIDtubeWallThickness>
+      <XIDlocation>SIDETHIS</XIDlocation>
+      <XIDcoilSequence>1</XIDcoilSequence>
+      <XIDfinMaterial>AL</XIDfinMaterial>
+      <XIDcoilCoating>NONE</XIDcoilCoating>
+      <XIDsplitAfter>NONE</XIDsplitAfter>
+      <XIDface>MFA</XIDface>
+      <XIDcoilFunction>COOLING</XIDcoilFunction>
+      <XIDfinThickness>B</XIDfinThickness>
+      <XIDrefrigerant>R32</XIDrefrigerant>
+      <XIDtIFa>N32</XIDtIFa>
+      <XIDtIFb>NONE</XIDtIFb>
+      <XIDdBTS>N65</XIDdBTS>
+      <XIDtubeSpacing>N0125</XIDtubeSpacing>
+      <XIDcoilWidth>N0750</XIDcoilWidth>
+      <XIDtXV>FACTORY</XIDtXV>
+      <XIDcomponentDepth>COMPONENT</XIDcomponentDepth>
+      <AHUManufacturedComponent>
+        <version>5.3</version>
+        <displayName>Dissipation Board Enclosure</displayName>
+        <name>DISSIPATIONBOARDENCLOSURE</name>
+        <BoundingBox>
+          <version>1.5</version>
+          <originX>3.89</originX>
+          <originY>35.7</originY>
+          <originZ>-4.63</originZ>
+          <extentX>5.14</extentX>
+          <extentY>14.14</extentY>
+          <extentZ>4.63</extentZ>
+          <weight>0</weight>
+        </BoundingBox>
+        <XIDBELOW>XXXXX</XIDBELOW>
+        <XIDAHUManufacturedComponent>DISSIPATIONBOARDENCLOSURE</XIDAHUManufacturedComponent>
+        <XIDsplitAfter>NONE</XIDsplitAfter>
+        <XIDcomponentDepth>SUBCOMPONENT</XIDcomponentDepth>
+      </AHUManufacturedComponent>
+      <AHUManufacturedComponent>
+        <version>5.3</version>
+        <displayName>A2L Sensor</displayName>
+        <name>A2LSENSOR</name>
+        <BoundingBox>
+          <version>1.5</version>
+          <originX>21.65</originX>
+          <originY>4.11</originY>
+          <originZ>38.03</originZ>
+          <extentX>1.8</extentX>
+          <extentY>2.6</extentY>
+          <extentZ>0.8</extentZ>
+          <weight>0</weight>
+        </BoundingBox>
+        <XIDBELOW>XXXXX</XIDBELOW>
+        <XIDAHUManufacturedComponent>A2LSENSOR</XIDAHUManufacturedComponent>
+        <XIDsplitAfter>NONE</XIDsplitAfter>
+        <XIDa2LSensor>1</XIDa2LSensor>
+        <XIDcomponentDepth>SUBCOMPONENT</XIDcomponentDepth>
+      </AHUManufacturedComponent>
+      <AHUManufacturedComponent>
+        <version>5.3</version>
+        <displayName>A2L Sensor</displayName>
+        <name>A2LSENSOR</name>
+        <XIDBELOW>XXXXX</XIDBELOW>
+        <XIDAHUManufacturedComponent>A2LSENSOR</XIDAHUManufacturedComponent>
+        <XIDsplitAfter>NONE</XIDsplitAfter>
+        <XIDcomponentDepth>SUBCOMPONENT</XIDcomponentDepth>
+      </AHUManufacturedComponent>
+      <AHUManufacturedComponent>
+        <version>5.3</version>
+        <displayName>A2L Sensor</displayName>
+        <name>A2LSENSOR</name>
+        <XIDBELOW>XXXXX</XIDBELOW>
+        <XIDAHUManufacturedComponent>A2LSENSOR</XIDAHUManufacturedComponent>
+        <XIDsplitAfter>NONE</XIDsplitAfter>
+        <XIDcomponentDepth>SUBCOMPONENT</XIDcomponentDepth>
+      </AHUManufacturedComponent>
+      <AHUManufacturedComponent>
+        <version>5.3</version>
+        <displayName>A2L Sensor</displayName>
+        <name>A2LSENSOR</name>
+        <XIDBELOW>XXXXX</XIDBELOW>
+        <XIDAHUManufacturedComponent>A2LSENSOR</XIDAHUManufacturedComponent>
+        <XIDsplitAfter>NONE</XIDsplitAfter>
+        <XIDcomponentDepth>SUBCOMPONENT</XIDcomponentDepth>
+      </AHUManufacturedComponent>
+      <AHUManufacturedComponent>
+        <version>5.3</version>
+        <displayName>Nozzle</displayName>
+        <name>NOZZLE</name>
+        <dXNozzleCount>1</dXNozzleCount>
+        <dXNozzle>1200</dXNozzle>
+        <dXNozzleDiameter>D008750</dXNozzleDiameter>
+        <tXVTonnage>T00800</tXVTonnage>
+        <tXVQuantity>1</tXVQuantity>
+        <XIDBELOW>XXXXX</XIDBELOW>
+        <XIDAHUManufacturedComponent>NOZZLE</XIDAHUManufacturedComponent>
+        <XIDdXNozzleDiameter>D008750</XIDdXNozzleDiameter>
+        <XIDtXVTonnage>T00800</XIDtXVTonnage>
+        <XIDdXNozzleCount>1</XIDdXNozzleCount>
+        <XIDdXNozzle>1200</XIDdXNozzle>
+        <XIDsplitAfter>NONE</XIDsplitAfter>
+        <XIDtXVQuantity>1</XIDtXVQuantity>
+        <XIDcomponentDepth>SUBCOMPONENT</XIDcomponentDepth>
+      </AHUManufacturedComponent>
+      <AHUManufacturedComponent>
+        <version>5.3</version>
+        <displayName>Nozzle</displayName>
+        <name>NOZZLE</name>
+        <dXNozzleCount>2</dXNozzleCount>
+        <dXNozzle>1200</dXNozzle>
+        <dXNozzleDiameter>D008750</dXNozzleDiameter>
+        <tXVTonnage>T00800</tXVTonnage>
+        <tXVQuantity>1</tXVQuantity>
+        <XIDBELOW>XXXXX</XIDBELOW>
+        <XIDAHUManufacturedComponent>NOZZLE</XIDAHUManufacturedComponent>
+        <XIDdXNozzleDiameter>D008750</XIDdXNozzleDiameter>
+        <XIDtXVTonnage>T00800</XIDtXVTonnage>
+        <XIDdXNozzleCount>2</XIDdXNozzleCount>
+        <XIDdXNozzle>1200</XIDdXNozzle>
+        <XIDsplitAfter>NONE</XIDsplitAfter>
+        <XIDtXVQuantity>1</XIDtXVQuantity>
+        <XIDcomponentDepth>SUBCOMPONENT</XIDcomponentDepth>
+      </AHUManufacturedComponent>
+      <AHUManufacturedComponent>
+        <version>5.3</version>
+        <displayName>unknown</displayName>
+        <name>PERFORMANCE</name>
+        <hashVersion>2</hashVersion>
+        <hash>-513325967</hash>
+        <detail>
+          <heading>Cooling Performance Ratings (v8.1.169)</heading>
+          <body>Coil Type:     28ME</body>
+          <body>Type:     1/2 inch Tube</body>
+          <body>Altitude, ft     0</body>
+          <body>Tube spacing: Stf x Str     1.25 x 0.781</body>
+          <body>Face Vel., fpm     542.6</body>
+          <body>Actual Airflow, CFM     9800</body>
+          <body>Standard Airflow, CFM     9450</body>
+          <body>Fin Thickness, in.      .0060</body>
+          <body>Total Clg. Cap, MBH     375.63</body>
+          <body>Sen. Clg. Cap, MBH     256.79</body>
+          <body>Air Friction, in wg     0.93</body>
+          <body>Cond. EAT, °F     95.0</body>
+          <body>Suction Loss, °F     2.7</body>
+          <body>SST(Upstream Coil), °F     43.8</body>
+          <body>SST(Downstream Coil), °F     43.8</body>
+          <body>SCT(Upstream Coil), °F     126.9</body>
+          <body>SCT(Downstream Coil), °F     126.8</body>
+          <body>Tons/Circuit (Upstream Coil)     1.96</body>
+          <body>Tons/Circuit (Downstream Coil)     1.96</body>
+          <body>Compressor, kW     34.2</body>
+          <body>EADB, °F     80.00</body>
+          <body>EAWB, °F     67.00</body>
+          <body>Ent. Enthalpy, BTU/lb     31.44</body>
+          <body>LADB, °F     56.04</body>
+          <body>LAWB, °F     54.60</body>
+          <body>Lvg. Enthalpy, BTU/lb     22.92</body>
+          <body>Nozzle Size (Upstream/Downstream)     G12/G12</body>
+          <body>Number of TXV's (Upstream/Downstream)     1/1</body>
+          <body>TXV Tonnage (Upstream/Downstream)     8/8</body>
+          <bodyWide>Note:</bodyWide>
+          <bodyWide>* Nozzles and TXVs Factory Installed.</bodyWide>
+          <bodyWide>* Coil is NOT certified by AHRI. Coil is outside the scope of the AHRI Forced-Circulation Air-Cooling and Air-Heating Coils Certification Program.</bodyWide>
+        </detail>
+        <XIDBELOW>XXXXX</XIDBELOW>
+        <XIDAHUManufacturedComponent>PERFORMANCE</XIDAHUManufacturedComponent>
+        <XIDsplitAfter>NONE</XIDsplitAfter>
+        <XIDcomponentDepth>SUBCOMPONENT</XIDcomponentDepth>
+      </AHUManufacturedComponent>
+      <AHUManufacturedComponent>
+        <version>5.3</version>
+        <displayName>Dissipation Board Enclosure</displayName>
+        <name>DISSIPATIONBOARDENCLOSURE</name>
+        <XIDBELOW>XXXXX</XIDBELOW>
+        <XIDAHUManufacturedComponent>DISSIPATIONBOARDENCLOSURE</XIDAHUManufacturedComponent>
+        <XIDsplitAfter>NONE</XIDsplitAfter>
+        <XIDcomponentDepth>SUBCOMPONENT</XIDcomponentDepth>
+      </AHUManufacturedComponent>
+      <AHUManufacturedComponent>
+        <version>5.3</version>
+        <displayName>A2L Sensor</displayName>
+        <name>A2LSENSOR</name>
+        <XIDBELOW>XXXXX</XIDBELOW>
+        <XIDAHUManufacturedComponent>A2LSENSOR</XIDAHUManufacturedComponent>
+        <XIDsplitAfter>NONE</XIDsplitAfter>
+        <XIDcomponentDepth>SUBCOMPONENT</XIDcomponentDepth>
+      </AHUManufacturedComponent>
+      <AHUManufacturedComponent>
+        <version>5.3</version>
+        <displayName>A2L Sensor</displayName>
+        <name>A2LSENSOR</name>
+        <XIDBELOW>XXXXX</XIDBELOW>
+        <XIDAHUManufacturedComponent>A2LSENSOR</XIDAHUManufacturedComponent>
+        <XIDsplitAfter>NONE</XIDsplitAfter>
+        <XIDcomponentDepth>SUBCOMPONENT</XIDcomponentDepth>
+      </AHUManufacturedComponent>
+      <AHUManufacturedComponent>
+        <version>5.3</version>
+        <displayName>A2L Sensor</displayName>
+        <name>A2LSENSOR</name>
+        <XIDBELOW>XXXXX</XIDBELOW>
+        <XIDAHUManufacturedComponent>A2LSENSOR</XIDAHUManufacturedComponent>
+        <XIDsplitAfter>NONE</XIDsplitAfter>
+        <XIDcomponentDepth>SUBCOMPONENT</XIDcomponentDepth>
+      </AHUManufacturedComponent>
+      <AHUManufacturedComponent>
+        <version>5.3</version>
+        <displayName>A2L Sensor</displayName>
+        <name>A2LSENSOR</name>
+        <XIDBELOW>XXXXX</XIDBELOW>
+        <XIDAHUManufacturedComponent>A2LSENSOR</XIDAHUManufacturedComponent>
+        <XIDsplitAfter>NONE</XIDsplitAfter>
+        <XIDcomponentDepth>SUBCOMPONENT</XIDcomponentDepth>
+      </AHUManufacturedComponent>
+    </Coil>
+    <AHUManufacturedComponent>
+      <version>5.3</version>
+      <displayName>BaseRail</displayName>
+      <name>BASERAIL</name>
+      <BoundingBox>
+        <version>1.5</version>
+        <originX>0</originX>
+        <originY>-6</originY>
+        <originZ>0</originZ>
+        <extentX>24</extentX>
+        <extentY>6</extentY>
+        <extentZ>1.89</extentZ>
+        <weight>6.9</weight>
+      </BoundingBox>
+      <XIDBELOW>XXXXX</XIDBELOW>
+      <XIDAHUManufacturedComponent>BASERAIL</XIDAHUManufacturedComponent>
+      <XIDlocation>SIDEOPPOSITE</XIDlocation>
+      <XIDsplitAfter>NONE</XIDsplitAfter>
+      <XIDcomponentDepth>COMPONENT</XIDcomponentDepth>
+    </AHUManufacturedComponent>
+    <AHUManufacturedComponent>
+      <version>5.3</version>
+      <displayName>Skid</displayName>
+      <name>SKID</name>
+      <BoundingBox>
+        <version>1.5</version>
+        <originX>0</originX>
+        <originY>-9</originY>
+        <originZ>-0.55</originZ>
+        <extentX>24</extentX>
+        <extentY>3</extentY>
+        <extentZ>3</extentZ>
+        <weight>0</weight>
+      </BoundingBox>
+      <XIDBELOW>XXXXX</XIDBELOW>
+      <XIDAHUManufacturedComponent>SKID</XIDAHUManufacturedComponent>
+      <XIDlocation>SIDEOPPOSITE</XIDlocation>
+      <XIDsplitAfter>NONE</XIDsplitAfter>
+      <XIDskidConstruction>RUNNERSHORTKIT</XIDskidConstruction>
+      <XIDcomponentDepth>COMPONENT</XIDcomponentDepth>
+    </AHUManufacturedComponent>
+    <AHUManufacturedComponent>
+      <version>5.3</version>
+      <displayName>BaseRail</displayName>
+      <name>BASERAIL</name>
+      <BoundingBox>
+        <version>1.5</version>
+        <originX>0</originX>
+        <originY>-6</originY>
+        <originZ>77.11</originZ>
+        <extentX>24</extentX>
+        <extentY>6</extentY>
+        <extentZ>1.89</extentZ>
+        <weight>6.9</weight>
+      </BoundingBox>
+      <XIDBELOW>XXXXX</XIDBELOW>
+      <XIDAHUManufacturedComponent>BASERAIL</XIDAHUManufacturedComponent>
+      <XIDlocation>SIDETHIS</XIDlocation>
+      <XIDsplitAfter>NONE</XIDsplitAfter>
+      <XIDcomponentDepth>COMPONENT</XIDcomponentDepth>
+    </AHUManufacturedComponent>
+    <AHUManufacturedComponent>
+      <version>5.3</version>
+      <displayName>Skid</displayName>
+      <name>SKID</name>
+      <BoundingBox>
+        <version>1.5</version>
+        <originX>0</originX>
+        <originY>-9</originY>
+        <originZ>76.55</originZ>
+        <extentX>24</extentX>
+        <extentY>3</extentY>
+        <extentZ>3</extentZ>
+        <weight>0</weight>
+      </BoundingBox>
+      <XIDBELOW>XXXXX</XIDBELOW>
+      <XIDAHUManufacturedComponent>SKID</XIDAHUManufacturedComponent>
+      <XIDlocation>SIDETHIS</XIDlocation>
+      <XIDsplitAfter>NONE</XIDsplitAfter>
+      <XIDskidConstruction>RUNNERSHORTKIT</XIDskidConstruction>
+      <XIDcomponentDepth>COMPONENT</XIDcomponentDepth>
+    </AHUManufacturedComponent>
+    <AHUManufacturedComponent>
+      <version>5.3</version>
+      <displayName>BaseRail</displayName>
+      <name>BASERAIL</name>
+      <BoundingBox>
+        <version>1.5</version>
+        <originX>0</originX>
+        <originY>-6</originY>
+        <originZ>0</originZ>
+        <extentX>1.89</extentX>
+        <extentY>6</extentY>
+        <extentZ>79</extentZ>
+        <weight>21.57</weight>
+      </BoundingBox>
+      <XIDBELOW>XXXXX</XIDBELOW>
+      <XIDAHUManufacturedComponent>BASERAIL</XIDAHUManufacturedComponent>
+      <XIDlocation>REAR</XIDlocation>
+      <XIDsplitAfter>NONE</XIDsplitAfter>
+      <XIDbaseRailTab>YES</XIDbaseRailTab>
+      <XIDcomponentDepth>COMPONENT</XIDcomponentDepth>
+    </AHUManufacturedComponent>
+    <AHUManufacturedComponent>
+      <version>5.3</version>
+      <displayName>BaseRail</displayName>
+      <name>BASERAIL</name>
+      <BoundingBox>
+        <version>1.5</version>
+        <originX>22.11</originX>
+        <originY>-6</originY>
+        <originZ>0</originZ>
+        <extentX>1.89</extentX>
+        <extentY>6</extentY>
+        <extentZ>79</extentZ>
+        <weight>27.21</weight>
+      </BoundingBox>
+      <XIDBELOW>XXXXX</XIDBELOW>
+      <XIDAHUManufacturedComponent>BASERAIL</XIDAHUManufacturedComponent>
+      <XIDlocation>FRONT</XIDlocation>
+      <XIDsplitAfter>NONE</XIDsplitAfter>
+      <XIDbaseRailTab>YES</XIDbaseRailTab>
+      <XIDcomponentDepth>COMPONENT</XIDcomponentDepth>
+    </AHUManufacturedComponent>
+    <AHUManufacturedComponent>
+      <version>5.3</version>
+      <displayName>Panel</displayName>
+      <name>PANEL</name>
+      <BoundingBox>
+        <version>1.5</version>
+        <originX>1.89</originX>
+        <originY>0</originY>
+        <originZ>0</originZ>
+        <extentX>20.21</extentX>
+        <extentY>52.21</extentY>
+        <extentZ>1.5</extentZ>
+        <weight>19.38</weight>
+      </BoundingBox>
+      <XIDBELOW>XXXXX</XIDBELOW>
+      <XIDAHUManufacturedComponent>PANEL</XIDAHUManufacturedComponent>
+      <XIDsplitAfter>NONE</XIDsplitAfter>
+      <XIDpanelHinge>NO</XIDpanelHinge>
+      <XIDpanelInternal>NO</XIDpanelInternal>
+      <XIDinternalPanelMaterial>GALVANIZED</XIDinternalPanelMaterial>
+      <XIDexternalPanelMaterial>GALVANIZED</XIDexternalPanelMaterial>
+      <XIDcomponentDepth>COMPONENT</XIDcomponentDepth>
+    </AHUManufacturedComponent>
+    <AHUManufacturedComponent>
+      <version>5.3</version>
+      <displayName>Panel</displayName>
+      <name>PANEL</name>
+      <BoundingBox>
+        <version>1.5</version>
+        <originX>1.89</originX>
+        <originY>0</originY>
+        <originZ>77.5</originZ>
+        <extentX>20.21</extentX>
+        <extentY>52.21</extentY>
+        <extentZ>1.5</extentZ>
+        <weight>19.38</weight>
+      </BoundingBox>
+      <XIDBELOW>XXXXX</XIDBELOW>
+      <XIDAHUManufacturedComponent>PANEL</XIDAHUManufacturedComponent>
+      <XIDsplitAfter>NONE</XIDsplitAfter>
+      <XIDpanelHinge>NO</XIDpanelHinge>
+      <XIDpanelInternal>NO</XIDpanelInternal>
+      <XIDinternalPanelMaterial>GALVANIZED</XIDinternalPanelMaterial>
+      <XIDexternalPanelMaterial>GALVANIZED</XIDexternalPanelMaterial>
+      <XIDcomponentDepth>COMPONENT</XIDcomponentDepth>
+    </AHUManufacturedComponent>
+    <AHUManufacturedComponent>
+      <version>5.3</version>
+      <displayName>Panel</displayName>
+      <name>PANEL</name>
+      <BoundingBox>
+        <version>1.5</version>
+        <originX>1.89</originX>
+        <originY>52.61</originY>
+        <originZ>1.89</originZ>
+        <extentX>20.21</extentX>
+        <extentY>1.5</extentY>
+        <extentZ>75.21</extentZ>
+        <weight>27.91</weight>
+      </BoundingBox>
+      <XIDBELOW>XXXXX</XIDBELOW>
+      <XIDAHUManufacturedComponent>PANEL</XIDAHUManufacturedComponent>
+      <XIDsplitAfter>NONE</XIDsplitAfter>
+      <XIDpanelHinge>NO</XIDpanelHinge>
+      <XIDpanelInternal>NO</XIDpanelInternal>
+      <XIDinternalPanelMaterial>GALVANIZED</XIDinternalPanelMaterial>
+      <XIDexternalPanelMaterial>GALVANIZED</XIDexternalPanelMaterial>
+      <XIDcomponentDepth>COMPONENT</XIDcomponentDepth>
+    </AHUManufacturedComponent>
+  </AHUManufacturedComponent>
+  <manufacturing>
+    <version>1.5</version>
+    <dateCreated>2025-07-14T04:51:42</dateCreated>
+    <createdBy>AHU Builder</createdBy>
+    <manufacturedItem>
+      <version>12.0</version>
+      <partNumber>39MN21W02ET4611XGE</partNumber>
+      <description>39MN Indoor Air Handler Sz 21</description>
+      <mainPartNumberSequence>1</mainPartNumberSequence>
+      <height>63.11</height>
+      <width>86.48</width>
+      <length>64.0</length>
+      <points xl="-20.0" yl="-9.0" zl="-4.63" xu="44.0" yu="54.107" zu="81.853" length="86.483"/>
+      <weight>619.95</weight>
+      <manufacturedItem>
+        <version>0.0</version>
+        <partNumber>93MNXXXXXXXXXXXXXX</partNumber>
+        <description>Label</description>
+        <manufacturedItem>
+          <version>1.0</version>
+          <partNumber>39MX40130001</partNumber>
+          <quantity>1.0</quantity>
+          <description>ULP Label Pkg</description>
+          <source>xploder</source>
+        </manufacturedItem>
+      </manufacturedItem>
+      <manufacturedItem>
+        <version>1.0</version>
+        <partNumber>95G1XXE02ET46R11XA</partNumber>
+        <description>USE Label</description>
+        <locationNumber>111LR</locationNumber>
+      </manufacturedItem>
+      <manufacturedItem>
+        <version>6.0+++</version>
+        <partNumber>39MQSTWLSKMH72XXXX</partNumber>
+        <description>Direct Expansion Coil</description>
+        <icon>VLCP</icon>
+        <locationNumber>111SL000</locationNumber>
+        <height>54.11</height>
+        <width>79.0</width>
+        <length>24.0</length>
+        <points xl="0.0" yl="0.0" zl="0.0" xu="24.0" yu="54.107" zu="79.0" length="79.0"/>
+        <weight>619.95</weight>
+        <manufacturedItem>
+          <version>0.0</version>
+          <partNumber>95GPKNGSR020X0790X</partNumber>
+          <quantity>0</quantity>
+          <description>304 Stainless Steel Drain Pan  Right Side Drain</description>
+          <points xl="1.893" yl="-3.9" zl="1.893" xu="22.107" yu="0.0" zu="77.107" length="75.214"/>
+          <weight>28.1</weight>
+          <details name="penetrations" version="1.0">
+            <version>1.1</version>
+            <penetration shape="circle" feature="DRAINPANDRAIN" xl="11.25" yl="-2.96" zl="77.11" xu="12.75" yu="-1.46" zu="81.85"/>
+          </details>
+          <manufacturedItem>
+            <version>1.0</version>
+            <partNumber>LF39RZ045</partNumber>
+            <quantity>1.0</quantity>
+            <description>Drain Pan Plastic Cap</description>
+            <locationNumber>111XX</locationNumber>
+            <source>xploder</source>
+          </manufacturedItem>
+          <manufacturedItem>
+            <version>1.0</version>
+            <partNumber>39MX40147348</partNumber>
+            <quantity>1.0</quantity>
+            <description>Drain Pan Baserail Seal</description>
+            <locationNumber>111XX</locationNumber>
+            <source>xploder</source>
+          </manufacturedItem>
+          <manufacturedItem>
+            <version>1.0</version>
+            <partNumber>39MX40045326</partNumber>
+            <quantity>1.0</quantity>
+            <description>Drain Pan Kit24 AWL SS</description>
+            <locationNumber>111XX</locationNumber>
+            <source>xploder</source>
+          </manufacturedItem>
+          <manufacturedItem>
+            <version>1.0</version>
+            <partNumber>39MX40036001</partNumber>
+            <quantity>4.0</quantity>
+            <description>Drain Pan Plate Screws</description>
+            <locationNumber>111XX</locationNumber>
+            <source>xploder</source>
+          </manufacturedItem>
+          <manufacturedItem>
+            <version>1.0</version>
+            <partNumber>39MX40136109</partNumber>
+            <quantity>2.2</quantity>
+            <description>GASKET,DRAIN PAN24 AWL</description>
+            <locationNumber>111XX</locationNumber>
+            <source>xploder</source>
+          </manufacturedItem>
+        <details name="manufacturingFeatures" version="1.0"><version>1.0</version><manufacturingFeature name="general.bounds" value="BBv1 1.893 -3.9 1.893 22.107 0.0 77.107 1vBB" source="general.drainpan.bounds.20090408.01"/><manufacturingFeature name="general.bounds.drainpipe" value="BBv1 11.25 -2.96 77.11 12.75 -1.46 81.85 1vBB" source="general.drainpan.drain.bounds.20090408.01"/><manufacturingFeature name="general.classification" value="DRAINPAN.V2" source="general.drainpan.classification.20090408.01"/><manufacturingFeature name="general.dim.a" value="19.600" source="general.drainpan.dimensions.20090408.01"/><manufacturingFeature name="general.dim.a.axis" value="X" source="general.drainpan.orientation.20090408.01"/><manufacturingFeature name="general.dim.a.screw.count" value="4" source="general.drainpan.screwcount.20081107.01"/><manufacturingFeature name="general.dim.a.screw.firsthole" value="1.78" source="general.drainpan.screwcount.20081107.01"/><manufacturingFeature name="general.dim.a.screw.spacing" value="5.546667" source="general.drainpan.screwcount.20081107.01"/><manufacturingFeature name="general.dim.b" value="74.600" source="general.drainpan.dimensions.20090408.01"/><manufacturingFeature name="general.dim.b.axis" value="Z" source="general.drainpan.orientation.20090408.01"/><manufacturingFeature name="general.dim.b.screw.count" value="10" source="general.drainpan.screwcount.20081107.01"/><manufacturingFeature name="general.dim.b.screw.firsthole" value="1.78" source="general.drainpan.screwcount.20081107.01"/><manufacturingFeature name="general.dim.b.screw.spacing" value="7.96" source="general.drainpan.screwcount.20081107.01"/><manufacturingFeature name="general.hand" value="RIGHT" source="general.drainpan.hand.20200423.01"/><manufacturingFeature name="general.material" value="STAINLESS STEEL 304" source="general.drainpan.material.20200423.01"/></details></manufacturedItem>
+        <manufacturedItem>
+          <version>6.1</version>
+          <partNumber>28MEV632JGE0651RNC</partNumber>
+          <description>DX COIL</description>
+          <locationNumber>111C1</locationNumber>
+          <points xl="3.05" yl="0.61" zl="5.06" xu="10.55" yu="42.825" zu="71.8" length="66.74"/>
+          <weight>353.88</weight>
+          <details name="penetrations" version="1.0">
+            <version>1.1</version>
+            <penetration shape="rectangle" feature="PHYSICALCOIL" xl="3.05" yl="0.61" zl="5.06" xu="10.55" yu="42.825" zu="71.8"/>
+            <penetration shape="rectangle" feature="PHYSICALCOILFINS" xl="3.05" yl="1.717" zl="5.93" xu="10.55" yu="41.718" zu="70.93"/>
+            <penetration shape="circle" feature="WATERFIRST" xl="17.118" yl="7.967" zl="71.8" xu="17.743" yu="8.593" zu="81.8" nozzle="G12" txvcircuit="A" pipelabel="L2" coilindex="2" txvtons="8"/>
+            <penetration shape="circle" feature="WATERFIRST" xl="13.368" yl="35.468" zl="71.8" xu="13.993" yu="36.093" zu="81.8" nozzle="G12" txvcircuit="B" pipelabel="L1" coilindex="1" txvtons="8"/>
+            <penetration shape="circle" feature="WATERFIRST" xl="3.627" yl="35.218" zl="71.8" xu="4.752" yu="36.343" zu="81.8" pipelabel="S1"/>
+            <penetration shape="circle" feature="WATERFIRST" xl="4.938" yl="7.717" zl="71.8" xu="6.063" yu="8.843" zu="81.8" pipelabel="S2"/>
+          </details>
+          <details name="namevaluepairs" version="1.0">
+            <version>1.1</version>
+            <namevaluepair refrigerant="R32"/>
+          </details>
+          <manufacturedItem>
+            <version>0.0</version>
+            <partNumber>95CFDSS0883001XXXB</partNumber>
+            <description>A2L Dissipation Board Sensor Wire</description>
+            <locationNumber>C30-01</locationNumber>
+          </manufacturedItem>
+          <manufacturedItem>
+            <version>0.0</version>
+            <partNumber>39MX41000060</partNumber>
+            <quantity>5</quantity>
+            <description>Wire Tie Kit</description>
+          </manufacturedItem>
+          <manufacturedItem>
+            <version>1.0</version>
+            <partNumber>39MX40146101</partNumber>
+            <quantity>1.0</quantity>
+            <description>DX Coil Pipe labels</description>
+            <locationNumber>111XX</locationNumber>
+            <source>xploder</source>
+          </manufacturedItem>
+          <manufacturedItem>
+            <version>1.0</version>
+            <partNumber>39MX40146101</partNumber>
+            <quantity>1.0</quantity>
+            <description>DX Coil Pipe labels</description>
+            <locationNumber>111XX</locationNumber>
+            <source>xploder</source>
+          </manufacturedItem>
+        <details name="manufacturingFeatures" version="1.0"><version>1.0</version><manufacturingFeature name="general.bounds" value="BBv1 3.05 0.61 5.06 10.55 42.825 71.8 1vBB" source="general.coil.bounds.bottom.20100228.01"/><manufacturingFeature name="general.classification" value="COIL.V1" source="general.coil.classification.20220719.01"/><manufacturingFeature name="general.dim.a" value="42.22" source="general.coil.dim.a.y.20100228.01"/><manufacturingFeature name="general.dim.a.axis" value="Y" source="general.coil.dim.a.y.20100228.01"/><manufacturingFeature name="general.dim.a.screw.count" value="7" source="general.coil.screw.count.y.not.ifb.20111205.01"/><manufacturingFeature name="general.dim.a.screw.firsthole" value="3.11" source="general.coil.screw.count.y.not.ifb.20111205.01"/><manufacturingFeature name="general.dim.a.screw.spacing" value="6.0" source="general.coil.screw.count.y.not.ifb.20111205.01"/><manufacturingFeature name="general.dim.b" value="66.74" source="general.coil.dim.b.z.20100228.01"/><manufacturingFeature name="general.dim.b.axis" value="Z" source="general.coil.dim.b.z.20100228.01"/><manufacturingFeature name="general.dim.b.screw.count" value="11" source="general.coil.screw.count.z.20111205.01"/><manufacturingFeature name="general.dim.b.screw.firsthole" value="3.37" source="general.coil.screw.count.z.20111205.01"/><manufacturingFeature name="general.dim.b.screw.spacing" value="6.0" source="general.coil.screw.count.z.20111205.01"/><manufacturingFeature name="general.ecoat" value="NO" source="general.coil.ecoat.20160907.01"/><manufacturingFeature name="general.style" value="DX" source="general.coil.style.20220719.01"/></details></manufacturedItem>
+        <manufacturedItem>
+          <version>?</version>
+          <partNumber>95VBDBXXXXXX02021A</partNumber>
+          <quantity>3.0</quantity>
+          <description>Coil Support</description>
+          <locationNumber>111XX</locationNumber>
+          <weight>1.8</weight>
+        <details name="manufacturingFeatures" version="1.0"><version>1.0</version><manufacturingFeature name="general.classification" value="COILSUPPORT.V1" source="general.supports.coil.classification.20180220.01"/><manufacturingFeature name="general.dim.notcha" value="1.32" source="general.supports.coil.height.et.al.coildrain.20180220.01"/><manufacturingFeature name="general.dim.notchb" value="1.32" source="general.supports.coil.height.et.al.coildrain.20180220.01"/><manufacturingFeature name="general.dim.notchc" value="0.5" source="general.supports.coil.height.et.al.coildrain.20180220.01"/><manufacturingFeature name="general.dualcoil" value="NO" source="general.supports.coil.dual.20180220.01"/><manufacturingFeature name="general.gauge" value="12" source="general.supports.coil.material.20180413.01"/><manufacturingFeature name="general.height" value="1.00" source="general.supports.coil.height.et.al.coildrain.20180220.01"/><manufacturingFeature name="general.length" value="21.73" source="general.supports.coil.length.coildrain.20180220.01"/><manufacturingFeature name="general.material" value="STAINLESS STEEL(VN04-16)" source="general.supports.coil.material.20180413.01"/><manufacturingFeature name="general.style" value="COILDRAIN" source="general.supports.coil.style.20180220.01"/><manufacturingFeature name="pricing.cost" value="12.77" source="pricing.cost.profit.calculation.20171106.01"/><manufacturingFeature name="pricing.overhead.and.profit" value="1.9546" source="pricing.cost.profit.calculation.20171106.01"/><manufacturingFeature name="pricing.raw.flat.1.extents" value="(22.1899, 2.7799, 0.0)" source="pricing.COILSUPPORT.V1.drain.20180323.01"/><manufacturingFeature name="pricing.subtotal.flat.1.l.form" value="1.0149" source="pricing.flat.form.awkward.cost.20171102.01"/><manufacturingFeature name="pricing.subtotal.flat.1.l.form" value="0.4833" source="pricing.flat.form.cost.20171102.01"/><manufacturingFeature name="pricing.subtotal.flat.1.l.punch" value="0.7507" source="pricing.flat.punch.cost.20171102.01"/><manufacturingFeature name="pricing.subtotal.flat.1.l.shear" value="0.1287" source="pricing.flat.shear.cost.20171102.01"/><manufacturingFeature name="pricing.subtotal.flat.1.material" value="8.6983" source="pricing.flat.material.cost.20101117.01"/><manufacturingFeature name="pricing.total.labor" value="2.3776" source="pricing.sum.labor.cost.20171122.01"/><manufacturingFeature name="pricing.total.material.labor" value="11.0759" source="pricing.sum.cost.20110322.01"/><manufacturingFeature name="pricing.vendor" value="TMP" source="pricing.COILSUPPORT.V1.drain.20180323.01"/><manufacturingFeature name="pricing.version" value="20250401.01" source="pricing.version.20110118.01"/></details></manufacturedItem>
+        <manufacturedItem>
+          <version>Z.2</version>
+          <partNumber>95GBLLE02ET46X017D</partNumber>
+          <description>Coil Baffle Left Side</description>
+          <locationNumber>111XX017</locationNumber>
+          <points xl="0.0" yl="0.0" zl="1.893" xu="3.05" yu="52.214" zu="5.93" length="52.214"/>
+        <details name="manufacturingFeatures" version="1.0"><version>1.0</version><manufacturingFeature name="general.axis" value="Y" source="general.baffle.coil.length.v2.v3.20111116.01"/><manufacturingFeature name="general.bounds" value="BBv1 0.0 0.73 2.323 3.05 50.714 5.83 1vBB" source="general.baffle.coil.bounds.side.v2.v3.20220519.01"/><manufacturingFeature name="general.classification" value="BAFFLE.COIL.V3" source="general.baffle.coil.classification.v3.20200417.01"/><manufacturingFeature name="general.dim.a" value="3.51" source="general.baffle.coil.dim.a.z.v2.v3.20111116.01"/><manufacturingFeature name="general.dim.b" value="2.93" source="general.baffle.coil.constants.sides.v3.20111116.01"/><manufacturingFeature name="general.dim.c" value="0.51" source="general.baffle.coil.constants.sides.v3.20111116.01"/><manufacturingFeature name="general.dim.d" value="1.55" source="general.baffle.coil.constants.sides.v3.20111116.01"/><manufacturingFeature name="general.dim.e" value="0.43" source="general.baffle.coil.constants.sides.v3.20111116.01"/><manufacturingFeature name="general.gauge" value="18" source="general.baffle.coil.material.v2.v3.20121026.01"/><manufacturingFeature name="general.length" value="49.98" source="general.baffle.coil.length.v2.v3.20111116.01"/><manufacturingFeature name="general.location" value="LEFT" source="general.baffle.coil.location.v2.v3.20111116.01"/><manufacturingFeature name="general.location.x" value="UPSTREAM" source="general.baffle.coil.location.x.v2.v3.20111116.01"/><manufacturingFeature name="general.material" value="GALVANIZED(VA03-56)" source="general.baffle.coil.material.v2.v3.20121026.01"/><manufacturingFeature name="general.notch" value="NO" source="general.baffle.coil.constants.sides.v3.20111116.01"/><manufacturingFeature name="general.orientation" value="STANDARD" source="general.baffle.coil.orientation.v2.v3.20111116.01"/><manufacturingFeature name="general.style" value="STANDARD" source="general.baffle.coil.style.v2.v3.20200406.01"/><manufacturingFeature name="feature.coil-clr-sides" value="2.990" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-sides" value="8.990" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-sides" value="14.990" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-sides" value="20.990" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-sides" value="26.990" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-sides" value="32.990" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-sides" value="38.990" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.frame-clr" value="2.127" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="feature.frame-clr" value="13.497" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="feature.frame-clr" value="24.867" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="feature.frame-clr" value="36.237" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="feature.frame-clr" value="47.607" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="pricing.cost" value="7.00" source="pricing.cost.profit.calculation.20171106.01"/><manufacturingFeature name="pricing.overhead.and.profit" value="1.0730" source="pricing.cost.profit.calculation.20171106.01"/><manufacturingFeature name="pricing.raw.flat.1.extents" value="(49.98, 6.622999999999999, 0.0)" source="pricing.BAFFLE.COIL.V3.sides.feature.count.20221209.01"/><manufacturingFeature name="pricing.subtotal.flat.1.l.form" value="0.8055" source="pricing.flat.form.cost.20171102.01"/><manufacturingFeature name="pricing.subtotal.flat.1.l.punch" value="0.4575" source="pricing.flat.punch.cost.20171102.01"/><manufacturingFeature name="pricing.subtotal.flat.1.l.shear" value="0.2918" source="pricing.flat.shear.cost.20171102.01"/><manufacturingFeature name="pricing.subtotal.flat.1.material" value="4.5258" source="pricing.flat.material.cost.20101117.01"/><manufacturingFeature name="pricing.total.labor" value="1.5548" source="pricing.sum.labor.cost.20171122.01"/><manufacturingFeature name="pricing.total.material.labor" value="6.0806" source="pricing.sum.cost.20110322.01"/><manufacturingFeature name="pricing.vendor" value="TMP" source="pricing.BAFFLE.COIL.V3.sides.feature.count.20221209.01"/><manufacturingFeature name="pricing.version" value="20250401.01" source="pricing.version.20110118.01"/></details></manufacturedItem>
+        <manufacturedItem>
+          <version>Z.2</version>
+          <partNumber>95GBRLE02ET46X017D</partNumber>
+          <description>Coil Baffle Right Side</description>
+          <locationNumber>111XX017</locationNumber>
+          <points xl="0.0" yl="0.0" zl="70.93" xu="3.05" yu="52.214" zu="77.107" length="52.214"/>
+          <manufacturedItem>
+            <version>1.0</version>
+            <partNumber>39MX40030901</partNumber>
+            <quantity>2.0</quantity>
+            <description>HEADER BAFFLE BUSHING</description>
+            <locationNumber>111XX</locationNumber>
+            <source>xploder</source>
+          </manufacturedItem>
+        <details name="manufacturingFeatures" version="1.0"><version>1.0</version><manufacturingFeature name="feature.wiring-clr" value="43.98" source="general.baffle.coil.static.wiring.hole.v2.v3.20111116.01"/><manufacturingFeature name="feature.wiring-clr" value="6.00" source="general.baffle.coil.static.wiring.hole.v2.v3.20111116.01"/><manufacturingFeature name="general.axis" value="Y" source="general.baffle.coil.length.v2.v3.20111116.01"/><manufacturingFeature name="general.bounds" value="BBv1 0.0 0.73 71.03 3.05 50.714 76.67699999999999 1vBB" source="general.baffle.coil.bounds.side.v2.v3.20220519.01"/><manufacturingFeature name="general.classification" value="BAFFLE.COIL.V3" source="general.baffle.coil.classification.v3.20200417.01"/><manufacturingFeature name="general.dim.a" value="5.65" source="general.baffle.coil.dim.a.z.v2.v3.20111116.01"/><manufacturingFeature name="general.dim.b" value="2.93" source="general.baffle.coil.constants.sides.v3.20111116.01"/><manufacturingFeature name="general.dim.c" value="0.51" source="general.baffle.coil.constants.sides.v3.20111116.01"/><manufacturingFeature name="general.dim.d" value="1.55" source="general.baffle.coil.constants.sides.v3.20111116.01"/><manufacturingFeature name="general.dim.e" value="0.43" source="general.baffle.coil.constants.sides.v3.20111116.01"/><manufacturingFeature name="general.gauge" value="18" source="general.baffle.coil.material.v2.v3.20121026.01"/><manufacturingFeature name="general.length" value="49.98" source="general.baffle.coil.length.v2.v3.20111116.01"/><manufacturingFeature name="general.location" value="RIGHT" source="general.baffle.coil.location.v2.v3.20111116.01"/><manufacturingFeature name="general.location.x" value="UPSTREAM" source="general.baffle.coil.location.x.v2.v3.20111116.01"/><manufacturingFeature name="general.material" value="GALVANIZED(VA03-56)" source="general.baffle.coil.material.v2.v3.20121026.01"/><manufacturingFeature name="general.notch" value="NO" source="general.baffle.coil.constants.sides.v3.20111116.01"/><manufacturingFeature name="general.orientation" value="INVERTX" source="general.baffle.coil.orientation.v2.v3.20111116.01"/><manufacturingFeature name="general.style" value="STANDARD" source="general.baffle.coil.style.v2.v3.20200406.01"/><manufacturingFeature name="feature.coil-clr-sides" value="2.990" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-sides" value="8.990" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-sides" value="14.990" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-sides" value="20.990" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-sides" value="26.990" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-sides" value="32.990" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-sides" value="38.990" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.frame-clr" value="2.127" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="feature.frame-clr" value="13.497" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="feature.frame-clr" value="24.867" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="feature.frame-clr" value="36.237" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="feature.frame-clr" value="47.607" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="pricing.cost" value="8.62" source="pricing.cost.profit.calculation.20171106.01"/><manufacturingFeature name="pricing.overhead.and.profit" value="1.3189" source="pricing.cost.profit.calculation.20171106.01"/><manufacturingFeature name="pricing.raw.flat.1.extents" value="(49.98, 8.763, 0.0)" source="pricing.BAFFLE.COIL.V3.sides.feature.count.20221209.01"/><manufacturingFeature name="pricing.subtotal.flat.1.l.form" value="0.8055" source="pricing.flat.form.cost.20171102.01"/><manufacturingFeature name="pricing.subtotal.flat.1.l.punch" value="0.4801" source="pricing.flat.punch.cost.20171102.01"/><manufacturingFeature name="pricing.subtotal.flat.1.l.shear" value="0.3028" source="pricing.flat.shear.cost.20171102.01"/><manufacturingFeature name="pricing.subtotal.flat.1.material" value="5.8855" source="pricing.flat.material.cost.20101117.01"/><manufacturingFeature name="pricing.total.labor" value="1.5884" source="pricing.sum.labor.cost.20171122.01"/><manufacturingFeature name="pricing.total.material.labor" value="7.4739" source="pricing.sum.cost.20110322.01"/><manufacturingFeature name="pricing.vendor" value="TMP" source="pricing.BAFFLE.COIL.V3.sides.feature.count.20221209.01"/><manufacturingFeature name="pricing.version" value="20250401.01" source="pricing.version.20110118.01"/></details></manufacturedItem>
+        <manufacturedItem>
+          <version>Z.2</version>
+          <partNumber>95GBBLE02ET46X017D</partNumber>
+          <description>Coil Baffle Bottom</description>
+          <locationNumber>111XX017</locationNumber>
+          <points xl="0.0" yl="0.0" zl="1.893" xu="3.05" yu="1.717" zu="77.107" length="75.214"/>
+        <details name="manufacturingFeatures" version="1.0"><version>1.0</version><manufacturingFeature name="general.axis" value="Z" source="general.baffle.coil.length.v2.v3.20111116.01"/><manufacturingFeature name="general.bounds" value="BBv1 0.0 0.09 2.323 3.05 1.907 76.67699999999999 1vBB" source="general.baffle.coil.bounds.bottom.v2.v3.20111116.01"/><manufacturingFeature name="general.classification" value="BAFFLE.COIL.V3" source="general.baffle.coil.classification.v3.20200417.01"/><manufacturingFeature name="general.dim.a" value="1.82" source="general.baffle.coil.dim.a.y.v2.v3.20111116.01"/><manufacturingFeature name="general.dim.b" value="2.99" source="general.baffle.coil.constants.bottom.standard.v3.20200406.01"/><manufacturingFeature name="general.dim.c" value=".55" source="general.baffle.coil.constants.bottom.standard.v3.20200406.01"/><manufacturingFeature name="general.dim.d" value="1.04" source="general.baffle.coil.constants.bottom.standard.v3.20200406.01"/><manufacturingFeature name="general.dim.e" value="0" source="general.baffle.coil.constants.bottom.standard.v3.20200406.01"/><manufacturingFeature name="general.gauge" value="18" source="general.baffle.coil.material.v2.v3.20121026.01"/><manufacturingFeature name="general.length" value="74.35" source="general.baffle.coil.length.v2.v3.20111116.01"/><manufacturingFeature name="general.location" value="BOTTOM" source="general.baffle.coil.location.v2.v3.20111116.01"/><manufacturingFeature name="general.location.x" value="UPSTREAM" source="general.baffle.coil.location.x.v2.v3.20111116.01"/><manufacturingFeature name="general.material" value="GALVANIZED(VA03-56)" source="general.baffle.coil.material.v2.v3.20121026.01"/><manufacturingFeature name="general.notch" value="YES" source="general.baffle.coil.constants.bottom.standard.v3.20200406.01"/><manufacturingFeature name="general.orientation" value="INVERTX" source="general.baffle.coil.orientation.v2.v3.20111116.01"/><manufacturingFeature name="general.style" value="STANDARD" source="general.baffle.coil.style.v2.v3.20200406.01"/><manufacturingFeature name="feature.baserail-clr" value="3.427" source="intersector.intersection.baserail.coil.baffle.20100228.01"/><manufacturingFeature name="feature.baserail-clr" value="14.677" source="intersector.intersection.baserail.coil.baffle.20100228.01"/><manufacturingFeature name="feature.baserail-clr" value="25.927" source="intersector.intersection.baserail.coil.baffle.20100228.01"/><manufacturingFeature name="feature.baserail-clr" value="37.177" source="intersector.intersection.baserail.coil.baffle.20100228.01"/><manufacturingFeature name="feature.baserail-clr" value="48.427" source="intersector.intersection.baserail.coil.baffle.20100228.01"/><manufacturingFeature name="feature.baserail-clr" value="59.677" source="intersector.intersection.baserail.coil.baffle.20100228.01"/><manufacturingFeature name="feature.baserail-clr" value="70.927" source="intersector.intersection.baserail.coil.baffle.20100228.01"/><manufacturingFeature name="feature.coil-clr-bottom" value="6.107" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-bottom" value="12.107" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-bottom" value="18.107" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-bottom" value="24.107" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-bottom" value="30.107" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-bottom" value="36.107" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-bottom" value="42.107" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-bottom" value="48.107" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-bottom" value="54.107" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-bottom" value="60.107" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-bottom" value="66.107" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="pricing.cost" value="7.71" source="pricing.cost.profit.calculation.20171106.01"/><manufacturingFeature name="pricing.overhead.and.profit" value="1.1835" source="pricing.cost.profit.calculation.20171106.01"/><manufacturingFeature name="pricing.raw.flat.1.extents" value="(74.35, 4.61, 0.0)" source="pricing.BAFFLE.COIL.V3.bottom.feature.count.20111122.01"/><manufacturingFeature name="pricing.subtotal.flat.1.l.form" value="0.6444" source="pricing.flat.form.cost.20171102.01"/><manufacturingFeature name="pricing.subtotal.flat.1.l.punch" value="0.8409" source="pricing.flat.punch.cost.20171102.01"/><manufacturingFeature name="pricing.subtotal.flat.1.l.shear" value="0.4071" source="pricing.flat.shear.cost.20171102.01"/><manufacturingFeature name="pricing.subtotal.flat.1.material" value="4.8142" source="pricing.flat.material.cost.20101117.01"/><manufacturingFeature name="pricing.total.labor" value="1.8924" source="pricing.sum.labor.cost.20171122.01"/><manufacturingFeature name="pricing.total.material.labor" value="6.7066" source="pricing.sum.cost.20110322.01"/><manufacturingFeature name="pricing.vendor" value="TMP" source="pricing.BAFFLE.COIL.V3.bottom.feature.count.20111122.01"/><manufacturingFeature name="pricing.version" value="20250401.01" source="pricing.version.20110118.01"/></details></manufacturedItem>
+        <manufacturedItem>
+          <version>Z.2</version>
+          <partNumber>95GBTLE02ET46X017D</partNumber>
+          <description>Coil Baffle Top</description>
+          <locationNumber>111XX017</locationNumber>
+          <points xl="0.0" yl="41.718" zl="1.893" xu="3.05" yu="52.214" zu="77.107" length="75.214"/>
+        <details name="manufacturingFeatures" version="1.0"><version>1.0</version><manufacturingFeature name="general.axis" value="Z" source="general.baffle.coil.length.v2.v3.20111116.01"/><manufacturingFeature name="general.bounds" value="BBv1 0.0 41.818000000000005 2.833 3.05 51.784 76.167 1vBB" source="general.baffle.coil.bounds.top.v2.v3.20111116.01"/><manufacturingFeature name="general.classification" value="BAFFLE.COIL.V3" source="general.baffle.coil.classification.v3.20200417.01"/><manufacturingFeature name="general.dim.a" value="9.97" source="general.baffle.coil.dim.a.y.v2.v3.20111116.01"/><manufacturingFeature name="general.dim.b" value="2.99" source="general.baffle.coil.constants.top.v3.20111116.01"/><manufacturingFeature name="general.dim.c" value=".51" source="general.baffle.coil.constants.top.v3.20111116.01"/><manufacturingFeature name="general.dim.d" value="1.55" source="general.baffle.coil.constants.top.v3.20111116.01"/><manufacturingFeature name="general.dim.e" value="0.43" source="general.baffle.coil.constants.top.v3.20111116.01"/><manufacturingFeature name="general.gauge" value="18" source="general.baffle.coil.material.v2.v3.20121026.01"/><manufacturingFeature name="general.length" value="73.33" source="general.baffle.coil.length.v2.v3.20111116.01"/><manufacturingFeature name="general.location" value="TOP" source="general.baffle.coil.location.v2.v3.20111116.01"/><manufacturingFeature name="general.location.x" value="UPSTREAM" source="general.baffle.coil.location.x.v2.v3.20111116.01"/><manufacturingFeature name="general.material" value="GALVANIZED(VA03-56)" source="general.baffle.coil.material.v2.v3.20121026.01"/><manufacturingFeature name="general.notch" value="NO" source="general.baffle.coil.constants.top.v3.20111116.01"/><manufacturingFeature name="general.orientation" value="STANDARD" source="general.baffle.coil.orientation.v2.v3.20111116.01"/><manufacturingFeature name="general.style" value="STANDARD" source="general.baffle.coil.style.v2.v3.20200406.01"/><manufacturingFeature name="feature.coil-clr-top" value="5.597" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-top" value="11.597" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-top" value="17.597" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-top" value="23.597" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-top" value="29.597" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-top" value="35.597" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-top" value="41.597" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-top" value="47.597" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-top" value="53.597" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-top" value="59.597" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.coil-clr-top" value="65.597" source="intersector.intersection.coil.baffle.to.coil.20200406.01"/><manufacturingFeature name="feature.frame-clr" value="2.937" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="feature.frame-clr" value="14.180" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="feature.frame-clr" value="25.424" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="feature.frame-clr" value="36.667" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="feature.frame-clr" value="47.910" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="feature.frame-clr" value="59.154" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="feature.frame-clr" value="70.397" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="pricing.cost" value="17.02" source="pricing.cost.profit.calculation.20171106.01"/><manufacturingFeature name="pricing.overhead.and.profit" value="2.5946" source="pricing.cost.profit.calculation.20171106.01"/><manufacturingFeature name="pricing.raw.flat.1.extents" value="(73.33, 13.143, 0.0)" source="pricing.BAFFLE.COIL.V3.top.feature.count.20220519.01"/><manufacturingFeature name="pricing.subtotal.flat.1.l.form" value="0.8055" source="pricing.flat.form.cost.20171102.01"/><manufacturingFeature name="pricing.subtotal.flat.1.l.punch" value="0.7733" source="pricing.flat.punch.cost.20171102.01"/><manufacturingFeature name="pricing.subtotal.flat.1.l.shear" value="0.4458" source="pricing.flat.shear.cost.20171102.01"/><manufacturingFeature name="pricing.subtotal.flat.1.material" value="12.6782" source="pricing.flat.material.cost.20101117.01"/><manufacturingFeature name="pricing.total.labor" value="2.0246" source="pricing.sum.labor.cost.20171122.01"/><manufacturingFeature name="pricing.total.material.labor" value="14.7028" source="pricing.sum.cost.20110322.01"/><manufacturingFeature name="pricing.vendor" value="TMP" source="pricing.BAFFLE.COIL.V3.top.feature.count.20220519.01"/><manufacturingFeature name="pricing.version" value="20250401.01" source="pricing.version.20110118.01"/></details></manufacturedItem>
+        <manufacturedItem>
+          <version>2.00</version>
+          <partNumber>93SFGXE02ET46X003B</partNumber>
+          <description>Frame 003</description>
+          <locationNumber>111XX003</locationNumber>
+          <points xl="0.0" yl="52.214" zl="3.02" xu="1.893" yu="54.107" zu="75.98" length="72.96"/>
+          <weight>13.46</weight>
+        <details name="manufacturingFeatures" version="1.0"><version>1.0</version><manufacturingFeature name="feature.seal4" value="1.0" source="general.frame.bulbseal.temp.feature.20210809.01"/><manufacturingFeature name="general.axis" value="Z" source="general.frame.dimensions.20081107.01"/><manufacturingFeature name="general.bounds" value="BBv1 0.0 52.214 3.02 1.893 54.107 75.98 1vBB" source="general.frame.bounds.20081107.01"/><manufacturingFeature name="general.classification" value="FRAME.V1" source="general.frame.classification.20210630.01"/><manufacturingFeature name="general.length" value="72.960" source="general.frame.dimensions.20081107.01"/><manufacturingFeature name="general.material" value="GALVANIZED" source="general.frame.material.20090406.01"/><manufacturingFeature name="general.tablocation" value="UXLY" source="general.frame.tab.location.20081107.01"/><manufacturingFeature name="feature.frame-end-high" value="FRAME" source="intersector.intersection.frameend.to.frameend.20080923.01"/><manufacturingFeature name="feature.frame-end-low" value="FRAME" source="intersector.intersection.frameend.to.frameend.20080923.01"/><manufacturingFeature name="feature.scrpnlb3" value="0.65" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="8.61" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="16.57" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="24.53" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="32.49" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="40.45" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="48.41" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="56.37" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="64.33" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="72.29" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.seal1521" value="2.750" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="feature.seal1521" value="13.993" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="feature.seal1521" value="25.237" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="feature.seal1521" value="36.480" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="feature.seal1521" value="47.723" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="feature.seal1521" value="58.967" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="feature.seal1521" value="70.210" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/></details></manufacturedItem>
+        <manufacturedItem>
+          <version>2.00</version>
+          <partNumber>93SFGXE02ET46X005B</partNumber>
+          <description>Frame 005</description>
+          <locationNumber>111XX005</locationNumber>
+          <points xl="22.107" yl="52.214" zl="3.02" xu="24.0" yu="54.107" zu="75.98" length="72.96"/>
+          <weight>13.46</weight>
+        <details name="manufacturingFeatures" version="1.0"><version>1.0</version><manufacturingFeature name="feature.seal4" value="1.0" source="general.frame.bulbseal.temp.feature.20210809.01"/><manufacturingFeature name="general.axis" value="Z" source="general.frame.dimensions.20081107.01"/><manufacturingFeature name="general.bounds" value="BBv1 22.107 52.214 3.02 24.0 54.107 75.98 1vBB" source="general.frame.bounds.20081107.01"/><manufacturingFeature name="general.classification" value="FRAME.V1" source="general.frame.classification.20210630.01"/><manufacturingFeature name="general.length" value="72.960" source="general.frame.dimensions.20081107.01"/><manufacturingFeature name="general.material" value="GALVANIZED" source="general.frame.material.20090406.01"/><manufacturingFeature name="general.tablocation" value="LXLY" source="general.frame.tab.location.20081107.01"/><manufacturingFeature name="feature.frame-end-high" value="FRAME" source="intersector.intersection.frameend.to.frameend.20080923.01"/><manufacturingFeature name="feature.frame-end-low" value="FRAME" source="intersector.intersection.frameend.to.frameend.20080923.01"/><manufacturingFeature name="feature.scrpnlb2" value="0.65" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="8.61" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="16.57" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="24.53" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="32.49" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="40.45" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="48.41" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="56.37" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="64.33" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="72.29" source="intersector.intersection.framesurface.to.panel.20210610.01"/></details></manufacturedItem>
+        <manufacturedItem>
+          <version>2.00</version>
+          <partNumber>93SFGXE02ET46X004B</partNumber>
+          <description>Frame 004</description>
+          <locationNumber>111XX004</locationNumber>
+          <points xl="3.02" yl="52.214" zl="0.0" xu="20.98" yu="54.107" zu="1.893" length="17.96"/>
+          <weight>4.09</weight>
+        <details name="manufacturingFeatures" version="1.0"><version>1.0</version><manufacturingFeature name="feature.seal4" value="1.0" source="general.frame.bulbseal.temp.feature.20210809.01"/><manufacturingFeature name="general.axis" value="X" source="general.frame.dimensions.20081107.01"/><manufacturingFeature name="general.bounds" value="BBv1 3.02 52.214 0.0 20.98 54.107 1.893 1vBB" source="general.frame.bounds.20081107.01"/><manufacturingFeature name="general.classification" value="FRAME.V1" source="general.frame.classification.20210630.01"/><manufacturingFeature name="general.length" value="17.960" source="general.frame.dimensions.20081107.01"/><manufacturingFeature name="general.material" value="GALVANIZED" source="general.frame.material.20090406.01"/><manufacturingFeature name="general.tablocation" value="LYUZ" source="general.frame.tab.location.20081107.01"/><manufacturingFeature name="feature.frame-end-high" value="FRAME" source="intersector.intersection.frameend.to.frameend.20080923.01"/><manufacturingFeature name="feature.frame-end-low" value="FRAME" source="intersector.intersection.frameend.to.frameend.20080923.01"/><manufacturingFeature name="feature.scrpnlb2" value="0.65" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="6.20" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="11.75" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="17.29" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="0.65" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="6.20" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="11.75" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="17.29" source="intersector.intersection.framesurface.to.panel.20210610.01"/></details></manufacturedItem>
+        <manufacturedItem>
+          <version>2.00</version>
+          <partNumber>93SFGXE02ET46X008B</partNumber>
+          <description>Frame 008</description>
+          <locationNumber>111XX008</locationNumber>
+          <points xl="3.02" yl="52.214" zl="77.107" xu="20.98" yu="54.107" zu="79.0" length="17.96"/>
+          <weight>4.09</weight>
+        <details name="manufacturingFeatures" version="1.0"><version>1.0</version><manufacturingFeature name="feature.seal4" value="1.0" source="general.frame.bulbseal.temp.feature.20210809.01"/><manufacturingFeature name="general.axis" value="X" source="general.frame.dimensions.20081107.01"/><manufacturingFeature name="general.bounds" value="BBv1 3.02 52.214 77.107 20.98 54.107 79.0 1vBB" source="general.frame.bounds.20081107.01"/><manufacturingFeature name="general.classification" value="FRAME.V1" source="general.frame.classification.20210630.01"/><manufacturingFeature name="general.length" value="17.960" source="general.frame.dimensions.20081107.01"/><manufacturingFeature name="general.material" value="GALVANIZED" source="general.frame.material.20090406.01"/><manufacturingFeature name="general.tablocation" value="LYLZ" source="general.frame.tab.location.20081107.01"/><manufacturingFeature name="feature.frame-end-high" value="FRAME" source="intersector.intersection.frameend.to.frameend.20080923.01"/><manufacturingFeature name="feature.frame-end-low" value="FRAME" source="intersector.intersection.frameend.to.frameend.20080923.01"/><manufacturingFeature name="feature.scrpnlb2" value="0.65" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="6.20" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="11.75" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="17.29" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="0.65" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="6.20" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="11.75" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="17.29" source="intersector.intersection.framesurface.to.panel.20210610.01"/></details></manufacturedItem>
+        <manufacturedItem>
+          <version>2.00</version>
+          <partNumber>93SFGXE02ET46X001B</partNumber>
+          <description>Frame 001</description>
+          <locationNumber>111XX001</locationNumber>
+          <points xl="0.0" yl="0.107" zl="0.0" xu="1.893" yu="51.087" zu="1.893" length="50.98"/>
+          <weight>9.22</weight>
+          <manufacturedItem>
+            <version>0.0</version>
+            <partNumber>39MX40141004</partNumber>
+            <description>Frame Cup</description>
+          </manufacturedItem>
+        <details name="manufacturingFeatures" version="1.0"><version>1.0</version><manufacturingFeature name="feature.seal4" value="1.0" source="general.frame.bulbseal.temp.feature.20210809.01"/><manufacturingFeature name="general.axis" value="Y" source="general.frame.dimensions.20081107.01"/><manufacturingFeature name="general.bounds" value="BBv1 0.0 0.107 0.0 1.893 51.087 1.893 1vBB" source="general.frame.bounds.20081107.01"/><manufacturingFeature name="general.classification" value="FRAME.V1" source="general.frame.classification.20210630.01"/><manufacturingFeature name="general.length" value="50.980" source="general.frame.dimensions.20081107.01"/><manufacturingFeature name="general.material" value="GALVANIZED" source="general.frame.material.20090406.01"/><manufacturingFeature name="general.tablocation" value="UXUZ" source="general.frame.tab.location.20081107.01"/><manufacturingFeature name="feature.frame-end-high" value="FRAME" source="intersector.intersection.frameend.to.frameend.20080923.01"/><manufacturingFeature name="feature.frame-end-low" value="BASERAIL" source="intersector.intersection.baserail.to.frameend.20090427.01"/><manufacturingFeature name="feature.scrpnlb3" value="1.67" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="8.62" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="15.57" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="22.52" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="29.47" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="36.42" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="43.36" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="50.31" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.seal1521" value="2.750" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="feature.seal1521" value="14.120" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="feature.seal1521" value="25.490" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="feature.seal1521" value="36.860" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="feature.seal1521" value="48.230" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/></details></manufacturedItem>
+        <manufacturedItem>
+          <version>2.00</version>
+          <partNumber>93SFGXE02ET46X002B</partNumber>
+          <description>Frame 002</description>
+          <locationNumber>111XX002</locationNumber>
+          <points xl="22.107" yl="0.107" zl="0.0" xu="24.0" yu="51.087" zu="1.893" length="50.98"/>
+          <weight>9.22</weight>
+          <manufacturedItem>
+            <version>0.0</version>
+            <partNumber>39MX40141004</partNumber>
+            <description>Frame Cup</description>
+          </manufacturedItem>
+        <details name="manufacturingFeatures" version="1.0"><version>1.0</version><manufacturingFeature name="feature.seal4" value="1.0" source="general.frame.bulbseal.temp.feature.20210809.01"/><manufacturingFeature name="general.axis" value="Y" source="general.frame.dimensions.20081107.01"/><manufacturingFeature name="general.bounds" value="BBv1 22.107 0.107 0.0 24.0 51.087 1.893 1vBB" source="general.frame.bounds.20081107.01"/><manufacturingFeature name="general.classification" value="FRAME.V1" source="general.frame.classification.20210630.01"/><manufacturingFeature name="general.length" value="50.980" source="general.frame.dimensions.20081107.01"/><manufacturingFeature name="general.material" value="GALVANIZED" source="general.frame.material.20090406.01"/><manufacturingFeature name="general.tablocation" value="LXUZ" source="general.frame.tab.location.20081107.01"/><manufacturingFeature name="feature.frame-end-high" value="FRAME" source="intersector.intersection.frameend.to.frameend.20080923.01"/><manufacturingFeature name="feature.frame-end-low" value="BASERAIL" source="intersector.intersection.baserail.to.frameend.20090427.01"/><manufacturingFeature name="feature.scrpnlb2" value="1.67" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="8.62" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="15.57" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="22.52" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="29.47" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="36.42" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="43.36" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="50.31" source="intersector.intersection.framesurface.to.panel.20210610.01"/></details></manufacturedItem>
+        <manufacturedItem>
+          <version>2.00</version>
+          <partNumber>93SFGXE02ET46X006B</partNumber>
+          <description>Frame 006</description>
+          <locationNumber>111XX006</locationNumber>
+          <points xl="0.0" yl="0.107" zl="77.107" xu="1.893" yu="51.087" zu="79.0" length="50.98"/>
+          <weight>9.22</weight>
+          <manufacturedItem>
+            <version>0.0</version>
+            <partNumber>39MX40141004</partNumber>
+            <description>Frame Cup</description>
+          </manufacturedItem>
+        <details name="manufacturingFeatures" version="1.0"><version>1.0</version><manufacturingFeature name="feature.seal4" value="1.0" source="general.frame.bulbseal.temp.feature.20210809.01"/><manufacturingFeature name="general.axis" value="Y" source="general.frame.dimensions.20081107.01"/><manufacturingFeature name="general.bounds" value="BBv1 0.0 0.107 77.107 1.893 51.087 79.0 1vBB" source="general.frame.bounds.20081107.01"/><manufacturingFeature name="general.classification" value="FRAME.V1" source="general.frame.classification.20210630.01"/><manufacturingFeature name="general.length" value="50.980" source="general.frame.dimensions.20081107.01"/><manufacturingFeature name="general.material" value="GALVANIZED" source="general.frame.material.20090406.01"/><manufacturingFeature name="general.tablocation" value="UXLZ" source="general.frame.tab.location.20081107.01"/><manufacturingFeature name="feature.frame-end-high" value="FRAME" source="intersector.intersection.frameend.to.frameend.20080923.01"/><manufacturingFeature name="feature.frame-end-low" value="BASERAIL" source="intersector.intersection.baserail.to.frameend.20090427.01"/><manufacturingFeature name="feature.scrpnlb2" value="1.67" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="8.62" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="15.57" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="22.52" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="29.47" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="36.42" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="43.36" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb2" value="50.31" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.seal1524" value="2.750" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="feature.seal1524" value="14.120" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="feature.seal1524" value="25.490" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="feature.seal1524" value="36.860" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/><manufacturingFeature name="feature.seal1524" value="48.230" source="intersector.intersection.coil.baffle.to.frame.20111129.01"/></details></manufacturedItem>
+        <manufacturedItem>
+          <version>2.00</version>
+          <partNumber>93SFGXE02ET46X007B</partNumber>
+          <description>Frame 007</description>
+          <locationNumber>111XX007</locationNumber>
+          <points xl="22.107" yl="0.107" zl="77.107" xu="24.0" yu="51.087" zu="79.0" length="50.98"/>
+          <weight>9.22</weight>
+          <manufacturedItem>
+            <version>0.0</version>
+            <partNumber>39MX40141004</partNumber>
+            <description>Frame Cup</description>
+          </manufacturedItem>
+        <details name="manufacturingFeatures" version="1.0"><version>1.0</version><manufacturingFeature name="feature.seal4" value="1.0" source="general.frame.bulbseal.temp.feature.20210809.01"/><manufacturingFeature name="general.axis" value="Y" source="general.frame.dimensions.20081107.01"/><manufacturingFeature name="general.bounds" value="BBv1 22.107 0.107 77.107 24.0 51.087 79.0 1vBB" source="general.frame.bounds.20081107.01"/><manufacturingFeature name="general.classification" value="FRAME.V1" source="general.frame.classification.20210630.01"/><manufacturingFeature name="general.length" value="50.980" source="general.frame.dimensions.20081107.01"/><manufacturingFeature name="general.material" value="GALVANIZED" source="general.frame.material.20090406.01"/><manufacturingFeature name="general.tablocation" value="LXLZ" source="general.frame.tab.location.20081107.01"/><manufacturingFeature name="feature.frame-end-high" value="FRAME" source="intersector.intersection.frameend.to.frameend.20080923.01"/><manufacturingFeature name="feature.frame-end-low" value="BASERAIL" source="intersector.intersection.baserail.to.frameend.20090427.01"/><manufacturingFeature name="feature.scrpnlb3" value="1.67" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="8.62" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="15.57" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="22.52" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="29.47" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="36.42" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="43.36" source="intersector.intersection.framesurface.to.panel.20210610.01"/><manufacturingFeature name="feature.scrpnlb3" value="50.31" source="intersector.intersection.framesurface.to.panel.20210610.01"/></details></manufacturedItem>
+        <manufacturedItem>
+          <version>d9rz.1+s3</version>
+          <partNumber>876FP42LTJ51YE6BAC</partNumber>
+          <description>Panel 52.214 x 20.214</description>
+          <locationNumber>111XX013</locationNumber>
+          <points xl="1.893" yl="0.0" zl="0.0" xu="22.107" yu="52.214" zu="1.5" length="52.214"/>
+          <weight>19.38</weight>
+          <details name="penetrations" version="1.0">
+            <version>1.1</version>
+            <penetration shape="circle" feature="PHYSICALRIVNUT" xl="7.833" yl="48.639" zl="0.0" xu="8.233" yu="49.039" zu="1.0"/>
+            <penetration shape="circle" feature="PHYSICALRIVNUT" xl="4.693" yl="48.639" zl="0.0" xu="5.093" yu="49.039" zu="1.0"/>
+            <penetration shape="circle" feature="PHYSICALRIVNUT" xl="7.833" yl="39.109" zl="0.0" xu="8.233" yu="39.509" zu="1.0"/>
+            <penetration shape="circle" feature="PHYSICALRIVNUT" xl="4.693" yl="39.109" zl="0.0" xu="5.093" yu="39.509" zu="1.0"/>
+            <penetration shape="circle" feature="PHYSICALCONDUIT" xl="5.603" yl="36.429" zl="0.0" xu="7.323" yu="38.149" zu="1.5"/>
+            <penetration shape="rectangle" feature="ELECTRICALBOXDBE" xl="3.893" yl="35.699" zl="-4.63" xu="9.033" yu="49.839" zu="0.0"/>
+          </details>
+          <manufacturedItem>
+            <version>1.0</version>
+            <partNumber>39MX40147406</partNumber>
+            <quantity>1.0</quantity>
+            <description>Outswing door and top/side panel aluminum plugs</description>
+            <locationNumber>111XX</locationNumber>
+            <source>xploder</source>
+          </manufacturedItem>
+        <details name="manufacturingFeatures" version="1.0"><version>1.0</version><manufacturingFeature name="billofmaterial.raw" value="SUPPORT&#9;39MA51010082&#9;1" source="general.panel.v2.rivnut.list.calculate.20200416.01"/><manufacturingFeature name="billofmaterial.raw" value="SUPPORT&#9;39MA51010082&#9;1" source="general.panel.v2.rivnut.list.calculate.20200416.01"/><manufacturingFeature name="billofmaterial.raw" value="SUPPORT&#9;39MA51010082&#9;1" source="general.panel.v2.rivnut.list.calculate.20200416.01"/><manufacturingFeature name="feature.conduit_01_72" value="BBv1 5.603 36.429 0.0 7.323 38.149 1.5 1vBB" source="general.panel.v2.conduit.feature.20170210.01"/><manufacturingFeature name="feature.rivnutf" value="BBv1 4.693 39.109 0.0 5.093 39.509 1.0 1vBB" source="general.panel.v2.rivnut.feature.20170210.01"/><manufacturingFeature name="feature.rivnutf" value="BBv1 7.833 39.109 0.0 8.233 39.509 1.0 1vBB" source="general.panel.v2.rivnut.feature.20170210.01"/><manufacturingFeature name="feature.rivnutf" value="BBv1 4.693 48.639 0.0 5.093 49.039 1.0 1vBB" source="general.panel.v2.rivnut.feature.20170210.01"/><manufacturingFeature name="feature.rivnutf" value="BBv1 7.833 48.639 0.0 8.233 49.039 1.0 1vBB" source="general.panel.v2.rivnut.feature.20170210.01"/><manufacturingFeature name="general.bounds" value="BBv1 1.893 0.0 0.0 22.107 52.214 1.5 1vBB" source="general.panelv2.bounds.20081107.01"/><manufacturingFeature name="general.classification" value="PANEL.V2" source="general.panelv2.classification.20171219.01"/><manufacturingFeature name="general.classification.A2L" value="NO" source="general.panelv2.a2l.side.panel.20180213.01"/><manufacturingFeature name="general.dim.a" value="19.600" source="general.panelv2.dimensions.20081107.01"/><manufacturingFeature name="general.dim.a.axis" value="X" source="general.panelv2.orientation.20081107.01"/><manufacturingFeature name="general.dim.a.screw.count" value="4" source="general.panelv2.screwcount.20171219.01"/><manufacturingFeature name="general.dim.a.screw.firsthole" value="1.78" source="general.panelv2.screwcount.20171219.01"/><manufacturingFeature name="general.dim.a.screw.spacing" value="5.546667" source="general.panelv2.screwcount.20171219.01"/><manufacturingFeature name="general.dim.b" value="51.600" source="general.panelv2.dimensions.20081107.01"/><manufacturingFeature name="general.dim.b.axis" value="Y" source="general.panelv2.orientation.20081107.01"/><manufacturingFeature name="general.dim.b.screw.count" value="8" source="general.panelv2.screwcount.20171219.01"/><manufacturingFeature name="general.dim.b.screw.firsthole" value="1.78" source="general.panelv2.screwcount.20171219.01"/><manufacturingFeature name="general.dim.b.screw.spacing" value="6.948571" source="general.panelv2.screwcount.20171219.01"/><manufacturingFeature name="general.door" value="NO" source="general.panelv2.flanged.20171219.01"/><manufacturingFeature name="general.door.flange" value="NONE" source="general.panelv2.flanged.20171219.01"/><manufacturingFeature name="general.flange.gasket" value="YES" source="general.panelv2.flanged.20171219.01"/><manufacturingFeature name="general.flanged" value="YES" source="general.panelv2.flanged.20171219.01"/><manufacturingFeature name="general.gauge.a" value="26" source="general.panelv2.gage.20180606.01"/><manufacturingFeature name="general.gauge.b" value="26" source="general.panelv2.gage.20180606.01"/><manufacturingFeature name="general.hinge.count" value="0" source="general.panel.v2.hinge.count.20090412.01"/><manufacturingFeature name="general.hinge.location" value="NONE" source="general.panelv2.hinge.location.20180213.01"/><manufacturingFeature name="general.internal.handle" value="NO" source="general.panelv2.inside.handle.20171219.01"/><manufacturingFeature name="general.material.a" value="GALVANIZED (VA03-150)" source="general.panelv2.material.20180606.01"/><manufacturingFeature name="general.material.a.perforated" value="NO" source="general.panelv2.perforated.20180213.01"/><manufacturingFeature name="general.material.b" value="GALVANIZED (VA03-150)" source="general.panelv2.material.20180606.01"/><manufacturingFeature name="general.non.axis" value="Z" source="general.panelv2.relative.location.20201023.01"/><manufacturingFeature name="general.orientation" value="INVERTA" source="general.panelv2.orientation.inverta.20100329.01"/><manufacturingFeature name="general.relative.location" value="L" source="general.panelv2.relative.location.20201023.01"/><manufacturingFeature name="general.thermalbreak" value="NO" source="general.panelv2.thermalbreak.20081107.01"/><manufacturingFeature name="general.weight" value="19.498" source="general.panelv2.weight.20180606.01"/><manufacturingFeature name="pricing.cost" value="85.83" source="pricing.PANEL.V2.main.subtotal.20140401.01"/><manufacturingFeature name="pricing.folder.adjustment" value="-1.75" source="pricing.PANEL.V2.main.subtotal.20140401.01"/><manufacturingFeature name="pricing.overhead.and.profit" value="10.7592" source="pricing.PANEL.V2.main.subtotal.20140401.01"/><manufacturingFeature name="pricing.raw.flat.1.extents" value="(24.5, 56.5, 0.0)" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.raw.flat.2.extents" value="(26.5, 58.5, 0.0)" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.subtotal.flat.1.accessoriescost" value="5.3580" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.subtotal.flat.1.feature.adder.penetrations.by.lf" value="10.1364" source="pricing.PANEL.V2.penetrations.base.adder.20110316.01"/><manufacturingFeature name="pricing.subtotal.flat.1.feature.doorframe" value="0.0000" source="pricing.PANEL.V2.penetrations.inswingdoor.feature.pre.sum.20101214.01"/><manufacturingFeature name="pricing.subtotal.flat.1.feature.material.rivnut" value="0.5900" source="pricing.flat.rivnut.cost.20101221.01"/><manufacturingFeature name="pricing.subtotal.flat.1.feature.material.rivnut" value="0.5900" source="pricing.flat.rivnut.cost.20101221.01"/><manufacturingFeature name="pricing.subtotal.flat.1.feature.material.rivnut" value="0.5900" source="pricing.flat.rivnut.cost.20101221.01"/><manufacturingFeature name="pricing.subtotal.flat.1.feature.raw.billofmaterial" value="5.9300" source="pricing.PANEL.V2.penetrations.raw.bom.20180419.01"/><manufacturingFeature name="pricing.subtotal.flat.1.feature.raw.billofmaterial" value="5.9300" source="pricing.PANEL.V2.penetrations.raw.bom.20180419.01"/><manufacturingFeature name="pricing.subtotal.flat.1.feature.raw.billofmaterial" value="5.9300" source="pricing.PANEL.V2.penetrations.raw.bom.20180419.01"/><manufacturingFeature name="pricing.subtotal.flat.1.freight" value="1.4025" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.subtotal.flat.1.labor" value="12.8250" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.subtotal.flat.1.material" value="7.5208" source="pricing.flat.material.cost.20101117.01"/><manufacturingFeature name="pricing.subtotal.flat.1.material.different" value="0.4948" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.subtotal.flat.1.material.tbextrusion" value="0.0000" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.subtotal.flat.1.penetrations" value="29.6964" source="pricing.PANEL.V2.penetrations.feature.sum.20101205.01"/><manufacturingFeature name="pricing.subtotal.flat.1.perf" value="0.0000" source="pricing.PANEL.V2.perf.feature.pre.sum.20180125.01"/><manufacturingFeature name="pricing.subtotal.flat.1.standardaccessoriescost" value="1.0940" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.subtotal.flat.2.material" value="8.4075" source="pricing.flat.material.cost.20101117.01"/><manufacturingFeature name="pricing.subtotal.material.foam" value="9.6789" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.total.material.labor" value="75.0754" source="pricing.PANEL.V2.main.subtotal.20140401.01"/><manufacturingFeature name="pricing.vendor" value="TMP" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.version" value="20250401.01" source="pricing.version.20110118.01"/></details></manufacturedItem>
+        <manufacturedItem>
+          <version>d9rz.1+s3</version>
+          <partNumber>8766P42LTJYD11XNJC</partNumber>
+          <description>Panel 52.214 x 20.214</description>
+          <locationNumber>111XX015</locationNumber>
+          <points xl="1.893" yl="0.0" zl="77.5" xu="22.107" yu="52.214" zu="79.0" length="52.214"/>
+          <weight>19.38</weight>
+          <details name="penetrations" version="1.0">
+            <version>1.1</version>
+            <penetration shape="circle" feature="WATERFIRST" xl="17.118" yl="7.967" zl="77.5" xu="17.743" yu="8.593" zu="79.0" nozzle="G12" pipelabel="L2" coilindex="2" txvcircuit="A" txvtons="8"/>
+            <penetration shape="circle" feature="WATERFIRST" xl="13.368" yl="35.468" zl="77.5" xu="13.993" yu="36.093" zu="79.0" nozzle="G12" pipelabel="L1" coilindex="1" txvcircuit="B" txvtons="8"/>
+            <penetration shape="circle" feature="WATERFIRST" xl="3.627" yl="35.218" zl="77.5" xu="4.752" yu="36.343" zu="79.0" pipelabel="S1"/>
+            <penetration shape="circle" feature="WATERFIRST" xl="4.938" yl="7.717" zl="77.5" xu="6.063" yu="8.843" zu="79.0" pipelabel="S2"/>
+          </details>
+          <manufacturedItem>
+            <version>1.0</version>
+            <partNumber>39MX40147406</partNumber>
+            <quantity>1.0</quantity>
+            <description>Outswing door and top/side panel aluminum plugs</description>
+            <locationNumber>111XX</locationNumber>
+            <source>xploder</source>
+          </manufacturedItem>
+        <details name="manufacturingFeatures" version="1.0"><version>1.0</version><manufacturingFeature name="feature.coil_2_0" value="BBv1 4.938 7.717 77.5 6.063 8.843 79.0 1vBB" source="general.panelv2.penetration.coil.20170707.01"/><manufacturingFeature name="feature.coil_2_0" value="BBv1 3.627 35.218 77.5 4.752 36.343 79.0 1vBB" source="general.panelv2.penetration.coil.20170707.01"/><manufacturingFeature name="feature.coil_2_0" value="BBv1 13.368 35.468 77.5 13.993 36.093 79.0 1vBB" source="general.panelv2.penetration.coil.20170707.01"/><manufacturingFeature name="feature.coil_2_0" value="BBv1 17.118 7.967 77.5 17.743 8.593 79.0 1vBB" source="general.panelv2.penetration.coil.20170707.01"/><manufacturingFeature name="general.bounds" value="BBv1 1.893 0.0 77.5 22.107 52.214 79.0 1vBB" source="general.panelv2.bounds.20081107.01"/><manufacturingFeature name="general.classification" value="PANEL.V2" source="general.panelv2.classification.20171219.01"/><manufacturingFeature name="general.classification.A2L" value="NO" source="general.panelv2.a2l.side.panel.20180213.01"/><manufacturingFeature name="general.dim.a" value="19.600" source="general.panelv2.dimensions.20081107.01"/><manufacturingFeature name="general.dim.a.axis" value="X" source="general.panelv2.orientation.20081107.01"/><manufacturingFeature name="general.dim.a.screw.count" value="4" source="general.panelv2.screwcount.20171219.01"/><manufacturingFeature name="general.dim.a.screw.firsthole" value="1.78" source="general.panelv2.screwcount.20171219.01"/><manufacturingFeature name="general.dim.a.screw.spacing" value="5.546667" source="general.panelv2.screwcount.20171219.01"/><manufacturingFeature name="general.dim.b" value="51.600" source="general.panelv2.dimensions.20081107.01"/><manufacturingFeature name="general.dim.b.axis" value="Y" source="general.panelv2.orientation.20081107.01"/><manufacturingFeature name="general.dim.b.screw.count" value="8" source="general.panelv2.screwcount.20171219.01"/><manufacturingFeature name="general.dim.b.screw.firsthole" value="1.78" source="general.panelv2.screwcount.20171219.01"/><manufacturingFeature name="general.dim.b.screw.spacing" value="6.948571" source="general.panelv2.screwcount.20171219.01"/><manufacturingFeature name="general.door" value="NO" source="general.panelv2.flanged.20171219.01"/><manufacturingFeature name="general.door.flange" value="NONE" source="general.panelv2.flanged.20171219.01"/><manufacturingFeature name="general.flange.gasket" value="YES" source="general.panelv2.flanged.20171219.01"/><manufacturingFeature name="general.flanged" value="YES" source="general.panelv2.flanged.20171219.01"/><manufacturingFeature name="general.gauge.a" value="26" source="general.panelv2.gage.20180606.01"/><manufacturingFeature name="general.gauge.b" value="26" source="general.panelv2.gage.20180606.01"/><manufacturingFeature name="general.hinge.count" value="0" source="general.panel.v2.hinge.count.20090412.01"/><manufacturingFeature name="general.hinge.location" value="NONE" source="general.panelv2.hinge.location.20180213.01"/><manufacturingFeature name="general.internal.handle" value="NO" source="general.panelv2.inside.handle.20171219.01"/><manufacturingFeature name="general.material.a" value="GALVANIZED (VA03-150)" source="general.panelv2.material.20180606.01"/><manufacturingFeature name="general.material.a.perforated" value="NO" source="general.panelv2.perforated.20180213.01"/><manufacturingFeature name="general.material.b" value="GALVANIZED (VA03-150)" source="general.panelv2.material.20180606.01"/><manufacturingFeature name="general.non.axis" value="Z" source="general.panelv2.relative.location.20201023.01"/><manufacturingFeature name="general.orientation" value="STANDARD" source="general.panelv2.orientation.standard.20100909.01"/><manufacturingFeature name="general.relative.location" value="U" source="general.panelv2.relative.location.20201023.01"/><manufacturingFeature name="general.thermalbreak" value="NO" source="general.panelv2.thermalbreak.20081107.01"/><manufacturingFeature name="general.weight" value="19.498" source="general.panelv2.weight.20180606.01"/><manufacturingFeature name="pricing.cost" value="78.26" source="pricing.PANEL.V2.main.subtotal.20140401.01"/><manufacturingFeature name="pricing.folder.adjustment" value="-1.60" source="pricing.PANEL.V2.main.subtotal.20140401.01"/><manufacturingFeature name="pricing.overhead.and.profit" value="9.7805" source="pricing.PANEL.V2.main.subtotal.20140401.01"/><manufacturingFeature name="pricing.raw.flat.1.extents" value="(24.5, 56.5, 0.0)" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.raw.flat.2.extents" value="(26.5, 58.5, 0.0)" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.subtotal.flat.1.accessoriescost" value="5.3580" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.subtotal.flat.1.feature.adder.penetrations.by.lf" value="10.1364" source="pricing.PANEL.V2.penetrations.base.adder.20110316.01"/><manufacturingFeature name="pricing.subtotal.flat.1.feature.coil.hole.adder.insert" value="12.9600" source="pricing.PANEL.V2.penetrations.simple.hole.metal.insert.adder.20101221.01"/><manufacturingFeature name="pricing.subtotal.flat.1.feature.doorframe" value="0.0000" source="pricing.PANEL.V2.penetrations.inswingdoor.feature.pre.sum.20101214.01"/><manufacturingFeature name="pricing.subtotal.flat.1.freight" value="1.4025" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.subtotal.flat.1.labor" value="12.8250" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.subtotal.flat.1.material" value="7.5208" source="pricing.flat.material.cost.20101117.01"/><manufacturingFeature name="pricing.subtotal.flat.1.material.different" value="0.4948" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.subtotal.flat.1.material.tbextrusion" value="0.0000" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.subtotal.flat.1.penetrations" value="23.0964" source="pricing.PANEL.V2.penetrations.feature.sum.20101205.01"/><manufacturingFeature name="pricing.subtotal.flat.1.perf" value="0.0000" source="pricing.PANEL.V2.perf.feature.pre.sum.20180125.01"/><manufacturingFeature name="pricing.subtotal.flat.1.standardaccessoriescost" value="1.0940" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.subtotal.flat.2.material" value="8.4075" source="pricing.flat.material.cost.20101117.01"/><manufacturingFeature name="pricing.subtotal.material.foam" value="9.6789" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.total.material.labor" value="68.4754" source="pricing.PANEL.V2.main.subtotal.20140401.01"/><manufacturingFeature name="pricing.vendor" value="TMP" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.version" value="20250401.01" source="pricing.version.20110118.01"/></details></manufacturedItem>
+        <manufacturedItem>
+          <version>d9rz.1+s3</version>
+          <partNumber>876XP42MLLXXXXXXXC</partNumber>
+          <description>Panel 75.214 x 20.214</description>
+          <locationNumber>111XX014</locationNumber>
+          <points xl="1.893" yl="52.607" zl="1.893" xu="22.107" yu="54.107" zu="77.107" length="75.214"/>
+          <weight>27.91</weight>
+          <manufacturedItem>
+            <version>1.0</version>
+            <partNumber>39MX40147406</partNumber>
+            <quantity>1.0</quantity>
+            <description>Outswing door and top/side panel aluminum plugs</description>
+            <locationNumber>111XX</locationNumber>
+            <source>xploder</source>
+          </manufacturedItem>
+        <details name="manufacturingFeatures" version="1.0"><version>1.0</version><manufacturingFeature name="general.bounds" value="BBv1 1.893 52.607 1.893 22.107 54.107 77.107 1vBB" source="general.panelv2.bounds.20081107.01"/><manufacturingFeature name="general.classification" value="PANEL.V2" source="general.panelv2.classification.20171219.01"/><manufacturingFeature name="general.classification.A2L" value="NO" source="general.panelv2.a2l.side.panel.20180213.01"/><manufacturingFeature name="general.dim.a" value="19.600" source="general.panelv2.dimensions.20081107.01"/><manufacturingFeature name="general.dim.a.axis" value="X" source="general.panelv2.orientation.20081107.01"/><manufacturingFeature name="general.dim.a.screw.count" value="4" source="general.panelv2.screwcount.20171219.01"/><manufacturingFeature name="general.dim.a.screw.firsthole" value="1.78" source="general.panelv2.screwcount.20171219.01"/><manufacturingFeature name="general.dim.a.screw.spacing" value="5.546667" source="general.panelv2.screwcount.20171219.01"/><manufacturingFeature name="general.dim.b" value="74.600" source="general.panelv2.dimensions.20081107.01"/><manufacturingFeature name="general.dim.b.axis" value="Z" source="general.panelv2.orientation.20081107.01"/><manufacturingFeature name="general.dim.b.screw.count" value="10" source="general.panelv2.screwcount.20171219.01"/><manufacturingFeature name="general.dim.b.screw.firsthole" value="1.78" source="general.panelv2.screwcount.20171219.01"/><manufacturingFeature name="general.dim.b.screw.spacing" value="7.96" source="general.panelv2.screwcount.20171219.01"/><manufacturingFeature name="general.door" value="NO" source="general.panelv2.flanged.20171219.01"/><manufacturingFeature name="general.door.flange" value="NONE" source="general.panelv2.flanged.20171219.01"/><manufacturingFeature name="general.flange.gasket" value="YES" source="general.panelv2.flanged.20171219.01"/><manufacturingFeature name="general.flanged" value="YES" source="general.panelv2.flanged.20171219.01"/><manufacturingFeature name="general.gauge.a" value="26" source="general.panelv2.gage.20180606.01"/><manufacturingFeature name="general.gauge.b" value="26" source="general.panelv2.gage.20180606.01"/><manufacturingFeature name="general.hinge.count" value="0" source="general.panel.v2.hinge.count.20090412.01"/><manufacturingFeature name="general.hinge.location" value="NONE" source="general.panelv2.hinge.location.20180213.01"/><manufacturingFeature name="general.internal.handle" value="NO" source="general.panelv2.inside.handle.20171219.01"/><manufacturingFeature name="general.material.a" value="GALVANIZED (VA03-150)" source="general.panelv2.material.20180606.01"/><manufacturingFeature name="general.material.a.perforated" value="NO" source="general.panelv2.perforated.20180213.01"/><manufacturingFeature name="general.material.b" value="GALVANIZED (VA03-150)" source="general.panelv2.material.20180606.01"/><manufacturingFeature name="general.non.axis" value="Y" source="general.panelv2.relative.location.20201023.01"/><manufacturingFeature name="general.orientation" value="STANDARD" source="general.panelv2.orientation.standard.20100909.01"/><manufacturingFeature name="general.relative.location" value="U" source="general.panelv2.relative.location.20201023.01"/><manufacturingFeature name="general.thermalbreak" value="NO" source="general.panelv2.thermalbreak.20081107.01"/><manufacturingFeature name="general.weight" value="27.616" source="general.panelv2.weight.20180606.01"/><manufacturingFeature name="pricing.cost" value="71.83" source="pricing.PANEL.V2.main.subtotal.20140401.01"/><manufacturingFeature name="pricing.folder.adjustment" value="-1.47" source="pricing.PANEL.V2.main.subtotal.20140401.01"/><manufacturingFeature name="pricing.overhead.and.profit" value="8.8459" source="pricing.PANEL.V2.main.subtotal.20140401.01"/><manufacturingFeature name="pricing.raw.flat.1.extents" value="(24.5, 79.5, 0.0)" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.raw.flat.2.extents" value="(26.5, 81.5, 0.0)" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.subtotal.flat.1.accessoriescost" value="6.9795" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.subtotal.flat.1.feature.doorframe" value="0.0000" source="pricing.PANEL.V2.penetrations.inswingdoor.feature.pre.sum.20101214.01"/><manufacturingFeature name="pricing.subtotal.flat.1.freight" value="1.9999" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.subtotal.flat.1.labor" value="18.0000" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.subtotal.flat.1.material" value="10.5556" source="pricing.flat.material.cost.20101117.01"/><manufacturingFeature name="pricing.subtotal.flat.1.material.different" value="0.6944" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.subtotal.flat.1.material.tbextrusion" value="0.0000" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.subtotal.flat.1.penetrations" value="0.0000" source="pricing.PANEL.V2.penetrations.feature.sum.20101205.01"/><manufacturingFeature name="pricing.subtotal.flat.1.perf" value="0.0000" source="pricing.PANEL.V2.perf.feature.pre.sum.20180125.01"/><manufacturingFeature name="pricing.subtotal.flat.1.standardaccessoriescost" value="1.2665" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.subtotal.flat.2.material" value="11.6850" source="pricing.flat.material.cost.20101117.01"/><manufacturingFeature name="pricing.subtotal.material.foam" value="13.8014" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.total.material.labor" value="62.9824" source="pricing.PANEL.V2.main.subtotal.20140401.01"/><manufacturingFeature name="pricing.vendor" value="TMP" source="pricing.PANEL.V2.main.20180125.01"/><manufacturingFeature name="pricing.version" value="20250401.01" source="pricing.version.20110118.01"/></details></manufacturedItem>
+        <manufacturedItem>
+          <version>11</version>
+          <partNumber>93BL6JE02ET46X009J</partNumber>
+          <description>Baserail Left 24.0</description>
+          <locationNumber>111XX009</locationNumber>
+          <points xl="0.0" yl="-6.0" zl="0.0" xu="24.0" yu="0.0" zu="1.893" length="24.0"/>
+          <weight>6.9</weight>
+          <details name="penetrations" version="1.0">
+            <version>1.1</version>
+            <penetration shape="rectangle" feature="LIFTINGLUG" xl="0.0" yl="-6.0" zl="0.0" xu="1.893" yu="0.0" zu="1.893"/>
+            <penetration shape="rectangle" feature="LIFTINGLUG" xl="22.107" yl="-6.0" zl="0.0" xu="24.0" yu="0.0" zu="1.893"/>
+          </details>
+          <manufacturedItem>
+            <version>0.00</version>
+            <partNumber>95GMK2XXLCX0790XXA</partNumber>
+            <quantity>0</quantity>
+            <description>RUNNER Short</description>
+            <points xl="0.0" yl="-9.0" zl="-0.553" xu="24.0" yu="-6.0" zu="2.447" length="24.0"/>
+            <manufacturedItem>
+              <version>1.0</version>
+              <partNumber>39MX40141061</partNumber>
+              <quantity>1.0</quantity>
+              <description>Short Split Runner</description>
+              <locationNumber>111XX</locationNumber>
+              <source>xploder</source>
+            </manufacturedItem>
+          <details name="manufacturingFeatures" version="1.0"><version>1.0</version><manufacturingFeature name="general.application" value="SHORT" source="general.runner.application.20131007.01"/><manufacturingFeature name="general.bounds" value="BBv1 0.0 -9.0 -0.553 24.0 -6.0 2.447 1vBB" source="general.runner.bounds.20081107.01"/><manufacturingFeature name="general.classification" value="RUNNER.V1" source="general.runner.classification.20140211.01"/><manufacturingFeature name="general.hand" value="LEFT" source="general.runner.hand.20090420.01"/></details></manufacturedItem>
+          <manufacturedItem>
+            <version>5.0</version>
+            <partNumber>39MX40141193</partNumber>
+            <quantity>2</quantity>
+            <description>Lifting Lug Tab (Not4)</description>
+          </manufacturedItem>
+        <details name="manufacturingFeatures" version="1.0"><version>1.0</version><manufacturingFeature name="general.bottom" value="YES" source="general.baserail.v2.v3.bottom.20190223.01"/><manufacturingFeature name="general.bounds" value="BBv1 0.0 -6.0 0.0 24.0 0.0 1.893 1vBB" source="general.baserail.v2.v3.bounds.20190222.01"/><manufacturingFeature name="general.classification" value="BASERAIL.V4" source="general.baserail.v4.classification.20190222.01"/><manufacturingFeature name="general.dim.s4" value="1.893" source="general.baserail.v4.dim.s4.20190223.01"/><manufacturingFeature name="general.dim.s5" value="0" source="general.baserail.v4.dim.s5.20190223.01"/><manufacturingFeature name="general.gauge" value="14" source="general.baserail.v2.v3.material.20190222.01"/><manufacturingFeature name="general.height" value="6.0" source="general.baserail.v2.v3.dimensions.20190222.01"/><manufacturingFeature name="general.length" value="24.0" source="general.baserail.v2.v3.dimensions.20190222.01"/><manufacturingFeature name="general.lip" value="NO" source="general.baserail.v2.v3.lip.20190223.01"/><manufacturingFeature name="general.location" value="LEFT" source="general.baserail.v2.v3.location.20190222.01"/><manufacturingFeature name="general.material" value="GALVANIZED(VA03-56)" source="general.baserail.v2.v3.material.20190222.01"/><manufacturingFeature name="general.orientation" value="INVERTX" source="general.baserail.v2.v3.orientation.20190222.01"/><manufacturingFeature name="general.tabs" value="NONE" source="general.baserail.v2.v3.tabs.20190222.01"/><manufacturingFeature name="feature.baserail-clr-6in" value="1.0775" source="intersector.intersection.baserail.to.baserail.v4.20190224.01"/><manufacturingFeature name="feature.baserail-clr-6in" value="22.9225" source="intersector.intersection.baserail.to.baserail.v4.20190224.01"/><manufacturingFeature name="feature.framecup.LXUZ" value="23.054" source="intersector.intersection.baserail.to.frameend.20090427.01"/><manufacturingFeature name="feature.framecup.UXUZ" value="0.947" source="intersector.intersection.baserail.to.frameend.20090427.01"/><manufacturingFeature name="feature.panel-eng-s2a" value="3.67" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s2a" value="9.22" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s2a" value="14.77" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s2a" value="20.31" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s3" value="3.67" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s3" value="9.22" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s3" value="14.77" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s3" value="20.31" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.runner-clr-s4" value="21.000" source="intersector.intersection.baserail.to.runner.20190917.01"/><manufacturingFeature name="feature.runner-clr-s4" value="12.000" source="intersector.intersection.baserail.to.runner.20190917.01"/><manufacturingFeature name="feature.runner-clr-s4" value="3.000" source="intersector.intersection.baserail.to.runner.20190917.01"/><manufacturingFeature name="pricing.cost" value="7.15" source="pricing.cost.profit.calculation.20171106.01"/><manufacturingFeature name="pricing.overhead.and.profit" value="1.0941" source="pricing.cost.profit.calculation.20171106.01"/><manufacturingFeature name="pricing.raw.flat.1.extents" value="(24.0, 10.393900000000002, 0.0)" source="pricing.BASERAIL.V4.20190123.01"/><manufacturingFeature name="pricing.subtotal.flat.1.l.form" value="0.3222" source="pricing.flat.form.cost.20171102.01"/><manufacturingFeature name="pricing.subtotal.flat.1.l.punch" value="0.7654" source="pricing.flat.punch.cost.20171102.01"/><manufacturingFeature name="pricing.subtotal.flat.1.l.shear" value="0.1773" source="pricing.flat.shear.cost.20171102.01"/><manufacturingFeature name="pricing.subtotal.flat.1.material" value="4.9349" source="pricing.flat.material.cost.20101117.01"/><manufacturingFeature name="pricing.total.labor" value="1.2649" source="pricing.sum.labor.cost.20171122.01"/><manufacturingFeature name="pricing.total.material.labor" value="6.1998" source="pricing.sum.cost.20110322.01"/><manufacturingFeature name="pricing.vendor" value="TMP" source="pricing.BASERAIL.V4.20190123.01"/><manufacturingFeature name="pricing.version" value="20250401.01" source="pricing.version.20110118.01"/></details></manufacturedItem>
+        <manufacturedItem>
+          <version>11</version>
+          <partNumber>93BR6JE02ET46X012J</partNumber>
+          <description>Baserail Right 24.0</description>
+          <locationNumber>111XX012</locationNumber>
+          <points xl="0.0" yl="-6.0" zl="77.107" xu="24.0" yu="0.0" zu="79.0" length="24.0"/>
+          <weight>6.9</weight>
+          <details name="penetrations" version="1.0">
+            <version>1.1</version>
+            <penetration shape="rectangle" feature="LIFTINGLUG" xl="0.0" yl="-6.0" zl="77.107" xu="1.893" yu="0.0" zu="79.0"/>
+            <penetration shape="rectangle" feature="LIFTINGLUG" xl="22.107" yl="-6.0" zl="77.107" xu="24.0" yu="0.0" zu="79.0"/>
+          </details>
+          <manufacturedItem>
+            <version>0.00</version>
+            <partNumber>95GMK2XXRCX0790XXA</partNumber>
+            <quantity>0</quantity>
+            <description>RUNNER Short</description>
+            <points xl="0.0" yl="-9.0" zl="76.554" xu="24.0" yu="-6.0" zu="79.554" length="24.0"/>
+          <details name="manufacturingFeatures" version="1.0"><version>1.0</version><manufacturingFeature name="general.application" value="SHORT" source="general.runner.application.20131007.01"/><manufacturingFeature name="general.bounds" value="BBv1 0.0 -9.0 76.554 24.0 -6.0 79.554 1vBB" source="general.runner.bounds.20081107.01"/><manufacturingFeature name="general.classification" value="RUNNER.V1" source="general.runner.classification.20140211.01"/><manufacturingFeature name="general.hand" value="RIGHT" source="general.runner.hand.20090420.01"/></details></manufacturedItem>
+          <manufacturedItem>
+            <version>5.0</version>
+            <partNumber>39MX40141193</partNumber>
+            <quantity>2</quantity>
+            <description>Lifting Lug Tab (Not4)</description>
+          </manufacturedItem>
+        <details name="manufacturingFeatures" version="1.0"><version>1.0</version><manufacturingFeature name="general.bottom" value="YES" source="general.baserail.v2.v3.bottom.20190223.01"/><manufacturingFeature name="general.bounds" value="BBv1 0.0 -6.0 77.107 24.0 0.0 79.0 1vBB" source="general.baserail.v2.v3.bounds.20190222.01"/><manufacturingFeature name="general.classification" value="BASERAIL.V4" source="general.baserail.v4.classification.20190222.01"/><manufacturingFeature name="general.dim.s4" value="1.893" source="general.baserail.v4.dim.s4.20190223.01"/><manufacturingFeature name="general.dim.s5" value="0" source="general.baserail.v4.dim.s5.20190223.01"/><manufacturingFeature name="general.gauge" value="14" source="general.baserail.v2.v3.material.20190222.01"/><manufacturingFeature name="general.height" value="6.0" source="general.baserail.v2.v3.dimensions.20190222.01"/><manufacturingFeature name="general.length" value="24.0" source="general.baserail.v2.v3.dimensions.20190222.01"/><manufacturingFeature name="general.lip" value="NO" source="general.baserail.v2.v3.lip.20190223.01"/><manufacturingFeature name="general.location" value="RIGHT" source="general.baserail.v2.v3.location.20190222.01"/><manufacturingFeature name="general.material" value="GALVANIZED(VA03-56)" source="general.baserail.v2.v3.material.20190222.01"/><manufacturingFeature name="general.orientation" value="STANDARD" source="general.baserail.v2.v3.orientation.20190222.01"/><manufacturingFeature name="general.tabs" value="NONE" source="general.baserail.v2.v3.tabs.20190222.01"/><manufacturingFeature name="feature.baserail-clr-6in" value="1.0775" source="intersector.intersection.baserail.to.baserail.v4.20190224.01"/><manufacturingFeature name="feature.baserail-clr-6in" value="22.9225" source="intersector.intersection.baserail.to.baserail.v4.20190224.01"/><manufacturingFeature name="feature.drainhole-clr" value="12.0" source="intersector.intersection.baserail.to.drainpanpipe.20190211.01"/><manufacturingFeature name="feature.framecup.LXLZ" value="23.054" source="intersector.intersection.baserail.to.frameend.20090427.01"/><manufacturingFeature name="feature.framecup.UXLZ" value="0.947" source="intersector.intersection.baserail.to.frameend.20090427.01"/><manufacturingFeature name="feature.panel-eng-s2a" value="3.67" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s2a" value="9.22" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s2a" value="14.77" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s2a" value="20.31" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s3" value="3.67" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s3" value="9.22" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s3" value="14.77" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s3" value="20.31" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.runner-clr-s4" value="21.000" source="intersector.intersection.baserail.to.runner.20190917.01"/><manufacturingFeature name="feature.runner-clr-s4" value="12.000" source="intersector.intersection.baserail.to.runner.20190917.01"/><manufacturingFeature name="feature.runner-clr-s4" value="3.000" source="intersector.intersection.baserail.to.runner.20190917.01"/><manufacturingFeature name="pricing.cost" value="7.15" source="pricing.cost.profit.calculation.20171106.01"/><manufacturingFeature name="pricing.overhead.and.profit" value="1.0941" source="pricing.cost.profit.calculation.20171106.01"/><manufacturingFeature name="pricing.raw.flat.1.extents" value="(24.0, 10.393900000000002, 0.0)" source="pricing.BASERAIL.V4.20190123.01"/><manufacturingFeature name="pricing.subtotal.flat.1.l.form" value="0.3222" source="pricing.flat.form.cost.20171102.01"/><manufacturingFeature name="pricing.subtotal.flat.1.l.punch" value="0.7654" source="pricing.flat.punch.cost.20171102.01"/><manufacturingFeature name="pricing.subtotal.flat.1.l.shear" value="0.1773" source="pricing.flat.shear.cost.20171102.01"/><manufacturingFeature name="pricing.subtotal.flat.1.material" value="4.9349" source="pricing.flat.material.cost.20101117.01"/><manufacturingFeature name="pricing.total.labor" value="1.2649" source="pricing.sum.labor.cost.20171122.01"/><manufacturingFeature name="pricing.total.material.labor" value="6.1998" source="pricing.sum.cost.20110322.01"/><manufacturingFeature name="pricing.vendor" value="TMP" source="pricing.BASERAIL.V4.20190123.01"/><manufacturingFeature name="pricing.version" value="20250401.01" source="pricing.version.20110118.01"/></details></manufacturedItem>
+        <manufacturedItem>
+          <version>11</version>
+          <partNumber>93BBDJE02ET46X010J</partNumber>
+          <description>Baserail Inlet 75.21</description>
+          <locationNumber>111XX010</locationNumber>
+          <points xl="0.0" yl="-6.0" zl="1.893" xu="1.893" yu="0.0" zu="77.107" length="75.214"/>
+          <weight>21.57</weight>
+        <details name="manufacturingFeatures" version="1.0"><version>1.0</version><manufacturingFeature name="general.bottom" value="YES" source="general.baserail.v2.v3.bottom.20190223.01"/><manufacturingFeature name="general.bounds" value="BBv1 0.0 -6.0 1.893 1.893 0.0 77.107 1vBB" source="general.baserail.v2.v3.bounds.20190222.01"/><manufacturingFeature name="general.classification" value="BASERAIL.V4" source="general.baserail.v4.classification.20190222.01"/><manufacturingFeature name="general.dim.s4" value="1.893" source="general.baserail.v4.dim.s4.20190223.01"/><manufacturingFeature name="general.dim.s5" value="0" source="general.baserail.v4.dim.s5.20190223.01"/><manufacturingFeature name="general.gauge" value="14" source="general.baserail.v2.v3.material.20190222.01"/><manufacturingFeature name="general.height" value="6.0" source="general.baserail.v2.v3.dimensions.20190222.01"/><manufacturingFeature name="general.length" value="75.214" source="general.baserail.v2.v3.dimensions.20190222.01"/><manufacturingFeature name="general.lip" value="NO" source="general.baserail.v2.v3.lip.20190223.01"/><manufacturingFeature name="general.location" value="INLET" source="general.baserail.v2.v3.location.20190222.01"/><manufacturingFeature name="general.material" value="GALVANIZED(VA03-56)" source="general.baserail.v2.v3.material.20190222.01"/><manufacturingFeature name="general.orientation" value="STANDARD" source="general.baserail.v2.v3.orientation.20190222.01"/><manufacturingFeature name="general.tabs" value="BOTH" source="general.baserail.v2.v3.tabs.20190222.01"/><manufacturingFeature name="feature.endtab-baserail" value="75.214" source="intersector.intersection.baserail.to.baserail.v4.20190224.01"/><manufacturingFeature name="feature.endtab-baserail" value="0.0" source="intersector.intersection.baserail.to.baserail.v4.20190224.01"/><manufacturingFeature name="feature.panel-eng-s2a" value="1.78" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s2a" value="9.74" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s2a" value="17.70" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s2a" value="25.66" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s2a" value="33.62" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s2a" value="41.58" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s2a" value="49.54" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s2a" value="57.50" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s2a" value="65.46" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s2a" value="73.42" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s2b" value="3.857" source="intersector.intersection.baserail.coil.baffle.20100228.01"/><manufacturingFeature name="feature.panel-eng-s2b" value="15.107" source="intersector.intersection.baserail.coil.baffle.20100228.01"/><manufacturingFeature name="feature.panel-eng-s2b" value="26.357" source="intersector.intersection.baserail.coil.baffle.20100228.01"/><manufacturingFeature name="feature.panel-eng-s2b" value="37.607" source="intersector.intersection.baserail.coil.baffle.20100228.01"/><manufacturingFeature name="feature.panel-eng-s2b" value="48.857" source="intersector.intersection.baserail.coil.baffle.20100228.01"/><manufacturingFeature name="feature.panel-eng-s2b" value="60.107" source="intersector.intersection.baserail.coil.baffle.20100228.01"/><manufacturingFeature name="feature.panel-eng-s2b" value="71.357" source="intersector.intersection.baserail.coil.baffle.20100228.01"/><manufacturingFeature name="feature.runner-clr-s4" value="0.625" source="intersector.intersection.baserail.to.runner.20190917.01"/><manufacturingFeature name="feature.runner-clr-s4" value="74.589" source="intersector.intersection.baserail.to.runner.20190917.01"/><manufacturingFeature name="pricing.cost" value="22.51" source="pricing.cost.profit.calculation.20171106.01"/><manufacturingFeature name="pricing.overhead.and.profit" value="3.4384" source="pricing.cost.profit.calculation.20171106.01"/><manufacturingFeature name="pricing.raw.flat.1.extents" value="(78.3518, 10.393900000000002, 0.0)" source="pricing.BASERAIL.V4.20190123.01"/><manufacturingFeature name="pricing.subtotal.flat.1.l.form" value="1.4499" source="pricing.flat.form.cost.20171102.01"/><manufacturingFeature name="pricing.subtotal.flat.1.l.punch" value="1.6940" source="pricing.flat.punch.cost.20171102.01"/><manufacturingFeature name="pricing.subtotal.flat.1.l.shear" value="0.4575" source="pricing.flat.shear.cost.20171102.01"/><manufacturingFeature name="pricing.subtotal.flat.1.material" value="15.8826" source="pricing.flat.material.cost.20101117.01"/><manufacturingFeature name="pricing.total.labor" value="3.6014" source="pricing.sum.labor.cost.20171122.01"/><manufacturingFeature name="pricing.total.material.labor" value="19.4840" source="pricing.sum.cost.20110322.01"/><manufacturingFeature name="pricing.vendor" value="TMP" source="pricing.BASERAIL.V4.20190123.01"/><manufacturingFeature name="pricing.version" value="20250401.01" source="pricing.version.20110118.01"/></details></manufacturedItem>
+        <manufacturedItem>
+          <version>11</version>
+          <partNumber>93BTDJE02ET46X011J</partNumber>
+          <description>Baserail Outlet 75.21</description>
+          <locationNumber>111XX011</locationNumber>
+          <points xl="22.107" yl="-6.0" zl="1.893" xu="24.0" yu="0.0" zu="77.107" length="75.214"/>
+          <weight>21.57</weight>
+          <manufacturedItem>
+            <version>0.0</version>
+            <partNumber>95GC2G0752XXXXXXXB</partNumber>
+            <quantity>0</quantity>
+            <description>Baserail Cover NTB</description>
+            <locationNumber>111XX011</locationNumber>
+            <points xl="22.107" yl="0.0" zl="1.893" xu="24.0" yu="0.5" zu="77.107" length="75.214"/>
+            <weight>5.64</weight>
+            <manufacturedItem>
+              <version>1.0</version>
+              <partNumber>93M1K61300X000009</partNumber>
+              <quantity>1.0</quantity>
+              <description>Base Rail, CoverSz 17/21</description>
+              <locationNumber>111XX</locationNumber>
+              <source>xploder</source>
+            </manufacturedItem>
+          <details name="manufacturingFeatures" version="1.0"><version>1.0</version><manufacturingFeature name="general.application" value="BASERAILCOVERNTB" source="general.sealcover.application.20090407.01"/><manufacturingFeature name="general.axis" value="Z" source="general.sealcover.dimensions.20081107.01"/><manufacturingFeature name="general.bounds" value="BBv1 22.107 0.0 1.893 24.0 0.5 77.107 1vBB" source="general.sealcover.bounds.20081107.01"/><manufacturingFeature name="general.classification" value="SEALCOVER.V1" source="general.sealcover.classification.20081107.01"/><manufacturingFeature name="general.length" value="75.214" source="general.sealcover.dimensions.20081107.01"/><manufacturingFeature name="general.material" value="GALVANIZED" source="general.sealcover.material.20090406.01"/></details></manufacturedItem>
+        <details name="manufacturingFeatures" version="1.0"><version>1.0</version><manufacturingFeature name="general.bottom" value="YES" source="general.baserail.v2.v3.bottom.20190223.01"/><manufacturingFeature name="general.bounds" value="BBv1 22.107 -6.0 1.893 24.0 0.0 77.107 1vBB" source="general.baserail.v2.v3.bounds.20190222.01"/><manufacturingFeature name="general.classification" value="BASERAIL.V4" source="general.baserail.v4.classification.20190222.01"/><manufacturingFeature name="general.dim.s4" value="1.893" source="general.baserail.v4.dim.s4.20190223.01"/><manufacturingFeature name="general.dim.s5" value="0" source="general.baserail.v4.dim.s5.20190223.01"/><manufacturingFeature name="general.gauge" value="14" source="general.baserail.v2.v3.material.20190222.01"/><manufacturingFeature name="general.height" value="6.0" source="general.baserail.v2.v3.dimensions.20190222.01"/><manufacturingFeature name="general.length" value="75.214" source="general.baserail.v2.v3.dimensions.20190222.01"/><manufacturingFeature name="general.lip" value="NO" source="general.baserail.v2.v3.lip.20190223.01"/><manufacturingFeature name="general.location" value="OUTLET" source="general.baserail.v2.v3.location.20190222.01"/><manufacturingFeature name="general.material" value="GALVANIZED(VA03-56)" source="general.baserail.v2.v3.material.20190222.01"/><manufacturingFeature name="general.orientation" value="INVERTX" source="general.baserail.v2.v3.orientation.20190222.01"/><manufacturingFeature name="general.tabs" value="BOTH" source="general.baserail.v2.v3.tabs.20190222.01"/><manufacturingFeature name="feature.endtab-baserail" value="75.214" source="intersector.intersection.baserail.to.baserail.v4.20190224.01"/><manufacturingFeature name="feature.endtab-baserail" value="0.0" source="intersector.intersection.baserail.to.baserail.v4.20190224.01"/><manufacturingFeature name="feature.panel-eng-s2a" value="1.78" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s2a" value="9.74" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s2a" value="17.70" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s2a" value="25.66" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s2a" value="33.62" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s2a" value="41.58" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s2a" value="49.54" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s2a" value="57.50" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s2a" value="65.46" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s2a" value="73.42" source="intersector.intersection.baserail.to.panel.20210610.01"/><manufacturingFeature name="feature.panel-eng-s2b" value="3.857" source="intersector.intersection.baserail.coverbaserail.20090409.01"/><manufacturingFeature name="feature.panel-eng-s2b" value="15.107" source="intersector.intersection.baserail.coverbaserail.20090409.01"/><manufacturingFeature name="feature.panel-eng-s2b" value="26.357" source="intersector.intersection.baserail.coverbaserail.20090409.01"/><manufacturingFeature name="feature.panel-eng-s2b" value="37.607" source="intersector.intersection.baserail.coverbaserail.20090409.01"/><manufacturingFeature name="feature.panel-eng-s2b" value="48.857" source="intersector.intersection.baserail.coverbaserail.20090409.01"/><manufacturingFeature name="feature.panel-eng-s2b" value="60.107" source="intersector.intersection.baserail.coverbaserail.20090409.01"/><manufacturingFeature name="feature.panel-eng-s2b" value="71.357" source="intersector.intersection.baserail.coverbaserail.20090409.01"/><manufacturingFeature name="feature.runner-clr-s4" value="0.625" source="intersector.intersection.baserail.to.runner.20190917.01"/><manufacturingFeature name="feature.runner-clr-s4" value="74.589" source="intersector.intersection.baserail.to.runner.20190917.01"/><manufacturingFeature name="pricing.cost" value="22.51" source="pricing.cost.profit.calculation.20171106.01"/><manufacturingFeature name="pricing.overhead.and.profit" value="3.4384" source="pricing.cost.profit.calculation.20171106.01"/><manufacturingFeature name="pricing.raw.flat.1.extents" value="(78.3518, 10.393900000000002, 0.0)" source="pricing.BASERAIL.V4.20190123.01"/><manufacturingFeature name="pricing.subtotal.flat.1.l.form" value="1.4499" source="pricing.flat.form.cost.20171102.01"/><manufacturingFeature name="pricing.subtotal.flat.1.l.punch" value="1.6940" source="pricing.flat.punch.cost.20171102.01"/><manufacturingFeature name="pricing.subtotal.flat.1.l.shear" value="0.4575" source="pricing.flat.shear.cost.20171102.01"/><manufacturingFeature name="pricing.subtotal.flat.1.material" value="15.8826" source="pricing.flat.material.cost.20101117.01"/><manufacturingFeature name="pricing.total.labor" value="3.6014" source="pricing.sum.labor.cost.20171122.01"/><manufacturingFeature name="pricing.total.material.labor" value="19.4840" source="pricing.sum.cost.20110322.01"/><manufacturingFeature name="pricing.vendor" value="TMP" source="pricing.BASERAIL.V4.20190123.01"/><manufacturingFeature name="pricing.version" value="20250401.01" source="pricing.version.20110118.01"/></details></manufacturedItem>
+        <manufacturedItem>
+          <version>0.0</version>
+          <partNumber>39MX40147404</partNumber>
+          <quantity>37.4</quantity>
+          <description>Panel Gasket</description>
+        </manufacturedItem>
+        <manufacturedItem>
+          <version>0.0</version>
+          <partNumber>39MX40036001</partNumber>
+          <quantity>78</quantity>
+          <description>Panel Screw</description>
+        </manufacturedItem>
+        <manufacturedItem>
+          <version>0.0</version>
+          <partNumber>39MX40141125</partNumber>
+          <quantity>30</quantity>
+          <description>Bottom panel screw</description>
+        </manufacturedItem>
+        <manufacturedItem>
+          <version>0.0</version>
+          <partNumber>95XAKL11SYGBMS024B</partNumber>
+          <quantity>0</quantity>
+          <description>Coil Middle Baffle</description>
+        </manufacturedItem>
+        <manufacturedItem>
+          <version>0.0</version>
+          <partNumber>39MX40147399</partNumber>
+          <quantity>31.1</quantity>
+          <description>Frame Column Seal</description>
+        </manufacturedItem>
+        <manufacturedItem>
+          <version>2.0</version>
+          <partNumber>39MX40141011</partNumber>
+          <quantity>18</quantity>
+          <description>Gasket Baserail</description>
+          <locationNumber>111XX</locationNumber>
+        </manufacturedItem>
+        <manufacturedItem>
+          <version>5.0+</version>
+          <partNumber>93M5X00054X000006</partNumber>
+          <quantity>15</quantity>
+          <description>Shrink Wrap (LF)</description>
+          <locationNumber>111XX</locationNumber>
+        </manufacturedItem>
+        <manufacturedItem>
+          <version>7.06</version>
+          <partNumber>93XRCCNXXXCXXXXXXX</partNumber>
+          <description>DX coil add-ons</description>
+          <manufacturedItem>
+            <version>1.0</version>
+            <partNumber>39MX41063503</partNumber>
+            <quantity>1.0</quantity>
+            <description>DX COIL ADD-ONS FOR FIRST COIL CLOSEST TO SUPPLY FAN</description>
+            <locationNumber>111XX</locationNumber>
+            <source>xploder</source>
+          </manufacturedItem>
+          <manufacturedItem>
+            <version>1.0</version>
+            <partNumber>39MX41063509</partNumber>
+            <quantity>1.0</quantity>
+            <description>DX COIL ADD-ONS FOR FIRST COIL CLOSEST TO SUPPLY FAN</description>
+            <locationNumber>111XX</locationNumber>
+            <source>xploder</source>
+          </manufacturedItem>
+          <manufacturedItem>
+            <version>1.0</version>
+            <partNumber>39MX41063533</partNumber>
+            <quantity>1.0</quantity>
+            <description>DX COIL ADD-ONS FOR FIRST COIL CLOSEST TO SUPPLY FAN</description>
+            <locationNumber>111XX</locationNumber>
+            <source>xploder</source>
+          </manufacturedItem>
+          <manufacturedItem>
+            <version>1.0</version>
+            <partNumber>39MX41063522</partNumber>
+            <quantity>2.0</quantity>
+            <description>DX COIL ADD-ONS FOR FIRST COIL CLOSEST TO SUPPLY FAN</description>
+            <locationNumber>111XX</locationNumber>
+            <source>xploder</source>
+          </manufacturedItem>
+          <manufacturedItem>
+            <version>1.0</version>
+            <partNumber>95CFF110003001XXXC</partNumber>
+            <quantity>1.0</quantity>
+            <description>A2L CONTROL HARNESS~J1 Harness for Single Board Coils</description>
+            <locationNumber>111XX</locationNumber>
+            <source>xploder</source>
+          </manufacturedItem>
+          <manufacturedItem>
+            <version>1.0</version>
+            <partNumber>95CFF1T0003001XXXC</partNumber>
+            <quantity>1.0</quantity>
+            <description>A2L CONTROL HARNESS~Connecting Components in Dissipation Board</description>
+            <locationNumber>111XX</locationNumber>
+            <source>xploder</source>
+          </manufacturedItem>
+          <manufacturedItem>
+            <version>1.0</version>
+            <partNumber>95CFFMQ0003001XXXA</partNumber>
+            <quantity>1.0</quantity>
+            <description>A2L CONTROL HARNESS~J3 Harness for External Relay Connection</description>
+            <locationNumber>111XX</locationNumber>
+            <source>xploder</source>
+          </manufacturedItem>
+        </manufacturedItem>
+        <manufacturedItem>
+          <version>1.0</version>
+          <partNumber>39MX40137701</partNumber>
+          <quantity>7.0</quantity>
+          <description>SCREWS - BOTTOM COIL BAFFLE TO BASERAIL17W/21W</description>
+          <locationNumber>111XX</locationNumber>
+          <source>xploder</source>
+        </manufacturedItem>
+        <manufacturedItem>
+          <version>1.0</version>
+          <partNumber>39MX40140001</partNumber>
+          <quantity>10.0</quantity>
+          <description>Frame to Frame Tool Hole Cover</description>
+          <locationNumber>111XX</locationNumber>
+          <source>xploder</source>
+        </manufacturedItem>
+        <manufacturedItem>
+          <version>1.0</version>
+          <partNumber>39MX40141079</partNumber>
+          <quantity>4.0</quantity>
+          <description>Frame Connector Coil Plenum Combo-Removable</description>
+          <locationNumber>111XX</locationNumber>
+          <source>xploder</source>
+        </manufacturedItem>
+        <manufacturedItem>
+          <version>1.0</version>
+          <partNumber>39MX40141101</partNumber>
+          <quantity>9.0</quantity>
+          <description>Frame Insulation Foam - Height</description>
+          <locationNumber>111XX</locationNumber>
+          <source>xploder</source>
+        </manufacturedItem>
+        <manufacturedItem>
+          <version>1.0</version>
+          <partNumber>39MX40141101</partNumber>
+          <quantity>6.6</quantity>
+          <description>Frame Insulation Foam - Width</description>
+          <locationNumber>111XX</locationNumber>
+          <source>xploder</source>
+        </manufacturedItem>
+        <manufacturedItem>
+          <version>1.0</version>
+          <partNumber>39MX40027404</partNumber>
+          <quantity>1.0</quantity>
+          <description>Section Specific Label Pkg.</description>
+          <locationNumber>111XX</locationNumber>
+          <source>xploder</source>
+        </manufacturedItem>
+        <manufacturedItem>
+          <version>1.0</version>
+          <partNumber>93M4X00014X000015</partNumber>
+          <quantity>17.0</quantity>
+          <description>Cover/Baffle to Frame Screw 1 1/2</description>
+          <locationNumber>111XX</locationNumber>
+          <source>xploder</source>
+        </manufacturedItem>
+      </manufacturedItem>
+      <manufacturedItem>
+        <version>1.0</version>
+        <partNumber>95GT0000003C87CWAA</partNumber>
+        <description>Bill Of Material Time Stamp</description>
+      </manufacturedItem>
+      <manufacturedItem>
+        <version>1.0</version>
+        <partNumber>39MX40130002</partNumber>
+        <quantity>1.0</quantity>
+        <description>Installation Unit Package</description>
+        <source>xploder</source>
+      </manufacturedItem>
+    </manufacturedItem>
+  </manufacturing>
+<xmldatastore><filename>NE02ET46.XML</filename><program name="rts" version="00000302"/><program name="rulegip" version="00000302"/><state>FIRMED</state></xmldatastore></Unit>

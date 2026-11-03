@@ -1,0 +1,12 @@
+__pycache__/
+.venv/
+.test-tmp/
+tests/run_*/
+*.xlsx
+node_modules/
+.pnpm-store/
+*.log
+.data/
+build/
+release/
+.build-cache/

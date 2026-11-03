@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SAP Catalog Price Comparator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <p class="eyebrow">Local catalog validation</p>
+      <h1>SAP Catalog Price Comparator</h1>
+      <p>Paste SAP catalog data, upload a Carrier PDF, and verify which catalog numbers appear.</p>
+    </header>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% for category, message in messages %}<div class="alert {{ category }}">{{ message }}</div>{% endfor %}
+    {% endwith %}
+
+    {% if parse_errors %}
+      <section class="error-panel"><h2>Input errors</h2><ul>{% for error in parse_errors %}<li>Row {{ error.row }}: {{ error.message }}</li>{% endfor %}</ul></section>
+    {% endif %}
+
+    <form action="{{ url_for('process_catalog') }}" method="post" enctype="multipart/form-data" class="card" id="catalog-form">
+      <label for="sap_input">SAP data <span>Two tab-separated columns copied from Excel</span></label>
+      <textarea id="sap_input" name="sap_input" rows="14" required placeholder="Catalog Number&#9;SAP Master Price&#10;30RC-2522S-1-----&#9;398043&#10;30RC_LG_CONDFAN_001&#9;15436">{{ sap_input }}</textarea>
+
+      <div class="form-grid">
+        <div>
+          <label for="pdf_file">Carrier pricing PDF</label>
+          <input id="pdf_file" name="pdf_file" type="file" accept="application/pdf,.pdf" required>
+          <small>PDF only, maximum 25 MB. The upload is deleted after processing.</small>
+        </div>
+      </div>
+      <button type="submit" id="submit-button">Compare prices</button>
+    </form>
+  </main>
+  <script>
+    document.getElementById('catalog-form').addEventListener('submit', () => {
+      const button = document.getElementById('submit-button');
+      button.disabled = true;
+      button.textContent = 'Processing...';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+{
+  "part_number": "39MBHHGTB10674MHDK",
+  "ok": false,
+  "total_price": 2243.283052,
+  "price_hits": [
+    {
+      "name": "PRICEHIT",
+      "category": "$BASE",
+      "description": "A18-18A FCA18_18A-SIDE-X041-Z065",
+      "price": 1146.154,
+      "value": "",
+      "why": "E551",
+      "base": false
+    },
+    {
+      "name": "PRICEHIT",
+      "category": "$BASE.1",
+      "description": "Discharge Adder TH[FR] A18-18A FCA18_18A-SIDE-X041-Z065",
+      "price": 39.861,
+      "value": "",
+      "why": "E748",
+      "base": false
+    },
+    {
+      "name": "PRICEHIT",
+      "category": "$MOTOR",
+      "description": "EFM3311T F2 7.5HP Premium Efficiency 208-230/460V-3-60 ODP 1800 RPM",
+      "price": 499.94,
+      "value": "",
+      "why": "E1574",
+      "base": false
+    },
+    {
+      "name": "PRICEHIT",
+      "category": "$SPRINGS",
+      "description": "FC Springs",
+      "price": 196.879,
+      "value": "",
+      "why": "E4628",
+      "base": false
+    }
+  ],
+  "variables": {
+    "WHEELRPM": "1067",
+    "NOMENCLATURE": "BELTPREFIVESIX",
+    "WHEEL": "A18-18A",
+    "WHEELCLASS": "1",
+    "FANQUANTITY": "1",
+    "FANSHAFT": "1.1875",
+    "DRIVENMAXPD": "18",
+    "MAXRPM": "1155",
+    "SHAFTGROUNDING": "NO",
+    "MOTORBOX": "F2",
+    "EXTRABELTS": "NO",
+    "MOTORFIELDSUPPLIED": "NO",
+    "MOTORBASECODE": "4M",
+    "MOTORHP": "7.5",
+    "MOTORRPM": "1800",
+    "MOTORFRAME": "213T",
+    "DRIVENMAXWIDTH": "3.38",
+    "MOTORDVALUE": "D0525",
+    "CENTERLINELOW": "18.7",
+    "CENTERLINEHIGH": "20.4",
+    "DRIVEPITCH": "VARIABLE",
+    "DRIVESERVICEFACTOR": "1.2",
+    "DRIVEMULTIPLEBELT": "NO",
+    "DRIVEFIELDSUPPLIED": "NO",
+    "PRICEHIT": "",
+    "DRIVEFACTOR": "1.04",
+    "MOTORFACTOR": "0.8915838",
+    "SLEDFACTOR": "1.2998426830086107"
+  },
+  "errors": [
+    "Drive solver is disabled"
+  ],
+  "warnings": [],
+  "drive_solutions": [],
+  "selected_drive": null
+}

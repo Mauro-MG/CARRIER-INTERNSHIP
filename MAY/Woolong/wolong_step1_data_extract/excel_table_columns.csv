@@ -1,0 +1,5 @@
+﻿sheet_name,table_name,column_id,column_name
+Run_All_EDRs,Scripts_To_Run,1,Run Scripts
+Run_All_EDRs,tPossible_Scripts,1,Possible Scripts
+Run_All_EDRs,Run_EDR_Files_Path,1,Run_EDR_Files_Path
+Info_Plate,iHeatLevelOffset,1,iHeatLevelOffset

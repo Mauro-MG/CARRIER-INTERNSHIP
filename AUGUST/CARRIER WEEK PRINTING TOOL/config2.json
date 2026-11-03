@@ -1,0 +1,45 @@
+{
+  "printer": {
+    "name": "HP16F1AF (HP Smart Tank 610 series)"
+  },
+  "label": {
+    "width_px": 288,
+    "height_px": 192,
+    "name": {
+      "x": 145,
+      "y": 35,
+      "max_width": 260,
+      "font_size": 13
+    },
+    "last_name": {
+      "x": 145,
+      "y": 50,
+      "max_width": 260,
+      "font_size": 11
+    },
+    "career1": {
+      "x": 145,
+      "y": 105,
+      "max_width": 700,
+      "font_size": 13
+    },
+    "career2": {
+      "x": 145,
+      "y": 120,
+      "max_width": 700,
+      "font_size": 11
+    },
+    "semester": {
+      "x": 80,
+      "y": 165,
+      "max_width": 700,
+      "font_size": 10
+    },
+    "folio": {
+      "x": 200,
+      "y": 165,
+      "max_width": 700,
+      "font_size": 10
+    }
+  }
+}

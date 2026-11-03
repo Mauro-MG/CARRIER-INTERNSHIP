@@ -1,0 +1,229 @@
+REGEDIT4
+
+[HKEY_CLASSES_ROOT\PTS.VbeltDriveConfigurator.AdvancedConfiguratorInputs]
+@="PTS.VbeltDriveConfigurator.AdvancedConfiguratorInputs"
+
+[HKEY_CLASSES_ROOT\PTS.VbeltDriveConfigurator.AdvancedConfiguratorInputs\CLSID]
+@="{B57BA369-56F7-39B7-AEB2-8AE2E4910A48}"
+
+[HKEY_CLASSES_ROOT\CLSID\{B57BA369-56F7-39B7-AEB2-8AE2E4910A48}]
+@="PTS.VbeltDriveConfigurator.AdvancedConfiguratorInputs"
+
+[HKEY_CLASSES_ROOT\CLSID\{B57BA369-56F7-39B7-AEB2-8AE2E4910A48}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="PTS.VbeltDriveConfigurator.AdvancedConfiguratorInputs"
+"Assembly"="PTS.VbeltDriveConfigurator, Version=1.0.0.1, Culture=neutral, PublicKeyToken=f928c089c5e8d185"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\CLSID\{B57BA369-56F7-39B7-AEB2-8AE2E4910A48}\InprocServer32\1.0.0.1]
+"Class"="PTS.VbeltDriveConfigurator.AdvancedConfiguratorInputs"
+"Assembly"="PTS.VbeltDriveConfigurator, Version=1.0.0.1, Culture=neutral, PublicKeyToken=f928c089c5e8d185"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\CLSID\{B57BA369-56F7-39B7-AEB2-8AE2E4910A48}\ProgId]
+@="PTS.VbeltDriveConfigurator.AdvancedConfiguratorInputs"
+
+[HKEY_CLASSES_ROOT\CLSID\{B57BA369-56F7-39B7-AEB2-8AE2E4910A48}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\PTS.VbeltDriveConfigurator.BasicConfiguratorInputs]
+@="PTS.VbeltDriveConfigurator.BasicConfiguratorInputs"
+
+[HKEY_CLASSES_ROOT\PTS.VbeltDriveConfigurator.BasicConfiguratorInputs\CLSID]
+@="{44D2E867-FF4B-3C19-A950-FE843DB5F658}"
+
+[HKEY_CLASSES_ROOT\CLSID\{44D2E867-FF4B-3C19-A950-FE843DB5F658}]
+@="PTS.VbeltDriveConfigurator.BasicConfiguratorInputs"
+
+[HKEY_CLASSES_ROOT\CLSID\{44D2E867-FF4B-3C19-A950-FE843DB5F658}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="PTS.VbeltDriveConfigurator.BasicConfiguratorInputs"
+"Assembly"="PTS.VbeltDriveConfigurator, Version=1.0.0.1, Culture=neutral, PublicKeyToken=f928c089c5e8d185"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\CLSID\{44D2E867-FF4B-3C19-A950-FE843DB5F658}\InprocServer32\1.0.0.1]
+"Class"="PTS.VbeltDriveConfigurator.BasicConfiguratorInputs"
+"Assembly"="PTS.VbeltDriveConfigurator, Version=1.0.0.1, Culture=neutral, PublicKeyToken=f928c089c5e8d185"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\CLSID\{44D2E867-FF4B-3C19-A950-FE843DB5F658}\ProgId]
+@="PTS.VbeltDriveConfigurator.BasicConfiguratorInputs"
+
+[HKEY_CLASSES_ROOT\CLSID\{44D2E867-FF4B-3C19-A950-FE843DB5F658}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\Record\{F28FC7E3-A214-35A0-ACE4-81F8FABF9FE6}\1.0.0.1]
+"Class"="PTS.VbeltDriveConfigurator.BeltClass"
+"Assembly"="PTS.VbeltDriveConfigurator, Version=1.0.0.1, Culture=neutral, PublicKeyToken=f928c089c5e8d185"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\Record\{04A457DE-F4D5-3AAA-A77A-CDE7791685BD}\1.0.0.1]
+"Class"="PTS.VbeltDriveConfigurator.BeltSection"
+"Assembly"="PTS.VbeltDriveConfigurator, Version=1.0.0.1, Culture=neutral, PublicKeyToken=f928c089c5e8d185"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\Record\{FB1135EE-4057-3A7D-88E4-8747A92695FC}\1.0.0.1]
+"Class"="PTS.VbeltDriveConfigurator.BeltType"
+"Assembly"="PTS.VbeltDriveConfigurator, Version=1.0.0.1, Culture=neutral, PublicKeyToken=f928c089c5e8d185"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\PTS.VbeltDriveConfigurator.Configurator]
+@="PTS.VbeltDriveConfigurator.Configurator"
+
+[HKEY_CLASSES_ROOT\PTS.VbeltDriveConfigurator.Configurator\CLSID]
+@="{3802E2A5-E399-3305-8F14-2FCD01B3923A}"
+
+[HKEY_CLASSES_ROOT\CLSID\{3802E2A5-E399-3305-8F14-2FCD01B3923A}]
+@="PTS.VbeltDriveConfigurator.Configurator"
+
+[HKEY_CLASSES_ROOT\CLSID\{3802E2A5-E399-3305-8F14-2FCD01B3923A}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="PTS.VbeltDriveConfigurator.Configurator"
+"Assembly"="PTS.VbeltDriveConfigurator, Version=1.0.0.1, Culture=neutral, PublicKeyToken=f928c089c5e8d185"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\CLSID\{3802E2A5-E399-3305-8F14-2FCD01B3923A}\InprocServer32\1.0.0.1]
+"Class"="PTS.VbeltDriveConfigurator.Configurator"
+"Assembly"="PTS.VbeltDriveConfigurator, Version=1.0.0.1, Culture=neutral, PublicKeyToken=f928c089c5e8d185"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\CLSID\{3802E2A5-E399-3305-8F14-2FCD01B3923A}\ProgId]
+@="PTS.VbeltDriveConfigurator.Configurator"
+
+[HKEY_CLASSES_ROOT\CLSID\{3802E2A5-E399-3305-8F14-2FCD01B3923A}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\PTS.VbeltDriveConfigurator.ConfiguratorInputs]
+@="PTS.VbeltDriveConfigurator.ConfiguratorInputs"
+
+[HKEY_CLASSES_ROOT\PTS.VbeltDriveConfigurator.ConfiguratorInputs\CLSID]
+@="{5CD8C827-90A9-3F47-A0CE-3A27022291FB}"
+
+[HKEY_CLASSES_ROOT\CLSID\{5CD8C827-90A9-3F47-A0CE-3A27022291FB}]
+@="PTS.VbeltDriveConfigurator.ConfiguratorInputs"
+
+[HKEY_CLASSES_ROOT\CLSID\{5CD8C827-90A9-3F47-A0CE-3A27022291FB}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="PTS.VbeltDriveConfigurator.ConfiguratorInputs"
+"Assembly"="PTS.VbeltDriveConfigurator, Version=1.0.0.1, Culture=neutral, PublicKeyToken=f928c089c5e8d185"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\CLSID\{5CD8C827-90A9-3F47-A0CE-3A27022291FB}\InprocServer32\1.0.0.1]
+"Class"="PTS.VbeltDriveConfigurator.ConfiguratorInputs"
+"Assembly"="PTS.VbeltDriveConfigurator, Version=1.0.0.1, Culture=neutral, PublicKeyToken=f928c089c5e8d185"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\CLSID\{5CD8C827-90A9-3F47-A0CE-3A27022291FB}\ProgId]
+@="PTS.VbeltDriveConfigurator.ConfiguratorInputs"
+
+[HKEY_CLASSES_ROOT\CLSID\{5CD8C827-90A9-3F47-A0CE-3A27022291FB}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\PTS.VbeltDriveConfigurator.JitInputs]
+@="PTS.VbeltDriveConfigurator.JitInputs"
+
+[HKEY_CLASSES_ROOT\PTS.VbeltDriveConfigurator.JitInputs\CLSID]
+@="{A8E11E74-9EDA-3543-8C94-BB3B1C5C3AB8}"
+
+[HKEY_CLASSES_ROOT\CLSID\{A8E11E74-9EDA-3543-8C94-BB3B1C5C3AB8}]
+@="PTS.VbeltDriveConfigurator.JitInputs"
+
+[HKEY_CLASSES_ROOT\CLSID\{A8E11E74-9EDA-3543-8C94-BB3B1C5C3AB8}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="PTS.VbeltDriveConfigurator.JitInputs"
+"Assembly"="PTS.VbeltDriveConfigurator, Version=1.0.0.1, Culture=neutral, PublicKeyToken=f928c089c5e8d185"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\CLSID\{A8E11E74-9EDA-3543-8C94-BB3B1C5C3AB8}\InprocServer32\1.0.0.1]
+"Class"="PTS.VbeltDriveConfigurator.JitInputs"
+"Assembly"="PTS.VbeltDriveConfigurator, Version=1.0.0.1, Culture=neutral, PublicKeyToken=f928c089c5e8d185"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\CLSID\{A8E11E74-9EDA-3543-8C94-BB3B1C5C3AB8}\ProgId]
+@="PTS.VbeltDriveConfigurator.JitInputs"
+
+[HKEY_CLASSES_ROOT\CLSID\{A8E11E74-9EDA-3543-8C94-BB3B1C5C3AB8}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\PTS.VbeltDriveConfigurator.ProductDatabase]
+@="PTS.VbeltDriveConfigurator.ProductDatabase"
+
+[HKEY_CLASSES_ROOT\PTS.VbeltDriveConfigurator.ProductDatabase\CLSID]
+@="{EF3C5602-C067-3E14-B62A-BCB0459C988C}"
+
+[HKEY_CLASSES_ROOT\CLSID\{EF3C5602-C067-3E14-B62A-BCB0459C988C}]
+@="PTS.VbeltDriveConfigurator.ProductDatabase"
+
+[HKEY_CLASSES_ROOT\CLSID\{EF3C5602-C067-3E14-B62A-BCB0459C988C}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="PTS.VbeltDriveConfigurator.ProductDatabase"
+"Assembly"="PTS.VbeltDriveConfigurator, Version=1.0.0.1, Culture=neutral, PublicKeyToken=f928c089c5e8d185"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\CLSID\{EF3C5602-C067-3E14-B62A-BCB0459C988C}\InprocServer32\1.0.0.1]
+"Class"="PTS.VbeltDriveConfigurator.ProductDatabase"
+"Assembly"="PTS.VbeltDriveConfigurator, Version=1.0.0.1, Culture=neutral, PublicKeyToken=f928c089c5e8d185"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\CLSID\{EF3C5602-C067-3E14-B62A-BCB0459C988C}\ProgId]
+@="PTS.VbeltDriveConfigurator.ProductDatabase"
+
+[HKEY_CLASSES_ROOT\CLSID\{EF3C5602-C067-3E14-B62A-BCB0459C988C}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\PTS.VbeltDriveConfigurator.Quirks]
+@="PTS.VbeltDriveConfigurator.Quirks"
+
+[HKEY_CLASSES_ROOT\PTS.VbeltDriveConfigurator.Quirks\CLSID]
+@="{C54502EF-E4F5-3A21-B8C7-BF163ACFCADF}"
+
+[HKEY_CLASSES_ROOT\CLSID\{C54502EF-E4F5-3A21-B8C7-BF163ACFCADF}]
+@="PTS.VbeltDriveConfigurator.Quirks"
+
+[HKEY_CLASSES_ROOT\CLSID\{C54502EF-E4F5-3A21-B8C7-BF163ACFCADF}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="PTS.VbeltDriveConfigurator.Quirks"
+"Assembly"="PTS.VbeltDriveConfigurator, Version=1.0.0.1, Culture=neutral, PublicKeyToken=f928c089c5e8d185"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\CLSID\{C54502EF-E4F5-3A21-B8C7-BF163ACFCADF}\InprocServer32\1.0.0.1]
+"Class"="PTS.VbeltDriveConfigurator.Quirks"
+"Assembly"="PTS.VbeltDriveConfigurator, Version=1.0.0.1, Culture=neutral, PublicKeyToken=f928c089c5e8d185"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\CLSID\{C54502EF-E4F5-3A21-B8C7-BF163ACFCADF}\ProgId]
+@="PTS.VbeltDriveConfigurator.Quirks"
+
+[HKEY_CLASSES_ROOT\CLSID\{C54502EF-E4F5-3A21-B8C7-BF163ACFCADF}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\Record\{61C693E1-AAF2-372D-9346-F48AFAA22FF0}\1.0.0.1]
+"Class"="PTS.VbeltDriveConfigurator.SolutionListType"
+"Assembly"="PTS.VbeltDriveConfigurator, Version=1.0.0.1, Culture=neutral, PublicKeyToken=f928c089c5e8d185"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\PTS.VbeltDriveConfigurator.XmlProductData]
+@="PTS.VbeltDriveConfigurator.XmlProductData"
+
+[HKEY_CLASSES_ROOT\PTS.VbeltDriveConfigurator.XmlProductData\CLSID]
+@="{22E23419-88D0-30F5-9265-C86BECD0C429}"
+
+[HKEY_CLASSES_ROOT\CLSID\{22E23419-88D0-30F5-9265-C86BECD0C429}]
+@="PTS.VbeltDriveConfigurator.XmlProductData"
+
+[HKEY_CLASSES_ROOT\CLSID\{22E23419-88D0-30F5-9265-C86BECD0C429}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="PTS.VbeltDriveConfigurator.XmlProductData"
+"Assembly"="PTS.VbeltDriveConfigurator, Version=1.0.0.1, Culture=neutral, PublicKeyToken=f928c089c5e8d185"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\CLSID\{22E23419-88D0-30F5-9265-C86BECD0C429}\InprocServer32\1.0.0.1]
+"Class"="PTS.VbeltDriveConfigurator.XmlProductData"
+"Assembly"="PTS.VbeltDriveConfigurator, Version=1.0.0.1, Culture=neutral, PublicKeyToken=f928c089c5e8d185"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\CLSID\{22E23419-88D0-30F5-9265-C86BECD0C429}\ProgId]
+@="PTS.VbeltDriveConfigurator.XmlProductData"
+
+[HKEY_CLASSES_ROOT\CLSID\{22E23419-88D0-30F5-9265-C86BECD0C429}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]

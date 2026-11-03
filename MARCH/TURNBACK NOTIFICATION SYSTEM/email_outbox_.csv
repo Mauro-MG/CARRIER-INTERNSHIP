@@ -1,0 +1,19 @@
+﻿Employee,Email,turnbacks_completed,goal,remaining,met_goal,status,current_date,current_month,subject,body
+Brayan Uriel Grimaldo Salazar,mauro.montelongo@carrier.com,1,4,3,False,BEHIND_GOAL,2026-03-11,March,Turnback Progress Update - March,"Hello Brayan,
+
+As of March 11, 2026, you have completed 1 turnbacks during the month of March.
+You are currently 3 turnbacks behind the goal required to be completed by the end of the month.
+
+Thank you,
+Turnback Notification System
+"
+Mauro Montelongo Gallegos,mauro.montelongo@carrier.com,4,4,0,True,MET_GOAL,2026-03-11,March,Turnback Goal Achieved - March,"Hello Mauro,
+
+Congratulations! You have completed your turnback goal for the month of March.
+As of March 11, 2026, your current turnback total for March is 4.
+
+Thank you for your work and commitment.
+
+Thank you,
+Turnback Notification System
+"

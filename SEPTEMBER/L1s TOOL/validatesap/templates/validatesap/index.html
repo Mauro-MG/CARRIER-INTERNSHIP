@@ -1,0 +1,112 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ValidateSAP Comparison</title>
+  <link rel="stylesheet" href="{% static 'validatesap/app.css' %}">
+  <script src="{% static 'validatesap/app.js' %}" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="shell masthead__inner">
+      <div>
+        <p class="eyebrow">Manufacturing operations</p>
+        <h1>ValidateSAP Comparison</h1>
+        <p class="subtitle">Paste the five source datasets, validate the SAP structure, and produce one unambiguous action for every part number.</p>
+      </div>
+      <div class="phase-key" aria-label="Processing phases">
+        <span><b>1</b> Parse &amp; validate</span>
+        <span><b>2</b> Compare</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="notice" aria-label="Important behavior">
+      <strong>Before you run:</strong> Standard BOM and SAP Data are required. Headers are optional. Part-number matching ignores case and pasted whitespace. Enter the five-character Tumbling name used for the saved CSV filename.
+    </section>
+
+    <form method="post" class="paste-form" novalidate>
+      {% csrf_token %}
+      <div class="section-heading">
+        <div>
+          <p class="step">Input</p>
+          <h2>Paste source data</h2>
+        </div>
+        <p>Copy directly from Excel or SAP. Tab-, comma-, and semicolon-separated rows are accepted.</p>
+      </div>
+
+      <div class="input-grid">
+        <article class="paste-card paste-card--tumbling">
+          <div class="paste-card__heading"><label for="{{ form.tumbling.id_for_label }}">Tumbling</label><span>5 characters</span></div>
+          {{ form.tumbling }}
+        </article>
+        <article class="paste-card paste-card--adds">
+          <div class="paste-card__heading"><label for="{{ form.adds.id_for_label }}">Adds</label><span>Item · Part Number · Qty · Source</span></div>
+          {{ form.adds }}
+        </article>
+        <article class="paste-card paste-card--deletes">
+          <div class="paste-card__heading"><label for="{{ form.deletes.id_for_label }}">Deletes</label><span>Item · Part Number · Qty</span></div>
+          {{ form.deletes }}
+        </article>
+        <article class="paste-card paste-card--standard">
+          <div class="paste-card__heading"><label for="{{ form.standard.id_for_label }}">Standard BOM</label><span>Required · 5 columns</span></div>
+          {{ form.standard }}
+        </article>
+        <article class="paste-card paste-card--sap">
+          <div class="paste-card__heading"><label for="{{ form.sap.id_for_label }}">SAP Data</label><span>Required · 9 columns</span></div>
+          {{ form.sap }}
+        </article>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="primary-button">Validate &amp; compare</button>
+        <a class="secondary-button" href="{% url 'validatesap:history' %}">View past validations</a>
+        <span>Comparison runs only when every blocking validation passes.</span>
+      </div>
+    </form>
+
+    {% if result %}
+      <section id="results" class="results" aria-live="polite">
+        {% if not result.valid %}
+          <div class="validation-panel validation-panel--error">
+            <div class="validation-panel__icon" aria-hidden="true">!</div>
+            <div class="validation-panel__content">
+              <p class="step">Validation stopped</p>
+              <h2>{{ result.errors|length }} blocking issue{{ result.errors|length|pluralize }}</h2>
+              <p>No comparison or action list was produced. Correct the rows below and run validation again.</p>
+              <div class="error-list">
+                {% for error in result.errors %}
+                  <article class="error-row">
+                    <span class="dataset-tag">{{ error.dataset|title }}</span>
+                    <div>
+                      <strong>{% if error.part_number %}{{ error.part_number }}{% else %}Input issue{% endif %}</strong>
+                      <p>{{ error.message }}{% if error.row_number %} <span>Row {{ error.row_number }}</span>{% endif %}</p>
+                    </div>
+                  </article>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        {% else %}
+          <div class="success-banner">
+            <div><p class="step">Validation passed</p><h2>Comparison complete</h2></div>
+            <div class="save-area">
+              {% if save_token %}
+                <form method="post" action="{% url 'validatesap:save_results' %}">{% csrf_token %}<input type="hidden" name="result_token" value="{{ save_token }}"><button class="save-button" type="submit" name="action" value="save">Save results CSV</button></form>
+                <small>Filename: {{ save_filename }}</small>
+              {% else %}
+                <p class="save-error">{{ save_error }}</p>
+              {% endif %}
+            </div>
+          </div>
+          {% include "validatesap/partials/result_sections.html" with comparison_results=result.results %}
+        {% endif %}
+      </section>
+    {% endif %}
+  </main>
+  <footer class="shell">ValidateSAP migration · deterministic rules · original pasted records preserved</footer>
+</body>
+</html>

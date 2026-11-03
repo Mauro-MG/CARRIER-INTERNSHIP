@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Configuration Manager</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/configuration_phase1.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/configuration_matrix.css') }}">
+</head>
+<body>
+<main class="container wide">
+  <header class="results-header">
+    <div>
+      <p class="eyebrow">Version 2</p>
+      <h1>Configuration Manager</h1>
+      <p>Load, edit, duplicate, delete, import, and export local JSON product configurations.</p>
+    </div>
+    <div class="actions">
+      <a class="secondary-button" href="{{ url_for('new_configuration') }}">New configuration</a>
+      <a class="secondary-button" href="{{ url_for('analysis_form') }}">Analyze DOCX</a>
+    </div>
+  </header>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% for category, message in messages %}<div class="alert {{ category }}">{{ message }}</div>{% endfor %}
+  {% endwith %}
+
+  <section class="card manager-tools">
+    <form action="{{ url_for('configuration_manager') }}" method="get" class="manager-search">
+      <label for="q">Search product type</label>
+      <input id="q" name="q" value="{{ search }}" placeholder="30MP">
+      <button type="submit">Search</button>
+    </form>
+
+    <form action="{{ url_for('import_configuration') }}" method="post" enctype="multipart/form-data" class="manager-import">
+      <label for="configuration_file">Import JSON configuration</label>
+      <input id="configuration_file" name="configuration_file" type="file" accept="application/json,.json">
+      <button type="submit" class="secondary-button">Import</button>
+    </form>
+  </section>
+
+  <section class="table-wrap">
+    <table class="comparison-table manager-table">
+      <thead>
+        <tr>
+          <th>Product Type</th>
+          <th>Search Mode</th>
+          <th>Date</th>
+          <th>Version</th>
+          <th>Configured Positions</th>
+          <th>Updated</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for item in configurations %}
+        <tr>
+          <td><code>{{ item.product_type }}</code></td>
+          <td><span class="mode-badge small">{{ item.search_mode_label }}</span></td>
+          <td>{{ item.configuration_date }}</td>
+          <td>{{ item.version }}</td>
+          <td>{{ item.configured_positions|join(', ') }}</td>
+          <td>{{ item.updated_at }}</td>
+          <td class="manager-actions">
+            <a class="secondary-button" href="{{ url_for('analysis_form', config=item.file_name) }}">Analyze</a>
+            <a class="secondary-button" href="{{ url_for('edit_configuration', file_name=item.file_name) }}">Edit</a>
+            <a class="secondary-button" href="{{ url_for('export_configuration', file_name=item.file_name) }}">Export</a>
+            <form action="{{ url_for('duplicate_configuration_route', file_name=item.file_name) }}" method="post">
+              <button type="submit" class="secondary-button">Duplicate</button>
+            </form>
+            <form action="{{ url_for('delete_configuration_route', file_name=item.file_name) }}" method="post" data-delete-form>
+              <button type="submit" class="secondary-button danger-button">Delete</button>
+            </form>
+          </td>
+        </tr>
+      {% else %}
+        <tr><td colspan="7" class="muted">No saved configurations yet.</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </section>
+</main>
+<script>
+  document.querySelectorAll('[data-delete-form]').forEach((form) => {
+    form.addEventListener('submit', (event) => {
+      if (!window.confirm('Delete this configuration JSON file?')) {
+        event.preventDefault();
+      }
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+ref_type,ref,resolved_value,count,modules,procedures
+worksheet_literal,Info_Plate,,48,RunAllFiles1 | mElecData | mError | mMain | mSpecialOrder | mWrite_Values,CalculateMCA | GenerateElecData | Main | PrintErrortoScreen | WriteEDRLookups | WriteSplitCompressors | sGetBaseModel
+worksheet_literal,TempPrint,,7,mMain,CalculateMCA
+worksheet_variable,DataSheet_Common,Data_Common,29,RunAllFiles1 | mMCA_Calc | mWrite_Values,GetSinglePointBox | GetSinglePointBoxHSCCR | WriteCombustionFan | WriteCompressors | WriteConvenienceOutlet | WriteEDRLookups | WriteSplitCompressors
+worksheet_variable,DataSheet_ERV,Data_ERV,10,mWrite_Values,GetERVIndex | WriteERVSupply | WriteERVWheel | WritePowerExhaustFan
+worksheet_variable,DataSheet_Misc,Data_Misc,53,mWrite_Values,WriteFTCLabel | WriteMisc | WriteSplitMisc
+worksheet_variable,DataSheet_TC,,1,mWrite_Values,WritePowerExhaustFan
+worksheet_variable,OriginalModel,,2,mSpecialOrder,sGetBaseModel
+worksheet_variable,SheetName,,29,mElecData,GenerateElecData | GenerateElecDataType
+worksheet_variable,sDataSheetName,,145,mAux_Routines | mMain | mWrite_Values,CalculateMCA | GetChassis | WriteASHRAEYEAR | WriteCharge | WriteChargeOld | WriteCombustionFan | WriteCompressors | WriteFTCLabel | WriteIndoorFan | WriteMisc | WriteNamePlate | WriteOutdoorFan | WritePowerExhaustFan | WriteRiggingLabel | WriteSplitCharge | WriteSplitCompressors | WriteSplitMisc | WriteSplitOutdoorFan | WriteSplitRiggingLabel | WriteTitle20
+worksheet_variable,sDataSheetName2,,4,mWrite_Values,WriteNamePlate
+worksheet_variable,sDataSheet_Gas,,30,mWrite_Values,WriteGasValues | WriteMisc
+worksheet_variable,sSpecialOrderWorksheet,Info_Plate_Special_Order,5,mMain | mSpecialOrder,Main | sGetBaseModel

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Configuration Preview</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/configuration_phase1.css') }}">
+</head>
+<body>
+<main class="container wide">
+  <header class="results-header">
+    <div>
+      <p class="eyebrow">Phase 1 preview</p>
+      <h1>{{ configuration.product_type }} configuration</h1>
+      <p>{{ configuration.configuration_date }} · Version {{ configuration.version }} · Matrix selections come in Phase 2.</p>
+    </div>
+    <div class="actions">
+      <a class="secondary-button" href="{{ url_for('new_configuration') }}">Start another configuration</a>
+    </div>
+  </header>
+
+  <section class="stats">
+    <div><strong>{{ configuration.configured_positions|length }}</strong><span>Selected positions</span></div>
+    <div><strong>{{ configuration.positions.values()|map(attribute='option_codes')|map('length')|sum }}</strong><span>Generated option codes</span></div>
+    <div><strong>36</strong><span>Matrix rows per position</span></div>
+    <div><strong>JSON</strong><span>Draft structure</span></div>
+  </section>
+
+  {% for position, data in configuration.positions.items() %}
+    <section class="card preview-position">
+      <h2>Position {{ position }}</h2>
+      <p>{{ data.option_codes|length }} generated option-code column(s)</p>
+      <div class="range-chip-list">
+        {% for range in data.option_code_ranges %}
+          <span class="range-chip">Group {{ range.group }}: {{ range.start }} through {{ range.end }}</span>
+        {% endfor %}
+      </div>
+      <details>
+        <summary>Show generated columns</summary>
+        <div class="code-list">
+          {% for code in data.option_codes %}<code>{{ code }}</code>{% endfor %}
+        </div>
+      </details>
+    </section>
+  {% endfor %}
+
+  <section class="card">
+    <h2>Draft JSON</h2>
+    <pre class="json-preview">{{ configuration|tojson(indent=2) }}</pre>
+  </section>
+</main>
+</body>
+</html>

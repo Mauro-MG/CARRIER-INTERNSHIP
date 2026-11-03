@@ -1,0 +1,313 @@
+AIGroupID,Serial,Plant,ClaimNumbers,GroupClaimCount,GroupStartDate,GroupEndDate,CombinedReplacementParts,CombinedServiceText,TotalClaimAmountAppr,GLTotal,pred_primary_gemma,pred_secondary_gemma,pred_failure_gemma,evidence_phrases,needs_review,review_reason,raw
+734,0324U31777,CMXB,CRSASBJ93,1,2024-10-22,2024-10-22,"TXV VALVE, 12.5-TON NOM","ClaimNumber: CRSASBJ93
+ClaimDate: 2024-10-22 00:00:00
+ReplacementPartDescription: TXV VALVE, 12.5-TON NOM
+ServicePerformed: Unit was confirmed to have issues with 2 txv's.",2163.72,2163.7200000000003,Valve,Valve-Exv/Txv,Part Failure,,False,,"{""primary_component"": ""Valve"", ""secondary_component"": ""Valve-Exv/Txv"", ""failure_reason"": ""Part Failure"", ""confidence"": 1.0, ""needs_review"": true}"
+11061,3225U46045,CMXB,CRTBYFTFH,1,2025-11-04,2025-11-04,Not Provided,"ClaimNumber: CRTBYFTFH
+ClaimDate: 2025-11-04 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: First tried updating software in the unit which made the unit shut off and then cycle the heat on again continuously. After further troubleshooting I found a poorly made electrical connection on the rollout switch wire pin connection to the heat section control board. Used new pins and made connection. Tested operation and found unit working correctly. Reported my findings to service engineering. Unit warranty repair is complete.",812.0,812.0,Electrical controls,Electrical Controls-Wiring,Manufacturing,,False,,"{""primary_component"": ""Electrical controls"", ""secondary_component"": ""Electrical Controls-Wiring"", ""failure_reason"": ""Manufacturing"", ""confidence"": 1.0, ""needs_review"": true}"
+14018,4323Q77051,Charlotte,CRT8X67G7,1,2025-08-07,2025-08-07,Not Provided,"ClaimNumber: CRT8X67G7
+ClaimDate: 2025-08-07 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: Warranty- Model#- 30RAP0115J-0GF10 Serial# 4323Q77051  Customer reported faulty Discharge Pressure Transducer. Picked up replacement part from office and installed. Test run machine after repair.",676.0,676.0,Electrical controls,Electrical Controls-Board/Software,Part Failure,,False,,"{""primary_component"": ""Electrical controls"", ""secondary_component"": ""Electrical Controls-Board/Software"", ""failure_reason"": ""Part Failure"", ""confidence"": 1.0, ""needs_review"": true}"
+4282,1325U45385,CMXB,CRT8X6RPY,1,2025-08-08,2025-08-08,"SENSOR, HIGH TEMP A2L","ClaimNumber: CRT8X6RPY
+ClaimDate: 2025-08-08 00:00:00
+ReplacementPartDescription: SENSOR, HIGH TEMP A2L
+ServicePerformed: SENSOR DAMAGED - REPLACED",77.9,77.9,Input Devices,Input Devices-Sensor,Part Failure,,False,,"{""primary_component"": ""Input Devices"", ""secondary_component"": ""Input Devices-Sensor"", ""failure_reason"": ""Part Failure"", ""confidence"": 1.0, ""needs_review"": true}"
+12402,3624U49049,CMXB,CRT5W3MYL | CRT5W5TF5,2,2025-05-20,2025-05-27,"COIL,MCHX OUTDR /W-SHRINK WRAP","ClaimNumber: CRT5W3MYL
+ClaimDate: 2025-05-20 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: 3/13/25 Checked in at office. Facility crew gave me access to roof. Unit found running with no alarms. Zoe from ACCO told me that the min bypass damper parameters were not set previously and machine was getting high static alarms. Confirmed normal operations at this time and left the unit running normally. Checked out at office
+
+--- RELATED CLAIM IN SAME SERIAL GROUP ---
+
+ClaimNumber: CRT5W5TF5
+ClaimDate: 2025-05-27 00:00:00
+ReplacementPartDescription: COIL,MCHX OUTDR /W-SHRINK WRAP
+ServicePerformed: 2/12/25 Confirmed complete evacuation. Charged to name plate. Attempt to run cooling. Could not get test function to work. Coil repair complete. Had to pull off from string machine due to rain 2/7/25 Prepped for crane lift and condenser coil replacement.",24090.99,24090.99,Condenser,Cond/Evap-Coil Leak,Part Failure,,False,,"{""primary_component"": ""Condenser"", ""secondary_component"": ""Cond/Evap-Coil Leak"", ""failure_reason"": ""Part Failure"", ""confidence"": 1.0, ""needs_review"": true}"
+12720,3724Q902627,Charlotte,CRT5W57SG,1,2025-05-23,2025-05-23,SIOB BOARD,"ClaimNumber: CRT5W57SG
+ClaimDate: 2025-05-23 00:00:00
+ReplacementPartDescription: SIOB BOARD
+ServicePerformed: Tech picked up the new SIOB board from the shop and delivered it to the job site. Tech shut down the machine and installed the new board. Tech returned the pump leads back to the original terminals and tested the repair. Everything began to work properly.",1783.04,1783.04,Electrical controls,Electrical Controls-Board/Software,Part Failure,,False,,"{""primary_component"": ""Electrical controls"", ""secondary_component"": ""Electrical Controls-Board/Software"", ""failure_reason"": ""Part Failure"", ""confidence"": 1.0, ""needs_review"": true}"
+8910,2624Q900822,Charlotte,CRT9XMN6V,1,2025-09-08,2025-09-08,Not Provided,"ClaimNumber: CRT9XMN6V
+ClaimDate: 2025-09-08 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: 8/22 JY Arrived on site. Met with customer. Located chiller. Got tools and checked alarm history. Found alarm 10064. Circuit B High Discharge or Elec. Box pressure failure. Reset alarm and hooked up gauges. Verified pressures. Let circuit B come on. Monitored pressures and temps. Turned off power to chiller and opened up compressor peckerhead.",414.0,414.0,Compressor,Compressor-Mechanical Failure,Part Failure,,False,,"{""primary_component"": ""Compressor"", ""secondary_component"": ""Compressor-Mechanical Failure"", ""failure_reason"": ""Part Failure"", ""confidence"": 0.95, ""needs_review"": true}"
+17295,5020Q40437,Charlotte,CRT3VBZ5B,1,2025-03-21,2025-03-21,INTERNAL FAN,"ClaimNumber: CRT3VBZ5B
+ClaimDate: 2025-03-21 00:00:00
+ReplacementPartDescription: INTERNAL FAN
+ServicePerformed: Chiller in alarm. Checked alarm in alarm for drive fan. Checked all the drives found circuit A condenser fan drive in alarm. Switch alarm to warning. Reset alarm and run circuit A. Called and got part #. Order new fans.",634.96,634.9599999999999,Electrical controls,Electrical Controls-Board/Software,Part Failure,,False,,"{""primary_component"": ""Electrical controls"", ""secondary_component"": ""Electrical Controls-Board/Software"", ""failure_reason"": ""Part Failure"", ""confidence"": 0.9, ""needs_review"": true}"
+17918,5124U49197,CMXB,CRT6W964P,1,2025-06-03,2025-06-03,Not Provided,"ClaimNumber: CRT6W964P
+ClaimDate: 2025-06-03 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: Found unit in multiple alarms, lost communication with outdoor fan VFD, and unit off on low pressure, check configuration and found previously adjusted static pressure sensor high setting to 2.5, revert back to 5.0, this is the range of the transducer, which should not be touched, static pressure Setpoint is set to 1 inch wc, check VFD???s and found ground wire missing from outdoor fan VFD???s, install ground wires, reset alarms, and check operation",280.0,280.0,Non-component,Nc-Configuration,Installation,,False,,"{""primary_component"": ""Non-component"", ""secondary_component"": ""Nc-Configuration"", ""failure_reason"": ""Installation"", ""confidence"": 1.0, ""needs_review"": true}"
+6054,1922Q97998,Charlotte,CRT7X1KVM | CRT8X9YDZ,4,2025-07-28,2025-08-15,FLOW SWITCH | SIOB BOARD,"ClaimNumber: CRT7X1KVM
+ClaimDate: 2025-07-28 00:00:00
+ReplacementPartDescription: SIOB BOARD
+ServicePerformed: there was no ripped wires, I was getting voltage towards the flow switch, the SIOB Has been having issues. Will have to order parts and come back to replace the SIOB board and flow switch .Valved off system and replaced flow switch. Found multiple alarms in history for loss of comm to SIOB Boards. Removed black box info on both chillers and sent in to determine the solution.
+
+--- RELATED CLAIM IN SAME SERIAL GROUP ---
+
+ClaimNumber: CRT7X1KVM
+ClaimDate: 2025-07-28 00:00:00
+ReplacementPartDescription: FLOW SWITCH
+ServicePerformed: there was no ripped wires, I was getting voltage towards the flow switch, the SIOB Has been having issues. Will have to order parts and come back to replace the SIOB board and flow switch .Valved off system and replaced flow switch. Found multiple alarms in history for loss of comm to SIOB Boards. Removed black box info on both chillers and sent in to determine the solution.
+
+--- RELATED CLAIM IN SAME SERIAL GROUP ---
+
+ClaimNumber: CRT8X9YDZ
+ClaimDate: 2025-08-15 00:00:00
+ReplacementPartDescription: SIOB BOARD
+ServicePerformed: Chiller is not picking up flow, and tripping out on Evaporator flow failure. Arrived to jobsite, found chiller on alarm for flow, and evaporator flow switch stuck. Called BAC for command for chiller to turn and open water valves. Confirm water flow, replace flow switch, chiller was detecting water flow. Reset alarm, chiller tripped on flow switch failure, checked pump status flow switch #2 was open. Checked customer flow switch and it was closed. Removed connections to TB5.
+
+--- RELATED CLAIM IN SAME SERIAL GROUP ---
+
+ClaimNumber: CRT8X9YDZ
+ClaimDate: 2025-08-15 00:00:00
+ReplacementPartDescription: FLOW SWITCH
+ServicePerformed: Chiller is not picking up flow, and tripping out on Evaporator flow failure. Arrived to jobsite, found chiller on alarm for flow, and evaporator flow switch stuck. Called BAC for command for chiller to turn and open water valves. Confirm water flow, replace flow switch, chiller was detecting water flow. Reset alarm, chiller tripped on flow switch failure, checked pump status flow switch #2 was open. Checked customer flow switch and it was closed. Removed connections to TB5.",4415.08,4415.08,Electrical controls,Electrical Controls-Board/Software,Part Failure,,False,,"{""primary_component"": ""Electrical controls"", ""secondary_component"": ""Electrical Controls-Board/Software"", ""failure_reason"": ""Part Failure"", ""confidence"": 1.0, ""needs_review"": true}"
+3469,1124U22486,CMXB,CRS7R15H9,1,2024-07-25,2024-07-25,COIL.EVAP AL/CU,"ClaimNumber: CRS7R15H9
+ClaimDate: 2024-07-25 00:00:00
+ReplacementPartDescription: COIL.EVAP AL/CU
+ServicePerformed: UPON INSTALL, FOUND FACTORY LEAK IN COIL AT RETURN BEND . REPLACED.",2972.07,2972.07,Evaporator,Cond/Evap-Coil Leak,Manufacturing,,False,,"{""primary_component"": ""Evaporator"", ""secondary_component"": ""Cond/Evap-Coil Leak"", ""failure_reason"": ""Manufacturing"", ""confidence"": 1.0, ""needs_review"": true}"
+12935,3823Q76703,Charlotte,CRS7R1CSQ,2,2024-07-25,2024-07-25,"COMPRESSOR,SCROLL","ClaimNumber: CRS7R1CSQ
+ClaimDate: 2024-07-25 00:00:00
+ReplacementPartDescription: COMPRESSOR,SCROLL
+ServicePerformed: Tech found both compressors to be over amping and tripping breakers.
+
+--- RELATED CLAIM IN SAME SERIAL GROUP ---
+
+ClaimNumber: CRS7R1CSQ
+ClaimDate: 2024-07-25 00:00:00
+ReplacementPartDescription: COMPRESSOR,SCROLL
+ServicePerformed: Tech found both compressors to be over amping and tripping breakers.",4416.48,4416.48,Compressor,Compressor-Mechanical Failure,Part Failure,,False,,"{""primary_component"": ""Compressor"", ""secondary_component"": ""Compressor-Mechanical Failure"", ""failure_reason"": ""Part Failure"", ""confidence"": 1.0, ""needs_review"": true}"
+4915,1525U45437,CMXB,CRTBYK2S1 | CRTBYK2SY | CRTCYXR3Y,3,2025-11-12,2025-12-11,"SENSOR, HIGH TEMP A2L","ClaimNumber: CRTBYK2S1
+ClaimDate: 2025-11-12 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: upgrade software to v2.8 On start up software out of date. Updated software to newest version.
+
+--- RELATED CLAIM IN SAME SERIAL GROUP ---
+
+ClaimNumber: CRTBYK2SY
+ClaimDate: 2025-11-12 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: tried calibration on OAD still continued to get alarms. Actuator switch was set wrong. Switched changed and configured the actuator travel time to meet the actuator. Set the feedback calibration signal and alarm gone. Ran calibration and ran damper in service test verified open and close position.
+
+--- RELATED CLAIM IN SAME SERIAL GROUP ---
+
+ClaimNumber: CRTCYXR3Y
+ClaimDate: 2025-12-11 00:00:00
+ReplacementPartDescription: SENSOR, HIGH TEMP A2L
+ServicePerformed: Tried running unit in test to run heat but won???t operate due to sensor short and running in emergency mode. Left unit off on the pic 6 display. Gained access to RTU. Removed and replaced dissipation sensor. Readjusted sensor to attempt to avoid being soaked in water. Restored operation to machine and monitored. Installed refrigerant sensor for 48k. Check operation for cooling unit is online",3390.53,3390.53,Input Devices,Input Devices-Sensor,Part Failure,,False,,"{""primary_component"": ""Input Devices"", ""secondary_component"": ""Input Devices-Sensor"", ""failure_reason"": ""Part Failure"", ""confidence"": 1.0, ""needs_review"": true}"
+961,0423U30996,CMXB,CRSCSXQ8S,1,2024-12-04,2024-12-04,Not Provided,"ClaimNumber: CRSCSXQ8S
+ClaimDate: 2024-12-04 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: Tech arrived onsite, got escorted to AHU location, upon reviewing unit conditions tech found equipment had high split across evaporator of 26 degrees, ptrap was improperly installed, vavs were installed incorrectly and sweating as well, additional outside air on bas was found in a fixed position providing 1000 cfm of outside air when bas was requesting 500 cfm. Tech emailed project manager what was discovered.",270.0,270.0,Non-component,Nc-Configuration,Installation,,False,,"{""primary_component"": ""Non-component"", ""secondary_component"": ""Nc-Configuration"", ""failure_reason"": ""Installation"", ""confidence"": 1.0, ""needs_review"": true}"
+5865,1824U47267,CMXB,CRS8RGTMH,1,2024-08-24,2024-08-24,COMPRESSOR(230V),"ClaimNumber: CRS8RGTMH
+ClaimDate: 2024-08-24 00:00:00
+ReplacementPartDescription: COMPRESSOR(230V)
+ServicePerformed: Found compressor not starting. - Replaced",1743.79,1743.79,Compressor,Compressor-Mechanical Failure,Part Failure,,False,,"{""primary_component"": ""Compressor"", ""secondary_component"": ""Compressor-Mechanical Failure"", ""failure_reason"": ""Part Failure"", ""confidence"": 1.0, ""needs_review"": true}"
+2052,0724U30283,CMXB,CRSCSYCD9,1,2024-12-06,2024-12-06,Not Provided,"ClaimNumber: CRSCSYCD9
+ClaimDate: 2024-12-06 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: Assist Kyle R with installation   08/27/24 Assisted with heater install.   Began electric heater install job. Completed installation of electric heaters.",3674.65,3674.65,Non-component,Nc-Service Call,Installation,,False,,"{""primary_component"": ""Non-component"", ""secondary_component"": ""Nc-Service Call"", ""failure_reason"": ""Installation"", ""confidence"": 0.9, ""needs_review"": true}"
+6735,2120Q28080,Charlotte,CRT9XX48N,1,2025-09-29,2025-09-29,Not Provided,"ClaimNumber: CRT9XX48N
+ClaimDate: 2025-09-29 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: Complaint that chiller won???t reset. Found chiller in alarm for guide van actuator out of calibration. Ran test and ohm reading all over the place . Nut on potentiometer loose reset limits and tightened nut . Preform guide van calibration and start chiller. Observe operation chiller running good.",1088.0,1088.0,Electrical controls,Electrical Controls-Board/Software,Part Failure,,False,,"{""primary_component"": ""Electrical controls"", ""secondary_component"": ""Electrical Controls-Board/Software"", ""failure_reason"": ""Part Failure"", ""confidence"": 0.95, ""needs_review"": true}"
+1573,0621Q91999,Charlotte,CRT9XS3ZD,1,2025-09-18,2025-09-18,GRAPHIC LCP,"ClaimNumber: CRT9XS3ZD
+ClaimDate: 2025-09-18 00:00:00
+ReplacementPartDescription: GRAPHIC LCP
+ServicePerformed: I spoke with customer and I will order a new screen and come back. Arrived on site and found that the wrong part was shipped and was not able to install. New part is being ordered and will be back to install. Arrived on site and checked in with customer, preformed LOTO and replaced the scrolling marquee on the drive. Picked up tools and cleaned up around unit.",1191.19,1191.19,Electrical controls,Electrical Controls-Board/Software,Manufacturing,,False,,"{""primary_component"": ""Electrical controls"", ""secondary_component"": ""Electrical Controls-Board/Software"", ""failure_reason"": ""Manufacturing"", ""confidence"": 1.0, ""needs_review"": true}"
+1088,0424Q99012,Charlotte,CRT4VMZX1 | CRT5VW9MS,2,2025-04-15,2025-05-02,OIL SOLENOID VALVE | TRANSFORMER GROUNDING KIT,"ClaimNumber: CRT4VMZX1
+ClaimDate: 2025-04-15 00:00:00
+ReplacementPartDescription: OIL SOLENOID VALVE
+ServicePerformed: Upon arrival to job site and gaining access to chiller. I confirmed again that the circuit A compressor oil solenoid valve is defective. I isolated that compressor, and replaced the oil solenoid valve and coil. Upon completion of repair, I tested and confirmed proper operation of circuit A oil solenoid. I cleaned up and checked out of job site
+
+--- RELATED CLAIM IN SAME SERIAL GROUP ---
+
+ClaimNumber: CRT5VW9MS
+ClaimDate: 2025-05-02 00:00:00
+ReplacementPartDescription: TRANSFORMER GROUNDING KIT
+ServicePerformed: SMB24-0009 30XV Control Transformer Ground Wiring Rework Program. Work done 2-7-25 Turn power off and installed transformer grounding once done tested unit and everything work. Clean up and left",2028.73,2028.73,Valve,Valve-Charging/Service,Part Failure,,False,,"{""primary_component"": ""Valve"", ""secondary_component"": ""Valve-Charging/Service"", ""failure_reason"": ""Part Failure"", ""confidence"": 1.0, ""needs_review"": true}"
+17015,4923Q95622,Charlotte,CRS8R6Z5B,1,2024-08-07,2024-08-07,Not Provided,"ClaimNumber: CRS8R6Z5B
+ClaimDate: 2024-08-07 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: Unit in vfd alarm. Vfd in phase loss alarm. Teased out wires. Found loose connection at incoming power on vfd repaired. Ran unit and vfd operation.",590.0,590.0,Electrical controls,Electrical Controls-Wiring,Installation,,False,,"{""primary_component"": ""Electrical controls"", ""secondary_component"": ""Electrical Controls-Wiring"", ""failure_reason"": ""Installation"", ""confidence"": 1.0, ""needs_review"": true}"
+9922,2923Q76473,Charlotte,CRS6QBPZF,1,2024-06-06,2024-06-06,PRESSURE TRANSDUCER,"ClaimNumber: CRS6QBPZF
+ClaimDate: 2024-06-06 00:00:00
+ReplacementPartDescription: PRESSURE TRANSDUCER
+ServicePerformed: unit not cooling/defective transducer/remove replace transducer",41.67,41.67,Electrical controls,Electrical Controls-Board/Software,Part Failure,,False,,"{""primary_component"": ""Electrical controls"", ""secondary_component"": ""Electrical Controls-Board/Software"", ""failure_reason"": ""Part Failure"", ""confidence"": 1.0, ""needs_review"": true}"
+15119,4424Q903848,Charlotte,CRV3ZZB3N,1,2026-03-02,2026-03-02,Not Provided,"ClaimNumber: CRV3ZZB3N
+ClaimDate: 2026-03-02 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: Inspected unit and found the breaker for the B1 compressor was tripped. Shut power off and tested the breaker, contactor, and compressor with all reading good. Verified connections and wiring was all good. Turned unit on and ensured proper operation and amperage. Verified operation of condensor fans and components that can make the compressor run a higher amperage and everything ran good. Suspect a power surge causing the issue as the compressor ran steady at 29 amps.",408.0,408.0,Electrical controls,Electrical Controls-Power,Resettable alarms,,False,,"{""primary_component"": ""Electrical controls"", ""secondary_component"": ""Electrical Controls-Power"", ""failure_reason"": ""Resettable alarms"", ""confidence"": 1.0, ""needs_review"": true}"
+8010,2423Q28205,Charlotte,CRT1TKCDZ | CRT1TLXVB | CRT2TTKM6,3,2025-01-23,2025-02-12,"SWITCH, PRESSURE","ClaimNumber: CRT1TKCDZ
+ClaimDate: 2025-01-23 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: 1-9-25: Arrived onsite and waited for customer to open chiller plant. Picked up new HPS from carrier hawaii and returned job site. Isolated HPS and removed faulty HPS and installed new HPS, opened isolation valves and verified no leaks were present and continued with factory startup.
+
+--- RELATED CLAIM IN SAME SERIAL GROUP ---
+
+ClaimNumber: CRT1TLXVB
+ClaimDate: 2025-01-28 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: 1/15/25 notified Dylan Capusang upon arrival. Check wiring for VFD speed reference signal. Condenser fan VFD were currently running on HAND mode at 60hz. Turn off chiller. Configure. Configure chiller for Variable head pressure control and set for 4-20mA/0-10vdc. Test operations, ok. Note: did notice condenser fan VfD running at a minimum speed. Set chiller back to Remote Control operation.
+
+--- RELATED CLAIM IN SAME SERIAL GROUP ---
+
+ClaimNumber: CRT2TTKM6
+ClaimDate: 2025-02-12 00:00:00
+ReplacementPartDescription: SWITCH, PRESSURE
+ServicePerformed: Found on SU - Chiller Circuit B HPS tripped.",1223.05,1223.05,Electrical controls,Electrical Controls-Power,Part Failure,,False,,"{""primary_component"": ""Electrical controls"", ""secondary_component"": ""Electrical Controls-Power"", ""failure_reason"": ""Part Failure"", ""confidence"": 1.0, ""needs_review"": true}"
+10738,3125U46011,CMXB,CRV6296QG,2,2026-06-07,2026-06-07,CABLE CONNECTOR | PRESSURE TRANSDUCER,"ClaimNumber: CRV6296QG
+ClaimDate: 2026-06-07 00:00:00
+ReplacementPartDescription: PRESSURE TRANSDUCER
+ServicePerformed: The pressure transducer burned up and took the wiring harness with it
+
+--- RELATED CLAIM IN SAME SERIAL GROUP ---
+
+ClaimNumber: CRV6296QG
+ClaimDate: 2026-06-07 00:00:00
+ReplacementPartDescription: CABLE CONNECTOR
+ServicePerformed: The pressure transducer burned up and took the wiring harness with it",92.15,92.15,Electrical controls,Electrical Controls-Board/Software,Part Failure,,False,,"{""primary_component"": ""Electrical controls"", ""secondary_component"": ""Electrical Controls-Board/Software"", ""failure_reason"": ""Part Failure"", ""confidence"": 1.0, ""needs_review"": true}"
+16802,4824U44834,CMXB,CRT3VFH2M,1,2025-03-28,2025-03-28,Not Provided,"ClaimNumber: CRT3VFH2M
+ClaimDate: 2025-03-28 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: 3-12 Loaded K series rooftop with 2.4. Ran through all configurations and set per customer request. Controls contractor logged in. Remotely and we completed an operations test through the BAS. Verified unit operation and checked out",1104.0,1104.0,Non-component,Nc-Configuration,Installation,,False,,"{""primary_component"": ""Non-component"", ""secondary_component"": ""Nc-Configuration"", ""failure_reason"": ""Installation"", ""confidence"": 1.0, ""needs_review"": true}"
+7005,2124U47446,CMXB,CRT8XBX7K,1,2025-08-19,2025-08-19,Not Provided,"ClaimNumber: CRT8XBX7K
+ClaimDate: 2025-08-19 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: The unit was set for NO so I changed too YES. The alarm will happen if the suction and discharge pressure don???t separate far enough after the compressor starts. The unit controls think that the compressor is turning the wrong direction. It was turning the correct direction but with the cool outdoor temperatures the discharge pressure was not increasing fast enough. I then confirmed all four compressors functioning correctly and checked out with George the customer. I traveled home.",1206.0,1206.0,Non-component,Nc-Configuration,Installation,,False,,"{""primary_component"": ""Non-component"", ""secondary_component"": ""Nc-Configuration"", ""failure_reason"": ""Installation"", ""confidence"": 1.0, ""needs_review"": true}"
+1329,0524Q40946,Charlotte,CRT9XKTDQ,1,2025-09-03,2025-09-03,Not Provided,"ClaimNumber: CRT9XKTDQ
+ClaimDate: 2025-09-03 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: Chiller in Alarm 30XV/0524Q40946Chiller had low suction temperature circuit A alarm. No alarm present when I arrived. I checked operation. I raised water temperature so the circuit would load up. The circuit ran well with no issues. Superheat was 6-10 degrees sub cooling 10 degrees. Monitor operation.",608.0,608.0,Non-component,Nc-No Fault Found,Resettable alarms,,False,,"{""primary_component"": ""Non-component"", ""secondary_component"": ""Nc-No Fault Found"", ""failure_reason"": ""Resettable alarms"", ""confidence"": 1.0, ""needs_review"": true}"
+327,0223Q98393,Charlotte,CRTBYRSHH,1,2025-11-30,2025-11-30,"CONTROL, SPEED","ClaimNumber: CRTBYRSHH
+ClaimDate: 2025-11-30 00:00:00
+ReplacementPartDescription: CONTROL, SPEED
+ServicePerformed: Ordering (3rd) VFD for Hallmark Healthcare - please install and disable circuit so VFD won't run until Joel inspects.   part only",9581.85,9581.849999999999,Starter/VFD,Starter/Vfd-Control,Part Failure,,False,,"{""primary_component"": ""Starter/VFD"", ""secondary_component"": ""Starter/Vfd-Control"", ""failure_reason"": ""Part Failure"", ""confidence"": 1.0, ""needs_review"": true}"
+9255,2723U67740,CMXB,CRS8R6XMP,1,2024-08-07,2024-08-07,Not Provided,"ClaimNumber: CRS8R6XMP
+ClaimDate: 2024-08-07 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: 03 18 24 - Monday - JP Arrived at the job set up to check which unit are leaking found unit s/2723U67740 that have 3 joints leaking take pictures call customer to disconnect fire system to be able to braze joint after all joints are repair add water to make sure no more leak. Cleanup work area continued with the other repairs. Work Complete.",1185.6,1185.6,Non-component,Nc-Leak,Part Failure,,False,,"{""primary_component"": ""Non-component"", ""secondary_component"": ""Nc-Leak"", ""failure_reason"": ""Part Failure"", ""confidence"": 1.0, ""needs_review"": true}"
+5854,1824U23734,CMXB,CRT3V4YHF,1,2025-03-06,2025-03-06,"VALVE,TXV","ClaimNumber: CRT3V4YHF
+ClaimDate: 2025-03-06 00:00:00
+ReplacementPartDescription: VALVE,TXV
+ServicePerformed: NO COOL DUE TO NEW TXV IS LEAKING REFRIGERANT ON NEWLY INSTALLED AIR HANDLER. REPLACED TXV. REPLACED DRIER. CHECKED FOR LEAKS. ADDED REFRIGERANT. STARTED UP AND CHECKED OUT NEW UNIT. WE ARE REQUESTING DOA LABOR.",688.07,688.0699999999999,Valve,Valve-Exv/Txv,Part Failure,,False,,"{""primary_component"": ""Valve"", ""secondary_component"": ""Valve-Exv/Txv"", ""failure_reason"": ""Part Failure"", ""confidence"": 1.0, ""needs_review"": true}"
+7749,2324U35170,CMXB,CRV1ZBFF9,1,2026-01-14,2026-01-14,"DX COIL, AL/CU","ClaimNumber: CRV1ZBFF9
+ClaimDate: 2026-01-14 00:00:00
+ReplacementPartDescription: DX COIL, AL/CU
+ServicePerformed: Ordered new coil with multiple extensive shipment delays. Installed new coil and reinstalled piping. Put unit on nitrogen test. Started pulling a vacuum. Remade broken drain line for condensate drain. Put units back together. Circuit b got down to 389 microns. Released charge. Cleaned up job site. Spoke to POC need to come back in the spring time to add current charge to units as needed.",16558.25,16558.25,Evaporator,Cond/Evap-Coil Leak,Part Failure,,False,,"{""primary_component"": ""Evaporator"", ""secondary_component"": ""Cond/Evap-Coil Leak"", ""failure_reason"": ""Part Failure"", ""confidence"": 1.0, ""needs_review"": true}"
+3215,1026Q910900,Charlotte,CRV522VK3,1,2026-05-21,2026-05-21,Not Provided,"ClaimNumber: CRV522VK3
+ClaimDate: 2026-05-21 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: Upon arriving on site, I met with the technician from Victory Air. He reported that the unit frequently trips due to high-pressure alarms and welded contact alarms. Additionally, when the B circuit is active, the condenser fans do not operate, causing the unit to trip again on high-pressure alerts.",328.0,328.0,Electrical controls,Electrical Controls-Board/Software,Part Failure,,False,,"{""primary_component"": ""Electrical controls"", ""secondary_component"": ""Electrical Controls-Board/Software"", ""failure_reason"": ""Part Failure"", ""confidence"": 0.9, ""needs_review"": true}"
+8115,2424Q900467,Charlotte,CRTCYTCQM,1,2025-12-04,2025-12-04,Not Provided,"ClaimNumber: CRTCYTCQM
+ClaimDate: 2025-12-04 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: 10/25/25  Assist Dante with leak repair. Pickup flatbed and check in with security at Hale Koa. Assist with charging unit and wire repair. Haul away recovery equipment and replenish used nitrogen. 10/29/25 HaleKoa. Picked up refrigerant and delivered to Ilima tower. Haul empty refrigerant tanks from JABSOM and deliver to Carrier Kapolei to receive deposit.",15022.89,15022.89,Non-component,Nc-Leak,Part Failure,,False,,"{""primary_component"": ""Non-component"", ""secondary_component"": ""Nc-Leak"", ""failure_reason"": ""Part Failure"", ""confidence"": 1.0, ""needs_review"": true}"
+3903,1225Q906041,Charlotte,CRTBYF7KJ | CRTCYSRFR,2,2025-11-03,2025-12-02,Not Provided,"ClaimNumber: CRTBYF7KJ
+ClaimDate: 2025-11-03 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: Loaded version 2.4 software this morning off partners on a Thumb drive. Went to job site, checked in with customer. Hooked up computer to chiller and uploaded chiller. Took pictures of Factory Parameters also. Installed version 2.4, it was very confusing due to how down load ended. fw upgrade conf file not found in the usb flash drive
+
+--- RELATED CLAIM IN SAME SERIAL GROUP ---
+
+ClaimNumber: CRTCYSRFR
+ClaimDate: 2025-12-02 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: Assisted David with calibration of cooler flow switch.  Checked in with customer and found that the flow switch was not making up good needed to recalibrate and adjust flow on flow switch checked over operation on equipment Job is complete",3538.0,3538.0,Electrical controls,Electrical Controls-Board/Software,Installation,,False,,"{""primary_component"": ""Electrical controls"", ""secondary_component"": ""Electrical Controls-Board/Software"", ""failure_reason"": ""Installation"", ""confidence"": 0.9, ""needs_review"": true}"
+15612,4424U44709,CMXB,CRV51YRV3,1,2026-05-13,2026-05-13,ECONOMIZER CONTROL BOARD(ECB)(,"ClaimNumber: CRV51YRV3
+ClaimDate: 2026-05-13 00:00:00
+ReplacementPartDescription: ECONOMIZER CONTROL BOARD(ECB)(
+ServicePerformed: 5/6-Picked up needed parts from shop. Checked over all wiring and components to and from board to confirm no shortage. Replaced board and tested operation. All is well at this time",2997.51,2997.51,Electrical controls,Electrical Controls-Board/Software,Part Failure,,False,,"{""primary_component"": ""Electrical controls"", ""secondary_component"": ""Electrical Controls-Board/Software"", ""failure_reason"": ""Part Failure"", ""confidence"": 1.0, ""needs_review"": true}"
+6835,2123Q98584,Charlotte,CRT1TC4MG,1,2025-01-08,2025-01-08,GASKET,"ClaimNumber: CRT1TC4MG
+ClaimDate: 2025-01-08 00:00:00
+ReplacementPartDescription: GASKET
+ServicePerformed: Museum Pointe - replace vic fittings part only!   Museum Pointe - replace vic fittings part only!",2381.36,2381.36,Non-component,Nc-Other,Installation,,False,,"{""primary_component"": ""Non-component"", ""secondary_component"": ""Nc-Other"", ""failure_reason"": ""Installation"", ""confidence"": 0.9, ""needs_review"": true}"
+17450,5023Q98844,Charlotte,CRTBYDZ13,1,2025-11-02,2025-11-02,Not Provided,"ClaimNumber: CRTBYDZ13
+ClaimDate: 2025-11-02 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: Enabled quick test mode. Ran all all eight fans to 100%. Checked rotation and amp draw. Started checking the motors for the presence of water. B one and B2 were dry. Before did have water. Use CO2 and contact cleaner to dry out the ECM compartment. Cleared area of tools in debris. Brought down extension ladder.  Ran the fans to 100% and checked again. With no issues I ran the unit in local on. Released the unit to local on. The unit is now operating normally.",2052.0,2052.0,Evaporator,Cond/Evap-Fan Motor,Part Failure,,False,,"{""primary_component"": ""Evaporator"", ""secondary_component"": ""Cond/Evap-Fan Motor"", ""failure_reason"": ""Part Failure"", ""confidence"": 0.95, ""needs_review"": true}"
+9711,2824U49951,CMXB,CRT3V3PSY,1,2025-03-04,2025-03-04,Not Provided,"ClaimNumber: CRT3V3PSY
+ClaimDate: 2025-03-04 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: Pulled shielded communication cables for the supply and return air sensors. Current air temperature readings are no longer fluctuating like they did without the shielded cablePulled shielded communication cables for the supply and return air sensors. Current air temperature readings are no longer fluctuating like they did without the shielded cable.",1415.37,1415.37,Electrical controls,Electrical Controls-Wiring,Installation,,False,,"{""primary_component"": ""Electrical controls"", ""secondary_component"": ""Electrical Controls-Wiring"", ""failure_reason"": ""Installation"", ""confidence"": 1.0, ""needs_review"": true}"
+4721,1523Q94795,Charlotte,CRS6QMFGC,2,2024-06-26,2024-06-26,"COMPRESSOR,SCROLL","ClaimNumber: CRS6QMFGC
+ClaimDate: 2024-06-26 00:00:00
+ReplacementPartDescription: COMPRESSOR,SCROLL
+ServicePerformed: Traveled to the site. Checked the alarms. T078. Checked circuit B pressure transducers, leaving water temperature sensor, and exv. Traveled to customer site and finalized compressor replacement project of Circuit B #???s 1 & 3. Performed operational checks upon completion. System operating properly at this time. Delivered failed compressors and trash to shop.
+
+--- RELATED CLAIM IN SAME SERIAL GROUP ---
+
+ClaimNumber: CRS6QMFGC
+ClaimDate: 2024-06-26 00:00:00
+ReplacementPartDescription: COMPRESSOR,SCROLL
+ServicePerformed: Traveled to the site. Checked the alarms. T078. Checked circuit B pressure transducers, leaving water temperature sensor, and exv. Traveled to customer site and finalized compressor replacement project of Circuit B #???s 1 & 3. Performed operational checks upon completion. System operating properly at this time. Delivered failed compressors and trash to shop.",10738.64,10738.640000000001,Compressor,Compressor-Mechanical Failure,Part Failure,,False,,"{""primary_component"": ""Compressor"", ""secondary_component"": ""Compressor-Mechanical Failure"", ""failure_reason"": ""Part Failure"", ""confidence"": 1.0, ""needs_review"": true}"
+12083,3524U49039,CMXB,CRT7WW18X,1,2025-07-16,2025-07-16,Not Provided,"ClaimNumber: CRT7WW18X
+ClaimDate: 2025-07-16 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: RTU needs software update per Ray Donhauser-  Carrier assoc. director of Product & Tech serv.",624.0,624.0,Electrical controls,Electrical Controls-Board/Software,Design,,False,,"{""primary_component"": ""Electrical controls"", ""secondary_component"": ""Electrical Controls-Board/Software"", ""failure_reason"": ""Design"", ""confidence"": 1.0, ""needs_review"": true}"
+12204,3621U49654,CMXB,CRS5Q479H,1,2024-05-21,2024-05-21,"ACTUATOR, DAMPER","ClaimNumber: CRS5Q479H
+ClaimDate: 2024-05-21 00:00:00
+ReplacementPartDescription: ACTUATOR, DAMPER
+ServicePerformed: 1/26/24 Installed new actuator on heating coil. Set serial number in configurations. Enabled hydronic coil in heating config. Actuator is communicating with CCN. Performed calibration and monitored. All operations were good. Warranty replacement complete.",1440.58,1440.58,Valve,Valve-Actuator,Part Failure,,False,,"{""primary_component"": ""Valve"", ""secondary_component"": ""Valve-Actuator"", ""failure_reason"": ""Part Failure"", ""confidence"": 1.0, ""needs_review"": true}"
+13237,3924U37665,CMXB,CRT8X6G1R,1,2025-08-07,2025-08-07,Not Provided,"ClaimNumber: CRT8X6G1R
+ClaimDate: 2025-08-07 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: Begin troubleshooting VFD fault. Confirm correct motor data parameter. Need to return for further troubleshooting. Mechanical contractor had wrong VFD drive installed. Installing contractor corrected issue. Program drive to correct motor specifications and test operation. No further issues",171.0,171.0,Non-component,Nc-Configuration,Installation,,False,,"{""primary_component"": ""Non-component"", ""secondary_component"": ""Nc-Configuration"", ""failure_reason"": ""Installation"", ""confidence"": 1.0, ""needs_review"": true}"
+10882,3223U38093,CMXB,CRS6QH481,1,2024-06-17,2024-06-17,BACNET MODULE,"ClaimNumber: CRS6QH481
+ClaimDate: 2024-06-17 00:00:00
+ReplacementPartDescription: BACNET MODULE
+ServicePerformed: Installed new bacnet translator card.",1403.42,1403.4199999999998,Electrical controls,Electrical Controls-Board/Software,Part Failure,,False,,"{""primary_component"": ""Electrical controls"", ""secondary_component"": ""Electrical Controls-Board/Software"", ""failure_reason"": ""Part Failure"", ""confidence"": 1.0, ""needs_review"": true}"
+10943,3224Q901609,Charlotte,CRT1TKFJM,1,2025-01-23,2025-01-23,Not Provided,"ClaimNumber: CRT1TKFJM
+ClaimDate: 2025-01-23 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: Transferred hours 11/27/24 assess chiller 1 Main disconnect. It was found that the chiller main disconnect was already in the on position, but the exterior handle indicate power in the OFF position. It appears the Handle is broken.",318.0,318.0,Electrical controls,Electrical Controls-Power,Part Failure,,False,,"{""primary_component"": ""Electrical controls"", ""secondary_component"": ""Electrical Controls-Power"", ""failure_reason"": ""Part Failure"", ""confidence"": 1.0, ""needs_review"": true}"
+10116,2925U06006,CMXB,CRT9XM9TQ,1,2025-09-08,2025-09-08,"BOARD,UNIT CONTROL(UCB)","ClaimNumber: CRT9XM9TQ
+ClaimDate: 2025-09-08 00:00:00
+ReplacementPartDescription: BOARD,UNIT CONTROL(UCB)
+ServicePerformed: issue at start-up.  bad board.  replaced board.",243.47,243.47,Electrical controls,Electrical Controls-Board/Software,Part Failure,,False,,"{""primary_component"": ""Electrical controls"", ""secondary_component"": ""Electrical Controls-Board/Software"", ""failure_reason"": ""Part Failure"", ""confidence"": 1.0, ""needs_review"": true}"
+15368,4424Q904244,Charlotte,CRV1ZH2GZ,1,2026-01-26,2026-01-26,Not Provided,"ClaimNumber: CRV1ZH2GZ
+ClaimDate: 2026-01-26 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: The compressor came back on and I took amp draws and voltage readings and everything was within the normal parameters. I inspected the oil leak on circuit B and went around the area with a leak detector and soap bubbles and was not able to find any refrigerant leaks with the unit on or off. I left the chiller running and waited for it to cycle a couple of times before heading out.",720.0,720.0,Non-component,Nc-No Fault Found,Resettable alarms,,False,,"{""primary_component"": ""Non-component"", ""secondary_component"": ""Nc-No Fault Found"", ""failure_reason"": ""Resettable alarms"", ""confidence"": 1.0, ""needs_review"": true}"
+15213,4424Q903951,Charlotte,CRT6WC6LB,1,2025-06-09,2025-06-09,Not Provided,"ClaimNumber: CRT6WC6LB
+ClaimDate: 2025-06-09 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: Traveled to the job site. Checked the alarms. Chiller 2 circuit A has multiple low suction temp. Couldn???t get the chiller 1 to switch to chiller 2. Will need to go back. Subsequent startup appears normal except for a short period 2-3 minutes after startup when the compressor sped up. Startup ok when ambient is above 65 deg. .Adjacent unit (sn 903951) not showing low suction temp alarms.",1141.0,1141.0,Non-component,Nc-No Fault Found,Resettable alarms,,False,,"{""primary_component"": ""Non-component"", ""secondary_component"": ""Nc-No Fault Found"", ""failure_reason"": ""Resettable alarms"", ""confidence"": 0.9, ""needs_review"": true}"
+15289,4424Q904095,Charlotte,CRTAYDJ88,1,2025-10-31,2025-10-31,Not Provided,"ClaimNumber: CRTAYDJ88
+ClaimDate: 2025-10-31 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: Found loose wire connections compressor was dropping out because of a communication error. Tighten all loose connections. Chiller is running at this time.",944.0,944.0,Electrical controls,Electrical Controls-Wiring,Installation,,False,,"{""primary_component"": ""Electrical controls"", ""secondary_component"": ""Electrical Controls-Wiring"", ""failure_reason"": ""Installation"", ""confidence"": 1.0, ""needs_review"": true}"
+2806,0924U46820,CMXB,CRS9RM3QB | CRS9RWSD8 | CRSAS1LL4,4,2024-09-04,2024-10-02,FUSE | MOTOR,"ClaimNumber: CRS9RM3QB
+ClaimDate: 2024-09-04 00:00:00
+ReplacementPartDescription: FUSE
+ServicePerformed: Fuses were found to have 0 continuity and would not work
+
+--- RELATED CLAIM IN SAME SERIAL GROUP ---
+
+ClaimNumber: CRS9RWSD8
+ClaimDate: 2024-09-24 00:00:00
+ReplacementPartDescription: MOTOR
+ServicePerformed: Motor was found to have bad windings causing internal short, not allowing motor to run. When motor runs, it blows the fuses.     Nick with Carrier (Field Tech) went out and tried to troubleshoot the system, causing the fuse to fail again.
+
+--- RELATED CLAIM IN SAME SERIAL GROUP ---
+
+ClaimNumber: CRS9RWSD8
+ClaimDate: 2024-09-24 00:00:00
+ReplacementPartDescription: FUSE
+ServicePerformed: Motor was found to have bad windings causing internal short, not allowing motor to run. When motor runs, it blows the fuses.     Nick with Carrier (Field Tech) went out and tried to troubleshoot the system, causing the fuse to fail again.
+
+--- RELATED CLAIM IN SAME SERIAL GROUP ---
+
+ClaimNumber: CRSAS1LL4
+ClaimDate: 2024-10-02 00:00:00
+ReplacementPartDescription: FUSE
+ServicePerformed: Fuse was blown when Carrier tech went out to start unit before the motor was replaced.",3220.52,3220.52,Electrical controls,Electrical Controls-Power,Part Failure,,False,,"{""primary_component"": ""Electrical controls"", ""secondary_component"": ""Electrical Controls-Power"", ""failure_reason"": ""Part Failure"", ""confidence"": 1.0, ""needs_review"": true}"
+13134,3922Q94197,Charlotte,CRT1TC6CZ,1,2025-01-08,2025-01-08,Not Provided,"ClaimNumber: CRT1TC6CZ
+ClaimDate: 2025-01-08 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: Was called out because the chiller was in alarm. The alarms are all flow related. I called the controls company. I discussed the issues with them. They are going to set up the controls to run the chiller.",944.0,944.0,Non-component,Nc-Configuration,Installation,,False,,"{""primary_component"": ""Non-component"", ""secondary_component"": ""Nc-Configuration"", ""failure_reason"": ""Installation"", ""confidence"": 1.0, ""needs_review"": true}"

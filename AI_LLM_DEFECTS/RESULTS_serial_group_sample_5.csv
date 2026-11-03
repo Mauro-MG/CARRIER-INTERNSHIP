@@ -1,0 +1,28 @@
+AIGroupID,Serial,Plant,ClaimNumbers,GroupClaimCount,GroupStartDate,GroupEndDate,CombinedReplacementParts,CombinedServiceText,TotalClaimAmountAppr,GLTotal,pred_primary_gemma,pred_secondary_gemma,pred_failure_gemma,needs_review,review_reason
+734,0324U31777,CMXB,CRSASBJ93,1,2024-10-22,2024-10-22,"TXV VALVE, 12.5-TON NOM","ClaimNumber: CRSASBJ93
+ClaimDate: 2024-10-22 00:00:00
+ReplacementPartDescription: TXV VALVE, 12.5-TON NOM
+ServicePerformed: Unit was confirmed to have issues with 2 txv's.",2163.72,2163.7200000000003,Valve,Valve-Exv/Txv,Part Failure,False,
+11061,3225U46045,CMXB,CRTBYFTFH,1,2025-11-04,2025-11-04,Not Provided,"ClaimNumber: CRTBYFTFH
+ClaimDate: 2025-11-04 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: First tried updating software in the unit which made the unit shut off and then cycle the heat on again continuously. After further troubleshooting I found a poorly made electrical connection on the rollout switch wire pin connection to the heat section control board. Used new pins and made connection. Tested operation and found unit working correctly. Reported my findings to service engineering. Unit warranty repair is complete.",812.0,812.0,Electrical controls,Electrical Controls-Wiring,Manufacturing,False,
+14018,4323Q77051,Charlotte,CRT8X67G7,1,2025-08-07,2025-08-07,Not Provided,"ClaimNumber: CRT8X67G7
+ClaimDate: 2025-08-07 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: Warranty- Model#- 30RAP0115J-0GF10 Serial# 4323Q77051  Customer reported faulty Discharge Pressure Transducer. Picked up replacement part from office and installed. Test run machine after repair.",676.0,676.0,Input Devices,Input Devices-Sensor,Part Failure,False,
+4282,1325U45385,CMXB,CRT8X6RPY,1,2025-08-08,2025-08-08,"SENSOR, HIGH TEMP A2L","ClaimNumber: CRT8X6RPY
+ClaimDate: 2025-08-08 00:00:00
+ReplacementPartDescription: SENSOR, HIGH TEMP A2L
+ServicePerformed: SENSOR DAMAGED - REPLACED",77.9,77.9,Input Devices,Input Devices-Sensor,Part Failure,False,
+12402,3624U49049,CMXB,CRT5W3MYL | CRT5W5TF5,2,2025-05-20,2025-05-27,"COIL,MCHX OUTDR /W-SHRINK WRAP","ClaimNumber: CRT5W3MYL
+ClaimDate: 2025-05-20 00:00:00
+ReplacementPartDescription: 
+ServicePerformed: 3/13/25 Checked in at office. Facility crew gave me access to roof. Unit found running with no alarms. Zoe from ACCO told me that the min bypass damper parameters were not set previously and machine was getting high static alarms. Confirmed normal operations at this time and left the unit running normally. Checked out at office
+
+--- RELATED CLAIM IN SAME SERIAL GROUP ---
+
+ClaimNumber: CRT5W5TF5
+ClaimDate: 2025-05-27 00:00:00
+ReplacementPartDescription: COIL,MCHX OUTDR /W-SHRINK WRAP
+ServicePerformed: 2/12/25 Confirmed complete evacuation. Charged to name plate. Attempt to run cooling. Could not get test function to work. Coil repair complete. Had to pull off from string machine due to rain 2/7/25 Prepped for crane lift and condenser coil replacement.",24090.99,24090.99,Non-component,Nc-Configuration,Installation,False,

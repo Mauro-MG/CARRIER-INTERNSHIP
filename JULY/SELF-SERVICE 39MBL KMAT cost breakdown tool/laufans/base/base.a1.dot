@@ -1,0 +1,96 @@
+digraph Automaton {
+  rankdir = LR;
+  0 [shape=circle,label=""];
+  0 -> 14 [label="\u0000-\uffff"]
+  1 [shape=circle,label=""];
+  1 -> 21 [label="7"]
+  1 -> 21 [label="1"]
+  1 -> 21 [label="G-H"]
+  1 -> 21 [label="5"]
+  1 -> 21 [label="3"]
+  2 [shape=circle,label=""];
+  initial [shape=plaintext,label=""];
+  initial -> 2
+  2 -> 15 [label="\u0000-\uffff"]
+  3 [shape=circle,label=""];
+  3 -> 0 [label="\u0000-\uffff"]
+  4 [shape=circle,label=""];
+  4 -> 17 [label="\u0000-\uffff"]
+  5 [shape=circle,label=""];
+  5 -> 4 [label="\u0000-\uffff"]
+  6 [shape=circle,label=""];
+  6 -> 20 [label="\u0000-\uffff"]
+  7 [shape=circle,label=""];
+  7 -> 21 [label="G-H"]
+  7 -> 21 [label="1-8"]
+  8 [shape=circle,label=""];
+  8 -> 3 [label="\u0000-\uffff"]
+  9 [shape=circle,label=""];
+  9 -> 22 [label="\u0000-\uffff"]
+  10 [shape=circle,label=""];
+  10 -> 21 [label="Q"]
+  10 -> 21 [label="G-H"]
+  10 -> 21 [label="1-3"]
+  10 -> 21 [label="5-7"]
+  11 [shape=circle,label=""];
+  11 -> 21 [label="7"]
+  11 -> 21 [label="1"]
+  11 -> 21 [label="Q"]
+  11 -> 21 [label="G-H"]
+  11 -> 21 [label="5"]
+  11 -> 21 [label="3"]
+  12 [shape=circle,label=""];
+  12 -> 21 [label="1"]
+  12 -> 21 [label="Q"]
+  12 -> 21 [label="G-H"]
+  12 -> 21 [label="5"]
+  12 -> 21 [label="3"]
+  13 [shape=circle,label=""];
+  13 -> 21 [label="1"]
+  13 -> 21 [label="G-H"]
+  13 -> 21 [label="3"]
+  14 [shape=circle,label=""];
+  14 -> 23 [label="\u0000-\uffff"]
+  15 [shape=circle,label=""];
+  15 -> 6 [label="\u0000-\uffff"]
+  16 [shape=circle,label=""];
+  16 -> 5 [label="\u0000-\uffff"]
+  17 [shape=circle,label=""];
+  17 -> 8 [label="\u0000-\uffff"]
+  18 [shape=circle,label=""];
+  18 -> 21 [label="Q"]
+  18 -> 21 [label="G-H"]
+  18 -> 21 [label="1-8"]
+  19 [shape=circle,label=""];
+  19 -> 21 [label="1"]
+  19 -> 21 [label="G-H"]
+  19 -> 21 [label="5"]
+  19 -> 21 [label="3"]
+  20 [shape=circle,label=""];
+  20 -> 24 [label="\u0000-\uffff"]
+  21 [shape=circle,label=""];
+  21 -> 26 [label="\u0000-\uffff"]
+  22 [shape=circle,label=""];
+  22 -> 16 [label="\u0000-\uffff"]
+  23 [shape=doublecircle,label=""];
+  24 [shape=circle,label=""];
+  24 -> 25 [label="M"]
+  24 -> 1 [label="J"]
+  24 -> 12 [label="G"]
+  24 -> 18 [label="P-Q"]
+  24 -> 1 [label="D"]
+  24 -> 10 [label="N"]
+  24 -> 19 [label="H"]
+  24 -> 7 [label="R"]
+  24 -> 11 [label="K-L"]
+  24 -> 13 [label="B"]
+  24 -> 19 [label="F"]
+  24 -> 12 [label="C"]
+  25 [shape=circle,label=""];
+  25 -> 21 [label="7"]
+  25 -> 21 [label="1"]
+  25 -> 21 [label="G-H"]
+  25 -> 21 [label="3"]
+  26 [shape=circle,label=""];
+  26 -> 9 [label="\u0000-\uffff"]
+}

@@ -1,0 +1,3 @@
+case_id,model_number,expected_model.series,expected_model.model_string,expected_model.size,expected_model.chassis,expected_electrical.voltage,expected_mca_mocp.mca,expected_mca_mocp.mocp,expected_mca_mocp.fuse,expected_mca_mocp.disconnect,expected_mca_mocp.lra,expected_mca_mocp.single_point_box,expected_mca_mocp.single_point_box_hsccr,expected_mca_mocp.num_wires,expected_mca_mocp.actual_num_wires,expected_error_codes,expected_warning_codes,notes
+TC001,48FEDM08A2A6A0A0A0,,,,,,,,,,,,,,,,,"Fill expected values from original Excel output"
+TC002,50GEBM08A2A6A0A0A0,,,,,,,,,,,,,,,,,"Fill expected values from original Excel output"

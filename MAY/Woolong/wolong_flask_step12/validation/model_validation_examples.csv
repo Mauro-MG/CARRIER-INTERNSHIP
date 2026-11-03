@@ -1,0 +1,4 @@
+case_id,model_number,expected_model.series,expected_model.model_string,expected_model.size,expected_model.chassis,expected_electrical.voltage,expected_mca_mocp.mca,expected_mca_mocp.mocp,expected_mca_mocp.fuse,expected_mca_mocp.disconnect,expected_mca_mocp.lra,expected_mca_mocp.single_point_box,expected_mca_mocp.single_point_box_hsccr,expected_mca_mocp.num_wires,expected_mca_mocp.actual_num_wires,expected_error_codes,expected_warning_codes,notes
+BASE48,48FEDM08A2A6A0A0A0,48,48FE,8,3,460-3-60,21,25,25,21,72,,,,,,,Python baseline value. Replace with Excel confirmed value when available.
+HEAT50,50GEBM08A2A6A0A0A0,50,50GE,8,4,460-3-60,42,45,45,38,79,047,068,6,6,,,Python baseline value. Replace with Excel confirmed value when available.
+PE48,48FEDM08A2A6A0N0A0,48,48FE,8,3,460-3-60,,,,,,,,,,,,Used to confirm accessory rows in detailed report.

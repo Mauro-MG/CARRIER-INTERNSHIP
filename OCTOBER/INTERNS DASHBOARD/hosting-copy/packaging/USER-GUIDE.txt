@@ -1,0 +1,37 @@
+INTERN PROGRAM FOR WINDOWS
+
+The installer and portable app include the HTML interface, Highcharts, Node/Electron,
+and the Python/pywin32 backend. A separate Node.js or Python installation is not needed.
+
+Requirements: Windows x64 and Microsoft Excel desktop. Sign in to Excel with the
+company account that can access your source SharePoint workbook. No app login is used.
+
+1. Open your source workbook in desktop Excel and select the data worksheet.
+2. Launch Intern Program and click Connect to Excel. Check the displayed source.
+3. Use the sidebar to switch between Dashboard and Intern management. Use filters,
+   charts, search, sorting, and full record details.
+4. Review workbook setup once if required. Preparing fields creates a backup and
+   appends missing columns; existing records and the legacy Months column are retained.
+5. Add, view, edit, or delete interns in the directory. Deletion removes the
+   workbook row after confirmation and creates a recovery backup first. Use
+   Completed or Inactive plus an end date for departures. Historical records are
+   retained. Months as Intern is calculated from calendar months and stops at a
+   former intern's recorded end date.
+6. Refresh after external Excel changes. Excel handles saving and SharePoint sync.
+
+Keep Excel open while working. Closing the app does not close Excel. The app waits
+for outstanding Excel operations before normal exit. If Excel prompts for input,
+resolve that prompt. After an uncertain save error, inspect Excel and refresh;
+do not submit the same change again blindly.
+
+Settings and logs: use File > Open settings folder. Optional settings.json fields:
+fieldMap (canonical field keys to existing headers), backupDirectory (absolute path).
+Default backups remain under %LOCALAPPDATA%\ExcelConnectionTester\backups.
+
+For the portable edition, move/distribute the single Portable.exe. For the installer,
+run Setup.exe and use its desktop/Start menu shortcut. Do not copy only the exe from
+win-unpacked: that diagnostic folder requires all of its accompanying files.
+
+This build is unsigned. Organizational deployment can add code signing using the
+build configuration. Highcharts commercial use requires an appropriate license;
+its license is included under resources/licenses. No workbook data is shipped.

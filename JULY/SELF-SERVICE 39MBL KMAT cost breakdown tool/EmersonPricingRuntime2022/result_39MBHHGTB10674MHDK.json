@@ -1,0 +1,265 @@
+{
+  "part_number": "39MBHHGTB10674MHDK",
+  "ok": true,
+  "total_price": 2333.811993,
+  "price_hits": [
+    {
+      "name": "PRICEHIT",
+      "category": "$BASE",
+      "description": "A18-18A FCA18_18A-SIDE-X041-Z065",
+      "price": 1146.154,
+      "value": "",
+      "why": "E551",
+      "base": false
+    },
+    {
+      "name": "PRICEHIT",
+      "category": "$BASE.1",
+      "description": "Discharge Adder TH[FR] A18-18A FCA18_18A-SIDE-X041-Z065",
+      "price": 39.861,
+      "value": "",
+      "why": "E748",
+      "base": false
+    },
+    {
+      "name": "PRICEHIT",
+      "category": "$MOTOR",
+      "description": "EFM3311T F2 7.5HP Premium Efficiency 208-230/460V-3-60 ODP 1800 RPM",
+      "price": 499.94,
+      "value": "",
+      "why": "E1574",
+      "base": false
+    },
+    {
+      "name": "PRICEHIT",
+      "category": "$DRIVEDLL",
+      "description": "Second distinct drive solution 73.99; extra belt 0.00",
+      "price": 87.04705882352941,
+      "value": "",
+      "why": "E4590",
+      "base": false
+    },
+    {
+      "name": "PRICEHIT",
+      "category": "$SPRINGS",
+      "description": "FC Springs",
+      "price": 196.879,
+      "value": "",
+      "why": "E4628",
+      "base": false
+    }
+  ],
+  "variables": {
+    "WHEELRPM": "1067",
+    "NOMENCLATURE": "BELTPREFIVESIX",
+    "WHEEL": "A18-18A",
+    "WHEELCLASS": "1",
+    "FANQUANTITY": "1",
+    "FANSHAFT": "1.1875",
+    "DRIVENMAXPD": "18",
+    "MAXRPM": "1155",
+    "SHAFTGROUNDING": "NO",
+    "MOTORBOX": "F2",
+    "EXTRABELTS": "NO",
+    "MOTORFIELDSUPPLIED": "NO",
+    "MOTORBASECODE": "4M",
+    "MOTORHP": "7.5",
+    "MOTORRPM": "1800",
+    "MOTORFRAME": "213T",
+    "DRIVENMAXWIDTH": "3.38",
+    "MOTORDVALUE": "D0525",
+    "CENTERLINELOW": "18.7",
+    "CENTERLINEHIGH": "20.4",
+    "DRIVEPITCH": "VARIABLE",
+    "DRIVESERVICEFACTOR": "1.2",
+    "DRIVEMULTIPLEBELT": "NO",
+    "DRIVEFIELDSUPPLIED": "NO",
+    "DRIVEFACTOR": "1.04",
+    "MOTORFACTOR": "0.8915838",
+    "SLEDFACTOR": "1.2998426830086107"
+  },
+  "errors": [],
+  "warnings": [],
+  "reconciliation": {
+    "bucket_prefixes": {
+      "sled": [
+        "$BASE",
+        "$SPRINGS",
+        "$OPTIONS"
+      ],
+      "motor": [
+        "$MOTOR"
+      ],
+      "drive": [
+        "$DRIVE"
+      ]
+    },
+    "raw_sums": {
+      "sled": 1382.894,
+      "motor": 499.94,
+      "drive": 87.04705882352941
+    },
+    "factors": {
+      "sled": 1.2998426830086107,
+      "motor": 0.8915838,
+      "drive": 1.04
+    },
+    "adjusted_sums": {
+      "sled": 1797.5446472765097,
+      "motor": 445.738404972,
+      "drive": 90.5289411764706
+    },
+    "three_bucket_total": 2333.8119934249803,
+    "total_price": 2333.8119934249803,
+    "difference_total_minus_three_buckets": 0.0,
+    "price_tolerance": 0.01,
+    "matches_total_price": true,
+    "unclassified_price_hits": [],
+    "unclassified_adjusted_total": 0
+  },
+  "drive_solutions": [
+    {
+      "driver_sheave": "1VP60",
+      "driver_bushing": "",
+      "driven_sheave": "BK95H",
+      "driven_bushing": "H",
+      "belt": "BX59",
+      "belt_qty": 1,
+      "cost": 72.4,
+      "extra_belt_cost": 9.6,
+      "actual_center_distance": "18.95",
+      "actual_service_factor": "1.26",
+      "actual_driven_speed": "894/1122"
+    },
+    {
+      "driver_sheave": "1VP65",
+      "driver_bushing": "",
+      "driven_sheave": "BK95H",
+      "driven_bushing": "H",
+      "belt": "BX59",
+      "belt_qty": 1,
+      "cost": 73.99,
+      "extra_belt_cost": 9.6,
+      "actual_center_distance": "18.57",
+      "actual_service_factor": "1.26",
+      "actual_driven_speed": "989/1217"
+    },
+    {
+      "driver_sheave": "1VP71",
+      "driver_bushing": "",
+      "driven_sheave": "BK105H",
+      "driven_bushing": "H",
+      "belt": "B62",
+      "belt_qty": 1,
+      "cost": 76.07,
+      "extra_belt_cost": 7.94,
+      "actual_center_distance": "18.8",
+      "actual_service_factor": "1.27",
+      "actual_driven_speed": "995/1201"
+    },
+    {
+      "driver_sheave": "1VP71",
+      "driver_bushing": "",
+      "driven_sheave": "BK105H",
+      "driven_bushing": "H",
+      "belt": "BX62",
+      "belt_qty": 1,
+      "cost": 78.05,
+      "extra_belt_cost": 9.92,
+      "actual_center_distance": "18.8",
+      "actual_service_factor": "1.51",
+      "actual_driven_speed": "995/1201"
+    },
+    {
+      "driver_sheave": "1VP71",
+      "driver_bushing": "",
+      "driven_sheave": "BK110H",
+      "driven_bushing": "H",
+      "belt": "B63",
+      "belt_qty": 1,
+      "cost": 78.14,
+      "extra_belt_cost": 8.05,
+      "actual_center_distance": "18.89",
+      "actual_service_factor": "1.36",
+      "actual_driven_speed": "949/1145"
+    },
+    {
+      "driver_sheave": "1VP71",
+      "driver_bushing": "",
+      "driven_sheave": "BK110H",
+      "driven_bushing": "H",
+      "belt": "BX63",
+      "belt_qty": 1,
+      "cost": 80.14,
+      "extra_belt_cost": 10.05,
+      "actual_center_distance": "18.89",
+      "actual_service_factor": "1.61",
+      "actual_driven_speed": "949/1145"
+    },
+    {
+      "driver_sheave": "1VP65",
+      "driver_bushing": "",
+      "driven_sheave": "1B5V90",
+      "driven_bushing": "B",
+      "belt": "BX59",
+      "belt_qty": 1,
+      "cost": 92.53,
+      "extra_belt_cost": 9.6,
+      "actual_center_distance": "18.49",
+      "actual_service_factor": "1.29",
+      "actual_driven_speed": "978/1204"
+    },
+    {
+      "driver_sheave": "1VP60",
+      "driver_bushing": "",
+      "driven_sheave": "1B5V86",
+      "driven_bushing": "B",
+      "belt": "5VX600",
+      "belt_qty": 1,
+      "cost": 99.4,
+      "extra_belt_cost": 18.61,
+      "actual_center_distance": "18.49",
+      "actual_service_factor": "1.76",
+      "actual_driven_speed": "945/1187"
+    },
+    {
+      "driver_sheave": "1VP65",
+      "driver_bushing": "",
+      "driven_sheave": "1B5V90",
+      "driven_bushing": "B",
+      "belt": "5VX630",
+      "belt_qty": 1,
+      "cost": 102.44,
+      "extra_belt_cost": 19.51,
+      "actual_center_distance": "19.29",
+      "actual_service_factor": "1.93",
+      "actual_driven_speed": "1000/1231"
+    },
+    {
+      "driver_sheave": "1VP65",
+      "driver_bushing": "",
+      "driven_sheave": "1B5V94",
+      "driven_bushing": "B",
+      "belt": "5VX630",
+      "belt_qty": 1,
+      "cost": 103.01,
+      "extra_belt_cost": 19.51,
+      "actual_center_distance": "18.96",
+      "actual_service_factor": "2.03",
+      "actual_driven_speed": "958/1179"
+    }
+  ],
+  "selected_drive": {
+    "driver_sheave": "1VP65",
+    "driver_bushing": "",
+    "driven_sheave": "BK95H",
+    "driven_bushing": "H",
+    "belt": "BX59",
+    "belt_qty": 1,
+    "cost": 73.99,
+    "extra_belt_cost": 9.6,
+    "actual_center_distance": "18.57",
+    "actual_service_factor": "1.26",
+    "actual_driven_speed": "989/1217"
+  }
+}

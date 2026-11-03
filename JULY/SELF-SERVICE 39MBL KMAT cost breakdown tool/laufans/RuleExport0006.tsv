@@ -1,0 +1,3 @@
+RULEBEGIN.RAW	P5																					HIT.CATEGORY	HIT.VALUE	HIT.DESCRIPTION																				
+	^BCDFGHJKLMNPQRSTVW0123456789X																					ERRORPOSITION	P5	Position P5 is not in list  [^BCDFGHJKLMNPQRSTVW0123456789X]
+RULEEND																				
